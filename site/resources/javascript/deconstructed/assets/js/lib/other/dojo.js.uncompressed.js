@@ -94,7 +94,7 @@ djConfig = {
 	debugAtAllCosts: false,
 	// locale: String
 	//		The locale to assume for loading localized resources in this page,
-	//		specified according to [RFC 3066](http://www.ietf.org/rfc/rfc3066.txt).
+	//		specified according to [RFC 3066](http://ietf.org/rfc/rfc3066.txt).
 	//		Must be specified entirely in lowercase, e.g. `en-us` and `zh-cn`.
 	//		See the documentation for `dojo.i18n` and `dojo.requireLocalization`
 	//		for details on loading localized resources. If no locale is specified,
@@ -1131,7 +1131,7 @@ dojo.global = {
 		//		different packages throughout the source tree.  
 		//
 		//		Each directory is named for a locale as specified by RFC 3066,
-		//		(http://www.ietf.org/rfc/rfc3066.txt), normalized in lowercase.
+		//		(http://ietf.org/rfc/rfc3066.txt), normalized in lowercase.
 		//		Note that the two bundles in the example do not define all the
 		//		same variants.  For a given locale, bundles will be loaded for
 		//		that locale and all more general locales above it, including a
@@ -2461,7 +2461,7 @@ dojo.provide("dojo._base.declare");
 
 	function err(msg){ throw new Error("declare: " + msg); }
 
-	// C3 Method Resolution Order (see http://www.python.org/download/releases/2.3/mro/)
+	// C3 Method Resolution Order (see http://python.org/download/releases/2.3/mro/)
 	function c3mro(bases){
 		var result = [], roots = [{cls: 0, refs: []}], nameMap = {}, clsCount = 1,
 			l = bases.length, i = 0, j, lin, base, top, proto, rec, name, refs;
@@ -2970,7 +2970,7 @@ dojo.provide("dojo._base.declare");
 		//		Ancestors can be compound classes created by this version of
 		//		dojo.declare. In complex cases all base classes are going to be
 		//		linearized according to C3 MRO algorithm
-		//		(see http://www.python.org/download/releases/2.3/mro/ for more
+		//		(see http://python.org/download/releases/2.3/mro/ for more
 		//		details).
 		//
 		//		"className" is cached in "declaredClass" property of the new class,
@@ -6489,7 +6489,7 @@ if(dojo.isIE || dojo.isOpera){
 	// Element attribute Functions
 	// =============================
 
-	// dojo.attr() should conform to http://www.w3.org/TR/DOM-Level-2-Core/
+	// dojo.attr() should conform to http://w3.org/TR/DOM-Level-2-Core/
 
 	var _propNames = {
 			// properties renamed to avoid clashes with reserved words
@@ -9238,7 +9238,7 @@ if(typeof dojo != "undefined"){
 		var useQSA = ( 
 			qsaAvail && (!forceDOM) &&
 			// as per CSS 3, we can't currently start w/ combinator:
-			//		http://www.w3.org/TR/css3-selectors/#w3cselgrammar
+			//		http://w3.org/TR/css3-selectors/#w3cselgrammar
 			(specials.indexOf(qcz) == -1) && 
 			// IE's QSA impl sucks on pseudos
 			(!d.isIE || (query.indexOf(":") == -1)) &&
@@ -9478,7 +9478,7 @@ if(typeof dojo != "undefined"){
 		//
 		//	query:
 		//		The CSS3 expression to match against. For details on the syntax of
-		//		CSS3 selectors, see <http://www.w3.org/TR/css3-selectors/#selectors>
+		//		CSS3 selectors, see <http://w3.org/TR/css3-selectors/#selectors>
 		//	root:
 		//		A DOMNode (or node id) to scope the search from. Optional.
 		//	returns: dojo.NodeList

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-    
-	
-	
+<xsl:stylesheet xmlns:xsl="http://w3.org/1999/XSL/Transform" version="1.0">
+
+
+
 	<!-- ROOT ELEMENT -->
 	<xsl:template match="/sites">
 		<html>
@@ -23,8 +23,8 @@
 			</body>
 		</html>
 	</xsl:template>
-	
-	
+
+
 
 	<!-- DOMAINS -->
 	<xsl:template match="category">
@@ -33,12 +33,12 @@
 			<xsl:apply-templates/>
 		</div>
 	</xsl:template>
-	
-	
-	
+
+
+
 	<!-- SITES -->
 	<xsl:template match="site">
-		
+
 		<div class="site" onmouseover="over(this)" onmouseout="over(this, false)">
 			<h3>
 				<xsl:element name="a">
@@ -79,19 +79,19 @@
 			<xsl:apply-templates/>
 		</div>
 	</xsl:template>
-	
+
 
 
 	<!-- FOLDER -->
 	<xsl:template match="folder">
-	
+
 		<!-- form tag -->
 		<xsl:element name="form">
-			
+
 			<!-- attributes -->
 			<xsl:attribute name="method">get</xsl:attribute>
 			<xsl:attribute name="action"><xsl:value-of select="substring-before(@url,'//')"/>//<xsl:value-of select="@username"/>:<xsl:value-of select="@password"/>@<xsl:value-of select="substring-after(@url,'//')"/></xsl:attribute>
-			
+
 			<!-- submit button -->
 			<xsl:element name="input">
 				<xsl:attribute name="type">submit</xsl:attribute>
@@ -101,27 +101,27 @@
 						<xsl:otherwise><xsl:value-of select="name(.)"/></xsl:otherwise>
 					</xsl:choose>
 				</xsl:attribute>
-				<xsl:attribute name="title">Folder -  
+				<xsl:attribute name="title">Folder -
 					<xsl:value-of select="concat('username: ', @username, ' | password: ', @password)"/>
 				</xsl:attribute>
 			</xsl:element>
-			
+
 		</xsl:element>
-	
+
 	</xsl:template>
 
 
 
 	<!-- PAGE -->
 	<xsl:template match="page">
-	
+
 		<!-- form tag -->
 		<xsl:element name="form">
-			
+
 			<!-- attributes -->
 			<xsl:attribute name="method">get</xsl:attribute>
 			<xsl:attribute name="action"><xsl:value-of select="@url"/></xsl:attribute>
-			
+
 			<!-- submit button -->
 			<xsl:element name="input">
 				<xsl:attribute name="type">submit</xsl:attribute>
@@ -133,59 +133,59 @@
 				</xsl:attribute>
 				<xsl:attribute name="title">Page</xsl:attribute>
 			</xsl:element>
-			
+
 		</xsl:element>
-	
+
 	</xsl:template>
 
 
 
 	<!-- LOGIN OR DATABASE TAGS -->
 	<xsl:template match="login|database">
-	
+
 		<!-- form tag -->
 
 		<xsl:element name="form">
-		
+
 			<!-- attributes -->
 			<xsl:attribute name="action"><xsl:value-of select="@url"/></xsl:attribute>
 			<xsl:attribute name="method">post</xsl:attribute>
 			<!-- <xsl:attribute name="target">_blank</xsl:attribute> -->
-			
-			
+
+
 			<!-- loop through all attributes and create controls -->
 			<xsl:for-each select="@*">
-			
+
 				<!-- create hidden fields for all attributes except url, which is used in the form-->
 				<xsl:if test="name(.) != 'url'">
 					<xsl:element name="input">
-					
+
 						<xsl:attribute name="type">hidden</xsl:attribute>
 
 						<xsl:attribute name="name">
-						
-							<!-- 
+
+							<!--
 							SPECIAL CASES
 							==================================================================================
-							
+
 							You may want to store all your username and passwords in the XML file
-							as username="" and password="", but the forms you submit may expect 
+							as username="" and password="", but the forms you submit may expect
 							differenly-named variables, for example, Wordpress expects log and pwd.
-							
+
 							Luckily with XSL you can apply some logic to the document as it's processed!
-							
-							This is the place to put in place application-specific checks, so the 
+
+							This is the place to put in place application-specific checks, so the
 							output (HTML) is amended according to the input(XML).
-							
+
 							For example, if the application tag has the name attribute set to "Wordpress",
-							we simply change the name of the form fields to log and pwd, but still output 
+							we simply change the name of the form fields to log and pwd, but still output
 							the correct username and password values.
-							
+
 							==================================================================================
 							-->
 
 							<xsl:choose>
-							
+
 								<!-- PHPMYADMIN - check @client attribute for "phpmyadmin" -->
 								<!--<xsl:when test="@client = 'phpmyadmin'">pma_<xsl:value-of select="name(.)"/></xsl:when>-->
 
@@ -202,11 +202,11 @@
 
 								<!-- OTHERWISE - just output the values as they are stored -->
 								<xsl:otherwise><xsl:value-of select="name(.)"/></xsl:otherwise>
-								
+
 							</xsl:choose>
 
 						</xsl:attribute>
-						
+
 						<xsl:attribute name="value">
 							<xsl:value-of select="."/>
 						</xsl:attribute>
@@ -215,7 +215,7 @@
 				</xsl:if>
 
 			</xsl:for-each>
-		
+
 			<!-- submit button -->
 			<xsl:element name="input">
 				<xsl:attribute name="type">submit</xsl:attribute>
@@ -225,13 +225,13 @@
 						<xsl:otherwise><xsl:value-of select="name(.)"/></xsl:otherwise>
 					</xsl:choose>
 				</xsl:attribute>
-				<xsl:attribute name="title">Login - 
+				<xsl:attribute name="title">Login -
 					<xsl:value-of select="concat('username: ', @username, ' | password: ', @password)"/>
 				</xsl:attribute>
 			</xsl:element>
-			
+
 		</xsl:element>
-	
+
 	</xsl:template>
 
 

@@ -4,58 +4,58 @@
   <category name="Misc">
     <site name="Reseller Control Panel" url="">
       <login url="https://customer.heartinternet.co.uk/manage/login.cgi" email="dave@davestewart.co.uk" password="gdetail" />
-      <login name="System Status" url="http://www.webhostingstatus.com/" />
+      <login name="System Status" url="http://webhostingstatus.com/" />
     </site>
-    <site name="Google Analytics" url="http://www.google-analytics.com">
-      <login url="https://www.google.com/accounts/ServiceLoginBoxAuth" Email="singalongwithdave@hotmail.com" Passwd="google1" continue="http://www.google.com/analytics/home/?et=reset&amp;hl=" />
+    <site name="Google Analytics" url="http://google-analytics.com">
+      <login url="https://www.google.com/accounts/ServiceLoginBoxAuth" Email="singalongwithdave@hotmail.com" Passwd="google1" continue="http://google.com/analytics/home/?et=reset&amp;hl=" />
     </site>
     <site name="localhost" url="http://localhost/">
       <database name="" url="http://localhost/phpMyAdmin/index.php" username="root" password="root" />
     </site>
   </category>
   <category name="Personal">
-    <site name="Dave Stewart" url="http://www.davestewart.co.uk">
-      <login url="http://www.extendcp.com/login.cgi" username="davestewart.co.uk" password="gdetail" />
+    <site name="Dave Stewart" url="http://davestewart.co.uk">
+      <login url="http://extendcp.com/login.cgi" username="davestewart.co.uk" password="gdetail" />
       <database name="Jobs" url="http://82.110.105.85/phpmyadmin/index.php" username="web85-dave" password="dave123" client="phpmyadmin"></database>
     </site>
-    <site name="Keyframes and Code" url="http://www.keyframesandcode.com">
-      <login url="http://www.extendcp.com/login.cgi" username="keyframesandcode.com" password="gdetail" />
+    <site name="Keyframes and Code" url="http://keyframesandcode.com">
+      <login url="http://extendcp.com/login.cgi" username="keyframesandcode.com" password="gdetail" />
       <database name="Code Repository" url="http://79.170.40.33/phpmyadmin/index.php" username="web33-code" password="gdetail" />
-      <application name="Wordpress" url="http://www.keyframesandcode.com/blog/">
-        <login url="http://www.keyframesandcode.com/blog/wp-login.php" username="admin" password="gdetail" />
+      <application name="Wordpress" url="http://keyframesandcode.com/blog/">
+        <login url="http://keyframesandcode.com/blog/wp-login.php" username="admin" password="gdetail" />
         <database url="http://79.170.40.33/phpmyadmin/index.php" username="web33-a-wordp-13" password="gdetail" />
       </application>
     </site>
-    <site name="Bill Bunny" url="http://www.billbunny.co.uk">
-      <login url="http://www.extendcp.com/login.cgi" username="billbunny.co.uk" password="PPBIs4sF" />
+    <site name="Bill Bunny" url="http://billbunny.co.uk">
+      <login url="http://extendcp.com/login.cgi" username="billbunny.co.uk" password="PPBIs4sF" />
     </site>
-    <site name="Flash Particle Effects" url="http://www.fpfx.net">
-      <login url="http://www.extendcp.com/login.cgi" username="fpfx.net" password="l42wTRYI" />
+    <site name="Flash Particle Effects" url="http://fpfx.net">
+      <login url="http://extendcp.com/login.cgi" username="fpfx.net" password="l42wTRYI" />
     </site>
-    <site name="Balham Night" url="http://www.balham-night.org">
-      <login url="http://www.extendcp.com/login.cgi" username="balham-night.org" password="gdetail" />
+    <site name="Balham Night" url="http://balham-night.org">
+      <login url="http://extendcp.com/login.cgi" username="balham-night.org" password="gdetail" />
       <database name="" url="http://82.110.105.86/phpmyadmin/index.php" username="web86-balham-1" password="balham123" />
     </site>
-    <site name="Sarah Jane English" url="http://www.sarahjaneenglish.co.uk">
-      <login url="http://www.extendcp.com/login.cgi" username="sarahjaneenglish.com" password="Ww5yb0uS" />
+    <site name="Sarah Jane English" url="http://sarahjaneenglish.co.uk">
+      <login url="http://extendcp.com/login.cgi" username="sarahjaneenglish.com" password="Ww5yb0uS" />
     </site>
-    <site name="Pondskata" url="http://www.pondskata.com">
-      <login url="http://www.extendcp.com/login.cgi" username="pondskata.com" password="s9rqUb67" />
+    <site name="Pondskata" url="http://pondskata.com">
+      <login url="http://extendcp.com/login.cgi" username="pondskata.com" password="s9rqUb67" />
     </site>
   </category>
   <category name="Business">
-    <site name="Lifecheck Health" url="http://www.lifecheckhealth.co.uk">
-      <login url="http://www.extendcp.com/login.cgi" username="lifecheckhealth.co.uk" password="lifecheck1" />
+    <site name="Lifecheck Health" url="http://lifecheckhealth.co.uk">
+      <login url="http://extendcp.com/login.cgi" username="lifecheckhealth.co.uk" password="lifecheck1" />
       <database name="Site Data" url="http://82.110.105.85/phpmyadmin/index.php" username="web85-lifecheck" password="lifecheck1" />
-      <application name="Wordpress" url="http://www.lifecheckhealth.co.uk/blog/">
-        <login url="http://www.lifecheckhealth.co.uk/blog/wp-login.php" username="admin" password="lifecheck1" />
+      <application name="Wordpress" url="http://lifecheckhealth.co.uk/blog/">
+        <login url="http://lifecheckhealth.co.uk/blog/wp-login.php" username="admin" password="lifecheck1" />
         <database url="http://82.110.105.85/phpmyadmin/index.php" username="web85-a-word-146" password="lifecheck1" />
       </application>
     </site>
-    <site name="Prove It" url="http://www.proveit.tv">
-      <login url="http://www.extendcp.com/login.cgi" username="proveit.tv" password="tLKUzJVU" />
+    <site name="Prove It" url="http://proveit.tv">
+      <login url="http://extendcp.com/login.cgi" username="proveit.tv" password="tLKUzJVU" />
     </site>
-    <site name="Nocturnal Groove" url="http://www.nocturnalgroove.com">
+    <site name="Nocturnal Groove" url="http://nocturnalgroove.com">
       <login url="" username="" password="" />
     </site>
   </category>

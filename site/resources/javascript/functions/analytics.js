@@ -33,7 +33,7 @@
 		// update DOM
 			script.setAttribute('id',	'google-analytics')
 			script.setAttribute('type',	'text/javascript');
-			script.setAttribute('src',	'http://www.google-analytics.com/urchin.js')
+			script.setAttribute('src',	'http://google-analytics.com/urchin.js')
 			head.appendChild(script)
 			
 		// script-load callbacks

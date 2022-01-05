@@ -36,7 +36,7 @@
 		// update DOM
 			script.setAttribute('id',	'google-analytics')
 			script.setAttribute('type',	'text/javascript');
-			script.setAttribute('src',	'http://www.google-analytics.com/urchin.js')
+			script.setAttribute('src',	'http://google-analytics.com/urchin.js')
 			head.appendChild(script)
 			
 		// check if script tag attribute defer is set, and DON'T automatically run the tracking function

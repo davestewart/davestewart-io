@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <!-- BEGIN html --><html lang="en-US">
-<!-- A ThemeZilla design (http://www.themezilla.com) - Proudly powered by WordPress (http://wordpress.org) -->
 
 <!-- BEGIN head -->
 <head>
@@ -62,7 +61,7 @@
 
     			<!-- BEGIN #logo -->
     			<div id="logo">
-    				<a href="/">Dave Stewart</a> <span>|</span> <a href="http://davestewart.co.uk/" title="Go to davestewart.co.uk">io</a>
+    				<a href="/">Dave Stewart</a> <span>|</span> <a href="https://davestewart.co.uk/" title="Go to davestewart.co.uk">io</a>
     				<p id="tagline">Research » Tooling » Open Sorcery</p>
     			<!-- END #logo -->
     			</div>
@@ -154,17 +153,17 @@
 </ul>
 <p>Here&#039;s the thing though, because we did&#039;t want the hassle of setting up ALL our controllers with methods just to load views, our <strong>about</strong> controller doesn&#039;t have a <strong>company</strong> method! So what is Kohana to do?</p>
 <p><strong>Let&#039;s load the Fallback Controller!</strong><br>
-Well, normally, a 404 page would be served, but using the magic of <a href="http://docs.kohanaphp.com/general/hooks">hooks</a>, we&#039;re going to give Kohana one last chance to do something before serving that horrid 404 page.</p>
+Well, normally, a 404 page would be served, but using the magic of <a href="https://docs.kohanaphp.com/general/hooks">hooks</a>, we&#039;re going to give Kohana one last chance to do something before serving that horrid 404 page.</p>
 <p>So:</p>
 <ul>
-<li>The <a href="http://docs.kohanaphp.com/general/events#system.post_routing">system.post_routing</a> hook kicks in, and due to the way we&#039;ve set up the hook file</li>
+<li>The <a href="https://docs.kohanaphp.com/general/events#system.post_routing">system.post_routing</a> hook kicks in, and due to the way we&#039;ve set up the hook file</li>
 <li>It loads our <strong>Fallback controller</strong>, which is designed to do something useful with the route before bombing out.</li>
 </ul>
 <p><strong>Let&#039;s have the Fallback Controller do it&#039;s stuff and find the view!</strong><br>
 In this case, we want it to attempt to find a view, so:</p>
 <ul>
 <li>The Fallback controller builds a path from the arguments <strong>/about</strong> that will (hopefully) map to a view, in this case <strong>views/main/about.php</strong>, then</li>
-<li>Attempts to find this view using <a href="http://docs.kohanaphp.com/core/kohana#finding_files">Kohana::find_file</a>, and
+<li>Attempts to find this view using <a href="https://docs.kohanaphp.com/core/kohana#finding_files">Kohana::find_file</a>, and
 <ul>
 <li>if found &#8211; <strong>loads the view!</strong>
 </li>
@@ -331,8 +330,8 @@ function call_fallback_page()
 <div class="footer-col-1">
 
     <div id="ds_links-2" class="widget ds_links">
-<h3 class="widget-title">Commercial Portfolio</h3>
-<ul><li><a href="http://davestewart.co.uk/">davestewart.co.uk</a></li></ul>
+<h3 class="widget-title">Current site</h3>
+<ul><li><a href="https://davestewart.co.uk/">davestewart.co.uk</a></li></ul>
 </div>
 <!-- END .footer-col-1 -->
 </div>
@@ -370,7 +369,7 @@ function call_fallback_page()
 
 		    <div class="footer-lower">
 		        <div class="footer-inner">
-		            <p class="copyright">&copy; Copyright 2022. Powered by <a href="http://wordpress.org/">WordPress</a></p>
+		            <p class="copyright">&copy; Copyright 2015 </p>
 
 		        </div>
 		    </div>

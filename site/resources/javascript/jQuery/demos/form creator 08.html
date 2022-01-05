@@ -1,16 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+"http://w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Form Builder</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	
+
 	<script type="text/javascript" src="/lib/js/jquery/jquery-1.2.1.pack.js"></script>
 
 	<script type="text/javascript" src="/lib/js/jquery/jquery.validate.pack.js"></script>
 	<script type="text/javascript" src="/lib/js/jquery/jquery.delegate.js"></script>
 	<script type="text/javascript" src="/lib/js/jquery/jquery.metadata.pack.js"></script>
-	
+
 	<script type="text/javascript" src="/lib/js/jquery/jquery.interface.js"></script>
 	<script type="text/javascript" src="/lib/js/jquery/jquery.$$.js"></script>
 
@@ -19,43 +19,43 @@
 	<script type="text/javascript">
 
 		$(document).ready(function() {
-		
+
 
 			var required = $$('#validation[required]')
-		
+
 			required.bind(
 				'click',
 				function(){
 					var state	= this.checked
 					var check	= $$('#validation[class]')
 					var label	= check.parents('label')
-					
+
 					check.attr('disabled', state ? '' : 'disabled')
 					label.toggleClass('disabled')
 					}
 				)
-		
+
 			$.metadata.setType("attr", "validation");
 			$("#create").validate()
-			
+
 			if($('#html').EnableTabs){
 				$('#html').EnableTabs()
 				}
-			
+
 			initTabs()
-			
+
 			updateAll()
 
 		});
-	
+
 	</script>
 
 
-	
+
 	<script type="text/javascript">
-	
+
 		function initTabs(){
-		
+
 			var tabs	= $('#tab-list-main a, #tab-list-preview a')
 			tabs.bind
 				(
@@ -64,7 +64,7 @@
 					showTab(e)
 					}
 				)
-				
+
 			var tabs	= $('#tab-list-main a:first, #tab-list-preview a:first')
 			tabs.each(
 				function(e, i){
@@ -82,12 +82,12 @@
 				function(e, i){showTab(e, false)}
 				)
 			*/
-	
+
 			}
-	
+
 		function showTab(element, preview){
-		
-			// get element		
+
+			// get element
 				if(element.target){
 					element = element.target
 					}
@@ -95,17 +95,17 @@
 			// variables
 				var tabGroup		= $(element).parents('ul')
 				var tab				= $(element).parents('li')
-				
+
 				var sectionGroup	= $(tabGroup.attr('section'))
 				var sectionName		= tab.attr('section')
 				var section			= $(sectionName, sectionGroup)
-				
+
 			// preview
 				/*
 				if(preview != undefined){
 					var id = sectionName+ ' h3'
 					var previewHeader	= $(id)
-					
+
 					if(preview == true){
 						$('#section-main-design h3').text(previewHeader.text())
 						return
@@ -119,22 +119,22 @@
 			// update tabs
 				$('li', tabGroup).removeClass('active').addClass('inactive')
 				tab.removeClass('inactive').addClass('active')
-				
+
 			// update sections
  				$('.section', sectionGroup).hide()
 				section.show()
-				
+
 			}
-			
+
 	</script>
-	
+
 	<style type="text/css" media="screen">
-	
+
 		@import "css/main.css";
 		@import "css/form.css";
 		@import "css/form-ie.css";
 		@import "css/tabs.css";
-		
+
 	</style>
 	<!--[if lte IE 7]>
 	<style type="text/css" media="all">
@@ -144,14 +144,14 @@
 </head>
 <body>
 	<div id="page">
-	
+
 		<div id="header">
 			<h1>Form Builder</h1>
 			<h2>Easily build the base HTML for accessible, validated form elements</h2>
 		</div>
-		
+
 		<hr />
-		
+
 		<ul id="tab-list-main" class="tab-list" section="#section-main">
 			<li class="active"   section="#section-main-design"><a href="javascript:;">Design</a></li>
 			<li class="inactive" section="#section-main-names"><a class="" href="javascript:;">Data</a></li>
@@ -160,9 +160,9 @@
 			<li class="inactive" section="#section-main-markup"><a class="" href="javascript:;">Markup</a></li>
 			<li class="inactive" section="#section-main-data"><a class="" href="javascript:;">Options</a></li>
 		</ul>
-		
+
 		<div class="content" id="section-main">
-			
+
 			<form action="html/results.php" method="post" id="create" name="parameters">
 
 
@@ -179,7 +179,7 @@ Last Name
 E-mail Address</textarea>
 								<label for="content[labels]" class="error">This must contain some text</label>
 							</li>
-	
+
 							<li>
 								<label for="content[values]">Values<br />
 								<span class="info">Leave blank to use labels</span></label>
@@ -187,7 +187,7 @@ E-mail Address</textarea>
 							</li>
 						</ul>
 					</fieldset>
-					
+
 				<fieldset>
 						<legend>Control Options</legend>
 						<ul>
@@ -208,26 +208,26 @@ E-mail Address</textarea>
 									</optgroup>
 								</select>
 							</li>
-							
+
 							<li id="control[label]-list">
 								<label for="control[label]"><span class="required">Group label</span></label>
 								<input name="control[label]" id="control[label]" type="text" class="text" onchange="updateAll()" onkeyup="updateAll()" value="Contact"/>
 							</li>
-	
+
 							<li id="control[options][select]-list">
 								<label for="control-options">Control options</label>
 								<fieldset>
 									<label><input name="control[options][select]" id="control[options][select]" type="checkbox" value="1" onclick="updateAll()" /> Add "Select..." </label>
 								</fieldset>
 							</li>
-							
+
 							<li id="control[options][multiple]-list">
 								<label for="control-options">Control options</label>
 								<fieldset>
 									<label><input name="control[options][multiple]" id="control[options][multiple]" type="checkbox" value="1" onclick="updateAll()" /> Allow Multiple selections </label>
 								</fieldset>
 							</li>
-							
+
 							<li id="control[options][length]-list">
 								<label for="max-length">Max length</label>
 								<input type="text" name="control[options][length]" id="control[options][length]" maxlength="4" class="text" value=""  onchange="updateAll()" onkeyup="updateAll()" />
@@ -241,12 +241,12 @@ E-mail Address</textarea>
 					</fieldset>
 
 				</div>
-				
-				
+
+
 
 				<div id="section-main-names" class="section">
 					<h3>Define the server-side data structure by specifying the formatting of &quot;name&quot; attributes</h3>
-				
+
 
 					<fieldset>
 						<legend>Prefix</legend>
@@ -257,7 +257,7 @@ E-mail Address</textarea>
 							</li>
 						</ul>
 					</fieldset>
-					
+
 
 				<fieldset>
 						<legend>Auto-formatting</legend>
@@ -294,16 +294,16 @@ E-mail Address</textarea>
 							</li>
 						</ul>
 					</fieldset>
-					
+
 				<fieldset>
 						<legend>Options</legend>
 						<ul>
 							<li id="data[type]-list">
 								<label for="data[type]">Datatype for compound values (checkboxes)</label>
 								<fieldset>
-									<label><input name="data[type]" type="radio" value="numeric" onclick="updateAll(); updateName()" checked="checked" /> 
+									<label><input name="data[type]" type="radio" value="numeric" onclick="updateAll(); updateName()" checked="checked" />
 									Numeric Array: <em>group_label[]</em></label>
-									<label><input name="data[type]" type="radio" value="associative" onclick="updateAll(); updateName()" /> 
+									<label><input name="data[type]" type="radio" value="associative" onclick="updateAll(); updateName()" />
 									Associative Array: <em>group_label[element_name]</em> </label>
 									<label><input name="data[type]" type="radio" value="value" onclick="updateAll(); updateName()" /> Individual Values: <em>element_name</em> </label>
 								</fieldset>
@@ -313,7 +313,7 @@ E-mail Address</textarea>
 
 
 				</div>
-				
+
 
 				<div id="section-main-ids" class="section">
 					<h3>Automatically format &quot;id&quot; attrbutes for client-side document traversal</h3>
@@ -355,15 +355,15 @@ E-mail Address</textarea>
 
 
 				</div>
-				
+
 				<div id="section-main-validation" class="section">
-				
+
 					<h3>Turn validation on or off, and define basic validation options</h3>
 
 					<fieldset>
 						<legend>What is this?</legend>
-						<p style="padding:0px 20px">This web app uses the <em> <a href="http://jquery.com/">jQuery</a> </em>Validation plugin</em>, which makes form validation as easy as adding attributes to a form control, and clicking Submit.</p>
-						<p style="padding:0px 20px">Read the full documentation and download the plugin <a href="http://docs.jquery.com/Plugins/Validation">here</a>.</p>
+						<p style="padding:0px 20px">This web app uses the <em> <a href="https://jquery.com/">jQuery</a> </em>Validation plugin</em>, which makes form validation as easy as adding attributes to a form control, and clicking Submit.</p>
+						<p style="padding:0px 20px">Read the full documentation and download the plugin <a href="https://docs.jquery.com/Plugins/Validation">here</a>.</p>
 					</fieldset>
 
 				<fieldset>
@@ -391,9 +391,9 @@ E-mail Address</textarea>
 							</li>
 						</ul>
 					</fieldset>
-					
+
 				</div>
-				
+
 				<div id="section-main-markup" class="section">
 					<h3>Customize various aspects of the final HTML</h3>
 					<fieldset>
@@ -407,7 +407,7 @@ E-mail Address</textarea>
 									<option value="">Don't wrap elements</option>
 								</select>
 							</li>
-							
+
 							<li>
 								<label for="markup[html][indent]">Auto-indent when selecting</label>
 								<select name="markup[html][indent]" id="markup[html][indent]" class="select" onchange="updateAll()" onkeyup="updateAll()">
@@ -443,8 +443,8 @@ E-mail Address</textarea>
 					</fieldset>
 
 				</div>
-				
-				
+
+
 				<div id="section-main-data" class="section">
 					<h3>Control how initial values will be parsed to create individual controls and attributes</h3>
 					<fieldset>
@@ -459,7 +459,7 @@ E-mail Address</textarea>
 									<label><input name="data[split]" type="checkbox" class="checkbox" id="data[split]" value="\s" onclick="updateAll()" /> Whitespace</label>
 								</fieldset>
 							</li>
-							
+
 							<li>
 								<label for="data[options]">Options</label>
 								<fieldset id="data[options]">
@@ -473,8 +473,8 @@ E-mail Address</textarea>
 								<input type="text" name="data[optgroup]" id="data[optgroup]" class="text" maxlength="1" value="#" onchange="updateAll()" onclick="updateAll()" />
 							</li>
 						</ul>
-					</fieldset>		
-					
+					</fieldset>
+
 				<fieldset>
 						<legend>ID / Name Options</legend>
 						<ul>
@@ -489,7 +489,7 @@ E-mail Address</textarea>
 							</li>
 						</ul>
 					</fieldset>
-					
+
 				<fieldset>
 						<legend>This Form's Values</legend>
 						<ul>
@@ -501,12 +501,12 @@ E-mail Address</textarea>
 
 
 				</div>
-				
-				
-				
-				
+
+
+
+
 			</form>
-			
+
 			<hr />
 		</div>
 
@@ -542,15 +542,15 @@ E-mail Address</textarea>
 					</ul>
 				</fieldset>
 			</form>
-			
-			
-			
+
+
+
 			<hr />
 		</div>
 	</div>
-	
+
 	<div style="height:500px;"></div>
-	
+
 
 </body>
 

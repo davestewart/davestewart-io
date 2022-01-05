@@ -1,27 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+"http://w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Populate Demo</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	
+
 	<script type="text/javascript" src="/lib/js/jquery/jquery-1.2.1.pack.js"></script>
 	<script type="text/javascript" src="/lib/js/jquery/jquery.populate.js"></script>
 
 	<script type="text/javascript" src="js/tabs.js"></script>
 
 	<script type="text/javascript">
-	
+
 		$(document).ready(
 			function(){
 				initTabs()
 				}
 			);
-			
+
 		function populateForm(type){
 			var form		= document.forms['form_' + type];
 			var formJSON	= document.forms['json_' + type];
-			
+
 			var text		= formJSON['json'].value;
 			text			= text.replace(/(^\s+|\s+$)/, '');
 			text			= "(" + text + ");";
@@ -31,28 +31,28 @@
 				alert('That appears to be invalid JSON!')
 				return false;
 				}
-			
+
 			$(form).populate(json, {debug:1})
 			}
-			
+
 		function resetForms(type){
 			document.forms['form-' + type].reset()
 			document.forms['json-' + type].reset()
 			}
-			
+
 		function viewVariables(form){
 			}
-			
+
 		function viewJSON(form){
 			}
 	</script>
-	
+
 	<style type="text/css" media="screen">
 		@import "css/main.css";
 		@import "css/form.css";
 		@import "css/form-ie.css";
 		@import "css/tabs.css";
-		
+
 		body{
 			overflow:visible;
 			}
@@ -63,15 +63,15 @@
 	</style>
 	<![endif]-->
 	<style type="text/css" media="screen">
-	
+
 		/* code */
-		
+
 			thead td{
 				border-bottom: 1px solid #ccc !important;
 				font-weight:bold;
 				}
-		
-			code, 
+
+			code,
 			pre{
 				margin:10px 15px;
 				font-family:"Courier New", Courier, monospace;
@@ -80,7 +80,7 @@
 				padding:5px;
 				white-space:pre;
 				}
-		
+
 			.code{
 				font-family:"Courier New", Courier, monospace;
 				font-size:11px;
@@ -88,17 +88,17 @@
 				padding:2px;
 				white-space:pre;
 				}
-		
-				
+
+
 			.red {
 				color:#f00;
 				font-style:italic;
 				}
-				
+
 			.no-border{
 				border:none !important;
 				}
-				
+
 			.plain{
 				border:none !important;
 				list-style:none !important;
@@ -108,12 +108,12 @@
 </head>
 <body>
 	<div id="page">
-	
+
 		<div id="header">
 			<h1>jQuery &quot;Populate&quot;  Demo</h1>
 			<h2>jQuery plugin to populate an HTML form with values, on the client, rather than server-side</h2>
 		</div>
-		
+
 		<hr />
 		<ul id="tab-list-main" class="tab-list" section="#section-main">
 			<li class="active"   section="#intro"><a class="" href="javascript:;">Introduction</a></li>
@@ -123,9 +123,9 @@
 			<li class="inactive" section="#text-demo"><a class="" href="javascript:;">Text</a></li>
 			<li class="inactive" section="#download"><a class="" href="javascript:;">Download</a></li>
 		</ul>
-		
+
 		<div class="content" id="section-main">
-			
+
 			<div id="intro" class="section">
 				<h3>An introduction to Populate</h3>
 				<h4>Overview</h4>
@@ -156,7 +156,7 @@
 				<pre>$(<span class="red">'#form'</span>).populate(<span class="red"></span><span class="red">{first_name:'Dave',last_name:'Stewart'}</span>)</pre>
 				<p>This would fill in the form fields named <span class="red">first_name</span> and <span class="red">last_name</span> with <span class="red">Dave</span> and <span class="red">Stewart</span> respectively.</p>
 				<h4>So what is JSON, and how do I get my data into JSON format in the first place?</h4>
-				<p><a href="http://www.json.org/">JSON</a> stands for JavaScript Object Notation, and it is a <a href="http://secretgeek.net/json_3mins.asp">very logical, consise and flexible format</a> for describing data (think XML, only lighter).</p>
+				<p><a href="https://json.org/">JSON</a> stands for JavaScript Object Notation, and it is a <a href="https://secretgeek.net/json_3mins.asp">very logical, consise and flexible format</a> for describing data (think XML, only lighter).</p>
 				<p>It can handle the following datatypes:</p>
 				<ul>
 					<li>Numbers</li>
@@ -240,7 +240,7 @@
 							<td>Selects multiple items</td>
 							<td>Array of string values</td>
 						</tr>
-						
+
 						<tr>
 							<td>Button, Submit</td>
 							<td>Updates the button's text</td>
@@ -305,8 +305,8 @@
 					<li>Reduce the drudgery of parsing large forms by compartmentalizing your data in sub-arrays</li>
 				</ul>
 				<p>&nbsp;</p>
-				
-				
+
+
 				<h4>Populate options </h4>
 				<p>As with most jQuery plugins,  Populate has some options you can set as part of the function call, for example:</p>
 				<pre>$(#'form').populate(json, <span class="red">{resetForm:false, debug:true}</span>)</pre>
@@ -349,8 +349,8 @@
 				</table>
 				<p>&nbsp;</p>
 			</div>
-			
-			
+
+
 			<div id="simple-demo" class="section">
 
 				<h3>Populating a form with simple datatypes</h3>
@@ -399,7 +399,7 @@
 					</ul>
 					</fieldset>
 				</form>
-				
+
 
 				<h4>JSON</h4>
 				<form name="json_simple" id="json-simple" action="">
@@ -416,10 +416,10 @@
 					</div>
 
 				</form>
-					
+
 			</div>
-				
-				
+
+
 
 				<div id="complex-demo" class="section">
 				<h3>Populating a form with complex datatypes</h3>
@@ -441,7 +441,7 @@
 								<label for="name">Name</label>
 								<input name="name" id="name" type="text" class="text" maxlength="" value=""  />
 						</li>
-							
+
 						<li>
 							<label for="direction">Country</label>
 							<select name="country[]" id="country" class="select-multiple" multiple="multiple" >
@@ -460,8 +460,8 @@
 							<label><input name="contact[]" id="" type="checkbox" class="checkbox" value="post" /> Post</label>
 							</fieldset>
 						</li>
-						
-							
+
+
 							<li>
 								<input type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)" />
 						</li>
@@ -473,7 +473,7 @@
 					</ul>
 					</fieldset>
 				</form>
-				
+
 
 				<h4>JSON</h4>
 				<form name="json_complex" id="json-complex">
@@ -489,19 +489,19 @@
 					</div>
 
 				</form>
-				
+
 			</div>
-					
-					
+
+
 			<div id="hierarchical-demo" class="section">
 				<h3>Populating a hierarchically-named form with hierarchical JSON data</h3>
-					
+
 				<h4>Code example</h4>
 				<p>When forms get large, it's often preferable to break them up into smaller sections. It makes it easier for the user, and if you name your form elements using PHP naming conventions, it makes it easy for the developer as well!</p>
 				<p>For the JSON, you just enlose your data objects within other named objects:</p>
 				<pre>$('#form-hierarchical').populate({
 	<span class="red">personal:{</span>
-		first_name:'Dave', 
+		first_name:'Dave',
 		last_name:'Stewart',
 		country:'england'
 		<span class="red">}</span>,
@@ -521,12 +521,12 @@
 								<label for="first-name">First Name</label>
 								<input name="personal[first_name]" id="personal-first-name" type="text" class="text" maxlength="" value=""  />
 							</li>
-							
+
 							<li>
 								<label for="last-name">Last Name</label>
 								<input name="personal[last_name]" id="personal-last-name" type="text" class="text" maxlength="" value=""  />
 							</li>
-							
+
 							<li>
 								<label for="personal[country]">Country</label>
 								<select name="personal[country]" id="personal-country" class="select-multiple" >
@@ -541,11 +541,11 @@
 
 						</ul>
 					</fieldset>
-					
+
 					<fieldset>
 						<legend>Contact</legend>
 						<ul class="controls">
-						
+
 							<li>
 								<label for="email">Email</label>
 								<input name="contact[email]" id="email" type="text" class="text" maxlength="" value=""  />
@@ -566,8 +566,8 @@
 
 						</ul>
 					</fieldset>
-					
-					
+
+
 					<fieldset class="plain">
 						<ul class="controls">
 							<li>
@@ -580,14 +580,14 @@
 						</ul>
 					</fieldset>
 				</form>
-				
+
 
 				<h4>JSON</h4>
 				<form name="json_hierarchal" id="json-hierarchal">
 					<div style="padding:10px 20px 10px 10px;">
 						<textarea name="json" rows="10" wrap="virtual" class="textarea code" style="width:100% !important" />{
 personal:{
-	first_name:'Dave', 
+	first_name:'Dave',
 	last_name:'Stewart',
 	country:'england'
 	},
@@ -604,26 +604,26 @@ contact:{
 					</div>
 
 				</form>
-				
-				
+
+
 			</div>
-			
-			
+
+
 			<div id="text-demo" class="section">
 				<h3>Populating non-form elements within a form</h3>
-					
+
 				<h4>Code example</h4>
 				<p>Sometimes as part of your form population, you'll want to update areas of text. Populate makes it easy to target the whole form, not just control elements, and update where necessary by changing that element's HTML.</p>
 				<p class="red">This functionality is currently buggy, and is undergoing review!</p>
 				<p></p>
 
 <!--				<pre>$('#form-simple').populate({
-	'first_name':'Fred', 
-	'last_name':'Bloggs', 
+	'first_name':'Fred',
+	'last_name':'Bloggs',
 	'e_mail_address':'fred@fred-bloggs.com'
 })</pre>
 				<p>.</p>
-				
+
 				<h4>Form controls</h4>
 				<form name="form_text" id="form-text" action="html/results.php" method="post" target="_blank">
 					<fieldset class="no-border">
@@ -644,7 +644,7 @@ contact:{
 						</ul>
 					</fieldset>
 				</form>
-				
+
 
 				<h4>JSON</h4>
 				<p>Edit the JSON here, then click Populate to populate the form above</p>
@@ -664,38 +664,38 @@ instructions:'Please include the dialing code.'
 -->
 
 			</div>
-				
-				
+
+
 			<div id="download" class="section">
 					<h3>Download Highlight here</h3>
 					<h4>Download</h4>
 					<p>JavaScript</p>
 					<ul>
-						<li><a href="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/jquery.populate.js" title="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/populate.js">Populate (no compression) 5.7k</a></li>
-						<li><a href="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/jquery.populate.pack.js" title="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/populate.pack.js">Populate (packer compression) 1.9k</a></li>
+						<li><a href="https://keyframesandcode.com/resources/javascript/jQuery/populate/jquery.populate.js" title="http://keyframesandcode.com/resources/javascript/jQuery/populate/populate.js">Populate (no compression) 5.7k</a></li>
+						<li><a href="https://keyframesandcode.com/resources/javascript/jQuery/populate/jquery.populate.pack.js" title="http://keyframesandcode.com/resources/javascript/jQuery/populate/populate.pack.js">Populate (packer compression) 1.9k</a></li>
 					</ul>
 					<p>PHP</p>
 					<ul>
-						<li><a href="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/populate.func.zip">PHP jQuery helper functions</a></li>
-						<li><a href="http://mike.teczno.com/JSON/">PHP 4 JSON class</a></li>
+						<li><a href="https://keyframesandcode.com/resources/javascript/jQuery/populate/populate.func.zip">PHP jQuery helper functions</a></li>
+						<li><a href="https://mike.teczno.com/JSON/">PHP 4 JSON class</a></li>
 					</ul>
 					<p>Demo files</p>
 			<ul>
-						<li><a href="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/populate-demos.zip">Standalone demos</a></li></ul>
+						<li><a href="https://keyframesandcode.com/resources/javascript/jQuery/populate/populate-demos.zip">Standalone demos</a></li></ul>
 				<h4>Feedback</h4>
-				<p>If you have any comments, or wish to report any bugs or unexpected behaviour, please do so using the commenting system on the <a href="http://www.keyframesandcode.com/code/development/javascript/jquery-populate-plugin/">project's blog page</a>.</p>
+				<p>If you have any comments, or wish to report any bugs or unexpected behaviour, please do so using the commenting system on the <a href="https://keyframesandcode.com/code/development/javascript/jquery-populate-plugin/">project's blog page</a>.</p>
 				<p>I can't promise to answer questions on usage (that's what this help is for!), but I'll do my best to fix bugs.</p>
 				<p>Cheers,</p>
 				<p>Dave</p>
 				<p>&nbsp;</p>
 			</div>
-			
+
 			<hr />
 		</div>
 
 </div>
 	<div style="height:500px;"></div>
-	<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript" src="https://google-analytics.com/ga.js"></script>
 	<script type="text/javascript">
 		var pageTracker = _gat._getTracker("UA-603607-3");
 		pageTracker._initData();

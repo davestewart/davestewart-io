@@ -1,23 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://w3.org/1999/xhtml">
 <head>
 	<title>jQuery Deconstructed</title>
-	
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="description" content="jQuery Deconstructed is designed to visually and interactively deconstruct the internal code of the jQuery library. It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow." />
-	
+
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />.
-	<link rel="image_src" href="http://www.keyframesandcode.com/resources/javascript/deconstructed/assets/img/extra/facebook-thumbnail.png" />
+	<link rel="image_src" href="https://keyframesandcode.com/resources/javascript/deconstructed/assets/img/extra/facebook-thumbnail.png" />
 
 	<link href="../assets/css/prettify.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/css/formatting.css" rel="stylesheet" type="text/css" />
-	
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="../assets/js/utils/base64.pack.js"></script>
 	<script type="text/javascript" src="../assets/js/utils/prettify.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/jquery/jquery.cookie.js"></script>
 	<script type="text/javascript" src="../assets/js/core.js"></script>
-	
+
 	<script type="text/javascript">
 		writeColorsStylesheet('../')
 	</script>
@@ -44,7 +44,7 @@
 					<p class="large hightlight">The Deconstructed series is designed to visually and interactively deconstruct the internal code of JavaScript libraries, including <a href="../jquery/">jQuery</a>, <a href="../prototype/">Prototype</a> and <a href="../mootools/">MooTools</a>.</p>
 					<p class="large">It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow. </p>
 					<p class="large"><em>Instructions: click  <span class="highlight" title="Function, Property and Code blocks">element</span> headers to view specific code. Click <span class="highlight" title="Section, Class, Extend and Object blocks">group</span> headers to preview all nested descriptions. <span class="highlight" title="For example, CTRL+Clicking the main Code container will open ALL blocks in the entire page">CTRL+click</span> group headers to view all nested code. Click <span class="highlight" title="Those with a link indicator or icon">function</span> names to view official API docs.</em></p>
-					<p id="links"><a href="http://www.keyframesandcode.com/code/development/javascript/jquery/jquery-deconstructed/">comment</a> | <a href="javascript:m();void(0)">email</a> | <a href="http://twitter.com/dave_stewart/">follow</a></p>
+					<p id="links"><a href="https://keyframesandcode.com/code/development/javascript/jquery/jquery-deconstructed/">comment</a> | <a href="javascript:m();void(0)">email</a> | <a href="https://twitter.com/dave_stewart/">follow</a></p>
 				</div>
 			</td>
 			<td id="key" class="text" style="width:40%">
@@ -189,10 +189,10 @@
 
 	// For matching the engine and version of the browser
 	browserMatch,
-	
+
 	// Has the ready events already been bound?
 	readyBound = false,
-	
+
 	// The functions to execute on DOM ready
 	readyList = [],
 
@@ -208,7 +208,7 @@
 				</div>
 				<div class="block object"> <a name="jQuery-prototype" id="jQuery-prototype"></a>
 					<div class="head">
-						<p class="title"><span class="type">Object : </span><a href="http://api.jquery.com/jQuery/">jQuery prototype</a></p>
+						<p class="title"><span class="type">Object : </span><a href="https://api.jquery.com/jQuery/">jQuery prototype</a></p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -216,7 +216,7 @@ jQuery.fn = jQuery.prototype = {
 	</pre>
 					<div class="block function"> <a name="jQuery" id="jQuery"></a><a name="init" id="jQuery2"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery/">init (jQuery)</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery/">init (jQuery)</a></p>
 							<p class="desc">Main jQuery function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -235,7 +235,7 @@ jQuery.fn = jQuery.prototype = {
 			this.length = 1;
 			return this;
 		}
-		
+
 		// The body element only exists once, optimize finding it
 		if ( selector === &quot;body&quot; &amp;&amp; !context ) {
 			this.context = document;
@@ -274,9 +274,9 @@ jQuery.fn = jQuery.prototype = {
 						ret = buildFragment( [ match[1] ], [ doc ] );
 						selector = (ret.cacheable ? ret.fragment.cloneNode(true) : ret.fragment).childNodes;
 					}
-					
+
 					return jQuery.merge( this, selector );
-					
+
 				// HANDLE: $(&quot;#id&quot;)
 				} else {
 					elem = document.getElementById( match[2] );
@@ -347,7 +347,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="size"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/size/">size</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/size/">size</a></p>
 							<p class="desc">Return the number of DOM elements matched by the jQuery object</p>
 						</div>
 						<pre class="body prettyprint">
@@ -360,7 +360,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="toArray"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/toArray/">toArray</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/toArray/">toArray</a></p>
 							<p class="desc">Retrieve all the DOM elements contained in the jQuery set, as an array</p>
 						</div>
 						<pre class="body prettyprint">
@@ -372,7 +372,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="get"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/get/">get</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/get/">get</a></p>
 							<p class="desc">Retrieve the DOM elements matched by the jQuery object</p>
 						</div>
 						<pre class="body prettyprint">
@@ -392,7 +392,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="pushStack"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.pushStack">pushStack</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.pushStack">pushStack</a></p>
 							<p class="desc">Add a collection of DOM elements onto the jQuery stack</p>
 						</div>
 						<pre class="body prettyprint">
@@ -405,7 +405,7 @@ jQuery.fn = jQuery.prototype = {
 
 		if ( jQuery.isArray( elems ) ) {
 			push.apply( ret, elems );
-		
+
 		} else {
 			jQuery.merge( ret, elems );
 		}
@@ -428,7 +428,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="each2" id="each2"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/each/">each</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/each/">each</a></p>
 							<p class="desc">Iterate over a jQuery object, executing a function for each matched   element</p>
 						</div>
 						<pre class="body prettyprint">
@@ -443,7 +443,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="ready"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/ready/">ready</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/ready/">ready</a></p>
 							<p class="desc">Specify a function to execute when the DOM is fully loaded</p>
 						</div>
 						<pre class="body prettyprint">
@@ -469,7 +469,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="eq"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/eq/">eq</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/eq/">eq</a></p>
 							<p class="desc">Reduce the set of matched elements to the one at the specified index</p>
 						</div>
 						<pre class="body prettyprint">
@@ -483,7 +483,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="first"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/first/">first</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/first/">first</a></p>
 							<p class="desc">Reduce the set of matched elements to the first in the set</p>
 						</div>
 						<pre class="body prettyprint">
@@ -495,7 +495,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="last"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/last/">last</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/last/">last</a></p>
 							<p class="desc">Reduce the set of matched elements to the final one in the set</p>
 						</div>
 						<pre class="body prettyprint">
@@ -507,7 +507,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="slice"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/slice/">slice</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/slice/">slice</a></p>
 							<p class="desc">Reduce the set of matched elements to a subset specified by a range of   indices</p>
 						</div>
 						<pre class="body prettyprint">
@@ -520,7 +520,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="map"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/map/">map</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/map/">map</a></p>
 							<p class="desc">Pass each element in the current matched set through a function,   producing a new jQuery object containing the return values</p>
 						</div>
 						<pre class="body prettyprint">
@@ -534,7 +534,7 @@ jQuery.fn = jQuery.prototype = {
 					</div>
 					<div class="block function"> <a name="end"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/end/">end</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/end/">end</a></p>
 							<p class="desc">End the most recent filtering operation in the current chain and return   the set of matched elements to its previous state</p>
 						</div>
 						<pre class="body prettyprint">
@@ -572,24 +572,24 @@ jQuery.fn.init.prototype = jQuery.fn;	</pre>
 			</div>
 			<div class="block section"> <a name="section-utilities" id="section-utilities"></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://api.jquery.com/category/utilities/">Utilities</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://api.jquery.com/category/utilities/">Utilities</a></p>
 				</div>
 				<div class="block function"> <a name="extend" id="extend"></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.extend/">extend</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.extend/">extend</a></p>
 						<p class="desc">Merge the contents of two or more objects together into the first object</p>
 					</div>
 					<pre class="body prettyprint">
 
 jQuery.extend = jQuery.fn.extend = function() {
 	// copy reference to target object
-	var target = arguments[0] || {}, 
-	i = 1, 
-	length = arguments.length, 
-	deep = false, 
-	options, 
-	name, 
-	src, 
+	var target = arguments[0] || {},
+	i = 1,
+	length = arguments.length,
+	deep = false,
+	options,
+	name,
+	src,
 	copy;
 
 	// Handle a deep copy situation
@@ -647,7 +647,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 				</div>
 				<div class="block extend"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Extend : </span><strong>Add </strong><a href="http://api.jquery.com/category/utilities/">utility</a> methods</p>
+						<p class="title"><span class="type">Extend : </span><strong>Add </strong><a href="https://api.jquery.com/category/utilities/">utility</a> methods</p>
 					</div>
 					<pre class="body">
 
@@ -655,7 +655,7 @@ jQuery.extend({
 </pre>
 					<div class="block function"> <a name="noConflict" id="noConflict"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.noConflict/">noConflict</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.noConflict/">noConflict</a></p>
 							<p class="desc">Relinquish jQuery's control of the $ variable</p>
 						</div>
 						<pre class="body prettyprint">
@@ -682,7 +682,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="ready"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/ready/">ready</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/ready/">ready</a></p>
 							<p class="desc">Specify a function to execute when the DOM is fully loaded</p>
 						</div>
 						<pre class="body prettyprint">
@@ -721,7 +721,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="bindReady"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/bindReady/">bindReady</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/bindReady/">bindReady</a></p>
 							<p class="desc">Description</p>
 						</div>
 						<pre class="body prettyprint">
@@ -743,7 +743,7 @@ jQuery.extend({
 		if ( document.addEventListener ) {
 			// Use the handy event callback
 			document.addEventListener( &quot;DOMContentLoaded&quot;, DOMContentLoaded, false );
-			
+
 			// A fallback to window.onload, that will always work
 			window.addEventListener( &quot;load&quot;, jQuery.ready, false );
 
@@ -752,7 +752,7 @@ jQuery.extend({
 			// ensure firing before onload,
 			// maybe late but safe also for iframes
 			document.attachEvent(&quot;onreadystatechange&quot;, DOMContentLoaded);
-			
+
 			// A fallback to window.onload, that will always work
 			window.attachEvent( &quot;onload&quot;, jQuery.ready );
 
@@ -773,7 +773,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="isFunction"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.isFunction/">isFunction</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.isFunction/">isFunction</a></p>
 							<p class="desc">Determine if the argument passed is a Javascript function object</p>
 						</div>
 						<pre class="body prettyprint">
@@ -788,7 +788,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="isArray"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.isArray/">isArray</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.isArray/">isArray</a></p>
 							<p class="desc">Determine whether the argument is an array</p>
 						</div>
 						<pre class="body prettyprint">
@@ -800,7 +800,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="isPlainObject"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.isPlainObject/">isPlainObject</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.isPlainObject/">isPlainObject</a></p>
 							<p class="desc">Check to see if an object is a plain object (created using &quot;{}&quot; or &quot;new   Object&quot;)</p>
 						</div>
 						<pre class="body prettyprint">
@@ -812,27 +812,27 @@ jQuery.extend({
 		if ( !obj || toString.call(obj) !== &quot;[object Object]&quot; || obj.nodeType || obj.setInterval ) {
 			return false;
 		}
-		
+
 		// Not own constructor property must be Object
 		if ( obj.constructor
 			&amp;&amp; !hasOwnProperty.call(obj, &quot;constructor&quot;)
 			&amp;&amp; !hasOwnProperty.call(obj.constructor.prototype, &quot;isPrototypeOf&quot;) ) {
 			return false;
 		}
-		
+
 		// Own properties are enumerated firstly, so to speed up,
 		// if last one is own, then all properties are own.
-	
+
 		var key;
 		for ( key in obj ) {}
-		
+
 		return key === undefined || hasOwnProperty.call( obj, key );
 	},
 		</pre>
 					</div>
 					<div class="block function"> <a name="isEmptyObject"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.isEmptyObject/">isEmptyObject</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.isEmptyObject/">isEmptyObject</a></p>
 							<p class="desc">Check to see if an object is empty (contains no properties)</p>
 						</div>
 						<pre class="body prettyprint">
@@ -847,7 +847,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="error"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/error/">error</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/error/">error</a></p>
 							<p class="desc">Takes a string and throws an exception containing it</p>
 						</div>
 						<pre class="body prettyprint">
@@ -859,7 +859,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="parseJSON"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.parseJSON/">parseJSON</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.parseJSON/">parseJSON</a></p>
 							<p class="desc">Takes a well-formed JSON string and returns the resulting JavaScript   object</p>
 						</div>
 						<pre class="body prettyprint">
@@ -871,7 +871,7 @@ jQuery.extend({
 
 		// Make sure leading/trailing whitespace is removed (IE can't handle it)
 		data = jQuery.trim( data );
-		
+
 		// Make sure the incoming data is actual JSON
 		// Logic borrowed from http://json.org/json2.js
 		if ( /^[\],:{}\s]*$/.test(data.replace(/\\(?:[&quot;\\\/bfnrt]|u[0-9a-fA-F]{4})/g, &quot;@&quot;)
@@ -891,7 +891,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="noop"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.noop/">noop</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.noop/">noop</a></p>
 							<p class="desc">An empty function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -901,7 +901,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="globalEval"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.globalEval/">globalEval</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.globalEval/">globalEval</a></p>
 							<p class="desc">Execute some JavaScript code globally</p>
 						</div>
 						<pre class="body prettyprint">
@@ -932,7 +932,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="nodeName"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/nodeName/">nodeName</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/nodeName/">nodeName</a></p>
 							<p class="desc">Returns the uppercase node name</p>
 						</div>
 						<pre class="body prettyprint">
@@ -944,7 +944,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="each"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.each/">each</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.each/">each</a></p>
 							<p class="desc">Iterate over a jQuery object, executing a function for each matched   element</p>
 						</div>
 						<pre class="body prettyprint">
@@ -990,7 +990,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="trim"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.trim/">trim</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.trim/">trim</a></p>
 							<p class="desc">Remove the whitespace from the beginning and end of a string</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1003,7 +1003,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="makeArray"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.makeArray/">makeArray</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.makeArray/">makeArray</a></p>
 							<p class="desc">Convert an array-like object into a true JavaScript array</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1029,7 +1029,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="inArray"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.inArray/">inArray</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.inArray/">inArray</a></p>
 							<p class="desc">Search for a specified value within an array and return its index (or -1   if not found)</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1051,7 +1051,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="merge"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.merge/">merge</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.merge/">merge</a></p>
 							<p class="desc">Merge the contents of two arrays together into the first array</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1063,7 +1063,7 @@ jQuery.extend({
 			for ( var l = second.length; j &lt; l; j++ ) {
 				first[ i++ ] = second[ j ];
 			}
-		
+
 		} else {
 			while ( second[j] !== undefined ) {
 				first[ i++ ] = second[ j++ ];
@@ -1078,7 +1078,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="grep"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.grep/">grep</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.grep/">grep</a></p>
 							<p class="desc">Finds the elements of an array which satisfy a filter function. The   original array is not affected</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1100,7 +1100,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="map"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.map/">map</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.map/">map</a></p>
 							<p class="desc">Translate all items in an array or array-like object to another array of   items</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1135,7 +1135,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="proxy"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.proxy/">proxy</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.proxy/">proxy</a></p>
 							<p class="desc">Takes a function and returns a new one that will always have a   particular context</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1171,7 +1171,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="uaMatch"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/uaMatch/">uaMatch</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/uaMatch/">uaMatch</a></p>
 						</div>
 						<pre class="body prettyprint">
 
@@ -1248,7 +1248,7 @@ if ( document.addEventListener ) {
 				</div>
 				<div class="block function"> <a name="doScrollCheck" id="doScrollCheck"></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/doScrollCheck/">doScrollCheck</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/doScrollCheck/">doScrollCheck</a></p>
 						<p class="desc">Internal function</p>
 					</div>
 					<pre class="body prettyprint">
@@ -1275,7 +1275,7 @@ function doScrollCheck() {
 				</div>
 				<div class="block function"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/evalScript/">evalScript</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/evalScript/">evalScript</a></p>
 						<p class="desc">Internal function</p>
 					</div>
 					<pre class="body prettyprint">
@@ -1299,7 +1299,7 @@ function evalScript( i, elem ) {
 				</div>
 				<div class="block function"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/access/">access</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/access/">access</a></p>
 						<p class="desc">Mutifunctional method to get and set values to a collection</p>
 					</div>
 					<pre class="body prettyprint">
@@ -1308,7 +1308,7 @@ function evalScript( i, elem ) {
 // The value/s can be optionally by executed if its a function
 function access( elems, key, value, exec, fn, pass ) {
 	var length = elems.length;
-	
+
 	// Setting many attributes
 	if ( typeof key === &quot;object&quot; ) {
 		for ( var k in key ) {
@@ -1316,19 +1316,19 @@ function access( elems, key, value, exec, fn, pass ) {
 		}
 		return elems;
 	}
-	
+
 	// Setting one attribute
 	if ( value !== undefined ) {
 		// Optionally, function values get executed if exec is true
 		exec = !pass &amp;&amp; exec &amp;&amp; jQuery.isFunction(value);
-		
+
 		for ( var i = 0; i &lt; length; i++ ) {
 			fn( elems[i], key, exec ? value.call( elems[i], i, fn( elems[i], key ) ) : value, pass );
 		}
-		
+
 		return elems;
 	}
-	
+
 	// Getting an attribute
 	return length ? fn( elems[0], key ) : undefined;
 }
@@ -1336,7 +1336,7 @@ function access( elems, key, value, exec, fn, pass ) {
 				</div>
 				<div class="block function"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/now/">now</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/now/">now</a></p>
 						<p class="desc">Internal function</p>
 					</div>
 					<pre class="body prettyprint">
@@ -1348,7 +1348,7 @@ function now() {
 				</div>
 				<div class="block code"> <a name="support" id="support"></a>
 					<div class="head">
-						<p class="title"><span class="type">Code : </span><a href="http://api.jquery.com/jQuery.support/">jQuery browser support</a></p>
+						<p class="title"><span class="type">Code : </span><a href="https://api.jquery.com/jQuery.support/">jQuery browser support</a></p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -1439,7 +1439,7 @@ function now() {
 	// Fails in Internet Explorer
 	try {
 		delete script.test;
-	
+
 	} catch(e) {
 		jQuery.support.deleteExpando = false;
 	}
@@ -1480,20 +1480,20 @@ function now() {
 
 	// Technique from Juriy Zaytsev
 	// http://thinkweb2.com/projects/prototype/detecting-event-support-without-browser-sniffing/
-	var eventSupported = function( eventName ) { 
-		var el = document.createElement(&quot;div&quot;); 
-		eventName = &quot;on&quot; + eventName; 
+	var eventSupported = function( eventName ) {
+		var el = document.createElement(&quot;div&quot;);
+		eventName = &quot;on&quot; + eventName;
 
-		var isSupported = (eventName in el); 
-		if ( !isSupported ) { 
-			el.setAttribute(eventName, &quot;return;&quot;); 
-			isSupported = typeof el[eventName] === &quot;function&quot;; 
-		} 
-		el = null; 
+		var isSupported = (eventName in el);
+		if ( !isSupported ) {
+			el.setAttribute(eventName, &quot;return;&quot;);
+			isSupported = typeof el[eventName] === &quot;function&quot;;
+		}
+		el = null;
 
-		return isSupported; 
+		return isSupported;
 	};
-	
+
 	jQuery.support.submitBubbles = eventSupported(&quot;submit&quot;);
 	jQuery.support.changeBubbles = eventSupported(&quot;change&quot;);
 
@@ -1505,7 +1505,7 @@ function now() {
 			</div>
 			<div class="block section"> <a name="section-data" id="section-data"></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://api.jquery.com/category/data/">Data</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://api.jquery.com/category/data/">Data</a></p>
 				</div>
 				<div class="block object"> <a name=""></a>
 					<div class="head">
@@ -1533,14 +1533,14 @@ jQuery.props = {
 					</div>
 					<pre class="body prettyprint">
 
-var expando = &quot;jQuery&quot; + now(), 
-uuid = 0, 
+var expando = &quot;jQuery&quot; + now(),
+uuid = 0,
 windowData = {};
 	</pre>
 				</div>
 				<div class="block extend"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Extend : </span><a href="http://api.jquery.com/category/data/">data</a></p>
+						<p class="title"><span class="type">Extend : </span><a href="https://api.jquery.com/category/data/">data</a></p>
 					</div>
 					<pre class="body">
 
@@ -1553,7 +1553,7 @@ jQuery.extend({
 						<pre class="body prettyprint">
 
 	cache: {},
-	
+
 	expando:expando,
 
 	// The following elements throw uncatchable exceptions if you
@@ -1566,7 +1566,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name=""></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.data/">data</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.data/">data</a></p>
 							<p class="desc">Store arbitrary data associated with the matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1587,7 +1587,7 @@ jQuery.extend({
 		}
 
 		// Compute a unique ID for the element
-		if ( !id ) { 
+		if ( !id ) {
 			id = ++uuid;
 		}
 
@@ -1615,7 +1615,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="removeData"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.removeData/">removeData</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.removeData/">removeData</a></p>
 							<p class="desc">Remove a previously-stored piece of data</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1673,7 +1673,7 @@ jQuery.fn.extend({
 </pre>
 					<div class="block function"> <a name="data"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/data/">data</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/data/">data</a></p>
 							<p class="desc">Store arbitrary data associated with the matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1710,7 +1710,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="removeData"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/removeData/">removeData</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/removeData/">removeData</a></p>
 							<p class="desc">Remove a previously-stored piece of data</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1736,7 +1736,7 @@ jQuery.extend({
 </pre>
 					<div class="block function"> <a name="queue"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.queue/">queue</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.queue/">queue</a></p>
 							<p class="desc">Show the queue of functions to be executed on the matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1767,7 +1767,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="dequeue"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.dequeue/">dequeue</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.dequeue/">dequeue</a></p>
 							<p class="desc">Execute the next function on the queue for the matched element</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1810,7 +1810,7 @@ jQuery.fn.extend({
 	</pre>
 					<div class="block function"> <a name="queue"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/queue/">queue</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/queue/">queue</a></p>
 							<p class="desc">Show the queue of functions to be executed on the matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1836,7 +1836,7 @@ queue: function( type, data ) {
 					</div>
 					<div class="block function"> <a name="dequeue"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/dequeue/">dequeue</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/dequeue/">dequeue</a></p>
 							<p class="desc">Execute the next function on the queue for the matched element</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1851,7 +1851,7 @@ queue: function( type, data ) {
 					</div>
 					<div class="block function"> <a name="delay"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/delay/">delay</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/delay/">delay</a></p>
 							<p class="desc">Set a timer to delay execution of subsequent items in the queue</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1873,7 +1873,7 @@ queue: function( type, data ) {
 					</div>
 					<div class="block function"> <a name="clearQueue"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/clearQueue/">clearQueue</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/clearQueue/">clearQueue</a></p>
 							<p class="desc">Remove from the queue all items that have not yet been run.</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1890,7 +1890,7 @@ queue: function( type, data ) {
 			</div>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://api.jquery.com/category/attributes/">Attributes</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://api.jquery.com/category/attributes/">Attributes</a></p>
 				</div>
 				<div class="block variables">
 					<div class="head">
@@ -1917,7 +1917,7 @@ jQuery.fn.extend({
 </pre>
 					<div class="block function"> <a name="attr"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/attr/">attr</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/attr/">attr</a></p>
 							<p class="desc">Get the value of an attribute for the first element in the set of   matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1930,7 +1930,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="removeAttr"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/removeAttr/">removeAttr</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/removeAttr/">removeAttr</a></p>
 							<p class="desc">Remove an attribute from each element in the set of matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1947,7 +1947,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="addClass"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/addClass/">addClass</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/addClass/">addClass</a></p>
 							<p class="desc">Adds the specified class(es) to each of the set of matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -1989,7 +1989,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="removeClass"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/removeClass/">removeClass</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/removeClass/">removeClass</a></p>
 							<p class="desc">Remove a single class, multiple classes, or all classes from each   element in the set of matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -2029,7 +2029,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="toggleClass"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/toggleClass/">toggleClass</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/toggleClass/">toggleClass</a></p>
 							<p class="desc">Add or remove one or more classes from each element in the set of   matched elements, depending on either the class's presence or the value   of the switch argument</p>
 						</div>
 						<pre class="body prettyprint">
@@ -2072,7 +2072,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="hasClass"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/hasClass/">hasClass</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/hasClass/">hasClass</a></p>
 							<p class="desc">Determine whether any of the matched elements are assigned the given   class</p>
 						</div>
 						<pre class="body prettyprint">
@@ -2092,7 +2092,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="val"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/val/">val</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/val/">val</a></p>
 							<p class="desc">Get the current value of the first element in the set of matched   elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -2143,7 +2143,7 @@ jQuery.fn.extend({
 				if ( rradiocheck.test( elem.type ) &amp;&amp; !jQuery.support.checkOn ) {
 					return elem.getAttribute(&quot;value&quot;) === null ? &quot;on&quot; : elem.value;
 				}
-				
+
 
 				// Everything else, we just grab the value
 				return (elem.value || &quot;&quot;).replace(rreturn, &quot;&quot;);
@@ -2226,7 +2226,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="attr"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/attr/">attr</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/attr/">attr</a></p>
 							<p class="desc">Get the value of an attribute for the first element in the set of   matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -2259,7 +2259,7 @@ jQuery.extend({
 				var parent = elem.parentNode;
 				if ( parent ) {
 					parent.selectedIndex;
-	
+
 					// Make sure that it also works with optgroups, see #5701
 					if ( parent.parentNode ) {
 						parent.parentNode.selectedIndex;
@@ -2333,7 +2333,7 @@ jQuery.extend({
 			</div>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://api.jquery.com/category/events/">Events</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://api.jquery.com/category/events/">Events</a></p>
 				</div>
 				<div class="block variables">
 					<div class="head">
@@ -2350,7 +2350,7 @@ fcleanup = function( nm ) {
 				</div>
 				<div class="block object"> <a name="event" id="event"></a>
 					<div class="head">
-						<p class="title"><span class="type">Object : </span><a href="http://api.jquery.com/category/events/event-object/">Event</a></p>
+						<p class="title"><span class="type">Object : </span><a href="https://api.jquery.com/category/events/event-object/">Event</a></p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -2364,7 +2364,7 @@ jQuery.event = {
 </pre>
 					<div class="block function"> <a name="add"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/add/">add</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/add/">add</a></p>
 							<p class="desc">Bind an event to an element</p>
 						</div>
 						<pre class="body prettyprint">
@@ -2466,9 +2466,9 @@ jQuery.event = {
 					}
 				}
 			}
-			
-			if ( special.add ) { 
-				special.add.call( elem, handleObj ); 
+
+			if ( special.add ) {
+				special.add.call( elem, handleObj );
 
 				if ( !handleObj.handler.guid ) {
 					handleObj.handler.guid = handler.guid;
@@ -2498,7 +2498,7 @@ jQuery.event = {
 					</div>
 					<div class="block function"> <a name="remove"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/remove/">remove</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/remove/">remove</a></p>
 							<p class="desc">Detach an event or set of events from an element</p>
 						</div>
 						<pre class="body prettyprint">
@@ -2550,7 +2550,7 @@ jQuery.event = {
 				namespaces = type.split(&quot;.&quot;);
 				type = namespaces.shift();
 
-				namespace = new RegExp(&quot;(^|\\.)&quot; + 
+				namespace = new RegExp(&quot;(^|\\.)&quot; +
 					jQuery.map( namespaces.slice(0).sort(), fcleanup ).join(&quot;\\.(?:.*\\.)?&quot;) + &quot;(\\.|$)&quot;)
 			}
 
@@ -2626,7 +2626,7 @@ jQuery.event = {
 					</div>
 					<div class="block function"> <a name="trigger"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/trigger/">trigger</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/trigger/">trigger</a></p>
 							<p class="desc">Execute all handlers and behaviors attached to the matched elements for   the given event type</p>
 						</div>
 						<pre class="body prettyprint">
@@ -2711,7 +2711,7 @@ jQuery.event = {
 				isClick = jQuery.nodeName(target, &quot;a&quot;) &amp;&amp; type === &quot;click&quot;,
 				special = jQuery.event.special[ type ] || {};
 
-			if ( (!special._default || special._default.call( elem, event ) === false) &amp;&amp; 
+			if ( (!special._default || special._default.call( elem, event ) === false) &amp;&amp;
 				!isClick &amp;&amp; !(target &amp;&amp; target.nodeName &amp;&amp; jQuery.noData[target.nodeName.toLowerCase()]) ) {
 
 				try {
@@ -2743,7 +2743,7 @@ jQuery.event = {
 					</div>
 					<div class="block function"> <a name="handle"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/handle/">handle</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/handle/">handle</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -2779,7 +2779,7 @@ jQuery.event = {
 					event.handler = handleObj.handler;
 					event.data = handleObj.data;
 					event.handleObj = handleObj;
-	
+
 					var ret = handleObj.handler.apply( this, arguments );
 
 					if ( ret !== undefined ) {
@@ -2813,7 +2813,7 @@ jQuery.event = {
 					</div>
 					<div class="block function"> <a name="fix"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/fix/">fix</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/fix/">fix</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -2910,13 +2910,13 @@ jQuery.event = {
 
 		live: {
 			add: function( handleObj ) {
-				jQuery.event.add( this, handleObj.origType, jQuery.extend({}, handleObj, {handler: liveHandler}) ); 
+				jQuery.event.add( this, handleObj.origType, jQuery.extend({}, handleObj, {handler: liveHandler}) );
 			},
 
 			remove: function( handleObj ) {
 				var remove = true,
 					type = handleObj.origType.replace(rnamespaces, &quot;&quot;);
-				
+
 				jQuery.each( jQuery.data(this, &quot;events&quot;).live || [], function() {
 					if ( type === this.origType.replace(rnamespaces, &quot;&quot;) ) {
 						remove = false;
@@ -2963,7 +2963,7 @@ jQuery.event = {
 var removeEvent = document.removeEventListener ?
 	function( elem, type, handle ) {
 		elem.removeEventListener( type, handle, false );
-	} : 
+	} :
 	function( elem, type, handle ) {
 		elem.detachEvent( &quot;on&quot; + type, handle );
 	};
@@ -3003,7 +3003,7 @@ jQuery.Event = function( src ) {
 				</div>
 				<div class="block function"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/returnFalse/">returnFalse</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/returnFalse/">returnFalse</a></p>
 						<p class="desc">Returns a value of false</p>
 					</div>
 					<pre class="body prettyprint">
@@ -3015,7 +3015,7 @@ function returnFalse() {
 				</div>
 				<div class="block function"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/returnTrue/">returnTrue</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/returnTrue/">returnTrue</a></p>
 						<p class="desc">Returns a value of true </p>
 					</div>
 					<pre class="body prettyprint">
@@ -3032,12 +3032,12 @@ function returnTrue() {
 					<pre class="body prettyprint">
 
 // jQuery.Event is based on DOM3 Events as specified by the ECMAScript Language Binding
-// http://www.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html
+// http://w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html
 jQuery.Event.prototype = {
 </pre>
 					<div class="block function"> <a name="preventDefault" id="preventDefault"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/event.preventDefault/">preventDefault</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/event.preventDefault/">preventDefault</a></p>
 							<p class="desc">Description</p>
 						</div>
 						<pre class="body prettyprint">
@@ -3049,7 +3049,7 @@ jQuery.Event.prototype = {
 		if ( !e ) {
 			return;
 		}
-		
+
 		// if preventDefault exists run it on the original event
 		if ( e.preventDefault ) {
 			e.preventDefault();
@@ -3061,7 +3061,7 @@ jQuery.Event.prototype = {
 					</div>
 					<div class="block function"> <a name="stopPropagation" id="stopPropagation"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/event.stopPropagation/">stopPropagation</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/event.stopPropagation/">stopPropagation</a></p>
 							<p class="desc">Description</p>
 						</div>
 						<pre class="body prettyprint">
@@ -3084,7 +3084,7 @@ jQuery.Event.prototype = {
 					</div>
 					<div class="block function"> <a name="stopImmediatePropagation" id="stopImmediatePropagation"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/event.stopImmediatePropagation/">stopImmediatePropagation</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/event.stopImmediatePropagation/">stopImmediatePropagation</a></p>
 							<p class="desc">Description</p>
 						</div>
 						<pre class="body prettyprint">
@@ -3143,7 +3143,7 @@ delegate = function( event ) {
 				</div>
 				<div class="block code"> <a name="mouseenter" id="mouseenter"></a><a name="mouseleave" id="mouseleave"></a>
 					<div class="head">
-						<p class="title"><span class="type">Code : </span><a href="http://api.jquery.com/mouseenter/">mouseenter</a> &amp; <a href="http://api.jquery.com/mouseleave/">mouseleave</a> events</p>
+						<p class="title"><span class="type">Code : </span><a href="https://api.jquery.com/mouseenter/">mouseenter</a> &amp; <a href="https://api.jquery.com/mouseleave/">mouseleave</a> events</p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -3165,7 +3165,7 @@ jQuery.each({
 				</div>
 				<div class="block code"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Code : </span><a href="http://api.jquery.com/submit/">submit</a> event</p>
+						<p class="title"><span class="type">Code : </span><a href="https://api.jquery.com/submit/">submit</a> event</p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -3182,7 +3182,7 @@ if ( !jQuery.support.submitBubbles ) {
 						return trigger( &quot;submit&quot;, this, arguments );
 					}
 				});
-	 
+
 				jQuery.event.add(this, &quot;keypress.specialSubmit&quot;, function( e ) {
 					var elem = e.target, type = elem.type;
 
@@ -3206,7 +3206,7 @@ if ( !jQuery.support.submitBubbles ) {
 				</div>
 				<div class="block code"> <a name="event.change" id="event.change"></a>
 					<div class="head">
-						<p class="title"><span class="type">Code : </span><a href="http://api.jquery.com/change/">change</a> event</p>
+						<p class="title"><span class="type">Code : </span><a href="https://api.jquery.com/change/">change</a> event</p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -3252,7 +3252,7 @@ if ( !jQuery.support.changeBubbles ) {
 			jQuery.data( elem, &quot;_change_data&quot;, val );
 
 		}
-		
+
 		if ( data === undefined || val === data ) {
 			return;
 		}
@@ -3265,7 +3265,7 @@ if ( !jQuery.support.changeBubbles ) {
 
 	jQuery.event.special.change = {
 		filters: {
-			focusout: testChange, 
+			focusout: testChange,
 
 			click: function( e ) {
 				var elem = e.target, type = elem.type;
@@ -3323,7 +3323,7 @@ if ( !jQuery.support.changeBubbles ) {
 				</div>
 				<div class="block code"> <a name="event.trigger" id="event.trigger"></a>
 					<div class="head">
-						<p class="title"><span class="type">Code : </span><a href="http://api.jquery.com/trigger/">trigger</a> function</p>
+						<p class="title"><span class="type">Code : </span><a href="https://api.jquery.com/trigger/">trigger</a> function</p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -3335,7 +3335,7 @@ function trigger( type, elem, args ) {
 				</div>
 				<div class="block code"> <a name="focus" id="focus"></a><a name="blur" id="blur"></a>
 					<div class="head">
-						<p class="title"><span class="type">Code : </span><a href="http://api.jquery.com/focus/">focus</a> and <a href="http://api.jquery.com/blur/">blur</a> events</p>
+						<p class="title"><span class="type">Code : </span><a href="https://api.jquery.com/focus/">focus</a> and <a href="https://api.jquery.com/blur/">blur</a> events</p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -3345,13 +3345,13 @@ if ( document.addEventListener ) {
 		jQuery.event.special[ fix ] = {
 			setup: function() {
 				this.addEventListener( orig, handler, true );
-			}, 
-			teardown: function() { 
+			},
+			teardown: function() {
 				this.removeEventListener( orig, handler, true );
 			}
 		};
 
-		function handler( e ) { 
+		function handler( e ) {
 			e = jQuery.event.fix( e );
 			e.type = fix;
 			return jQuery.event.handle.call( this, e );
@@ -3363,7 +3363,7 @@ if ( document.addEventListener ) {
 				</div>
 				<div class="block code"> <a name="bind" id="bind"></a><a name="one" id="one"></a>
 					<div class="head">
-						<p class="title"><span class="type">Code : </span><a href="http://api.jquery.com/bind/">bind</a> and <a href="http://api.jquery.com/one/">one</a> events</p>
+						<p class="title"><span class="type">Code : </span><a href="https://api.jquery.com/bind/">bind</a> and <a href="https://api.jquery.com/one/">one</a> events</p>
 					</div>
 					<pre class="body prettyprint">&nbsp;
 
@@ -3376,7 +3376,7 @@ jQuery.each([&quot;bind&quot;, &quot;one&quot;], function( i, name ) {
 			}
 			return this;
 		}
-		
+
 		if ( jQuery.isFunction( data ) ) {
 			fn = data;
 			data = undefined;
@@ -3410,7 +3410,7 @@ jQuery.fn.extend({
 </pre>
 					<div class="block function"> <a name="unbind"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/unbind/">unbind</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/unbind/">unbind</a></p>
 							<p class="desc">Remove a previously-attached event handler from the elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -3434,7 +3434,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="delegate"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/delegate/">delegate</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/delegate/">delegate</a></p>
 							<p class="desc">Attach a handler to one or more events for all elements that match the   selector, now or in the future, based on a specific set of root elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -3446,7 +3446,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="undelegate"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/undelegate/">undelegate</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/undelegate/">undelegate</a></p>
 							<p class="desc">Remove a handler from the event for all elements which match the current   selector, now or in the future, based upon a specific set of root   elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -3454,7 +3454,7 @@ jQuery.fn.extend({
 	undelegate: function( selector, types, fn ) {
 		if ( arguments.length === 0 ) {
 				return this.unbind( &quot;live&quot; );
-		
+
 		} else {
 			return this.die( types, null, fn, selector );
 		}
@@ -3463,7 +3463,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="trigger"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/trigger/">trigger</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/trigger/">trigger</a></p>
 							<p class="desc">Execute all handlers and behaviors attached to the matched elements for   the given event type</p>
 						</div>
 						<pre class="body prettyprint">
@@ -3477,7 +3477,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="triggerHandler"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/triggerHandler/">triggerHandler</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/triggerHandler/">triggerHandler</a></p>
 							<p class="desc">Execute all handlers attached to an element for an event</p>
 						</div>
 						<pre class="body prettyprint">
@@ -3495,7 +3495,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="toggle"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/toggle/">toggle</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/toggle/">toggle</a></p>
 							<p class="desc">Bind two or more handlers to the matched elements, to be executed on   alternate clicks</p>
 						</div>
 						<pre class="body prettyprint">
@@ -3527,7 +3527,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="hover"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/hover/">hover</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/hover/">hover</a></p>
 							<p class="desc">Bind two handlers to the matched elements, to be executed when the mouse   pointer enters and leaves the elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -3558,7 +3558,7 @@ var liveMap = {
 				</div>
 				<div class="block code"> <a name="live" id="live"></a><a name="die" id="live2"></a>
 					<div class="head">
-						<p class="title"><span class="type">Code : </span><a href="http://api.jquery.com/live/">live</a> and <a href="http://api.jquery.com/die/">die</a> functions</p>
+						<p class="title"><span class="type">Code : </span><a href="https://api.jquery.com/live/">live</a> and <a href="https://api.jquery.com/die/">die</a> functions</p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -3611,7 +3611,7 @@ jQuery.each([&quot;live&quot;, &quot;die&quot;], function( i, name ) {
 				context.unbind( liveConvert( type, selector ), fn );
 			}
 		}
-		
+
 		return this;
 	}
 });
@@ -3752,7 +3752,7 @@ if ( window.attachEvent &amp;&amp; !window.addEventListener ) {
 			</div>
 			<div class="block section"> <a name="Sizzle" id="Sizzle"></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://wiki.github.com/jeresig/sizzle/">Sizzle CSS Selector Engine</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://wiki.github.com/jeresig/sizzle/">Sizzle CSS Selector Engine</a></p>
 				</div>
 				<pre class="body prettyprint">
 /*!
@@ -3787,7 +3787,7 @@ var chunker = /((?:\((?:\([^()]+\)|[^()]+)+\)|\[(?:\[[^[\]]*\]|['&quot;][^'&quot
 				</div>
 				<div class="block function"> <a name="sizzle_constructor" id="sizzle_constructor"></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://wiki.github.com/jeresig/sizzle/">Sizzle constructor</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://wiki.github.com/jeresig/sizzle/">Sizzle constructor</a></p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -3798,20 +3798,20 @@ var Sizzle = function(selector, context, results, seed) {
 	if ( context.nodeType !== 1 &amp;&amp; context.nodeType !== 9 ) {
 		return [];
 	}
-	
+
 	if ( !selector || typeof selector !== &quot;string&quot; ) {
 		return results;
 	}
 
 	var parts = [], m, set, checkSet, extra, prune = true, contextXML = isXML(context),
 		soFar = selector;
-	
+
 	// Reset the position of the chunker regexp (start from head)
 	while ( (chunker.exec(&quot;&quot;), m = chunker.exec(soFar)) !== null ) {
 		soFar = m[3];
-		
+
 		parts.push( m[1] );
-		
+
 		if ( m[2] ) {
 			extra = m[3];
 			break;
@@ -3832,7 +3832,7 @@ var Sizzle = function(selector, context, results, seed) {
 				if ( Expr.relative[ selector ] ) {
 					selector += parts.shift();
 				}
-				
+
 				set = posProcess( selector, set );
 			}
 		}
@@ -3965,7 +3965,7 @@ Sizzle.find = function(expr, context, isXML){
 
 	for ( var i = 0, l = Expr.order.length; i &lt; l; i++ ) {
 		var type = Expr.order[i], match;
-		
+
 		if ( (match = Expr.leftMatch[ type ].exec( expr )) ) {
 			var left = match[1];
 			match.splice(1,1);
@@ -4262,7 +4262,7 @@ var Expr = Sizzle.selectors =
 		},
 		ATTR: function(match, curLoop, inplace, result, not, isXML){
 			var name = match[1].replace(/\\/g, &quot;&quot;);
-			
+
 			if ( !isXML &amp;&amp; Expr.attrMap[name] ) {
 				match[1] = Expr.attrMap[name];
 			}
@@ -4288,7 +4288,7 @@ var Expr = Sizzle.selectors =
 			} else if ( Expr.match.POS.test( match[0] ) || Expr.match.CHILD.test( match[0] ) ) {
 				return true;
 			}
-			
+
 			return match;
 		},
 		POS: function(match){
@@ -4409,18 +4409,18 @@ var Expr = Sizzle.selectors =
 				case 'only':
 				case 'first':
 					while ( (node = node.previousSibling) )	 {
-						if ( node.nodeType === 1 ) { 
-							return false; 
+						if ( node.nodeType === 1 ) {
+							return false;
 						}
 					}
-					if ( type === &quot;first&quot; ) { 
-						return true; 
+					if ( type === &quot;first&quot; ) {
+						return true;
 					}
 					node = elem;
 				case 'last':
 					while ( (node = node.nextSibling) )	 {
-						if ( node.nodeType === 1 ) { 
-							return false; 
+						if ( node.nodeType === 1 ) {
+							return false;
 						}
 					}
 					return true;
@@ -4430,20 +4430,20 @@ var Expr = Sizzle.selectors =
 					if ( first === 1 &amp;&amp; last === 0 ) {
 						return true;
 					}
-					
+
 					var doneName = match[0],
 						parent = elem.parentNode;
-	
+
 					if ( parent &amp;&amp; (parent.sizcache !== doneName || !elem.nodeIndex) ) {
 						var count = 0;
 						for ( node = parent.firstChild; node; node = node.nextSibling ) {
 							if ( node.nodeType === 1 ) {
 								node.nodeIndex = ++count;
 							}
-						} 
+						}
 						parent.sizcache = doneName;
 					}
-					
+
 					var diff = elem.nodeIndex - last;
 					if ( first === 0 ) {
 						return diff === 0;
@@ -4510,7 +4510,7 @@ var Expr = Sizzle.selectors =
 					</div>
 					<pre class="body prettyprint">
 
-var origPOS = Expr.match.POS;	
+var origPOS = Expr.match.POS;
 
 for ( var type in Expr.match ) {
 	Expr.match[ type ] = new RegExp( Expr.match[ type ].source + /(?![^\[]*\])(?![^\(]*\))/.source );
@@ -4526,7 +4526,7 @@ var makeArray = function(array, results) {
 		results.push.apply( results, array );
 		return results;
 	}
-	
+
 	return array;
 };
 
@@ -4718,7 +4718,7 @@ if ( document.querySelectorAll ) {
 		if ( div.querySelectorAll &amp;&amp; div.querySelectorAll(&quot;.TEST&quot;).length === 0 ) {
 			return;
 		}
-	
+
 		Sizzle = function(query, context, extra, seed){
 			context = context || document;
 
@@ -4729,7 +4729,7 @@ if ( document.querySelectorAll ) {
 					return makeArray( context.querySelectorAll(query), extra );
 				} catch(e){}
 			}
-		
+
 			return oldSizzle(query, context, extra, seed);
 		};
 
@@ -4758,7 +4758,7 @@ if ( document.querySelectorAll ) {
 	if ( div.getElementsByClassName(&quot;e&quot;).length === 1 ) {
 		return;
 	}
-	
+
 	Expr.order.splice(1, 0, &quot;CLASS&quot;);
 	Expr.find.CLASS = function(match, context, isXML) {
 		if ( typeof context.getElementsByClassName !== &quot;undefined&quot; &amp;&amp; !isXML ) {
@@ -4847,7 +4847,7 @@ var contains = document.compareDocumentPosition ? function(a, b){
 
 var isXML = function(elem){
 	// documentElement is verified for cases where it doesn't yet exist
-	// (such as loading iframes in IE - #4833) 
+	// (such as loading iframes in IE - #4833)
 	var documentElement = (elem ? elem.ownerDocument || elem : 0).documentElement;
 	return documentElement ? documentElement.nodeName !== &quot;HTML&quot; : false;
 };
@@ -4890,7 +4890,7 @@ window.Sizzle = Sizzle;
 			</div>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://api.jquery.com/category/selectors/">Selectors</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://api.jquery.com/category/selectors/">Selectors</a></p>
 				</div>
 				<div class="block variables">
 					<div class="head">
@@ -4938,7 +4938,7 @@ var winnow = function( elements, qualifier, keep ) {
 	return jQuery.grep(elements, function( elem, i ) {
 		return (jQuery.inArray( elem, qualifier ) &gt;= 0) === keep;
 	});
-};	
+};
 
 	</pre>
 				</div>
@@ -4952,7 +4952,7 @@ jQuery.fn.extend({
 </pre>
 					<div class="block function"> <a name="find"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/find/">find</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/find/">find</a></p>
 							<p class="desc">Get the descendants of each element in the current set of matched   elements, filtered by a selector</p>
 						</div>
 						<pre class="body prettyprint">
@@ -4984,7 +4984,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="has"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/has/">has</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/has/">has</a></p>
 							<p class="desc">Reduce the set of matched elements to those that have a descendant that   matches the selector or DOM element</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5003,7 +5003,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="not"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/not/">not</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/not/">not</a></p>
 							<p class="desc">Remove elements from the set of matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5015,7 +5015,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="filter"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/filter/">filter</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/filter/">filter</a></p>
 							<p class="desc">Reduce the set of matched elements to those that match the selector or   pass the function's test</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5027,7 +5027,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="is"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/is/">is</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/is/">is</a></p>
 							<p class="desc">Check the current matched set of elements against a selector and return   true if at least one of these elements matches the selector</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5039,7 +5039,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="closest"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/closest/">closest</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/closest/">closest</a></p>
 							<p class="desc">Get the first ancestor element that matches the selector, beginning at   the current element and progressing up through the DOM tree</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5053,7 +5053,7 @@ jQuery.fn.extend({
 					selector = selectors[i];
 
 					if ( !matches[selector] ) {
-						matches[selector] = jQuery.expr.match.POS.test( selector ) ? 
+						matches[selector] = jQuery.expr.match.POS.test( selector ) ?
 							jQuery( selector, context || this.context ) :
 							selector;
 					}
@@ -5075,7 +5075,7 @@ jQuery.fn.extend({
 			return ret;
 		}
 
-		var pos = jQuery.expr.match.POS.test( selectors ) ? 
+		var pos = jQuery.expr.match.POS.test( selectors ) ?
 			jQuery( selectors, context || this.context ) : null;
 
 		return this.map(function( i, cur ) {
@@ -5092,7 +5092,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="index"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/index/">index</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/index/">index</a></p>
 							<p class="desc">Search for a given element from among the matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5116,7 +5116,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="add"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/add/">add</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/add/">add</a></p>
 							<p class="desc">Add elements to the set of matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5135,7 +5135,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="andSelf"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/andSelf/">andSelf</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/andSelf/">andSelf</a></p>
 							<p class="desc">Add the previous set of elements on the stack to the current set</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5207,7 +5207,7 @@ jQuery.each({
 }, function( name, fn ) {
 	jQuery.fn[ name ] = function( until, selector ) {
 		var ret = jQuery.map( this, fn, until );
-		
+
 		if ( !runtil.test( name ) ) {
 			selector = until;
 		}
@@ -5236,7 +5236,7 @@ jQuery.extend({
 </pre>
 					<div class="block function"> <a name="filter"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/filter/">filter</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/filter/">filter</a></p>
 							<p class="desc">Reduce the set of matched elements to those that match the selector or   pass the function's test</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5252,7 +5252,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="dir"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/dir/">dir</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/dir/">dir</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5271,7 +5271,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="nth"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/nth/">nth</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/nth/">nth</a></p>
 							<p class="desc">Selects all elements that are the nth-child of their parent</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5292,7 +5292,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="sibling"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/sibling/">sibling</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/sibling/">sibling</a></p>
 							<p class="desc">Get the siblings of each element in the set of matched elements,   optionally filtered by a selector</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5317,7 +5317,7 @@ jQuery.extend({
 			</div>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://api.jquery.com/category/manipulation/">Manipulation</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://api.jquery.com/category/manipulation/">Manipulation</a></p>
 				</div>
 				<div class="block variables">
 					<div class="head">
@@ -5348,12 +5348,12 @@ var rinlinejQuery = / jQuery\d+=&quot;(?:\d+|null)&quot;/g,
 		col: [ 2, &quot;&lt;table&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;colgroup&gt;&quot;, &quot;&lt;/colgroup&gt;&lt;/table&gt;&quot; ],
 		area: [ 1, &quot;&lt;map&gt;&quot;, &quot;&lt;/map&gt;&quot; ],
 		_default: [ 0, &quot;&quot;, &quot;&quot; ]
-	};	
-	
+	};
+
 	wrapMap.optgroup = wrapMap.option;
 	wrapMap.tbody = wrapMap.tfoot = wrapMap.colgroup = wrapMap.caption = wrapMap.thead;
 	wrapMap.th = wrapMap.td;
-	
+
 	// IE can't serialize &lt;link&gt; and &lt;script&gt; tags normally
 	if ( !jQuery.support.htmlSerialize ) {
 		wrapMap._default = [ 1, "div&lt;div&gt;", "&lt;/div&gt;" ];
@@ -5373,7 +5373,7 @@ jQuery.fn.extend({
 </pre>
 					<div class="block function"> <a name="text"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/text/">text</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/text/">text</a></p>
 							<p class="desc">Get the combined text contents of each element in the set of matched   elements, including their descendants</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5396,7 +5396,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="wrapAll"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/wrapAll/">wrapAll</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/wrapAll/">wrapAll</a></p>
 							<p class="desc">Wrap an HTML structure around all elements in the set of matched   elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5433,7 +5433,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="wrapInner"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/wrapInner/">wrapInner</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/wrapInner/">wrapInner</a></p>
 							<p class="desc">Wrap an HTML structure around the content of each element in the set of   matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5463,7 +5463,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="wrap"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/wrap/">wrap</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/wrap/">wrap</a></p>
 							<p class="desc">Wrap an HTML structure around each element in the set of matched   elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5477,7 +5477,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="unwrap"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/unwrap/">unwrap</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/unwrap/">unwrap</a></p>
 							<p class="desc">Remove the parents of the set of matched elements from the DOM, leaving   the matched elements in their place</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5494,7 +5494,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="append"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/append/">append</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/append/">append</a></p>
 							<p class="desc">Insert content, specified by the parameter, to the end of each element   in the set of matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5510,7 +5510,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="prepend"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/prepend/">prepend</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/prepend/">prepend</a></p>
 							<p class="desc">Insert content, specified by the parameter, to the beginning of each   element in the set of matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5527,7 +5527,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="before"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/before/">before</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/before/">before</a></p>
 							<p class="desc">Insert content, specified by the parameter, before each element in the   set of matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5547,7 +5547,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="after"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/after/">after</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/after/">after</a></p>
 							<p class="desc">Insert content, specified by the parameter, after each element in the   set of matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5567,7 +5567,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="remove"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/remove/">remove</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/remove/">remove</a></p>
 							<p class="desc">Remove the set of matched elements from the DOM</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5586,14 +5586,14 @@ jQuery.fn.extend({
 				}
 			}
 		}
-		
+
 		return this;
 	},
 		</pre>
 					</div>
 					<div class="block function"> <a name="empty"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/empty/">empty</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/empty/">empty</a></p>
 							<p class="desc">Remove all child nodes of the set of matched elements from the DOM</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5610,14 +5610,14 @@ jQuery.fn.extend({
 				elem.removeChild( elem.firstChild );
 			}
 		}
-		
+
 		return this;
 	},
 		</pre>
 					</div>
 					<div class="block function"> <a name="clone"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/clone/">clone</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/clone/">clone</a></p>
 							<p class="desc">Create a copy of the set of matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5663,7 +5663,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="html"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/html/">html</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/html/">html</a></p>
 							<p class="desc">Get the HTML contents of the first element in the set of matched   elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5713,7 +5713,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="replaceWith"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/replaceWith/">replaceWith</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/replaceWith/">replaceWith</a></p>
 							<p class="desc">Replace each element in the set of matched elements with the provided   new content</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5752,7 +5752,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="detach"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/detach/">detach</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/detach/">detach</a></p>
 							<p class="desc">Remove the set of matched elements from the DOM</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5765,7 +5765,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="domManip"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/domManip/">domManip</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/domManip/">domManip</a></p>
 							<p class="desc">Description</p>
 						</div>
 						<pre class="body prettyprint">
@@ -5798,9 +5798,9 @@ jQuery.fn.extend({
 			} else {
 				results = buildFragment( args, this, scripts );
 			}
-			
+
 			fragment = results.fragment;
-			
+
 			if ( fragment.childNodes.length === 1 ) {
 				first = fragment = fragment.firstChild;
 			} else {
@@ -5844,7 +5844,7 @@ jQuery.fn.extend({
 				</div>
 				<div class="block function"> <a name="cloneCopyEvent"></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/cloneCopyEvent/">cloneCopyEvent</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/cloneCopyEvent/">cloneCopyEvent</a></p>
 						<p class="desc">Internal function</p>
 					</div>
 					<pre class="body prettyprint">
@@ -5875,7 +5875,7 @@ function cloneCopyEvent(orig, ret) {
 				</div>
 				<div class="block function"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/buildFragment/">buildFragment</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/buildFragment/">buildFragment</a></p>
 						<p class="desc">Internal function</p>
 					</div>
 					<pre class="body prettyprint">
@@ -5937,18 +5937,18 @@ jQuery.each({
 	jQuery.fn[ name ] = function( selector ) {
 		var ret = [], insert = jQuery( selector ),
 			parent = this.length === 1 &amp;&amp; this[0].parentNode;
-		
+
 		if ( parent &amp;&amp; parent.nodeType === 11 &amp;&amp; parent.childNodes.length === 1 &amp;&amp; insert.length === 1 ) {
 			insert[ original ]( this[0] );
 			return this;
-			
+
 		} else {
 			for ( var i = 0, l = insert.length; i &lt; l; i++ ) {
 				var elems = (i &gt; 0 ? this.clone(true) : this).get();
 				jQuery.fn[ original ].apply( jQuery(insert[i]), elems );
 				ret = ret.concat( elems );
 			}
-		
+
 			return this.pushStack( ret, name, insert.selector );
 		}
 	};
@@ -5965,7 +5965,7 @@ jQuery.extend({
 	</pre>
 				<div class="block function"> <a name="clean" id="clean"></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/clean/">clean</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/clean/">clean</a></p>
 						<p class="desc">Internal function</p>
 					</div>
 					<pre class="body prettyprint">
@@ -6051,7 +6051,7 @@ clean: function( elems, context, fragment, scripts ) {
 			for ( var i = 0; ret[i]; i++ ) {
 				if ( scripts &amp;&amp; jQuery.nodeName( ret[i], &quot;script&quot; ) &amp;&amp; (!ret[i].type || ret[i].type.toLowerCase() === &quot;text/javascript&quot;) ) {
 					scripts.push( ret[i].parentNode ? ret[i].parentNode.removeChild( ret[i] ) : ret[i] );
-				
+
 				} else {
 					if ( ret[i].nodeType === 1 ) {
 						ret.splice.apply( ret, [i + 1, 0].concat(jQuery.makeArray(ret[i].getElementsByTagName(&quot;script&quot;))) );
@@ -6067,7 +6067,7 @@ clean: function( elems, context, fragment, scripts ) {
 				</div>
 				<div class="block function"> <a name="cleanData"></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/cleanData/">cleanData</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/cleanData/">cleanData</a></p>
 						<p class="desc">Internal function</p>
 					</div>
 					<pre class="body prettyprint">
@@ -6076,13 +6076,13 @@ clean: function( elems, context, fragment, scripts ) {
 		var data, id, cache = jQuery.cache,
 			special = jQuery.event.special,
 			deleteExpando = jQuery.support.deleteExpando;
-		
+
 		for ( var i = 0, elem; (elem = elems[i]) != null; i++ ) {
 			id = elem[ jQuery.expando ];
-			
+
 			if ( id ) {
 				data = cache[ id ];
-				
+
 				if ( data.events ) {
 					for ( var type in data.events ) {
 						if ( special[ type ] ) {
@@ -6093,14 +6093,14 @@ clean: function( elems, context, fragment, scripts ) {
 						}
 					}
 				}
-				
+
 				if ( deleteExpando ) {
 					delete elem[ jQuery.expando ];
 
 				} else if ( elem.removeAttribute ) {
 					elem.removeAttribute( jQuery.expando );
 				}
-				
+
 				delete cache[ id ];
 			}
 		}
@@ -6113,7 +6113,7 @@ clean: function( elems, context, fragment, scripts ) {
 			</div>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://api.jquery.com/category/css/">CSS</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://api.jquery.com/category/css/">CSS</a></p>
 				</div>
 				<div class="block variables">
 					<div class="head">
@@ -6146,7 +6146,7 @@ var rexclude = /z-?index|font-?weight|opacity|zoom|line-?height/i,
 				</div>
 				<div class="block function"> <a name="css"></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/css/">css</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/css/">css</a></p>
 						<p class="desc">Get the value of a style property for the first element in the set of   matched elements</p>
 					</div>
 					<pre class="body prettyprint">
@@ -6156,7 +6156,7 @@ jQuery.fn.css = function( name, value ) {
 		if ( value === undefined ) {
 			return jQuery.curCSS( elem, name );
 		}
-		
+
 		if ( typeof value === &quot;number&quot; &amp;&amp; !rexclude.test(name) ) {
 			value += &quot;px&quot;;
 		}
@@ -6176,7 +6176,7 @@ jQuery.extend({
 </pre>
 					<div class="block function"> <a name="style"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/style/">style</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/style/">style</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6229,7 +6229,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="css"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/css/">css</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/css/">css</a></p>
 							<p class="desc">Get the value of a style property for the first element in the set of   matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6273,7 +6273,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="curCSS"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/curCSS/">curCSS</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/curCSS/">curCSS</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6358,7 +6358,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="swap"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/swap/">swap</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/swap/">swap</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6412,7 +6412,7 @@ if ( jQuery.expr &amp;&amp; jQuery.expr.filters ) {
 			</div>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://api.jquery.com/category/ajax/">AJAX</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://api.jquery.com/category/ajax/">AJAX</a></p>
 				</div>
 				<div class="block variables">
 					<div class="head">
@@ -6444,7 +6444,7 @@ jQuery.fn.extend({
 </pre>
 					<div class="block function"> <a name="load"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/load/">load</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/load/">load</a></p>
 							<p class="desc">Load data from the server and place the returned HTML into the matched   element</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6520,7 +6520,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="serialize"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/serialize/">serialize</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/serialize/">serialize</a></p>
 							<p class="desc">Encode a set of form elements as a string for submission</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6532,7 +6532,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="serializeArray"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/serializeArray/">serializeArray</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/serializeArray/">serializeArray</a></p>
 							<p class="desc">Encode a set of form elements as an array of names and values</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6588,7 +6588,7 @@ jQuery.extend({
 </pre>
 					<div class="block function"> <a name="get"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/get/">get</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/get/">get</a></p>
 							<p class="desc">Retrieve the DOM elements matched by the jQuery object</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6613,7 +6613,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="getScript"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.getScript/">getScript</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.getScript/">getScript</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6626,7 +6626,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="getJSON"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.getJSON/">getJSON</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.getJSON/">getJSON</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6639,7 +6639,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="post"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.post/">post</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.post/">post</a></p>
 							<p class="desc">Load data from the server using a HTTP POST request</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6664,7 +6664,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="ajaxSetup"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.ajaxSetup/">ajaxSetup</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.ajaxSetup/">ajaxSetup</a></p>
 							<p class="desc">Set default values for future Ajax requests</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6676,7 +6676,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="ajax"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/ajaxSettings/">ajaxSettings</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/ajaxSettings/">ajaxSettings</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -6740,14 +6740,14 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name=""></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.ajax/">ajax</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.ajax/">ajax</a></p>
 							<p class="desc">Perform an asynchronous HTTP (Ajax) request</p>
 						</div>
 						<pre class="body prettyprint">
 
 	ajax: function( origSettings ) {
 		var s = jQuery.extend(true, {}, jQuery.ajaxSettings, origSettings);
-		
+
 		var jsonp, status, data,
 			callbackContext = origSettings &amp;&amp; origSettings.context || s,
 			type = s.type.toUpperCase();
@@ -7062,7 +7062,7 @@ jQuery.extend({
 				jQuery.event.trigger( &quot;ajaxStop&quot; );
 			}
 		}
-		
+
 		function trigger(type, args) {
 			(s.context ? jQuery(s.context) : jQuery.event).trigger(type, args);
 		}
@@ -7074,7 +7074,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="handleError"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/handleError/">handleError</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/handleError/">handleError</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7103,7 +7103,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="httpSuccess"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/httpSuccess/">httpSuccess</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/httpSuccess/">httpSuccess</a></p>
 							<p class="desc">Determines if an XMLHttpRequest was successful or not</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7124,7 +7124,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="httpNotModified"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/httpNotModified/">httpNotModified</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/httpNotModified/">httpNotModified</a></p>
 							<p class="desc">Determines if an XMLHttpRequest returns NotModified</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7149,7 +7149,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="httpData"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/httpData/">httpData</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/httpData/">httpData</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7187,7 +7187,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="param"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/jQuery.param/">param</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/jQuery.param/">param</a></p>
 							<p class="desc">Create a serialized representation of an array or object, suitable for   use in a URL query string or Ajax request</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7196,19 +7196,19 @@ jQuery.extend({
 	// key/values into a query string
 	param: function( a, traditional ) {
 		var s = [];
-		
+
 		// Set traditional to true for jQuery &lt;= 1.3.2 behavior.
 		if ( traditional === undefined ) {
 			traditional = jQuery.ajaxSettings.traditional;
 		}
-		
+
 		// If an array was passed in, assume that it is an array of form elements.
 		if ( jQuery.isArray(a) || a.jquery ) {
 			// Serialize the form elements
 			jQuery.each( a, function() {
 				add( this.name, this.value );
 			});
-			
+
 		} else {
 			// If traditional, encode the &quot;old&quot; way (the way 1.3.2 or older
 			// did it), otherwise encode params recursively.
@@ -7238,13 +7238,13 @@ jQuery.extend({
 						buildParams( prefix + &quot;[&quot; + ( typeof v === &quot;object&quot; || jQuery.isArray(v) ? i : &quot;&quot; ) + &quot;]&quot;, v );
 					}
 				});
-					
+
 			} else if ( !traditional &amp;&amp; obj != null &amp;&amp; typeof obj === &quot;object&quot; ) {
 				// Serialize object item.
 				jQuery.each( obj, function( k, v ) {
 					buildParams( prefix + &quot;[&quot; + k + &quot;]&quot;, v );
 				});
-					
+
 			} else {
 				// Serialize scalar item.
 				add( prefix, obj );
@@ -7266,7 +7266,7 @@ jQuery.extend({
 			</div>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://api.jquery.com/category/effects/">Effects</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://api.jquery.com/category/effects/">Effects</a></p>
 				</div>
 				<div class="block variables">
 					<div class="head">
@@ -7298,7 +7298,7 @@ jQuery.fn.extend({
 	</pre>
 					<div class="block function"> <a name="show"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/show/">show</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/show/">show</a></p>
 							<p class="desc">Display the matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7350,7 +7350,7 @@ show: function( speed, callback ) {
 					</div>
 					<div class="block function"> <a name="hide"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/hide/">hide</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/hide/">hide</a></p>
 							<p class="desc">Hide the matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7380,14 +7380,14 @@ show: function( speed, callback ) {
 					</div>
 					<div class="block function"> <a name="toggle"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/toggle/">toggle</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/toggle/">toggle</a></p>
 							<p class="desc">Bind two or more handlers to the matched elements, to be executed on   alternate clicks</p>
 						</div>
 						<pre class="body prettyprint">
 
 	// Save the old toggle function
 	_toggle: jQuery.fn.toggle,
-	
+
 	toggle: function( fn, fn2 ) {
 		var bool = typeof fn === &quot;boolean&quot;;
 
@@ -7410,7 +7410,7 @@ show: function( speed, callback ) {
 					</div>
 					<div class="block function"> <a name="fadeTo"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/fadeTo/">fadeTo</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/fadeTo/">fadeTo</a></p>
 							<p class="desc">Adjust the opacity of the matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7424,7 +7424,7 @@ show: function( speed, callback ) {
 					</div>
 					<div class="block function"> <a name="animate"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/animate/">animate</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/animate/">animate</a></p>
 							<p class="desc">Perform a custom animation of a set of CSS properties</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7517,7 +7517,7 @@ show: function( speed, callback ) {
 					</div>
 					<div class="block function"> <a name="stop"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/stop/">stop</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/stop/">stop</a></p>
 							<p class="desc">Stop the currently-running animation on the matched elements</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7587,7 +7587,7 @@ jQuery.extend({
 </pre>
 					<div class="block function"> <a name="speed"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/speed/">speed</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/speed/">speed</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7620,7 +7620,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"><a name="easing" id="swing2"></a> <a name="linear"></a><a name="swing" id="swing"></a>
 						<div class="head">
-							<p class="title">FUNCTIONS : <a href="http://api.jquery.com/linear/">linear</a> &amp; swing</p>
+							<p class="title">FUNCTIONS : <a href="https://api.jquery.com/linear/">linear</a> &amp; swing</p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7645,7 +7645,7 @@ jQuery.extend({
 					</div>
 					<div class="block function"> <a name="fx"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/fx/">fx</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/fx/">fx</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7673,11 +7673,11 @@ jQuery.extend({
 					<pre class="body prettyprint">
 
 jQuery.fx.prototype = {
-	
+
 </pre>
 					<div class="block function"> <a name="update"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/update/">update</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/update/">update</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7700,7 +7700,7 @@ jQuery.fx.prototype = {
 					</div>
 					<div class="block function"> <a name="cur"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/cur/">cur</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/cur/">cur</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7718,7 +7718,7 @@ jQuery.fx.prototype = {
 					</div>
 					<div class="block function"> <a name="custom"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/custom/">custom</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/custom/">custom</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7748,7 +7748,7 @@ jQuery.fx.prototype = {
 					</div>
 					<div class="block function"> <a name="show"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/show/">show</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/show/">show</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7771,7 +7771,7 @@ jQuery.fx.prototype = {
 					</div>
 					<div class="block function"> <a name="hide"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/hide/">hide</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/hide/">hide</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7789,7 +7789,7 @@ jQuery.fx.prototype = {
 					</div>
 					<div class="block function"> <a name="step"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/step/">step</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/step/">step</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7875,7 +7875,7 @@ jQuery.extend( jQuery.fx, {
 </pre>
 					<div class="block function"> <a name="tick"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/tick/">tick</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/tick/">tick</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7897,7 +7897,7 @@ jQuery.extend( jQuery.fx, {
 					</div>
 					<div class="block function"> <a name="stop"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/stop/">stop</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/stop/">stop</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7924,7 +7924,7 @@ jQuery.extend( jQuery.fx, {
 					</div>
 					<div class="block function"> <a name="opacity"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/opacity/">opacity</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/opacity/">opacity</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -7964,7 +7964,7 @@ if ( jQuery.expr &amp;&amp; jQuery.expr.filters ) {
 				</div>
 				<div class="block function"> <a name="initialize"></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/genFx/">genFx</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/genFx/">genFx</a></p>
 						<span class="desc">Internal function</span></div>
 					<pre class="body prettyprint">
 
@@ -7982,7 +7982,7 @@ function genFx( type, num ) {
 			</div>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://api.jquery.com/category/dimensions/">Dimensions</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://api.jquery.com/category/dimensions/">Dimensions</a></p>
 				</div>
 				<div class="block code">
 					<div class="head">
@@ -7994,7 +7994,7 @@ if ( &quot;getBoundingClientRect&quot; in document.documentElement ) {
 	jQuery.fn.offset = function( options ) {
 		var elem = this[0];
 
-		if ( options ) { 
+		if ( options ) {
 			return this.each(function( i ) {
 				jQuery.offset.setOffset( this, options, i );
 			});
@@ -8020,7 +8020,7 @@ if ( &quot;getBoundingClientRect&quot; in document.documentElement ) {
 	jQuery.fn.offset = function( options ) {
 		var elem = this[0];
 
-		if ( options ) { 
+		if ( options ) {
 			return this.each(function( i ) {
 				jQuery.offset.setOffset( this, options, i );
 			});
@@ -8087,7 +8087,7 @@ if ( &quot;getBoundingClientRect&quot; in document.documentElement ) {
 				</div>
 				<div class="block object"> <a name="offset" id="offset"></a>
 					<div class="head">
-						<p class="title"><span class="type">Object : </span><a href="http://api.jquery.com/category/offset/">offset</a></p>
+						<p class="title"><span class="type">Object : </span><a href="https://api.jquery.com/category/offset/">offset</a></p>
 					</div>
 					<pre class="body prettyprint">
 
@@ -8095,7 +8095,7 @@ jQuery.offset = {
 </pre>
 					<div class="block function"> <a name=""></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/initialize/">initialize</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/initialize/">initialize</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -8134,7 +8134,7 @@ jQuery.offset = {
 					</div>
 					<div class="block function"> <a name="bodyOffset"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/bodyOffset/">bodyOffset</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/bodyOffset/">bodyOffset</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -8155,7 +8155,7 @@ jQuery.offset = {
 					</div>
 					<div class="block function"> <a name="setOffset"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/setOffset/">setOffset</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/setOffset/">setOffset</a></p>
 							<p class="desc">Internal function</p>
 						</div>
 						<pre class="body prettyprint">
@@ -8179,7 +8179,7 @@ jQuery.offset = {
 			left: (options.left - curOffset.left) + curLeft
 
 		};
-		
+
 		if ( &quot;using&quot; in options ) {
 			options.using.call( elem, props );
 		} else {
@@ -8203,7 +8203,7 @@ jQuery.fn.extend({
 </pre>
 					<div class="block function"> <a name="position"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/position/">position</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/position/">position</a></p>
 							<p class="desc">Get the current coordinates of the first element in the set of matched   elements, relative to the offset parent</p>
 						</div>
 						<pre class="body prettyprint">
@@ -8242,7 +8242,7 @@ jQuery.fn.extend({
 					</div>
 					<div class="block function"> <a name="offsetParent"></a>
 						<div class="head">
-							<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/offsetParent/">offsetParent</a></p>
+							<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/offsetParent/">offsetParent</a></p>
 							<p class="desc">Get the closest ancestor element that is positioned</p>
 						</div>
 						<pre class="body prettyprint">
@@ -8274,7 +8274,7 @@ jQuery.each( [&quot;Left&quot;, &quot;Top&quot;], function( i, name ) {
 
 	jQuery.fn[ method ] = function(val) {
 		var elem = this[0], win;
-		
+
 		if ( !elem ) {
 			return null;
 		}
@@ -8308,7 +8308,7 @@ jQuery.each( [&quot;Left&quot;, &quot;Top&quot;], function( i, name ) {
 				</div>
 				<div class="block function"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/getWindow/">getWindow</a></p>
+						<p class="title"><span class="type">Function : </span><a href="https://api.jquery.com/getWindow/">getWindow</a></p>
 						<p class="desc">Internal function</p>
 					</div>
 					<pre class="body prettyprint">
@@ -8353,7 +8353,7 @@ jQuery.each([ &quot;Height&quot;, &quot;Width&quot; ], function( i, name ) {
 		if ( !elem ) {
 			return size == null ? null : this;
 		}
-		
+
 		if ( jQuery.isFunction( size ) ) {
 			return this.each(function( i ) {
 				var self = jQuery( this );
@@ -8403,7 +8403,7 @@ window.jQuery = window.$ = jQuery;	</pre>
 		</div>
 	</div>
 </div>
-	<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript" src="https://google-analytics.com/ga.js"></script>
 	<script type="text/javascript">
 		var pageUrl = '/code/jQuery Deconstructed'
 		var pageTracker = _gat._getTracker("UA-603607-3");

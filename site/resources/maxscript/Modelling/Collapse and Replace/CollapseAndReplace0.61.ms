@@ -1,11 +1,11 @@
 -------------------------------------------------------------------------------------------------------------------------------
--- 
+--
 -- Collapse and Replace
 --
 -- Collapse a selection of objects to one mesh, retaining materials and mapping, and optionally replace
 -- another object's base mesh with the new mesh. Useful for modelling and animation when you need one mesh
 -- but still need access to the original objects
--- 
+--
 -------------------------------------------------------------------------------------------------------------------------------
 --
 -- created:		6 Oct 2006
@@ -35,21 +35,21 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 	--------------------------------------------------------------------------------------------------
 	-- ui
 	--------------------------------------------------------------------------------------------------
-	
+
 	GroupBox grpSource "Source Objects" pos:[8,8] width:160 height:288
 		listbox lbxSource "" pos:[16,24] width:144 height:17
 		button btnSource "Grab Selected" pos:[16,256] width:128 height:16 toolTip:"Grab selected objects"
 		button btnClear "x" pos:[144,256] width:16 height:16 toolTip:"Clear source objects"
 		pickbutton pckPivot "Pick pivot mesh..." pos:[16,272] width:144 height:16 toolTip:"Select which object should provide the pivot point for the new mesh (you can also double-click the Source Objects list to do this)"-- filter:pickFilter
-		
+
 	GroupBox grpTarget "Target Mesh" pos:[8,304] width:160 height:64
 		pickbutton btnTarget "Pick ..." pos:[16,323] width:144 height:16
 		checkbox chkMaterial "Replace material" pos:[16,344] width:104 height:16 checked:true
-		
+
 	GroupBox grpAction "Action" pos:[8,376] width:160 height:104
 		radiobuttons rdoAction "" pos:[16,392] width:135 height:48 labels:#("Collapse source objects", "Create a new mesh", "Update a target mesh") default:1
 		button btnGo "Duplicate and Collapse" pos:[16,448] width:144 height:24
-	
+
 	GroupBox grpAbout "About" pos:[8,488] width:160 height:62
 		ActiveXControl axFlash "{D27CDB6E-AE6D-11CF-96B8-444553540000}" pos:[16,504] width:144 height:40
 
@@ -57,7 +57,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 	--------------------------------------------------------------------------------------------------
 	-- functions
 	--------------------------------------------------------------------------------------------------
-	
+
 		function safeCollapse sel duplicate:false name:#prompt moveTo:unsupplied moveBy:unsupplied replaceNode:unsupplied replaceMaterial:true =
 			(
 			-- error checking
@@ -69,9 +69,9 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 						)
 					throw str[n]
 					)
-					
+
 				if NOT (classof sel == ObjectSet OR classof sel == Array OR superClassof sel == GeometryClass) do (throwError 1; return false)
-		
+
 			-- do it!
 				--undo "Safe-collpase to mesh" on
 					(
@@ -80,7 +80,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 						-- variables
 							local arr = #()
 							local objSrc, objTrg, objOld, objNew
-							
+
 						-- get rid of non mesh objects
 							if duplicate == false then
 								(
@@ -100,14 +100,14 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 									else delete objNew
 									)
 								)
-								
+
 						-- error check
 							if arr.count == 0 do (throwError 2; return false)
-								
+
 						-- setup source object
 							objSrc = arr[arr.count]
 							objSrc.material = copy objSrc.material
-			
+
 						-- do the collapse
 							arr.count = arr.count - 1
 							for objTrg in arr do
@@ -115,11 +115,11 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 								meshop.attach objSrc objTrg attachMat:#MatToID condenseMat:true
 								)
 							arr = undefined
-								
+
 						-- move / delete
 							if moveTo != unsupplied then if classof moveTo == Point3 then objSrc.pos = moveTo
 							if moveBy != unsupplied then if classof moveBy == Point3 then move objSrc moveBy
-							
+
 						-- select / replace
 							if replaceNode != unsupplied AND isValidNode replaceNode == true AND replaceNode != objSrc then
 								(
@@ -149,7 +149,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 			local col = colorMan.getColor #background
 			axFlash.BackgroundColor = ((col.x * 65536) + (col.y * 256) + col.z) * 255
 			try(
-				local mov		= "http://www.davestewart.co.uk/images/web/davestewart.swf"
+				local mov		= "http://davestewart.co.uk/images/web/davestewart.swf"
 				axFlash.movie	= mov
 				axFlash.movie	= mov
 				axFlash.SAlign	= "ML"
@@ -162,7 +162,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 			(
 			-- vars
 				local index = rdoAction.state
-				
+
 			-- button text
 				case index of
 					(
@@ -170,12 +170,12 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 						btnGo.text = "Collapse"
 						btnGo.enabled = arrSrc.count > 0
 						)
-							
+
 					2:	(
 						btnGo.text = "Create New"
 						btnGo.enabled = arrSrc.count > 0
 						)
-						
+
 					3:	(
 						btnGo.text = "Update Target"
 						btnGo.enabled = arrSrc.count > 0 AND isValidNode objTrg
@@ -183,7 +183,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 						)
 					)
 			)
-			
+
 		fn setSourceObjects arr =
 			(
 			arrSrc = #()
@@ -197,7 +197,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 				arrSrc = #()
 				)
 			)
-			
+
 		fn checkSourceObjects =
 			(
 			local objectsOK = true
@@ -231,7 +231,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 			(
 			-- variables
 				objSrc = undefined
-			
+
 			-- set correct base object
 				if arrSrc.count > 1 do
 					(
@@ -254,7 +254,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 						local index = finditem arrSrc objSrc
 						deleteItem arrSrc index
 						append arrSrc objSrc
-						
+
 					-- ui
 						pckPivot.text = "Pivot mesh: " + objSrc.name
 						lbxSource.selection = finditem lbxSource.items objSrc.name
@@ -269,12 +269,12 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 	--------------------------------------------------------------------------------------------------
 	-- handlers
 	--------------------------------------------------------------------------------------------------
-	
+
 		on lbxSource doubleClicked index do
 			(
 			setBaseObject index:index
 			)
-		
+
 		on btnSource pressed do
 			(
 			lbxSource.items = #()
@@ -282,7 +282,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 			if objSrc == undefined do setBaseObject obj:arrSrc[1]
 			checkGoButton()
 			)
-			
+
 		on btnClear pressed do
 			(
 			arrSrc = #()
@@ -290,17 +290,17 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 			lbxSource.items = #()
 			checkGoButton()
 			)
-			
+
 		on pckPivot picked obj do
 			(
 			setBaseObject obj:obj
 			)
-			
+
 		on rdoAction changed state do
 			(
 			checkGoButton()
 			)
-	
+
 		on btnTarget picked obj do
 			(
 			if isValidNode obj then
@@ -315,7 +315,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 				btnTarget.text = "Pick ..."
 				)
 			)
-	
+
 		on btnGo pressed do
 			(
 			if checkSourceObjects() == true then undo "Safe-collpase to mesh" on
@@ -335,7 +335,7 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 					)
 				)
 			)
-	
+
 		on roCollapse open do
 			(
 			initAbout()
@@ -344,4 +344,4 @@ rollout roCollapse "Collapse and Replace" width:176 height:560
 			)
 )
 
-createDialog roCollapse 
+createDialog roCollapse

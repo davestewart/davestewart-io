@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------
 -- Scripted Lookat Controller
 --
--- Author:		Dave Stewart http://www.davestewart.co.uk
+-- Author:		Dave Stewart http://davestewart.co.uk
 -- Idea by:		Eric Chadwick
 -- Date:		19th February 2002
 -- Version:		1.01
@@ -133,7 +133,7 @@ else degToRad((a-90)+" + offset + ")
 	on btnAssign pressed do
 		(
 		if (selection.count > 0) then assignControllers lookAtObj (getCurrentSelection())
-		else 
+		else
 			(
 			objArray = (selectByName title:"Select objects to assign Scripted Lookat Controller to:")
 			if objArray != undefined then assignControllers lookAtObj objArray
@@ -145,7 +145,7 @@ else degToRad((a-90)+" + offset + ")
 	on btnDelete pressed do
 		(
 		if (selection.count > 0) then deleteControllers (getCurrentSelection())
-		else 
+		else
 			(
 			objArray = (selectByName title:"Select objects to delete Scripted Lookat Controller from:")
 			if objArray != undefined then deleteControllers objArray

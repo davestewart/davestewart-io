@@ -1,26 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+"http://w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Highlight Demo</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	
+
 	<script type="text/javascript" src="/lib/js/jquery/jquery-1.2.1.pack.js"></script>
 	<script type="text/javascript" src="/lib/js/jquery/jquery.highlight.js"></script>
 
 	<script type="text/javascript" src="js/tabs.js"></script>
 
 	<script type="text/javascript">
-	
+
 		$(document).ready(
 			function(){
-			
+
 				// tabs
 					initTabs()
-					
+
 				// form demo
 					$('form').highlight()
-	
+
 				// table demos
 					$('#table1').highlight()
 					$('#table2').highlight('td')
@@ -28,14 +28,14 @@
 						highlight('tr')
 						highlight('tr', 'highlight-selected', 'mousedown')
 						}
-						
+
 				// list demos
 					$('#list1').highlight(null, 'list-highlight')
 					$('#list2').highlight('ul', 'list-highlight')
 				}
 			);
 	</script>
-	
+
 	<style type="text/css" media="screen">
 		@import "css/main.css";
 		@import "css/form.css";
@@ -48,15 +48,15 @@
 	</style>
 	<![endif]-->
 	<style type="text/css" media="screen">
-	
+
 		/* code */
-		
+
 			thead td{
 				border-bottom: 1px solid #ccc !important;
 				font-weight:bold;
 				}
-		
-			code, 
+
+			code,
 			pre{
 				margin:10px 15px;
 				font-family:"Courier New", Courier, monospace;
@@ -65,40 +65,40 @@
 				padding:5px;
 				white-space:pre;
 				}
-		
-	
+
+
 		/* General table styling... */
-		
+
 			table{
 				margin:15px;
 				border-right: 1px dotted #ccc;
 				border-bottom: 1px dotted #ccc;
 				}
-				
+
 			tr td{
 				border-top: 1px dotted #ccc;
 				border-left: 1px dotted #ccc;
 				}
-				
+
 			.no-border,
 			.no-border tr,
 			.no-border td
 				{
 				border:none;
 				}
-				
+
 		/* specific row styling for the table-row table ... */
-		
+
 			.row-highlight{
 				border:1px solid red !important;
 				background:#ccc;
 				}
-				
+
 			.highlight-selected{
 				background-image:url('img/highlight-selected.gif') !important;
 				}
 		/* specific row styling for the lists ... */
-		
+
 			#list1 ul,
 			#list1 li,
 			#list2 ul,
@@ -107,24 +107,24 @@
 				border:1px solid #fff;
 				width:auto;
 				}
-				
+
 			.list-highlight{
 				border:1px solid red !important;
 				}
-				
+
 		/* specific row styling for the - but NOT highlight related. Just to make the look pretty  ... */
-		
+
 			#list1 li,
 			#list2 li{
 				padding:2px;
 				cursor:default;
 				}
-	
+
 			.red {
 				color:#f00;
 				font-style:italic;
 				}
-				
+
 			.highlight{
 				background-image:url(img/highlight.gif);
 				}
@@ -132,14 +132,14 @@
 </head>
 <body>
 	<div id="page">
-	
+
 		<div id="header">
 			<h1>jQuery &quot;Highlight&quot;  Demo</h1>
 			<h2>jQuery plugin to highlight a form field’s parent tag (or any other selector) as you tab into it</h2>
 		</div>
-		
+
 		<hr />
-		
+
 		<ul id="tab-list-main" class="tab-list" section="#section-main">
 			<li class="active"   section="#intro"><a href="javascript:;">Introduction</a></li>
 			<li class="inactive" section="#form-demo"><a class="" href="javascript:;">Form Demo</a></li>
@@ -147,9 +147,9 @@
 			<li class="inactive" section="#list-demo"><a class="" href="javascript:;"> List Demo</a></li>
 			<li class="inactive" section="#download"><a class="" href="javascript:;">Download</a></li>
 		</ul>
-		
+
 		<div class="content" id="section-main">
-			
+
 			<div id="intro" class="section">
 				<h3>An introduction to Highlight</h3>
 				<h4>Overview</h4>
@@ -220,8 +220,8 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 				<pre>$('#element').highlight('div', 'some-class', <span class="red">'mousedown'</span>)	</pre>
 				<p>&nbsp;</p>
 			</div>
-			
-			
+
+
 			<div id="form-demo" class="section">
 				<h3>Example of highlight working within a form</h3>
 				<h4>Form controls</h4>
@@ -270,10 +270,10 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 							</li>
 					</ul>
 				</fieldset></form>
-					
+
 				</div>
-				
-				
+
+
 
 				<div id="table-demo" class="section">
 					<h3>Example of highlight working within tables</h3>
@@ -288,7 +288,7 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
 						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
 					</table>
-					
+
 					<h4>Table cells</h4>
 					<p>The following code is used to highlight the table cells as the mouse passes over them.</p>
 					<pre>$('#table2').highlight('td')</pre>
@@ -300,7 +300,7 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
 						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
 					</table>
-					
+
 					<h4>Toggling table rows</h4>
 					<p>The following code is used to toggle table rows off and on as you click them.</p>
 					<pre>$('#table3')
@@ -317,7 +317,7 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 					</div>
 				<div id="list-demo" class="section">
 					<h3>Example of highlight working on list items</h3>
-					
+
 					<h4>List items</h4>
 					<p>The following code is used to highlight a list's elements as the mouse passes over them.</p>
 					<pre>$('#list1').highlight(null, 'list-highlight')<br /></pre>
@@ -353,27 +353,27 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 						<li>Item 4</li>
 					</ul>
 			</div>
-				
-				
+
+
 			<div id="download" class="section">
 					<h3>Download Highlight here</h3>
 					<h4>Download</h4>
 					<p>Download <a href="../highlight/jquery.highlight.js">jquery.highlight.js</a>.</p>
 					<h4>Feedback</h4>
-					<p>If you have any comments, or wish to report any bugs or unexpected behaviour, please do so using the commenting system on the <a href="http://www.keyframesandcode.com/code/development/javascript/jquery-highlight-plugin/">project's blog page</a>.</p>
+					<p>If you have any comments, or wish to report any bugs or unexpected behaviour, please do so using the commenting system on the <a href="https://keyframesandcode.com/code/development/javascript/jquery-highlight-plugin/">project's blog page</a>.</p>
 					<p>I can't promise to answer questions on usage (that's what this help is for!), but I'll do my best to fix bugs.</p>
 					<p>Cheers,</p>
 					<p>Dave</p>
 					<p>&nbsp;</p>
 				<p>&nbsp;</p>
 			</div>
-			
+
 			<hr />
 		</div>
 
 </div>
 	<div style="height:500px;"></div>
-	<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript" src="https://google-analytics.com/ga.js"></script>
 	<script type="text/javascript">
 		var pageTracker = _gat._getTracker("UA-603607-3");
 		pageTracker._initData();

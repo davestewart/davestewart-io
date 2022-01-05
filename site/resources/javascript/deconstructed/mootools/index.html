@@ -1,23 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://w3.org/1999/xhtml">
 <head>
 	<title>MooTools Deconstructed</title>
-	
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="description" content="jQuery Deconstructed is designed to visually and interactively deconstruct the internal code of the jQuery library. It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow." />
-	
+
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />.
-	<link rel="image_src" href="http://www.keyframesandcode.com/resources/javascript/deconstructed/assets/img/extra/facebook-thumbnail.png" />
+	<link rel="image_src" href="https://keyframesandcode.com/resources/javascript/deconstructed/assets/img/extra/facebook-thumbnail.png" />
 
 	<link href="../assets/css/prettify.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/css/formatting.css" rel="stylesheet" type="text/css" />
-	
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="../assets/js/utils/base64.pack.js"></script>
 	<script type="text/javascript" src="../assets/js/utils/prettify.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/jquery/jquery.cookie.js"></script>
 	<script type="text/javascript" src="../assets/js/core.js"></script>
-	
+
 	<script type="text/javascript">
 		writeColorsStylesheet('../')
 	</script>
@@ -44,7 +44,7 @@
 					<p class="large hightlight">The Deconstructed series is designed to visually and interactively deconstruct the internal code of JavaScript libraries, including <a href="../jquery/">jQuery</a>, <a href="../prototype/">Prototype</a> and <a href="../mootools/">MooTools</a>.</p>
 					<p class="large">It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow. </p>
 					<p class="large"><em>Instructions: click  <span class="highlight" title="Function, Property and Code blocks">element</span> headers to view specific code. Click <span class="highlight" title="Section, Class, Extend and Object blocks">group</span> headers to preview all nested descriptions. <span class="highlight" title="For example, CTRL+Clicking the main Code container will open ALL blocks in the entire page">CTRL+click</span> group headers to view all nested code. Click <span class="highlight" title="Those with a link indicator or icon">function</span> names to view official API docs.</em></p>
-					<p id="links"><a href="http://www.keyframesandcode.com/code/development/javascript/jquery/jquery-deconstructed/">comment</a> | <a href="javascript:m();void(0)">email</a> | <a href="http://twitter.com/dave_stewart/">follow</a></p>
+					<p id="links"><a href="https://keyframesandcode.com/code/development/javascript/jquery/jquery-deconstructed/">comment</a> | <a href="javascript:m();void(0)">email</a> | <a href="https://twitter.com/dave_stewart/">follow</a></p>
 				</div>
 			</td>
 			<td id="key" class="text" style="width:40%">
@@ -128,7 +128,7 @@
 /*
 
 script:         Core.js
-description:    The core of MooTools, contains all the base functions and the Native and Hash implementations. 
+description:    The core of MooTools, contains all the base functions and the Native and Hash implementations.
                 Required by all the other scripts.
 
 provides:       [Mootools, Native, Hash.base, Array.each, $util]
@@ -137,11 +137,11 @@ copyright:      Copyright (c) 2006-2008 [Valerio Proietti](http://mad4milk.net/)
 authors:        The MooTools production team (http://mootools.net/developers/)
 
 inspiration:    Class implementation inspired by [Base.js]
-                (http://dean.edwards.name/weblog/2006/03/base/) Copyright (c) 2006 Dean Edwards, 
+                (http://dean.edwards.name/weblog/2006/03/base/) Copyright (c) 2006 Dean Edwards,
                 [GNU Lesser General Public License](http://opensource.org/licenses/lgpl-license.php)
-			
+
                 Some functionality inspired by [Prototype.js]
-                (http://prototypejs.org) Copyright (c) 2005-2007 Sam Stephenson, 
+                (http://prototypejs.org) Copyright (c) 2005-2007 Sam Stephenson,
                 [MIT License](http://opensource.org/licenses/mit-license.php)
 
 
@@ -150,7 +150,7 @@ inspiration:    Class implementation inspired by [Base.js]
 </pre>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a href="http://mootools.net/docs/core">MooTools</a></p>
+					<p class="title"><span class="type">Section : </span><a href="https://mootools.net/docs/core">MooTools</a></p>
 				</div>
 
 				<div class="block code"> <a name=""></a>
@@ -439,7 +439,7 @@ description: The Browser Core. Contains Browser initialization, Window and Docum
 
 license: MIT-style license.
 
-requires: 
+requires:
 - /Native
 - /$util
 
@@ -690,7 +690,7 @@ Array.implement({
 		for (var i = 0, j = array.length; i &lt; j; i++) this.push(array[i]);
 		return this;
 	},
-	
+
 	getLast: function(){
 		return (this.length) ? this[this.length - 1] : null;
 	},
@@ -1278,9 +1278,9 @@ provides: [Class]
 */
 
 function Class(params){
-	
+
 	if (params instanceof Function) params = {initialize: params};
-	
+
 	var newClass = function(){
 		Object.reset(this);
 		if (newClass._prototyping) return this;
@@ -1289,9 +1289,9 @@ function Class(params){
 		delete this._current; delete this.caller;
 		return value;
 	}.extend(this);
-	
+
 	newClass.implement(params);
-	
+
 	newClass.constructor = Class;
 	newClass.prototype.constructor = newClass;
 
@@ -1305,14 +1305,14 @@ Function.prototype.protect = function(){
 };
 
 Object.reset = function(object, key){
-		
+
 	if (key == null){
 		for (var p in object) Object.reset(object, p);
 		return object;
 	}
-	
+
 	delete object[key];
-	
+
 	switch ($type(object[key])){
 		case 'object':
 			var F = function(){};
@@ -1322,9 +1322,9 @@ Object.reset = function(object, key){
 		break;
 		case 'array': object[key] = $unlink(object[key]); break;
 	}
-	
+
 	return object;
-	
+
 };
 
 new Native({name: 'Class', initialize: Class}).extend({
@@ -1335,10 +1335,10 @@ new Native({name: 'Class', initialize: Class}).extend({
 		delete F._prototyping;
 		return proto;
 	},
-	
+
 	wrap: function(self, key, method){
 		if (method._origin) method = method._origin;
-		
+
 		return function(){
 			if (method._protected &amp;&amp; this._current == null) throw new Error('The method &quot;' + key + '&quot; cannot be called.');
 			var caller = this.caller, current = this._current;
@@ -1349,56 +1349,56 @@ new Native({name: 'Class', initialize: Class}).extend({
 		}.extend({_owner: self, _origin: method, _name: key});
 
 	}
-	
+
 });
 
 Class.implement({
-	
+
 	implement: function(key, value){
-		
+
 		if ($type(key) == 'object'){
 			for (var p in key) this.implement(p, key[p]);
 			return this;
 		}
-		
+
 		var mutator = Class.Mutators[key];
-		
+
 		if (mutator){
 			value = mutator.call(this, value);
 			if (value == null) return this;
 		}
-		
+
 		var proto = this.prototype;
 
 		switch ($type(value)){
-			
+
 			case 'function':
 				if (value._hidden) return this;
 				proto[key] = Class.wrap(this, key, value);
 			break;
-			
+
 			case 'object':
 				var previous = proto[key];
 				if ($type(previous) == 'object') $mixin(previous, value);
 				else proto[key] = $unlink(value);
 			break;
-			
+
 			case 'array':
 				proto[key] = $unlink(value);
 			break;
-			
+
 			default: proto[key] = value;
 
 		}
-		
+
 		return this;
 
 	}
-	
+
 });
 
 Class.Mutators = {
-	
+
 	Extends: function(parent){
 
 		this.parent = parent;
@@ -1419,7 +1419,7 @@ Class.Mutators = {
 		}, this);
 
 	}
-	
+
 };
 
 
@@ -1682,16 +1682,16 @@ Document.implement({
 	getWindow: function(){
 		return this.window;
 	},
-	
+
 	id: (function(){
-		
+
 		var types = {
 
 			string: function(id, nocash, doc){
 				id = doc.getElementById(id);
 				return (id) ? types.element(id, nocash) : null;
 			},
-			
+
 			element: function(el, nocash){
 				$uid(el);
 				if (!nocash &amp;&amp; !el.$family &amp;&amp; !(/^object|embed$/i).test(el.tagName)){
@@ -1700,17 +1700,17 @@ Document.implement({
 				};
 				return el;
 			},
-			
+
 			object: function(obj, nocash, doc){
 				if (obj.toElement) return types.element(obj.toElement(doc), nocash);
 				return null;
 			}
-			
+
 		};
 
 		types.textnode = types.whitespace = types.window = types.document = $arguments(0);
 
-		
+
 		return function(el, nocash, doc){
 			if (el &amp;&amp; el.$family &amp;&amp; el.uid) return el;
 			var type = $type(el);
@@ -1798,7 +1798,7 @@ var clean = function(item, retain){
 			}
 			Element.dispose(item);
 		}
-	}	
+	}
 	if (!uid) return;
 	collected[uid] = storage[uid] = null;
 };
@@ -2021,7 +2021,7 @@ Element.implement({
 	getParents: function(match, nocash){
 		return walk(this, 'parentNode', null, match, true, nocash);
 	},
-	
+
 	getSiblings: function(match, nocash){
 		return this.getParent().getChildren(match, nocash).erase(this);
 	},
@@ -2255,7 +2255,7 @@ description: Contains Element methods for dealing with events. This file also in
 
 license: MIT-style license.
 
-requires: 
+requires:
 - /Element
 - /Event
 
@@ -2567,7 +2567,7 @@ description: Contains methods to work with size, scroll, or positioning of Eleme
 license: MIT-style license.
 
 credits:
-- Element positioning based on the [qooxdoo](http://qooxdoo.org/) code and smart browser fixes, [LGPL License](http://www.gnu.org/licenses/lgpl.html).
+- Element positioning based on the [qooxdoo](http://qooxdoo.org/) code and smart browser fixes, [LGPL License](http://gnu.org/licenses/lgpl.html).
 - Viewport dimensions based on [YUI](http://developer.yahoo.com/yui/) code, [BSD License](http://developer.yahoo.com/yui/license.html).
 
 requires:
@@ -3106,7 +3106,7 @@ Selectors.Pseudo = new Hash({
 	checked: function(){
 		return this.checked;
 	},
-	
+
 	empty: function(){
 		return !(this.innerText || this.textContent || '').length;
 	},
@@ -3183,11 +3183,11 @@ Selectors.Pseudo = new Hash({
 	odd: function(argument, local){
 		return Selectors.Pseudo['nth-child'].call(this, '2n', local);
 	},
-	
+
 	selected: function(){
 		return this.selected;
 	},
-	
+
 	enabled: function(){
 		return (this.disabled === false);
 	}
@@ -3228,7 +3228,7 @@ Element.Events.domready = {
 		window.fireEvent('domready');
 		document.fireEvent('domready');
 	};
-	
+
 	window.addEvent('load', domready);
 
 	if (Browser.Engine.trident){
@@ -3259,7 +3259,7 @@ description: JSON encoder and decoder.
 
 license: MIT-style license.
 
-See Also: &lt;http://www.json.org/&gt;
+See Also: &lt;http://json.org/&gt;
 
 requires:
 - /Array
@@ -3277,7 +3277,7 @@ var JSON = new Hash(this.JSON &amp;&amp; {
 	stringify: JSON.stringify,
 	parse: JSON.parse
 }).extend({
-	
+
 	$specialChars: {'\b': '\\b', '\t': '\\t', '\n': '\\n', '\f': '\\f', '\r': '\\r', '&quot;' : '\\&quot;', '\\': '\\\\'},
 
 	$replaceChars: function(chr){
@@ -3405,7 +3405,7 @@ description: Wrapper for embedding SWF movies. Supports External Interface Commu
 
 license: MIT-style license.
 
-credits: 
+credits:
 - Flash detection &amp; Internet Explorer + Flash Player 9 fix inspired by SWFObject.
 
 requires:
@@ -3805,7 +3805,7 @@ description: Formerly Fx.Style, effect to transition any CSS property for an ele
 
 license: MIT-style license.
 
-requires: 
+requires:
 - /Fx.CSS
 
 provides: [Fx.Tween, Element.fade, Element.highlight]
@@ -3992,7 +3992,7 @@ description: Contains a set of advanced transitions to be used with any of the F
 license: MIT-style license.
 
 credits:
-- Easing Equations by Robert Penner, &lt;http://www.robertpenner.com/easing/&gt;, modified and optimized to be used with MooTools.
+- Easing Equations by Robert Penner, &lt;http://robertpenner.com/easing/&gt;, modified and optimized to be used with MooTools.
 
 requires:
 - /Fx
@@ -4468,16 +4468,16 @@ Request.JSON = new Class({
 		this.onSuccess(this.response.json, text);
 	}
 
-}); 
+});
 				</pre>
-			</div>	
+			</div>
 			</div>
 		</div>
 	</div>
 </div>
 
 
-	<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript" src="https://google-analytics.com/ga.js"></script>
 	<script type="text/javascript">
 		var pageUrl = '/code/MooTools Deconstructed'
 		var pageTracker = _gat._getTracker("UA-603607-3");
