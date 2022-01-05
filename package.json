@@ -1,0 +1,15 @@
+{
+  "name": "davestewart-io",
+  "version": "1.0.0",
+  "description": "Static export of davestewart.io",
+  "homepage": "https://davestewart-io.vercel.app",
+  "scripts": {
+    "serve": "npx serve site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davestewart/davestewart-io.git"
+  },
+  "author": "Dave Stewart",
+  "license": "ISC"
+}

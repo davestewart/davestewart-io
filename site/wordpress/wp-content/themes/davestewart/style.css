@@ -347,6 +347,12 @@ Version:        0.1.0
 		.sticky-nav{
 			width:100%;
 			z-index:1000;
+			position: relative;
+		}
+		@media screen and (max-width: 768px) {
+			.sticky-nav {
+				position: absolute;
+			}
 		}
 
 	/* FILTER NAV */

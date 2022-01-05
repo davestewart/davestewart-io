@@ -4,5 +4,5 @@ Static backup of my old projects site **davestewart.io** now hosted at [davestew
 Links:
 
 - [My main site](https://davestewart.co.uk)
-- [Archived projects](https://davestewart.vercel.app/archive/projects/)
-- [Archived open source](https://davestewart.vercel.app/archive/projects/open-source/) (a summary of this site)
+- [Archived projects](https://davestewart.co.uk/archive/projects/)
+- [Archived open source](https://davestewart.co.uk/archive/projects/open-source/) (a summary of this site)
