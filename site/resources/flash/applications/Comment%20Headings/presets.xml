@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presets>
+	<input>
+		<!--
+			Add your own input presets here - this is the text that will automatically show in the input field
+			Separate new lines with commas
+		-->
+		<preset>
+			<name>ActionScript (Class)</name>
+			<value>Variables,Initialization,Public Methods,Accessors,Private Methods,Handlers,Utilities</value>
+		</preset>
+		<preset>
+			<name>ActionScript (Timeline)</name>
+			<value>Variables,Functions,Handlers,Utilities,Initialize</value>
+		</preset>
+		<preset>
+			<name>PHP</name>
+			<value>Includes,Variables,Constructor,Functions,Utilities,Code</value>
+		</preset>
+		<preset>
+			<name>MaxScript</name>
+			<value>Variables,Interface,Utilities,Functions,Code,Handlers</value>
+		</preset>
+		<preset>
+			<name>Full Character Set</name>
+			<value><![CDATA[ABCDEFGHIJKLMNOPQRSTUVWXYZ,abcdefghijklmnopqrstuvwxyz,0123456789,[({})].,:;'"!?,ÆÁÀÄÅÂÃÇÐÉÈËÊÍÌÏÎÑØÓÒÖÔÕÞÚÙÜÛÝ,æáàäåâãçđéèëêíìïîñøóòöôõþβúùüûýÿ,$¢£¥¤#&§*†‡¶@\●«<>»€®©™|¦¼½¾%‰°¹²³ªºµ‹›+±=~^÷-¬•×“”‘’‚„…¡¿_]]></value>
+		</preset>
+	</input>
+	<output>
+		<!--
+			Edit this section customize the output to your particular language
+			
+			comment, block	- should be one of the available elements from the comments and blocks nodes
+			font			- should be a font name from one of the font nodes
+			size			- a number from 1 to 20
+			delimiter		- the (0-based) index of the delimiter node you want to use
+		-->
+		<preset>
+			<name>Action/JavaScript</name>
+			<comment>//</comment>
+			<block>█</block>
+			<font>Freedom</font>
+			<size>8</size>
+			<delimiter>0</delimiter>
+		</preset>
+		<preset>
+			<name>PHP (Old style)</name>
+			<comment>#</comment>
+			<block>█</block>
+			<font>Business</font>
+			<size>8</size>
+			<delimiter>1</delimiter>
+		</preset>
+		<preset>
+			<name>MaxScript (Unicode)</name>
+			<comment>--</comment>
+			<block>█</block>
+			<font>Dreamer</font>
+			<size>8</size>
+			<delimiter>0</delimiter>
+		</preset>
+		<preset>
+			<name>MaxScript</name>
+			<comment>--</comment>
+			<block>@</block>
+			<font>Intelligent</font>
+			<size>8</size>
+			<delimiter>0</delimiter>
+		</preset>
+		<preset>
+			<name>VB</name>
+			<comment>'</comment>
+			<block>#</block>
+			<font>Estudio</font>
+			<size>8</size>
+			<delimiter>2</delimiter>
+		</preset>
+ 	</output>
+	<comments>
+		<preset>//</preset>
+		<preset>#</preset>
+		<preset>--</preset>
+		<preset>'</preset>
+	</comments>
+	<blocks>
+		<preset>█</preset>
+		<preset>■</preset>
+		<preset>@</preset>
+		<preset>#</preset>
+		<preset>=</preset>
+		<preset>-</preset>
+	</blocks>
+	<delimiters>
+		<preset>
+		<!--
+			Add your own indenting styles here
+			
+			character		- the character to use for the main delimiter
+			length			- the default length for the delimiter
+			indent			- any indent you want the start, for example a tab character
+		-->
+			<character>-</character>
+			<length>120</length>
+			<indent>	</indent>
+		</preset>
+		<preset>
+			<character>=</character>
+			<length>120</length>
+			<indent>	</indent>
+		</preset>
+		<preset>
+			<character>*</character>
+			<length>120</length>
+			<indent>	</indent>
+		</preset>
+	</delimiters>
+	<fonts>
+		<!--
+			No need to edit this section, but if you want to reduce the amount of available fonts,
+			You can move them to the next section "unusedfonts"...
+		-->
+		<font>
+			<name>Atlantis</name>
+			<id>atlantis</id>
+			<size>5</size>
+			<style>normal</style>
+			<characters><![CDATA[AÆBCDEFGHIJKLMNOØPQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdefghijklmnoøpqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûý0123456789$£¥#&*@\€®©™[({})]|%°<>+=~^.,:;'`"!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Compact</name>
+			<id>compact</id>
+			<size>5</size>
+			<style>normal</style>
+			<characters><![CDATA[AÆBCDEFGHIJKLMNOØPQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdefghijklmnoøpqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûý0123456789$£¥#&*@\€®©™[({})]|%°<>+=~^.,:;'`"!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Intelligent</name>
+			<id>intelligent</id>
+			<size>5</size>
+			<style>bold</style>
+			<characters><![CDATA[AÆBCDEFGHIJKLMNOØPQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdefghijklmnoøpqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûý0123456789$£¥#&*@\€®©™[({})]|%°<>+=~^.,:;'`"!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Minitower</name>
+			<id>minitower</id>
+			<size>5</size>
+			<style>bold</style>
+			<characters><![CDATA[AÆBCDÐEFGHIJKLMNOØPÞQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdđefghijklmnoøpþqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûýÿ0123456789$¢£¥¤#&§*†‡¶@\●«<>»€®©™[({})]|¼½¾%‰°¹²³ªºµ‹›+±=~^÷-¬•×.,:;'"“”‘’‚„…!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Idea</name>
+			<id>idea</id>
+			<size>6</size>
+			<style>normal</style>
+			<characters><![CDATA[AÆBCDEFGHIJKLMNOØPQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdefghijklmnoøpqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûý0123456789$£¥#&*@\€[({})]|%°<>+=~^&#.,:;'"`!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Alias</name>
+			<id>alias</id>
+			<size>6</size>
+			<style>normal</style>
+			<characters><![CDATA[AÆBCDEFGHIJKLMNOØPQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdefghijklmnoøpqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûý0123456789$¢£¥#&*@\€®©™[({})]|%°<>+=~^&#.,:;`'"!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Freedom</name>
+			<id>freedom</id>
+			<size>7</size>
+			<style>normal</style>
+			<characters><![CDATA[AÆBCDEFGHIJKLMNOØPQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdefghijklmnoøpqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûý0123456789$£¥#&*@\€[({})]|%°<>+=~^&#.,:;'"`!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Business</name>
+			<id>business</id>
+			<size>7</size>
+			<style>bold</style>
+			<characters><![CDATA[AÆBCDÐEFGHIJKLMNOØPÞQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdđefghijklmnoøpþqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûýÿ0123456789$¢£¥¤#&§*†‡¶@\●«<>»€®©™[({})]|¦¼½¾%‰°¹²³ªºµ‹›+±=~^÷-¬•×.,:;'"“”‘’‚„…!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Dreamer</name>
+			<id>dreamer</id>
+			<size>7</size>
+			<style>bold</style>
+			<characters><![CDATA[AÆBCDEFGHIJKLMNOØPQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdefghijklmnoøpqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûý0123456789$£¥#&*@\€[({})]|%°<>+=~^&#.,:;'"`!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Estudio</name>
+			<id>estudio</id>
+			<size>7</size>
+			<style>normal</style>
+			<characters><![CDATA[AÆBCDÐEFGHIJKLMNOØPÞQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdđefghijklmnoøpþqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûýÿ0123456789$¢£¥¤#&§*†‡¶@\●«<>»€®©™[({})]|¦¼½¾%‰°¹²³ªºµ‹›+±=~^÷-¬•×.,:;'"“”‘’‚„…!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Executive</name>
+			<id>executive</id>
+			<size>10</size>
+			<style>bold</style>
+			<characters><![CDATA[AÆBCDÐEFGHIJKLMNOØPÞQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdđefghijklmnoøpþqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûýÿ0123456789$¢£¥¤#&§*†‡¶@\●«<>»€®©™[({})]|¦¼½¾%‰°¹²³ªºµ‹›+±=~^÷-¬•×.,:;'"“”‘’‚„…!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+		<font>
+			<name>Museum</name>
+			<id>museum</id>
+			<size>10</size>
+			<style>bold</style>
+			<characters><![CDATA[AÆBCDEFGHIJKLMNOØPQRSTUVWXYZÁÀÄÅÂÃÇÉÈËÊÍÌÏÎÑÓÒÖÔÕÚÙÜÛÝaæbcdefghijklmnoøpqrsβtuvwxyzáàäåâãçéèëêíìïîñóòöôõúùüûý0123456789$£¥#&*@\€®©™[({})]|%°<>+=~^&#.,:;'"`!?¡¿_]]></characters>
+			<spacewidth>4</spacewidth>
+		</font>
+	</fonts>
+	<unusedfonts>
+		<!--
+			Place any unused fonts here...
+		-->
+	</unusedfonts>
+</presets>

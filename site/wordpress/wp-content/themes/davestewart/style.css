@@ -1,0 +1,674 @@
+/*
+Theme Name:     Dave Stewart
+Theme URI:      http://example.com/
+Description:    Child theme for the Hoarder theme
+Author:         Dave Stewart
+Author URI:     http://www.davestewart.co.uk
+Template:       hoarder                             
+Version:        0.1.0
+*/
+
+/*
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url('/wordpress/wp-content/themes/davestewart/assets/fonts/patua-one/stylesheet.css');
+*/
+
+@import url('/wordpress/wp-content/themes/hoarder/style.css');
+@import url('/wordpress/wp-content/themes/davestewart/assets/fonts/open-sans/stylesheet.css');
+@import url('/wordpress/wp-content/themes/davestewart/assets/fonts/patua-one/stylesheet.css');
+@import url('/wordpress/wp-content/themes/davestewart/assets/fonts/merriweather/stylesheet.css');
+
+
+/*
+-------------------------------------------------------------------------------------------------
+-- MAIN
+-------------------------------------------------------------------------------------------------
+*/
+	/* MAIN */
+	
+		html{
+			overflow-y: scroll;
+		}
+		
+		body{
+			/*
+			font-family:'Open Sans';
+			*/
+			position: relative;
+			font-family:'OpenSansRegular';
+			font-size:0.8em;
+			line-height: 1.4em;
+		}
+		
+		
+		
+	/* LAYOUT */
+	
+		#content{
+			min-height: 500px;
+		}
+		
+	
+	/* FORMATTING */
+	
+		h3 a:link,
+		h3 a:visited{
+			color:#000;
+		}
+		
+		.hentry p,
+		.hentry li{
+			line-height: 1.5em;
+		}
+		
+		a {
+			-webkit-transition: none;
+			-moz-transition: none;
+			-ms-transition: none;
+			-o-transition: none;
+			transition: none;
+		}
+		
+		pre{
+			border-radius: 3px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+			-webkit-tab-size:4;
+			-moz-tab-size:4;
+			-ms-tab-size:4;
+			tab-size:4;
+			overflow-x: auto;
+			word-wrap: normal;
+		}
+
+		/*
+		.page-title,
+		.entry-title,
+		.page.page-template-template-home-2col-php .entry-title,
+		.entry-content h2, h3, h4,
+		#primary-nav > ul > li > a,
+		button,
+		#submit,
+		input[type="submit"],
+		.gform_next_button,
+		.gform_previous_button,
+		.gform_button,
+		.entry-quote,
+		.entry-link,
+		.comments-title,
+		#reply-title,
+		.pings-title,
+		.comment-author cite,
+		#load-more,
+		.footer-lower,
+		.widget-title,
+		.twitter-link,
+		#zilla-mobile-menu ul.sub-menu{
+			font-family: 'andada-bold', Georgia, serif;
+			font-weight: normal;
+		}
+		*/
+		
+	/* HEADER */
+	
+		.header-inner{
+			padding:25px 0;
+		}
+	
+		#logo{
+			font-family:merriweather-regular, Georgia, serif;
+			font-size:50px;
+			letter-spacing: normal;
+			text-transform: none;
+			color:#000;
+			padding-bottom:0px;
+		}
+		
+		/* Smartphones (portrait and landscape) ----------- */
+		@media only screen and (min-device-width : 320px) and (max-width : 480px) {
+		
+			#logo{
+				font-size:35px;
+			}
+		}
+
+		
+		#logo span{
+			font-family:"Times New Roman";
+			font-size: 1.2em;
+			position: relative;
+			top:-0.04em;
+		}
+		
+		#logo a{
+			font-family: inherit;
+			font-size: inherit;
+			line-height:1em;
+			letter-spacing: inherit;
+			text-transform: inherit;
+		}
+			
+		#logo a:hover{
+			color:#EA4848;
+		}
+		
+		#logo img{
+			
+		}
+			
+		#tagline{
+			color:#EA4848;
+			font-family: 'Patua One';
+			letter-spacing: 0.1em;
+			text-transform:none;
+			font-weight: normal;
+			font-size:12px;
+			margin:1em 0 0 0;
+			cursor: default;
+		}
+	
+	
+	/* HOME LAYOUT */
+	
+		.home .entry-meta-footer {
+			padding: 0.6em 12px;
+			font-size: 10px;
+			text-align: right;
+			font-weight: normal;
+			color:#AAA;
+		}
+		
+		.home .entry-meta-footer .comment-count,
+		.home .entry-meta-footer .author{
+			display:none;
+		}
+		
+		.entry-title,
+		.page.page-template-template-home-2col-php .entry-title {
+			margin: 0.5em 20px 0.5em;
+		}
+		
+		.isotope-container .entry-content{
+			
+		}
+		
+		.published{
+			font-weight: normal;
+		}
+		
+		.entry-meta-footer div {
+			font-weight: bold;
+		}
+			
+		.entry-meta-footer span {
+			display: inline;
+			font-weight: normal;
+		}
+		
+		.entry-title a{
+			color: #5A5E61;
+		}
+		
+		body.archive .entry-title{
+			font-size: 32px;
+		}
+		
+		.home .entry-title{
+			margin-top:1.1em;
+		}
+		
+		.single .entry-title,
+		.page .entry-title,
+		.page-template-template-home-blog-php .entry-title {
+		  font-size: 32px;
+		  margin-top: 0.5em;
+		}
+
+		.entry-content {
+			margin: 0.5em 20px 1em 20px;
+		}
+		
+		h1 + .entry-content,
+		h2 + .entry-content{
+			margin-top:-0.4em;
+		}
+		
+	/* NEW POST */
+		
+		.post{
+			position: relative;
+		}
+		
+		.blog #primary .isotope-container{
+			overflow: visible !important;
+		}
+		.new-post{
+			position: absolute;
+			top:-15px;
+			right:-15px;
+			z-index:1000;
+		}
+		
+	/* SIDEBAR */
+	
+		#sidebar{
+			padding-top:0;
+			background:none;
+			box-shadow:none;
+		}
+		
+		#sidebar li{
+			padding:0;
+		}
+		#sidebar li a{
+			display: block;
+			padding:0.35em 0.84em;
+		}
+		
+
+
+
+	/* HEADINGS */
+
+		
+		/*
+		h1.page-title{
+			font-family: ThirstyRough;
+			text-transform: none;
+			font-size: 45px;
+			margin-bottom: 0.75em;
+			padding-left:10px;
+		}
+		*/
+		
+		h1.page-title:after{
+			content: '...';
+			/*
+			font-size: 0.8em;
+			*/
+			}
+		
+		h2 {
+			font-size: 24px;
+			color:#666;
+		}
+		
+		h3 {
+			font-size: 20px;
+		}
+		
+		h4{
+			font-size:16px;
+			margin-bottom:0.5em;
+			color:#666;
+		}
+		
+		
+	/* MISC */
+		
+		li a .meta{
+			float: right;
+			font-size: 0.7em;
+			border-radius: 3px;
+			padding:0px 6px;
+		}
+		
+		.blog .flexslider .slides li,
+		.page-template-template-home-2col-php .flexslider .slides li {
+			height:inherit !important;
+		}
+
+		
+	/* THUMBNAILS */
+	
+		.post-thumb{
+			background:none;
+			margin-bottom:1em;
+			}
+			
+		.post-thumb a{
+			display:block;
+			text-decoration: none !important;
+		}
+		
+		.post-thumb a img {
+			opacity:1 !important;
+			}
+	
+		.post-thumb a:hover{
+			text-decoration: none !important;
+			/* opacity:0.7; */
+		}
+	
+	
+		
+	/* STICKY NAV */
+	
+		.sticky-nav{
+			width:100%;
+			z-index:1000;
+		}
+
+	/* FILTER NAV */
+	
+		#filter-nav-container {
+			/*
+			*/
+			bottom: 0;
+			position: fixed;
+			
+			width:100%;
+			z-index:100;
+			cursor: default;
+			
+			background: none repeat scroll 0 0 #FFFFFF;
+			border-top: 4px solid #FAFAFB;
+			box-shadow: 0 -1px 0 #D2D2D3, 0 -1px 3px rgba(0, 0, 0, 0.2);
+		}
+		
+		#filter-nav {
+			width: 940px;
+			margin:auto;
+			text-align: right;
+		}
+		
+		#filter-nav *{
+			display: inline-block;
+			white-space-collapse: discard;
+		}
+		
+		
+		#filter-nav ul{
+			list-style: none outside none;
+			margin: 0;
+			padding: 0;
+			font-size:0;
+		}
+			
+	
+		#filter-nav li:first-child {
+			border-left: 1px solid #EBEBEC;
+		}
+		
+		#filter-nav li {
+			border-right: 1px solid #EBEBEC;
+			position: relative;
+		}
+		
+		#filter-nav span,
+		#filter-nav a {
+			font-family: 'Patua One', Georgia,serif;
+			font-size:10px;
+			text-transform: uppercase;
+			padding: 2px 8px;
+			color:#2C2F32;
+			text-decoration: none;
+		}
+		
+		#filter-nav a {
+			color:#999;
+			}
+		
+		#filter-nav a:hover {
+			color: #EA4848;
+		}
+		
+		#filter-nav a.active {
+			border-bottom: 2px solid #2C2D32;
+			color: #EA4848;
+		}
+		
+		
+		.home #back-to-top{
+			bottom:40px;
+		}
+
+/*
+-------------------------------------------------------------------------------------------------
+-- INTRO (home page)
+-------------------------------------------------------------------------------------------------
+*/	
+
+	#intro{
+		width:300px !important;
+		font-size:21px;
+		line-height:1.4em;
+		margin:0px 10px 20px 10px;
+	}
+	
+	#intro .entry-quote{
+		padding-right:20px;
+		background:#2C2F32;
+		margin:20px;
+		}
+	
+	#intro .entry-quote:after {
+		content: "";
+		}
+		
+	#intro h2{
+		font-size:32px;	
+		margin-bottom: 15px;
+	}
+	
+	#intro *{
+		color:#CCC;
+		font-size:16px;
+		line-height: 1.2em;
+	}
+	
+	#intro p{
+		margin-bottom: 20px;
+	}
+	
+	#intro .text p:first-child{
+		color:#FFF;
+		font-size:21px;
+		line-height: 1.0em;
+	}
+	
+	#intro a{
+		text-decoration:none;
+		margin-right:2px;
+		color:#EA4848;
+		transition: none;
+		}
+		
+	#intro a:hover{
+		color:#FFF;
+		}
+		
+	#intro p:last-child{
+		margin-bottom:0;
+		}
+
+/* isotope */
+	
+	#content,
+	.isotope,
+	.isotope .isotope-item {
+	  /* change duration value to whatever you like */
+	  -webkit-transition-duration: 0s;
+		 -moz-transition-duration: 0s;
+		  -ms-transition-duration: 0s;
+		   -o-transition-duration: 0s;
+			  transition-duration: 0s;
+	}
+	
+	#content,
+	.isotope {
+	  -webkit-transition-property: left, right, top, bottom, width, margin, opacity;
+		 -moz-transition-property: left, right, top, bottom, width, margin, opacity;
+		  -ms-transition-property: left, right, top, bottom, width, margin, opacity;
+		   -o-transition-property: left, right, top, bottom, width, margin, opacity;
+			  transition-property: left, right, top, bottom, width, margin, opacity;
+	}
+	
+	.isotope .isotope-item {
+	  -webkit-transition-property: -webkit-transform, left, right, top, bottom, width, margin, opacity;
+		 -moz-transition-property:    -moz-transform, left, right, top, bottom, width, margin, opacity;
+		  -ms-transition-property:     -ms-transform, left, right, top, bottom, width, margin, opacity;
+		   -o-transition-property:      -o-transform, left, right, top, bottom, width, margin, opacity;
+			  transition-property:         transform, left, right, top, bottom, width, margin, opacity;
+	}
+
+
+
+/*
+-------------------------------------------------------------------------------------------------
+-- post hierarchy plugin
+-------------------------------------------------------------------------------------------------
+*/
+
+	.post-hierarchy{
+		
+	}
+	
+	.post-hierarchy p,
+	.post-hierarchy li{
+		line-height: 1.4em;
+	}
+	
+	.post-hierarchy .group{
+		margin-left:40px;
+	}
+	
+	.post-hierarchy > .group{
+		margin-left:0px;
+	}
+	
+	.post-hierarchy .category a{
+		color:black;
+	}
+	
+	.post-hierarchy .post{
+		margin-bottom:10px;
+	}
+	
+	.post-hierarchy .post a{
+		padding-bottom:5px;
+		text-decoration: none !important;
+	}
+	
+	.post-hierarchy .post a:hover .title{
+		text-decoration:underline;
+	}
+	
+	.post-hierarchy .level-1 > .description{
+		margin-top:-20px;
+	}
+	
+	.post-hierarchy .level-2 > .description{
+		margin-top:-10px;
+	}
+	
+	.post-hierarchy .level-3 > .description{
+		margin-top:-5px;
+	}
+	
+	.post-hierarchy .description,
+	.post-hierarchy .excerpt{
+		font-size:0.9em;
+		color:grey;
+	}
+	
+	.post-hierarchy .comments{
+		position: relative;
+		display: inline-block;
+		padding: 1px 3px;
+		top: -5px;
+		left:4px;
+		min-width:8px;
+		text-align: center;
+		
+		font-size: 8px;
+		font-family: arial;
+		line-height:10px;
+		color: #fff;
+		background: #000;
+		
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	
+	.post-hierarchy .comments:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 0;
+		bottom: -5px;
+		left: 30%;
+		border-width: 5px 5px 0px 0;
+		border-style: solid;
+		border-color: #000 transparent;
+	}
+
+/*
+-------------------------------------------------------------------------------------------------
+-- responsive
+-------------------------------------------------------------------------------------------------
+*/
+	/* Smartphones (portrait and landscape) ----------- */
+	@media only screen and (min-device-width : 320px) and (max-width : 480px) {
+	
+		body { 
+			font-size:0.75em;
+		}
+		#intro{
+			width:300px !important;
+		}
+		
+	}
+	
+	
+	/* iPads (portrait and landscape) ----------- */
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) {
+		
+		#intro{
+			width:600px !important;
+		}
+	
+		
+	}
+
+	#primary-nav #s{
+		width:0;
+		padding-left: 36px;
+		background-color:inherit;
+		text-indent: 1px;
+	}
+
+
+	#primary-nav #s:focus{
+		width:150px;
+		background-position: 15px -2px;
+	}
+
+	
+	li.text{
+		background: none !important;
+	}
+	
+	.entry-meta-header{
+		position:relative;
+	}
+	
+	.edit-post {
+		background: none repeat scroll 0 0 #EEEEEE;
+		border-radius: 5px 5px 5px 5px;
+		display: inline-block;
+		margin: 5px 0;
+		padding: 3px 8px;
+		text-decoration: none;
+	}
+	
+	.edit-post{
+		position: absolute;
+		right: 0;
+		top: -4.4em;		
+	}
+	
+

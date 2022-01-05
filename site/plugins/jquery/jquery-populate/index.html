@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<!-- BEGIN html --><html lang="en-US">
+<!-- A ThemeZilla design (http://www.themezilla.com) - Proudly powered by WordPress (http://wordpress.org) -->
+
+<!-- BEGIN head -->
+<head>
+
+	<!-- Meta Tags -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="generator" content="Hoarder 1.1.1">
+<meta name="generator" content="ZillaFramework 1.0.2.5">
+
+	<!-- Title -->
+	<title>jQuery Populate | Dave Stewart IO</title>
+
+	<!-- RSS & Pingbacks -->
+	<link rel="alternate" type="application/rss+xml" title="Dave Stewart IO RSS Feed" href="/feed/">
+	<link rel="pingback" href="/wordpress/xmlrpc.php">
+
+	<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Dave Stewart IO &raquo; jQuery Populate Comments Feed" href="/plugins/jquery/jquery-populate/feed/">
+<link rel="stylesheet" id="hoarder-style-css" href="/wordpress/wp-content/themes/davestewart/style.css?ver=1.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="jquery.lightbox.min.css-css" href="/wordpress/wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css?ver=1.4.6" type="text/css" media="all">
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/superfish.js?ver=1.4.8"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/supersubs.js?ver=0.2"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.flexslider-min.js?ver=2.0"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.jplayer.min.js?ver=2.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.imagesloaded.min.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.isotope.min.js?ver=1.5.19"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.fitvids.js?ver=1.0"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/includes/js/twitter.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/vendor/jquery/jquery.sticky.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/vendor/jquery/jquery.cookie.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/assets/js/zilla-media.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/assets/js/scripts.js?ver=2.0.1"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress/wp-includes/wlwmanifest.xml">
+<link rel="canonical" href="/plugins/jquery/jquery-populate/">
+<link rel="shortlink" href="/?p=17">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fplugins%2Fjquery%2Fjquery-populate%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fplugins%2Fjquery%2Fjquery-populate%2F&#038;format=xml">
+
+<style type="text/css">.wp-editor-container{
+		border:1px solid #DDD;
+		margin-bottom:10px;
+	}</style>
+
+<!-- END head -->
+</head>
+
+<!-- BEGIN body -->
+<body class="post-template-default single single-post postid-17 single-format-standard no-js unknown post-jquery-populate zilla layout-2cr">
+
+	    		<!-- BEGIN #header -->
+		<div id="header">
+
+		    <!-- BEGIN .header-inner -->
+		    <div class="header-inner">
+
+    			<!-- BEGIN #logo -->
+    			<div id="logo">
+    				<a href="/">Dave Stewart</a> <span>|</span> <a href="http://davestewart.co.uk/" title="Go to davestewart.co.uk">io</a>
+    				<p id="tagline">Research » Tooling » Open Sorcery</p>
+    			<!-- END #logo -->
+    			</div>
+
+
+	        <!-- END .header-inner -->
+	        </div>
+
+		<!-- END #header-->
+		</div>
+
+		<!-- BEGIN .main-navigation -->
+		<div class="main-navigation">
+
+		        		<!-- BEGIN #primary-nav -->
+    		<div id="primary-nav">
+    		    <ul id="primary-menu" class="menu">
+<li id="menu-item-373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-373"><a href="/">Home</a></li>
+<li id="menu-item-369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-369"><a href="/category/frameworks/">Frameworks</a></li>
+<li id="menu-item-368" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-368"><a href="/category/tools/">Tools</a></li>
+<li id="menu-item-887" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-887"><a href="/all/plugins/">Plugins</a></li>
+<li id="menu-item-888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-888"><a href="/all/extensions/">Extensions</a></li>
+<li id="menu-item-1064" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1064"><a href="/category/setup/">Setup</a></li>
+<li id="menu-item-977" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-977"><a href="/posts-by-category/">Everything</a></li>
+<li id="menu-item-1006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1006"><a href="/about/">About</a></li>
+</ul>
+    		    <!-- BEGIN #searchform-->
+<form method="get" id="searchform" action="/">
+	<fieldset>
+		<input type="text" name="s" id="s">
+	</fieldset>
+<!-- END #searchform-->
+</form>    		<!-- END #primary-nav -->
+    		</div>
+
+		<!-- END .main-navigation -->
+		</div>
+
+		<!-- BEGIN #content -->
+		<div id="content" class="clearfix">
+
+
+
+
+<!-- FILE davestewart/single.php -->
+
+			<!-- BEGIN #primary .hfeed-->
+			<div id="primary" class="hfeed">
+
+								<!-- BEGIN .hentry -->
+				<div class="post-17 post type-post status-publish format-standard has-post-thumbnail hentry category-jquery tag-javascript tag-featured" id="post-17">
+
+    				<!-- FILE davestewart/content.php -->
+<div class="post-thumb">
+
+
+</div>
+
+    <h1 class="entry-title">jQuery Populate</h1>
+	<div class="entry-meta-header">
+			</div>
+
+
+
+<!-- BEGIN .entry-content -->
+<div class="entry-content">
+
+	<p>I don&#039;t like mixing HTML and PHP when I build my forms. Instead I like to keep my HTML completely clean, then if a form needs to be pre-filled (for example retrieving a bunch of database results), get JavaScript to fill it in for me after the page has loaded.</p>
+<p><a class="plain" href="/resources/javascript/jQuery/demos/populate-demo.html"><img style="border: 0pt none;" src="/resources/javascript/jQuery/populate/populate-example-03.gif" alt="" border="0"></a></p>
+<p>This plugin supports full PHP naming and deep data structures, as well as checkbox arrays, other non-standard UI controls, and even standard HTML elements such as labels or divs.</p>
+<p>The plugin can be used as part of your AJAX toolkit, or for separating server-side code from HTML by populating a form after the page has loaded eg:</p>
+<pre>$('form').populate({text:'text', radio:1})</pre>
+<p>and not inline as the page is processed, such as:</p>
+<pre>&lt;input type="text" name="text" id="text" value="&lt;?php echo $text; ?&gt;" /&gt;
+&lt;input type="radio" name="radio" id="radio-1" checked="&lt;?php echo $val == 1; ?&gt;" /&gt;
+&lt;input type="radio" name="radio" id="radio-2" checked="&lt;?php echo $val == 2; ?&gt;" /&gt;</pre>
+<p>You can also populate non-form controls such as &lt;div&gt;s, by specifiying the id and an identifying attribute (defaults to id):</p>
+<pre>$('div').populate({'text-1':'text', 'text-2':'More text'})</pre>
+<p>This can be useful when you want to show the results of a database call, but don&#039;t want the text to be editable.</p>
+<h3>Instructions and demos</h3>
+<p>View the <a href="/resources/javascript/jQuery/demos/populate-demo.html">jQuery Populate demo</a> for a view a full set of instructions and a working demo, with examples of populating:</p>
+<ul>
+<li>a simple form, using string variable types for textfields, radiobuttons, dropdowns and checkboxes</li>
+<li>a complex form, using array variable types for checkbox arrays and multi-list boxes</li>
+<li>a hierarchical form, using hierarchical JSON data</li>
+</ul>
+<h3>Update 29th November 2009</h3>
+<p>Thanks to everyone who spotted bugs and contributed their comments. The following features are added / bugs are now squished:</p>
+<ul>
+<li>Now populates standard HTML elements within forms</li>
+<li>Is now case-sensitive for element value comparisons (keith, 5030SDEC, Mark Croxton)</li>
+<li>Now skips function references and undefined elements (Henning, Found-a-Bug)</li>
+<li>Fixed debug trace for missing elements (Found-a-Bug)</li>
+</ul>
+<h3>Download</h3>
+<p style="color: #414244;">New links</p>
+<ul style="color: #414244;">
+<li>Demo: <a style="color: #ea4848;" href="/resources/javascript/jquery-populate-plugin/">/resources/javascript/jquery-populate-plugin/</a>
+</li>
+<li>Source: <a style="color: #ea4848;" href="https://github.com/davestewart/jquery-populate">https://github.com/davestewart/jquery-populate</a>
+</li>
+</ul>
+<p>JavaScript</p>
+<ul>
+<li><a title="http://www.keyframesandcode.local/resources/javascript/jQuery/populate/populate.js" href="/resources/javascript/jQuery/populate/jquery.populate.js">Populate (no compression) 4.6k</a></li>
+<li><a title="http://www.keyframesandcode.local/resources/javascript/jQuery/populate/populate.pack.js" href="/resources/javascript/jQuery/populate/jquery.populate.pack.js">Populate (packer compression) 1.6k</a></li>
+</ul>
+<p>PHP</p>
+<ul>
+<li><a href="/resources/javascript/jQuery/populate/populate.func.zip">PHP jQuery helper functions</a></li>
+<li><a href="http://mike.teczno.com/JSON/">PHP JSON class</a></li>
+</ul>
+<p>Demo files</p>
+<ul>
+<li><a href="/resources/javascript/jQuery/populate/populate-demos.zip">Populate standalone demos</a></li>
+</ul>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 741px; width: 1px; height: 1px;">
+<!-- [if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:TrackMoves /> <w:TrackFormatting /> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:DoNotPromoteQF /> <w:LidThemeOther>EN-US</w:LidThemeOther> <w:LidThemeAsian>X-NONE</w:LidThemeAsian> <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> <w:SplitPgBreakAndParaMark /> <w:DontVertAlignCellWithSp /> <w:DontBreakConstrainedForcedTables /> <w:DontVertAlignInTxbx /> <w:Word11KerningPairs /> <w:CachedColBalance /> </w:Compatibility> <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel> <m:mathPr> <m:mathFont m:val="Cambria Math" /> <m:brkBin m:val="before" /> <m:brkBinSub m:val="&#45;-" /> <m:smallFrac m:val="off" /> <m:dispDef /> <m:lMargin m:val="0" /> <m:rMargin m:val="0" /> <m:defJc m:val="centerGroup" /> <m:wrapIndent m:val="1440" /> <m:intLim m:val="subSup" /> <m:naryLim m:val="undOvr" /> </m:mathPr></w:WordDocument> </xml><![endif]--><!-- [if gte mso 9]><xml> <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"   DefSemiHidden="true" DefQFormat="false" DefPriority="99"   LatentStyleCount="267"> <w:LsdException Locked="false" Priority="0" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Normal" /> <w:LsdException Locked="false" Priority="9" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="heading 1" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" /> <w:LsdException Locked="false" Priority="39" Name="toc 1" /> <w:LsdException Locked="false" Priority="39" Name="toc 2" /> <w:LsdException Locked="false" Priority="39" Name="toc 3" /> <w:LsdException Locked="false" Priority="39" Name="toc 4" /> <w:LsdException Locked="false" Priority="39" Name="toc 5" /> <w:LsdException Locked="false" Priority="39" Name="toc 6" /> <w:LsdException Locked="false" Priority="39" Name="toc 7" /> <w:LsdException Locked="false" Priority="39" Name="toc 8" /> <w:LsdException Locked="false" Priority="39" Name="toc 9" /> <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" /> <w:LsdException Locked="false" Priority="10" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Title" /> <w:LsdException Locked="false" Priority="0" Name="Default Paragraph Font" /> <w:LsdException Locked="false" Priority="11" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtitle" /> <w:LsdException Locked="false" Priority="22" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Strong" /> <w:LsdException Locked="false" Priority="20" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Emphasis" /> <w:LsdException Locked="false" Priority="59" SemiHidden="false"    UnhideWhenUsed="false" Name="Table Grid" /> <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" /> <w:LsdException Locked="false" Priority="1" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="No Spacing" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 1" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 1" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 1" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 1" /> <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" /> <w:LsdException Locked="false" Priority="34" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" /> <w:LsdException Locked="false" Priority="29" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Quote" /> <w:LsdException Locked="false" Priority="30" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 1" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 1" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 1" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 1" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 1" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 2" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 2" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 2" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 2" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 2" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 2" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 2" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 2" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 2" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 3" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 3" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 3" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 3" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 3" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 3" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 3" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 3" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 3" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 4" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 4" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 4" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 4" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 4" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 4" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 4" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 4" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 4" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 5" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 5" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 5" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 5" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 5" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 5" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 5" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 5" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 5" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 6" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 6" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 6" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 6" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 6" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 6" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 6" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 6" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 6" /> <w:LsdException Locked="false" Priority="19" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" /> <w:LsdException Locked="false" Priority="21" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" /> <w:LsdException Locked="false" Priority="31" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" /> <w:LsdException Locked="false" Priority="32" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" /> <w:LsdException Locked="false" Priority="33" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Book Title" /> <w:LsdException Locked="false" Priority="37" Name="Bibliography" /> <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" /> </w:LatentStyles> </xml><![endif]--><!--  /* Font Definitions */  @font-face 	{font-family:"Cambria Math"; 	panose-1:2 4 5 3 5 4 6 3 2 4; 	mso-font-charset:0; 	mso-generic-font-family:roman; 	mso-font-pitch:variable; 	mso-font-signature:-1610611985 1107304683 0 0 159 0;}  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal 	{mso-style-unhide:no; 	mso-style-qformat:yes; 	mso-style-parent:""; 	margin-top:0cm; 	margin-right:0cm; 	margin-bottom:3.0pt; 	margin-left:0cm; 	mso-pagination:widow-orphan lines-together; 	page-break-after:avoid; 	tab-stops:9.0cm; 	font-size:8.0pt; 	font-family:"Arial","sans-serif"; 	mso-fareast-font-family:"Times New Roman"; 	mso-ansi-language:EN-GB;} .MsoChpDefault 	{mso-style-type:export-only; 	mso-default-props:yes; 	font-size:10.0pt; 	mso-ansi-font-size:10.0pt; 	mso-bidi-font-size:10.0pt;} @page Section1 	{size:612.0pt 792.0pt; 	margin:72.0pt 72.0pt 72.0pt 72.0pt; 	mso-header-margin:36.0pt; 	mso-footer-margin:36.0pt; 	mso-paper-source:0;} div.Section1 	{page:Section1;} --><!-- [if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable 	{mso-style-name:"Table Normal"; 	mso-tstyle-rowband-size:0; 	mso-tstyle-colband-size:0; 	mso-style-noshow:yes; 	mso-style-priority:99; 	mso-style-qformat:yes; 	mso-style-parent:""; 	mso-padding-alt:0cm 5.4pt 0cm 5.4pt; 	mso-para-margin:0cm; 	mso-para-margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:11.0pt; 	font-family:"Calibri","sans-serif"; 	mso-ascii-font-family:Calibri; 	mso-ascii-theme-font:minor-latin; 	mso-fareast-font-family:"Times New Roman"; 	mso-fareast-theme-font:minor-fareast; 	mso-hansi-font-family:Calibri; 	mso-hansi-theme-font:minor-latin; 	mso-bidi-font-family:"Times New Roman"; 	mso-bidi-theme-font:minor-bidi;} --> <!--[endif]-->
+<p class="MsoNormal"><span lang="EN-GB">Fixed debug trace for missing elements (<cite><span style="font-family: 'Arial','sans-serif';">Found-a-Bug</span></cite>)</span></p>
+<p class="MsoNormal"><span lang="EN-GB">Now skips function references and undefined elements (Henning, <cite><span style="font-family: 'Arial','sans-serif';">Found-a-Bug</span></cite>)</span></p>
+<p class="MsoNormal"><span lang="EN-GB">Now populates standard HTML elements</span></p>
+<p class="MsoNormal"><span lang="EN-GB">Is now case-insensitive for element value comparisons (keith, <cite><span style="font-family: 'Arial','sans-serif';">5030SDEC,</span></cite> <cite><span style="font-family: 'Arial','sans-serif';">Mark Croxton</span></cite>)</span></p>
+</div>
+<!-- END .entry-content -->
+</div>
+<!-- FILE davestewart/content-meta.php -->
+<!-- BEGIN .entry-meta-footer-->
+<div class="entry-meta-footer">
+	<!--
+    <span class="comment-count">Comments: <a href="/plugins/jquery/jquery-populate/#comments">84</a></span>
+    <span class="author">Posted by: <a href="/author/admin/" title="Posts by Dave Stewart" rel="author">Dave Stewart</a></span>
+	-->
+
+
+
+
+	<div class="entry-categories">Categories: <a href="/category/plugins/" title="View all posts in Plugins">Plugins</a>, <a href="/category/plugins/jquery/" title="View all posts in jQuery">jQuery</a>
+</div>
+    <div class="entry-tags">Tags: <a href="/tag/javascript/" rel="tag">JavaScript</a>, <a href="/tag/featured/" rel="tag">Featured</a>
+</div>
+	<div class="published">Date: <span style="font-weight:normal">February 2008</span>
+</div>
+
+<!-- END .entry-meta-footer-->
+</div>
+
+                                <!-- END .hentry-->
+				</div>
+
+
+<!-- BEGIN #comments -->
+<div id="comments">
+
+	        <h3 class="comments-title">84 Comments</h3>
+
+        	<ol class="commentlist">
+                    <li class="comment even thread-even depth-1" id="li-comment-106">
+
+            <div id="comment-106">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/341c426fa4740d9725b3cbbece7938f0?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/341c426fa4740d9725b3cbbece7938f0?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">David</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-106">March 1, 2008 at 11:36 am</a> &middot; </div>
+
+
+                    <p>Hi<br>
+It&#039;s possible put one example complete for this plugin on your site, or demo ??<br>
+David.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-109">
+
+            <div id="comment-109">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-109">March 2, 2008 at 12:22 am</a> &middot; </div>
+
+
+                    <p>Hi David,<br>
+Sure. Am in deadline hell right now though, so might take a week or so.<br>
+If you just download the files, though, you should have everything you need to get started.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-110">
+
+            <div id="comment-110">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/341c426fa4740d9725b3cbbece7938f0?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/341c426fa4740d9725b3cbbece7938f0?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">David</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-110">March 2, 2008 at 11:31 am</a> &middot; </div>
+
+
+                    <p>Hi Dave,<br>
+I try the plugin jquery.populate and for me not work.<br>
+I have:<br>
+<code></code></p>
+<p> jQuery(document).ready(function($) {<br>
+  $('div.example').populate({'text-1':'text', 'text-2':'More text'})<br>
+})</p>
+<p></p>
+<p>but not work?<br>
+Why?</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-112">
+
+            <div id="comment-112">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/341c426fa4740d9725b3cbbece7938f0?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/341c426fa4740d9725b3cbbece7938f0?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">David</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-112">March 2, 2008 at 11:34 am</a> &middot; </div>
+
+
+                    <p>Hi Dave,<br>
+I try the plugin jquery.populate and for me not work.<br>
+I have:</p>
+<p> jQuery(document).ready(function($) {<br>
+  $(&#039;div.example&#039;).populate({&#039;text-1&#039;:&#039;text&#039;, &#039;text-2&#039;:&#039;More text&#039;})<br>
+})</p>
+<p>but not work?<br>
+Why?</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-114">
+
+            <div id="comment-114">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-114">March 5, 2008 at 12:51 am</a> &middot; </div>
+
+
+                    <p>Hi again David.<br>
+I designed populate to be used with forms mainly, and the div stuff was an afterthought.</p>
+<p>However, it looks as if something is up, but I&#039;ll get onto soon, and hopefully I&#039;ll have something up and working in the next week or so.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-280">
+
+            <div id="comment-280">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/26d9a6f28b6bca1f6531013ac54be427?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/26d9a6f28b6bca1f6531013ac54be427?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://www.leftimpact.com/" rel="external nofollow" class="url">Vipul</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-280">May 27, 2008 at 1:21 pm</a> &middot; </div>
+
+
+                    <p>Hi Dave,</p>
+<p>Any luck getting the demo up sometime soonish ?</p>
+<p>Cheers,</p>
+<p>Vipul</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-282">
+
+            <div id="comment-282">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-282">May 27, 2008 at 1:52 pm</a> &middot; </div>
+
+
+                    <p>Funny you should mention that &#8211; I&#039;m doing the demo now! Check back later today or perhaps tomorrow&#8230;</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1009">
+
+            <div id="comment-1009">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/57b5c413e835bb27280b104bc301773e?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/57b5c413e835bb27280b104bc301773e?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Greg Greenhaw</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-1009">September 10, 2008 at 4:31 pm</a> &middot; </div>
+
+
+                    <p>jquery form populate does not populate checkboxes and radio buttons in safari. </p>
+<p>Also it would be cool to recognize max length on fields that are array and apply a value between them. For example if you have a json data like  {&#034;phone&#034;:&#034;3105551212&#034;} and there were 3 fields like phone[0],phone[1],phone[2] it would split the phone up based off each fields max length</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-1016">
+
+            <div id="comment-1016">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-1016">September 11, 2008 at 12:40 am</a> &middot; </div>
+
+
+                    <p>Damn&#8230; whadya know. I&#039;ll look into it when I get a moment. Thanks for flagging it 🙂</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1095">
+
+            <div id="comment-1095">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/45e815356bbcbb7bc165235679cd160d?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/45e815356bbcbb7bc165235679cd160d?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Tirta</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-1095">September 19, 2008 at 7:51 pm</a> &middot; </div>
+
+
+                    <p>Dave, a bug report from me. The populate doesnt work with *radio and combo boxes* in Safari for Mac. I don&#039;t know if the status of this bug with Safari for Windows. And Populate works perfectly with Firefox and Opera.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-1098">
+
+            <div id="comment-1098">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-1098">September 20, 2008 at 12:34 am</a> &middot; </div>
+
+
+                    <p>OK</p>
+<p>thanks guys for reporting the safari bug! Strange that it made it so far without being detected. I&#039;m pretty good at testing on the major browsers so surprised that this made it through, especially after ALL this time!</p>
+<p>Anyway &#8211; bug fixed. It was due to safari not implementing the item() method on collection elements.</p>
+<p>Thanks again,<br>
+Dave</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1376">
+
+            <div id="comment-1376">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/18efeea938bc3924b9d2e59c7b2b1151?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/18efeea938bc3924b9d2e59c7b2b1151?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://htxt.org/" rel="external nofollow" class="url">wdm</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-1376">October 16, 2008 at 5:28 pm</a> &middot; </div>
+
+
+                    <p>Great plugin!</p>
+<p>Found a bug &#8212; it seems to break if the field name=&#034;length&#034;</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-1718">
+
+            <div id="comment-1718">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/f6faeb1f4b96e0cb7fe496d3afc2df12?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/f6faeb1f4b96e0cb7fe496d3afc2df12?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://www.eshoptipps.de/" rel="external nofollow" class="url">jan berger</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-1718">November 17, 2008 at 5:08 pm</a> &middot; </div>
+
+
+                    <p>great plugin. saved me a lot of work. thanks dave.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2559">
+
+            <div id="comment-2559">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/846fdcd1ed53493130e448363ceac055?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/846fdcd1ed53493130e448363ceac055?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://www.spun.de/" rel="external nofollow" class="url">Henning</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-2559">December 29, 2008 at 5:47 pm</a> &middot; </div>
+
+
+                    <p>Hey,<br>
+I use populate to build up what once shall become a web-application 😉<br>
+I had a hard time getting .populate() working properly in FF and mainly IE. I managed to figure out, that this was due to the wide range of objects running through the main loop in function populateFormElement().<br>
+So there are two fixes which got me rich of these errors:<br>
+One insert in line 123 of the uncompressed version:</p>
+<p>if(typeof element == &#034;undefined&#034; || typeof == &#034;function&#034;)<br>
+   continue;</p>
+<p>This actually was enough to make the FF running (and hopefully it will speed up the script as well)&#8230;</p>
+<p>IE was a bit more tricky but targeting a similar problem. I edited lines 161 to 168 of the uncompressed file to look like this:</p>
+<p>case &#039;text&#039;:<br>
+case &#039;button&#039;:<br>
+case &#039;textarea&#039;:<br>
+case &#039;submit&#039;:<br>
+  value = value == null ? &#034; : value;<br>
+  element.value	= value;<br>
+  break;<br>
+case &#039;div&#039;:<br>
+  element.innerHTML = value;<br>
+  break;<br>
+default:<br>
+  break;</p>
+<p>The point is that often IE seemed to throw an error as he had to work on a function or non-Formelement and apply something like this:<br>
+element.value	= value;</p>
+<p>Whatsoever. This is what is currently working for me. Maybe one of you may find my contribution useful for his or her own problem or you, Dave, can use it as an idea for future improvement.</p>
+<p>Thanks for this great Plugin!</p>
+<p>Bye,</p>
+<p>Henning</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-2987">
+
+            <div id="comment-2987">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/a710e8078325d68cc35dc454055b626a?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a710e8078325d68cc35dc454055b626a?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Keith</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-2987">January 26, 2009 at 7:36 pm</a> &middot; </div>
+
+
+                    <p>Great plugin. I&#039;m having a problem with selects in IE7. Your demo works fine but on my implementation the selects are showing up blank. I have State and Country values in uppercase. It seems like the problem is in the select case statement</p>
+<p>line 158 of uncompressed:<br>
+<code><br>
+element.value	= value.toString().toLowerCase() || value;</code></p>
+<p>removing the toLowerCase() seems to resolve this for me.<br>
+</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-3534">
+
+            <div id="comment-3534">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-3534">February 25, 2009 at 1:35 pm</a> &middot; </div>
+
+
+                    <p>Hi Keith and Henning,<br>
+Thanks for the posts. I&#039;ll take a look!<br>
+Cheers,<br>
+Dave</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-3683">
+
+            <div id="comment-3683">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/14e994e97ca12c94cb7f870f969686c6?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/14e994e97ca12c94cb7f870f969686c6?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://www.tylerwanlass.com/" rel="external nofollow" class="url">Tyler</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-3683">March 4, 2009 at 6:38 am</a> &middot; </div>
+
+
+                    <p>Hey Dave,</p>
+<p>This plugin is just what I need however I&#039;m having issues getting it to work. No JS errors, just a blank form! Would it be possible to post a simple .zip with nothing but the js includes, a tiny html form and the jquery populate call? Something super super simple?</p>
+<p>Thanks so much for your hard work!</p>
+<p>Cheers,</p>
+<p>Tyler</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-3907">
+
+            <div id="comment-3907">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-3907">March 10, 2009 at 10:17 pm</a> &middot; </div>
+
+
+                    <p>Hi Tyler,<br>
+Good idea. Maybe I&#039;ll do that in the next few days, and will drop you a mail when done<br>
+😀</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-3995">
+
+            <div id="comment-3995">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-3995">March 13, 2009 at 9:19 pm</a> &middot; </div>
+
+
+                    <p>OK, the demos are up. Good suggestions folks.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4207">
+
+            <div id="comment-4207">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/54f4af18c7f1621aa1fc21d32a28e7e2?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/54f4af18c7f1621aa1fc21d32a28e7e2?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Phipps</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-4207">March 23, 2009 at 1:36 pm</a> &middot; </div>
+
+
+                    <p>Hi Dave,</p>
+<p>I have just started using the populate plugin with jquery 1.3.2 and it populates my form perfectly except for select drop downs. It doesn&#039;t change them to the value in the json string. Here is an example of my json string:</p>
+<p>{&#034;UNIQUENO&#034;:63421, &#034;DATAPROTECTEXTDISCLOSE&#034;:&#034;Y&#034;, &#034;STATUS&#034;:&#034;Active&#034;, &#034;DATAPROTECTWEBPUBLISH&#034;:&#034;Y&#034;}</p>
+<p>The UniqueNo is just a text field but the others are all single select dropdowns.</p>
+<p>Is this a problem with my json string or is there some issue with populate and jquery 1.3.2? I noticed that your demos are using 1.2.1?</p>
+<p>Cheers,</p>
+<p>Dave</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-5076">
+
+            <div id="comment-5076">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/6525962dfd6b8bd376cd10a29cf9b0a6?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/6525962dfd6b8bd376cd10a29cf9b0a6?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">5030SDEC</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-5076">April 3, 2009 at 2:49 pm</a> &middot; </div>
+
+
+                    <p>Seems like populate select box doesn&#039;t work if value is not lowercase&#8230;</p>
+<p>This work:<br>
+Test</p>
+<p>This *DOES NOT* work<br>
+Test</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-5203">
+
+            <div id="comment-5203">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-5203">April 6, 2009 at 10:18 pm</a> &middot; </div>
+
+
+                    <p>Hey guys,</p>
+<p>Sorry you&#039;re having trouble there.</p>
+<p>Dave, can you post a link to some live code? There shouldn&#039;t be any problems. I used this code and it was fine:</p>
+<p><code></code></p>
+<p>{&quot;UNIQUENO&quot;:63421, &quot;DATAPROTECTEXTDISCLOSE&quot;:&quot;Y&quot;, &quot;STATUS&quot;:&quot;Active&quot;, &quot;DATAPROTECTWEBPUBLISH&quot;:&quot;Y&quot;}</p>
+<p>&lt;select class=&quot;select&quot; id=&quot;STATUS&quot; name=&quot;STATUS&quot;&gt;<br>
+	&lt;option value=&quot;&quot;&gt;Select&lt;/option&gt;<br>
+	&lt;option value=&quot;active&quot;&gt;Active&lt;/option&gt;<br>
+	&lt;option value=&quot;inactive&quot;&gt;Inactive&lt;/option&gt;<br>
+	&lt;/select&gt;</p>
+<p></p>
+<p>DEC, yes, populate may have issues with some elements that are lower case. I was adhering to the HTML specs by converting everything to lower case, but it&#039;s not very user-friendly. Do a search in the code and remove the toLowerCase() checks and that might solve it. In the meantime I&#039;ll take another look.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-5219">
+
+            <div id="comment-5219">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/7def16bc1b1a11d6c7b7555a2c2a796c?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/7def16bc1b1a11d6c7b7555a2c2a796c?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Eric</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-5219">April 7, 2009 at 2:32 am</a> &middot; </div>
+
+
+                    <p>I can&#039;t find the code for results.php (with the simple demo)&#8230;and you don&#039;t have it in your demo zip file!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-5317">
+
+            <div id="comment-5317">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-5317">April 8, 2009 at 9:33 am</a> &middot; </div>
+
+
+                    <p>Hi Eric,<br>
+Ah, it&#039;s just a simple print_r() that dumps the submitted form variables to the browser window. I can post it if you like&#8230;</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-5376">
+
+            <div id="comment-5376">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/7def16bc1b1a11d6c7b7555a2c2a796c?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/7def16bc1b1a11d6c7b7555a2c2a796c?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Eric</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-5376">April 8, 2009 at 7:37 pm</a> &middot; </div>
+
+
+                    <p>If you could, please? I don&#039;t know what to pass onto the function&#8230;</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-5379">
+
+            <div id="comment-5379">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-5379">April 8, 2009 at 8:00 pm</a> &middot; </div>
+
+
+                    <p>OK, that&#039;s done. All it does is print out the form variables though, and you need to run it on the server to do so.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-18834">
+
+            <div id="comment-18834">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/1f77113371c7d36eae5c8a1f10137438?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/1f77113371c7d36eae5c8a1f10137438?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Pete Helgren</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-18834">June 7, 2009 at 1:59 am</a> &middot; </div>
+
+
+                    <p>Great plugin!  I got it to work and then I had an idea for an improvement that takes it past the current implementation (maybe you know if there is already plugin that does this).</p>
+<p>Here is what I need:</p>
+<p>When there is a known set of fields this works great.  Each field is mapped to a JSON element.  But when you have an array of data, the current implementation of Populate only sets on the select or checked attribute.  What if populate could create a list of fields based on an array?  That is what I am after.  For example, an employee may have a single email address or they may have 10 (or more).  Since I can&#039;t anticipate how many, it would be great if Populate could just create a list of fields anchored by the div or field id.  At the very least it would be great to get a list of items generated but even better would be a list of fields.</p>
+<p>I know this goes beyond the current scope of what you are trying to accomplish, but it would be very helpful if variable arrays could rendered in the form &#034;automagically&#034;.  I may look around for a plugin that does this but it seems a nice enhancement for populate.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-18901">
+
+            <div id="comment-18901">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-18901">June 8, 2009 at 9:57 am</a> &middot; </div>
+
+
+                    <p>Thanks Pete!</p>
+<p>Yeah, it does the job alright.</p>
+<p>Your plugin suggestion is kind of the opposite of Populate, but shouldn&#039;t be too hard to accomplish. I guess the thing they have in common is the JSON format.</p>
+<p>Take a look at this, which is similar to what you described. It&#039;s unfinished, and one of the issues was always &#034;how much functionality to add?&#034;</p>
+<p><a href="http://www.keyframesandcode.local/resources/html/form-builder/html/form%20creator%2008.html">/resources/html/form-builder/html/form%20creator%2008.html</a></p>
+<p>Really, I should break the code out into a library, but as with a lot of my stuff, as I said, it&#039;s unfinished!!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-18921">
+
+            <div id="comment-18921">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/1f77113371c7d36eae5c8a1f10137438?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/1f77113371c7d36eae5c8a1f10137438?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Pete Helgren</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-18921">June 8, 2009 at 10:18 pm</a> &middot; </div>
+
+
+                    <p>I gave it a shot although my javascript and jQuery skills are pretty bad.  Here is what I did with the assumption that the incoming arrays are key:value pairs and a  anchors the placement of them (roughly).</p>
+<p>I added this hack to populateformelement</p>
+<p>// might be a div so check for it&#039;s existance<br>
+objref = document.getElementById(name.substring(0,name.length-2));<br>
+// check that the named element exists in the form<br>
+var name	= getElementName(name); // handle non-php naming<br>
+var element	= form[name] || objref;</p>
+<p>And then at about line 160</p>
+<p>case &#039;DIV&#039;:</p>
+<p>for(var j = 0; j &lt; value.length; j++)</p>
+<p>{<br>
+	var fields = value[j].split(&#034;:&#034;);<br>
+	var fieldname = fields[0];<br>
+	var fieldvalue = fields[1];<br>
+	var divname = name.substring(0,name.length-2);<br>
+// Append the fields here<br>
+	$(&#034;#&#034;+divname).append(&#034;&#034; + fieldname + &#034;&nbsp;&nbsp;&#034; );<br>
+}<br>
+break; </p>
+<p>I can&#039;t say that it will work in all cases but it does what I need which is to populate a div with a list of key &#8211; value pairs that allows for editing. </p>
+<p>Thanks!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-31927">
+
+            <div id="comment-31927">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/a66306d190a66a96aa7df16d7e969a85?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a66306d190a66a96aa7df16d7e969a85?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Adrien gibrat</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-31927">July 29, 2009 at 10:49 pm</a> &middot; </div>
+
+
+                    <p>Hello,<br>
+I&#039;ve found your plugin very usefull, but i tought i was&#039;nt using the power of jQuery as it should&#8230; So i rewrited itfrom scratch:</p>
+<p>packed version (668bytes!)<br>
+(function($){$.populate=function(h,i){$.each(h,function(b,c){var d=typeof c,e=$(i+&#039; [name=&#039;+b+&#039;],&#039;+i+&#039; [name=&#039;+b+&#039;\\[\\]]&#039;),f=e.is(&#039;:radio,:checkbox&#039;);if(d===&#039;boolean&#039;&amp;&amp;f)e.attr({checked:c?&#039;checked&#039;:null});else if(d===&#039;object&#039;&amp;&amp;!$.isArray(c))for(var g in c)arguments.callee(b+&#039;\\[&#039;+g+&#039;\\]&#039;,c[g]);else e.val(f?$.makeArray(c).map(function(a){return a.toString()}):c)})};$.fn.extend({populate:function(b,c){if(!b)return this.reset();var d=this.selector;if(typeof b===&#039;string&#039;)$.getJSON(b,c,function(a){$.populate(a,d)});else if(typeof b===&#039;object&#039;)$.populate(b,d);return this},reset:function(){return this.filter(&#039;form&#039;).each(function(){this.reset()}).end()}})})(jQuery);</p>
+<p>Full version:<br>
+(function($){<br>
+	$.populate = function(data, selector){<br>
+		$.each(data, function(name, value){<br>
+			var type	= typeof value,<br>
+				element	= $(selector+&#039; [name=&#039;+name+&#039;],&#039;+selector+&#039; [name=&#039;+name+&#039;\\[\\]]&#039;),<br>
+				check	= element.is(&#039;:radio,:checkbox&#039;);<br>
+			if (type === &#039;boolean&#039; &amp;&amp; check)<br>
+				element.attr({checked: value ? &#039;checked&#039; : null});<br>
+			else if (type === &#039;object&#039; &amp;&amp; !$.isArray(value))<br>
+				for (var key in value)<br>
+				  arguments.callee(name+&#039;\\[&#039;+key+&#039;\\]&#039;, value[key]);<br>
+			else<br>
+				element.val(check ? $.makeArray(value).map(function(key){return key.toString();}) : value);<br>
+		});<br>
+	};<br>
+	$.fn.extend({<br>
+		populate: function(data, options){<br>
+			if (!data)<br>
+				return this.reset();<br>
+			var selector = this.selector;<br>
+			if (typeof data === &#039;string&#039;)<br>
+				$.getJSON(data, options, function(data){ $.populate(data, selector); });<br>
+			else if (typeof data === &#039;object&#039;)<br>
+				$.populate(data, selector);<br>
+			return this;<br>
+		},<br>
+		reset: function(){<br>
+			return this.filter(&#039;form&#039;).each(function(){this.reset();}).end();<br>
+		}<br>
+	});<br>
+})(jQuery);</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-31929">
+
+            <div id="comment-31929">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/a66306d190a66a96aa7df16d7e969a85?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a66306d190a66a96aa7df16d7e969a85?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Adrien gibrat</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-31929">July 29, 2009 at 10:59 pm</a> &middot; </div>
+
+
+                    <p>my version don&#039;t use id, but names, as only names are realy required in forms&#8230; and using id (especially if different from names) in forms is a very bad idea (you can&#039;t have multiple edit form in the same page by example&#8230; and  the php array result submited from the form could be different from the one use to populate it: not good!).</p>
+<p>my version target a use with form, and not text&#8230; but it should be easy to add text/html injection to an element with a certain class if no form element match the given name&#8230;.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-31932">
+
+            <div id="comment-31932">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/a66306d190a66a96aa7df16d7e969a85?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a66306d190a66a96aa7df16d7e969a85?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Adrien gibrat</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-31932">July 29, 2009 at 11:02 pm</a> &middot; </div>
+
+
+                    <p>Sorry, just a test, hoping the layout will be better! (you should provide a preview)<br>
+<code><br>
+(function($){<br>
+	$.populate = function(data, selector){<br>
+		$.each(data, function(name, value){<br>
+			var type	= typeof value,<br>
+				element	= $(selector+' [name='+name+'],'+selector+' [name='+name+'\\[\\]]'),<br>
+				check	= element.is(':radio,:checkbox');<br>
+			if (type === 'boolean' &amp;&amp; check)<br>
+				element.attr({checked: value ? 'checked' : null});<br>
+			else if (type === 'object' &amp;&amp; !$.isArray(value))<br>
+				for (var key in value)<br>
+				  arguments.callee(name+'\\['+key+'\\]', value[key]);<br>
+			else<br>
+				element.val(check ? $.makeArray(value).map(function(key){return key.toString();}) : value);<br>
+		});<br>
+	};<br>
+	$.fn.extend({<br>
+		populate: function(data, options){<br>
+			if (!data)<br>
+				return this.reset();<br>
+			var selector = this.selector;<br>
+			if (typeof data === 'string')<br>
+				$.getJSON(data, options, function(data){ $.populate(data, selector); });<br>
+			else if (typeof data === 'object')<br>
+				$.populate(data, selector);<br>
+			return this;<br>
+		},<br>
+		reset: function(){<br>
+			return this.filter('form').each(function(){this.reset();}).end();<br>
+		}<br>
+	});<br>
+})(jQuery);<br>
+</code></p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-36739">
+
+            <div id="comment-36739">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/96c7b01c8aa73837972478aedd41a6bc?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/96c7b01c8aa73837972478aedd41a6bc?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Everett</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-36739">August 21, 2009 at 5:56 am</a> &middot; </div>
+
+
+                    <p>Maybe I&#039;m blind, but in the stand-alone demos, I&#039;m not seeing where you&#039;re adding the one-liner: &#034;$(&#039;#form&#039;).populate({first_name:&#039;Dave&#039;,last_name:&#039;Stewart&#039;})&#034; </p>
+<p>It&#039;s trivial to JSON encode a PHP array, but you didn&#039;t make it clear where this appears&#8230; only a reference that it must come after the form.   What is really needed here is an example of where to add our own JSON encoded array to a form.  I don&#039;t think it&#039;s helpful to print out the JSON text into a text field merely for display purposes.</p>
+<p>This is a good plugin, and it is right on in its aim to preserve the MVC architecture for form handling, but the documentation still needs some clarification.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-44578">
+
+            <div id="comment-44578">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-44578">September 12, 2009 at 4:31 pm</a> &middot; </div>
+
+
+                    <p>Sorry guys &#8211; not really been paying any attention to the blog or my plugins for a long while!</p>
+<p>Thanks for commenting though 🙂</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-49964">
+
+            <div id="comment-49964">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/3acd39d3ac95331a5a806fb31b64d6e2?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/3acd39d3ac95331a5a806fb31b64d6e2?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Found-a-Bug</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-49964">October 6, 2009 at 11:21 pm</a> &middot; </div>
+
+
+                    <p>Nice little form population script. I wish something like this was moved to jQuery core&#8230;</p>
+<p>There&#039;s a bug when using the debug option. Namely, undefined fields always get debugged to console even when debug is false, because the debug option isn&#039;t consulted before the debug function is called.</p>
+<p>Other than that, great job.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-49965">
+
+            <div id="comment-49965">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/fab7b172d5f1641538df8ef100f95595?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/fab7b172d5f1641538df8ef100f95595?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://hallmark-design.co.uk/" rel="external nofollow" class="url">Mark Croxton</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-49965">October 8, 2009 at 3:27 pm</a> &middot; </div>
+
+
+                    <p>Found a bug &#8211; the select menu (single) selected value is converted to lowercase, so won&#039;t match the original html value if it has uppercase characters!</p>
+<p>Problem line 158:<br>
+element.value	= value.toString().toLowerCase() || value;</p>
+<p>Change to:<br>
+element.value	= value.toString() || value;</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-49981">
+
+            <div id="comment-49981">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-49981">October 12, 2009 at 10:29 am</a> &middot; </div>
+
+
+                    <p>Thanks chaps, I&#039;ll take a look at these in the next week or so as I have a few updates to do and will see if I can add a fix or two</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-50037">
+
+            <div id="comment-50037">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/b1517ce23bc00db894a459b355a26db6?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/b1517ce23bc00db894a459b355a26db6?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Found-a-Bug</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-50037">November 18, 2009 at 9:51 pm</a> &middot; </div>
+
+
+                    <p>Two issues actually: </p>
+<p>1. Internet Explorer will throw an error if an element is undefined in the for loop of populateFormElement(). Add the following below the <code>var element = elements[e];</code> line: </p>
+<p><code>if(!element) continue; //Prevents undefined errors in IE</code></p>
+<p>2. also in populateFormElement(), the &#039;No such element as&#8230;&#039; is always traced when triggered regardless of debug settings.</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor even depth-2" id="li-comment-50065">
+
+            <div id="comment-50065">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-50065">November 24, 2009 at 10:35 pm</a> &middot; </div>
+
+
+                    <p>Sweet, thanks for the spot. Populate needs a wee update, so I&#039;ll make sure it gets one.<br>
+Thanks</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-even depth-1" id="li-comment-50089">
+
+            <div id="comment-50089">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-50089">November 29, 2009 at 1:18 pm</a> &middot; </div>
+
+
+                    <p>Just to let everyone know, I&#039;ve finally got round to updating the plugin. Also, I&#039;ve added support for regular HTML elements, so you should now be able to update labels, error messages, or anything else within a form that is not a regular HTML form control.</p>
+<p>Enjoy!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-50988">
+
+            <div id="comment-50988">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/edebdbc61602b626657ef99bf065cb27?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/edebdbc61602b626657ef99bf065cb27?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">imarichardson</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-50988">December 17, 2009 at 2:17 pm</a> &middot; </div>
+
+
+                    <p>Great plugin but I&#039;m having an unexplainable behavior. I add the populator call to my page and I see the field value show instantaneously before disappearing. It&#039;s as if the value gets added then immediately removed. As I mentioned I can see it blink and then disappear. </p>
+<p>Javascript:<br>
+<code><br>
+$( "#firstName" ).val( value );<br>
+</code></p>
+<p>HTML<br>
+<code></code></p>
+<p></p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-even depth-1" id="li-comment-51353">
+
+            <div id="comment-51353">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51353">December 28, 2009 at 2:51 pm</a> &middot; </div>
+
+
+                    <p>Hey imarichardson,</p>
+<p>Not too sure what you&#039;re doing there. That looks like jQuery not Populate code!</p>
+<p>Email me with some details if you like.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-51516">
+
+            <div id="comment-51516">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/7cbd5a727a8230501504fef8a5488569?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/7cbd5a727a8230501504fef8a5488569?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">jim</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51516">February 12, 2010 at 6:41 am</a> &middot; </div>
+
+
+                    <p>Hi Dave,</p>
+<p>Is there a license or copyright or something similar that is associated with your code?</p>
+<p>Thanks, Jim</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor odd alt depth-2" id="li-comment-51534">
+
+            <div id="comment-51534">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51534">February 17, 2010 at 3:25 pm</a> &middot; </div>
+
+
+                    <p>Nope &#8211; just a use if you want to. I should probably put one in as someone else commented on that. I&#039;m not so anal that I care, but apparently others do 🙂</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-51541">
+
+            <div id="comment-51541">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/d606b4dac81ee1de91b8f5cb0ff84d47?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/d606b4dac81ee1de91b8f5cb0ff84d47?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Zane</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51541">March 9, 2010 at 4:15 pm</a> &middot; </div>
+
+
+                    <p>Just letting you know that I was getting some weird errors and had to change a line of code:</p>
+<p>var parseJSON = function (obj, path) </p>
+<p>That was what I changed the parseJSON function line to. It eliminated my issue and didnt seem to introduce any other problems. Just letting you know in case you wanted to add that into your next release. Thanks</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-51733">
+
+            <div id="comment-51733">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/b0fbbe87c0add1b61bbfe5d9155d0989?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/b0fbbe87c0add1b61bbfe5d9155d0989?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Marc</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51733">September 24, 2010 at 8:50 pm</a> &middot; </div>
+
+
+                    <p>Just a quick note to say that you&#039;ve helped me learn a better (and cleaner) way to develop web apps.</p>
+<p>Cheers!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-51747">
+
+            <div id="comment-51747">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/8b559095e37f11ee0376a45e97df45c6?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/8b559095e37f11ee0376a45e97df45c6?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">sas</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51747">November 4, 2010 at 9:30 pm</a> &middot; </div>
+
+
+                    <p>Hello,<br>
+Thanks for the plugin.<br>
+I had a problem which arises when the plugin tries to populate form fields that do not exist in the form but do exist in the json/js data array.<br>
+for example:<br>
+json data elements are: firstname, lastname, email<br>
+form fields: firstname, lastname</p>
+<p>When the plugin gives js error on IE since it cannot fiend the form field.</p>
+<p>Here is a small patch &#8211; line 125:<br>
+	if(element == undefined)<br>
+	{<br>
+		debug(&#039;No such element as &#039; + name);<br>
+		return false;<br>
+	}</p>
+<p>This will ensure that the plugin will return and not try to populate a non-existing form field.</p>
+<p>Thanks,</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor odd alt depth-2" id="li-comment-51748">
+
+            <div id="comment-51748">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51748">November 16, 2010 at 10:47 am</a> &middot; </div>
+
+
+                    <p>Thanks Sas. Probably about time I had a maintenance-look at this plugin anyway 😉</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-51781">
+
+            <div id="comment-51781">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/a62b01b76d576518e109ee1de65ff74c?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a62b01b76d576518e109ee1de65ff74c?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">heinetz</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51781">March 8, 2011 at 11:54 am</a> &middot; </div>
+
+
+                    <p>IE6 throws an error, when trying to poplulate the value of a textarea.</p>
+<p>best,<br>
+heinetz</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-even depth-1" id="li-comment-51782">
+
+            <div id="comment-51782">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/a62b01b76d576518e109ee1de65ff74c?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a62b01b76d576518e109ee1de65ff74c?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">heinetz</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51782">March 8, 2011 at 12:26 pm</a> &middot; </div>
+
+
+                    <p>this is, what it did for me:</p>
+<p>#180 case &#039;select&#039;:<br>
+#181 case &#039;select-one&#039;:<br>
+#182  element.value = value.toString() || value;<br>
+#183  break;<br>
+#184<br>
+#185 /*new*/case &#039;textarea&#039;:<br>
+#186 /*new*/ alert(value);<br>
+#187 /*new*/ value   = value == null ? &#034; : value;<br>
+#188 /*new*/ element.innerHTML = value;<br>
+#189 /*new*/ break;<br>
+#190<br>
+#191 case &#039;text&#039;:<br>
+#192 case &#039;button&#039;:<br>
+#193 /*old*///case &#039;textarea&#039;:<br>
+#194 case &#039;submit&#039;:<br>
+#195 default:<br>
+#196  value   = value == null ? &#034; : value;<br>
+#197  element.value = value;</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-51783">
+
+            <div id="comment-51783">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/a62b01b76d576518e109ee1de65ff74c?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a62b01b76d576518e109ee1de65ff74c?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">heinetz</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51783">March 8, 2011 at 12:27 pm</a> &middot; </div>
+
+
+                    <p>&#8230; and you &#039;ll see nice alerts whenever populating textareas 😉</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-even depth-1" id="li-comment-51837">
+
+            <div id="comment-51837">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/122082f9c04423c912bfa940a4216fcd?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/122082f9c04423c912bfa940a4216fcd?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Jovan Popovic</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51837">April 16, 2011 at 12:05 am</a> &middot; </div>
+
+
+                    <p>Hi Dave,</p>
+<p>I have tried this plugin and it looks great. I have few questions about the plugin.<br>
+1. On the demo page in text area example you wrote that &#034;This functionality is currently buggy, and is undergoing review!&#034;. I have placed textarea and it works fine. What is a bug here?<br>
+2. Is there a chance to accept non-string types in JSON. I have check box with values true and false and I need to put something like { Selected: &#034;true&#034; } instead of {Selected: true} in JSON. I don&#039;t see why you have this constraint because to resolve this you will need to change line in the &#034;checkbox&#034; case branch:</p>
+<p>element.checked |= element.value == values[j];</p>
+<p>to </p>
+<p>element.checked |= element.value == values[j].toString();</p>
+<p>I think that the same issue is for select lists. Usually values of select lists are numbers so it is a problem to convert them to string each time, espessially if we are using some library that automatically generate JSON based on actual object.</p>
+<p>Regards,<br>
+Jovan</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-51846">
+
+            <div id="comment-51846">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/417183256f9c02374acec94fb01962f0?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/417183256f9c02374acec94fb01962f0?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">OsakaWebbie</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51846">May 23, 2011 at 1:31 pm</a> &middot; </div>
+
+
+                    <p>Quick question: Your demo page says, in the section about data types:</p>
+<blockquote><p>Checkbox (checkbox) 	Checks or unchecks the box 	String value</p></blockquote>
+<p>But if the expected content of the string is the value of the checkbox, how is it possible to explicitly uncheck the box?  I don&#039;t want to clear the whole form first, so this actually matters in my case.  Thanks!</p>
+<p>(If you can toss me an email so I know you answered, that would be great.)</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor odd alt depth-2" id="li-comment-52043">
+
+            <div id="comment-52043">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-52043">August 6, 2014 at 10:43 am</a> &middot; </div>
+
+
+                    <p>Have logged an issue and will test soon: <a href="https://github.com/davestewart/jquery-populate/issues/4">https://github.com/davestewart/jquery-populate/issues/4</a></p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-51847">
+
+            <div id="comment-51847">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/417183256f9c02374acec94fb01962f0?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/417183256f9c02374acec94fb01962f0?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">OsakaWebbie</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51847">May 23, 2011 at 4:58 pm</a> &middot; </div>
+
+
+                    <p>Addendum: It doesn&#039;t appear that it will uncheck checkboxes at all, so I had to uncheck them before calling populate() to start with a clean slate.  Then I couldn&#039;t figure out what value to use even to <strong>check</strong> the checkboxes &#8211; your only example is a group of checkboxes with the same name, therefore an array is used.  But mine are independent single checkboxes with unique names.  I had to put breakpoints in your code in Firebug to figure it out &#8211; it turns out that the magic value that will make the plugin code recognize it and check the checkbox is literally &#034;checkboxValue&#034;.  That&#039;s a bit hard to guess (!), so you might want to mention it in your docs.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-51861">
+
+            <div id="comment-51861">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/7868055d41a1ea1aa4149ab2e069b9a9?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/7868055d41a1ea1aa4149ab2e069b9a9?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Wil Barath</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51861">July 14, 2011 at 9:13 pm</a> &middot; </div>
+
+
+                    <p>This is quite powerful already, but I have a suggestion:</p>
+<p>If $.populate() with empty args would return the same heirarchical JSON data which it requires, it would be great for working with the form data in a sensible way:<br>
+data=$(&#034;#form&#034;).serializeArray();<br>
+for (i in data){<br>
+   if (data[i][&#039;name&#039;]==&#039;the[cat][in][the][fedora]&#039;)) &#8230;</p>
+<p>is ooogly compared to<br>
+data=$(&#034;#form&#034;).populate();<br>
+hats=data.the.cat.in.the;<br>
+(for i in hats){<br>
+   if (hat == &#039;fedora&#039;) &#8230;</p>
+<p>It would also be useful for re-populating a form after it had undergone some $.html() transformations.</p>
+<p>What do you think?  This would be valuable to me, I would be happy to contribute to such an upgrade.  It might necessitate renaming the plugin to something like jquery.formJSON so users recognise that it is for dealing with forms directly with JSON, both for read and write.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-51862">
+
+            <div id="comment-51862">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/88d91845fea79773025f80a961abefa9?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/88d91845fea79773025f80a961abefa9?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="https://profiles.google.com/SMHMayboudi" rel="external nofollow" class="url">Seyed Mohammad Hossein Mayboudi</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51862">July 15, 2011 at 8:21 pm</a> &middot; </div>
+
+
+                    <p>Dear, Thanks in advance for your gear plugin. Your idea is very simple but the usage is high. I like these things. I also check your plugin with HTML5 tags like , and unfortunately not working very well. I think inside the populateFormElement function, the last witch-case for &#034;button&#034; and &#034;textarea&#034; from value = value == null ? &#034; : value; element.value = value; should be change to value = $(&#039;button&#039;, this).text();.</p>
+<p>I am looking forward to hear from you, about this issue and other thing related to html.<br>
+AGAIN TAHNKS</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor odd alt depth-2" id="li-comment-52044">
+
+            <div id="comment-52044">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-52044">August 6, 2014 at 10:46 am</a> &middot; </div>
+
+
+                    <p>Have logged an issue on GitHub: <a href="https://github.com/davestewart/jquery-populate/issues/6">https://github.com/davestewart/jquery-populate/issues/6</a></p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-51863">
+
+            <div id="comment-51863">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/88d91845fea79773025f80a961abefa9?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/88d91845fea79773025f80a961abefa9?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="https://profiles.google.com/SMHMayboudi" rel="external nofollow" class="url">Seyed Mohammad Hossein Mayboudi</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51863">July 16, 2011 at 4:26 am</a> &middot; </div>
+
+
+                    <p>There is code from Adrien gibrat on July 29th, 2009, I think it needs some modofcation, but it is quite very well. Still it doesn&#039;t support some HTML5 elements very well, like button.<br>
+arguments.callee(name + &#039;\\[&#039; + key + &#039;\\]&#039;, value[key]); =&gt; arguments.callee(value[key], name + &#039;\\[&#039; + key + &#039;\\]&#039;);arguments.callee call the same anonymous function so based on definition $.populate = function (data, selector) it has to be all-right know.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-even depth-1" id="li-comment-51866">
+
+            <div id="comment-51866">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/c3e41769e89a273fd23aea0fdb461874?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/c3e41769e89a273fd23aea0fdb461874?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">monica</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51866">July 28, 2011 at 12:54 pm</a> &middot; </div>
+
+
+                    <p>Thanks for the awesome plug-in! Is there a plan to make populate work with elements like div as well ? I&#039;m using it with dform(dynamic form); had to parse the dom tree to get the dynamic form(id/class) to pass it to populate(). Neitherless I&#039;m here to thank you 🙂</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor even depth-2" id="li-comment-52041">
+
+            <div id="comment-52041">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-52041">August 6, 2014 at 10:40 am</a> &middot; </div>
+
+
+                    <p>Hi Monica, yes that is on the roadmap &#8211; now I have the site running again, I&#039;ll look into it. Check Github for updates: <a href="https://github.com/davestewart/jquery-populate">https://github.com/davestewart/jquery-populate</a></p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-51872">
+
+            <div id="comment-51872">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/056de64eed9e38cdbfbb23ea1bf1401e?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/056de64eed9e38cdbfbb23ea1bf1401e?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">chaos</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51872">October 14, 2011 at 6:48 am</a> &middot; </div>
+
+
+                    <p>Bug report:<br>
+when in the form there is a &#034;file&#034; field, script tries to populate it and gets &#034;Security error&#034; from the browser, because entering value to &#034;file&#034; is forbidden. Then all the rest of the form leaves unpopulated. This could be corrected manually, if uncompressed script would be available. Sadly &#8211; it is not. So finally &#8211; script is useless&#8230;</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor even depth-2" id="li-comment-52040">
+
+            <div id="comment-52040">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-52040">August 6, 2014 at 10:39 am</a> &middot; </div>
+
+
+                    <p>Thanks Chaos, I added this as a GitHub issue: <a href="https://github.com/davestewart/jquery-populate/issues/2">https://github.com/davestewart/jquery-populate/issues/2</a></p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-even depth-1" id="li-comment-51880">
+
+            <div id="comment-51880">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/a00fcc9ed6e6ae344efff9fe317c7a5a?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a00fcc9ed6e6ae344efff9fe317c7a5a?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://youfailed.us/" rel="external nofollow" class="url">Jim d</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51880">October 20, 2011 at 5:28 pm</a> &middot; </div>
+
+
+                    <p>Hi Dave!</p>
+<p>I think I spotted a bug in your plugin.   One of the options is labeled &#039;phpIndices&#039;, but in your parseJSON() function I notice a reference to &#039;options.useIndices&#039;, which is never defined.  If you change &#039;useIndices&#039; to &#039;phpIndices&#039; the parseJSON appears to behave as described in your documentation (e.g. if phpIndices=true and you pass an array to populate()  it will look for &#039;myvar[0]&#039;, &#039;myvar[1]&#039;, etc.).</p>
+<p>This plugin has helped me out enormously. Thanks!! &#8211;Jim</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor even depth-2" id="li-comment-52039">
+
+            <div id="comment-52039">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-52039">August 6, 2014 at 10:38 am</a> &middot; </div>
+
+
+                    <p>Thanks Jim, I added this as an issue on Github: <a href="https://github.com/davestewart/jquery-populate/issues/1">https://github.com/davestewart/jquery-populate/issues/1</a></p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-51908">
+
+            <div id="comment-51908">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/0934962c9f02534f7a084e2dc3102697?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0934962c9f02534f7a084e2dc3102697?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://droid365.com/" rel="external nofollow" class="url">Bill</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51908">April 18, 2012 at 9:07 pm</a> &middot; </div>
+
+
+                    <p>After spending time fighting with this, I finally gave up.</p>
+<p>I found <a href="http://code.google.com/p/jquery-load-json/">http://code.google.com/p/jquery-load-json/</a> works out of the box in my situation.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-51919">
+
+            <div id="comment-51919">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/573691e4091142af0058b137583d8eea?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/573691e4091142af0058b137583d8eea?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">alex</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51919">June 27, 2012 at 12:53 pm</a> &middot; </div>
+
+
+                    <p>The arr variable is initialized with an JS array. This creates a lot of parasite properties coming from the Array prototype (for instance the &#039;all&#039; function).</p>
+<p>// &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br>
+	// convert hierarchical JSON to flat array</p>
+<p>			var arr  = [];<br>
+			parseJSON(obj);</p>
+<p>			if(options.debug)<br>
+			{<br>
+				_populate =<br>
+				{<br>
+					arr:		arr,<br>
+					obj:		obj,<br>
+					elements:	[]<br>
+				}<br>
+			}</p>
+<p>This produces a lot a bugs under IE since the form[&#039;all&#039;] returns something in ie!!!<br>
+Why don&#039;t we use an object instead like this :<br>
+var arr	= {};</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-51921">
+
+            <div id="comment-51921">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/c76b93a357ef2827192624cfdd243f34?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/c76b93a357ef2827192624cfdd243f34?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Phil</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51921">July 13, 2012 at 1:13 am</a> &middot; </div>
+
+
+                    <p>There&#039;s a bug on line 200 when attempting to fill a select box and a passed in value is null &#8211; it should be:</p>
+<p>element.value = (value == null ? &#034; : (value.toString() || value));</p>
+<p>The same problem exists for radio values.</p>
+<p>Apart from that, though, awesome library!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-51944">
+
+            <div id="comment-51944">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/8b3c9ea6a99642a68440e0e005d75daf?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/8b3c9ea6a99642a68440e0e005d75daf?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Chris S.</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51944">November 19, 2012 at 6:13 pm</a> &middot; </div>
+
+
+                    <p>Having a strange problem with populate plug-in. Have used it successfully before but am having the following issue.</p>
+<p>this works fine:  $(&#039;#signupForm&#039;).populate({&#039;FNAME&#039;:&#039;firstname&#039;,&#039;LNAME&#039;:&#039;lastname&#039;,&#039;EMAIL&#039;:&#039;test@test.com&#039;});</p>
+<p>but this throws an exception:<br>
+var frmValues = &#034;{&#039;FNAME&#039;:&#039;firstname&#039;,&#039;LNAME&#039;:&#039;lastname&#039;,&#039;EMAIL&#039;:&#039;test@test.com&#039;}&#034;;<br>
+ $(&#039;#signupForm&#039;).populate(frmValues);</p>
+<p>the exception I am getting is:<br>
+Uncaught Error: Syntax error, unrecognized expression: # </p>
+<p>so works with a hard codes json value but not as a variable &#8211; any thoughts?</p>
+<p>using latest populate plugin with jquery 1.8.3</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-51962">
+
+            <div id="comment-51962">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/151133beb5aed166217ff5006d66e9e5?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/151133beb5aed166217ff5006d66e9e5?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">James Murray</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51962">May 16, 2013 at 5:24 pm</a> &middot; </div>
+
+
+                    <p>I found a small bug. </p>
+<p>In the parseJSON method, in the assignment of values, you make reference to &#034;options.useIndices&#034; the option name is &#034;options.phpIndices&#034;</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-51989">
+
+            <div id="comment-51989">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/b2d80db65480717afcbcb85f972c456e?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/b2d80db65480717afcbcb85f972c456e?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Mark</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-51989">December 19, 2013 at 4:12 pm</a> &middot; </div>
+
+
+                    <p>Hi where do I find the</p>
+<p>$().populate(); </p>
+<p>in the demo exampes.<br>
+I&#039;ve looked everywhere<br>
+please advise.</p>
+<p>Thanks</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-52003">
+
+            <div id="comment-52003">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/6d87b220be81d769fd167b18fd6fa628?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/6d87b220be81d769fd167b18fd6fa628?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">stxh</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-52003">March 23, 2014 at 3:25 pm</a> &middot; </div>
+
+
+                    <p>Error when json string contened UTF-8 string (jQuery 2.x)<br>
+After remove paresJSON function and let arr=$.paresJSON(obj) it worked.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-68022">
+
+            <div id="comment-68022">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/dc5947e3ec1673131fa798d662aae77e?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/dc5947e3ec1673131fa798d662aae77e?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">John Smith</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-68022">February 6, 2015 at 10:29 pm</a> &middot; </div>
+
+
+                    <p>Wow, that was EXACTLY what I was looking for! I&#039;m working on a Mac but unfortunately it doesn&#039;t work properly with DIVs, guess I&#039;m doing right so far, no errors in console. I&#039;m not talking about the PHP implementation but from Javascript (<a href="/resources/javascript/jQuery/demos/populate-demo.html">/resources/javascript/jQuery/demos/populate-demo.html</a>). The weird DIV-thing: It only works so far for textareas but f.e. not for input elements. I don&#039;t get any error while running it and it doesn&#039;t matter if I test it in Safari or Firefox, always that same behaviour. I call it that way: $(&#039;#gamediv&#039;).populate({&#039;inputfield&#039;:&#039;Holla nolla&#039;,&#039;textarea&#039;:&#039;Text here&#039;});<br>
+(btw. you missed some semicolons in your examples in the demo scripts). And yes: would be great it would run with DIV as well!</p>
+<p>With FORM it works great in Javascript. I found also the &#034;opposite&#034; of populate and hope it&#039;s not rude I am posting that here: http://bitovi.com/blog/2010/06/convert-form-elements-to-javascript-object-literals-with-jquery-formparams-plugin.html</p>
+<p>Thanks a ton for your effort! I will recomend your script to others!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-68429">
+
+            <div id="comment-68429">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/b2150ee1f85c846c43e968232c3ad6c5?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/b2150ee1f85c846c43e968232c3ad6c5?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Jojo</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-68429">February 10, 2015 at 8:57 pm</a> &middot; </div>
+
+
+                    <p>I have tried the populate demo using several different browsers and clicking on populate does nothing, on all examples on the demo page.</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor even depth-2" id="li-comment-72985">
+
+            <div id="comment-72985">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-72985">March 31, 2015 at 3:53 pm</a> &middot; </div>
+
+
+                    <p>Hey JoJo,</p>
+<p>Sorry you&#039;re not having much luck with the demo. This post is quite a few years old now, and I really do need to update it! I&#039;m actually working on getting all my old scripts updated at the moment, but work keeps getting in the way. I hope you didn&#039;t waste too much time on things!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-even depth-1" id="li-comment-74574">
+
+            <div id="comment-74574">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/22bd0b1b3c6b9dd9997d02eaa3988b35?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/22bd0b1b3c6b9dd9997d02eaa3988b35?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Toby</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-74574">April 18, 2015 at 4:15 pm</a> &middot; </div>
+
+
+                    <p>David,</p>
+<p>Been a perfect routine for me.</p>
+<p>However, just ran into an issue: Form Field won&#039;t populate when high-hex value exists in string, e.g. trademark ™, registration mark ®, etc.</p>
+<p>Have any thoughts on a quick fix?</p>
+<p>Thanks,</p>
+<p>Toby</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor even depth-2" id="li-comment-75568">
+
+            <div id="comment-75568">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-75568">April 28, 2015 at 10:41 am</a> &middot; </div>
+
+
+                    <p>Hi Toby,</p>
+<p>Not sure right now, and I&#039;m not actively developing this plugin at the moment (though I will be reviewing all my plugins in the next few months). Take a look at the source code if you&#039;re that-way inclined &#8211; it shouldn&#039;t be too much of an issue to sort out 🙂</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-76946">
+
+            <div id="comment-76946">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/dc5947e3ec1673131fa798d662aae77e?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/dc5947e3ec1673131fa798d662aae77e?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">John</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-76946">May 14, 2015 at 11:30 am</a> &middot; </div>
+
+
+                    <p>Hi Dave</p>
+<p>First of all a huge thank for your great work! populate() is easy to understand and easy to use! It works well for me so far and I want to continue using it&#8230;</p>
+<p>Your examples always shows a set of JSON example for ONE form entry. I run now into a situation where I have more records (lets say a list of addresses) in a single JSON file. Its server friendlier (for me) to send the user all records instead only the one he currently wants to see. The user should now be able to f.e. select an address by a dropdownlist. I would like to read/populate only a user chosen adress into a set of predefined fields. Maybe its possible with populate() but I couldn&#039;t find such a case in your documentation. It would mean to hand over a &#034;key&#034; so that populate() &#034;knows&#034; which entry it has to read out of the JSON file with many address records in it.</p>
+<p>The other way would be to iterate through all address entries and to fill up all addresses in the form but thats not what I am looking for.</p>
+<p>Just wondering if populate() is supporting what I am looking for. If not I have to find another solution.</p>
+<p>Greetings<br>
+John</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-77002">
+
+            <div id="comment-77002">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-77002">May 15, 2015 at 12:39 am</a> &middot; </div>
+
+
+                    <p>Hey John, not sure if I understand your request!</p>
+<p>Can you post a JS Fiddle or something?</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-88131">
+
+            <div id="comment-88131">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/a16e412f4bfe61282ee0c935eaa12d74?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a16e412f4bfe61282ee0c935eaa12d74?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://www.dangerstudio.com/" rel="external nofollow" class="url">Ilan Patao</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-88131">October 1, 2015 at 5:37 pm</a> &middot; </div>
+
+
+                    <p>David, Excellent work!</p>
+<p>Quick question, if my JSON has about 100 items in it, how would you go about populating multiple items, or creating the form elements to be populated per item?</p>
+<p>On a single JSON item your code is excellent, I&#039;m trying to parse a catalog of items (up to 250-ish) and have them populate into multiple links/form fields on a page with some additional buttons for my application to draw data corrolating to to the item, hoping you can help point me in the right direction. 🙂</p>
+<p>&nbsp;</p>
+<p>Again, awesome work!</p>
+<p>Best,</p>
+<p>Ilan P.</p>
+<p>DangerStudio.com</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-89262">
+
+            <div id="comment-89262">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-89262">October 14, 2015 at 9:34 pm</a> &middot; </div>
+
+
+                    <p>Hey Ilan,</p>
+<p>Glad you like it 🙂</p>
+<p>Mainly you just need to make sure your form elements are named correctly, so if you have 100, just generate them somehow as name_1, name_2 or such like. I haven&#039;t checked if array access notation will work, but you can try!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-96469">
+
+            <div id="comment-96469">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/e80f2995895c139627f7ab5080937e9e?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/e80f2995895c139627f7ab5080937e9e?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Oliver Mortimer</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-96469">April 13, 2016 at 8:49 am</a> &middot; </div>
+
+
+                    <p>Do you have any plans to add this back to Github?  I&#039;m always writing my own solution to populate forms via JSON (and to take into account inputs, checkboxes, radio buttons, selects etc), so would be great to contribute to this project.</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor even depth-2" id="li-comment-96487">
+
+            <div id="comment-96487">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-96487">April 14, 2016 at 12:11 pm</a> &middot; </div>
+
+
+                    <p>Actually Oliver, over the last few months I&#039;ve finally moved all my coding to a single laptop, and I&#039;m finally organising all my projects with proper wikis and such like, so it is on the list. Maybe I&#039;ll try to do something this weekend&#8230; 🙂</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-even depth-1" id="li-comment-101813">
+
+            <div id="comment-101813">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/ec0dcd25d8895b30432561604c0370bd?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/ec0dcd25d8895b30432561604c0370bd?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">terry</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-populate/#comment-101813">November 11, 2016 at 3:46 am</a> &middot; </div>
+
+
+                    <p>Demos currently aren&#039;t working.</p>
+<p><a href="/resources/javascript/jQuery/demos/populate-demo.html">/resources/javascript/jQuery/demos/populate-demo.html</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+            </ol>
+
+
+<!-- END #comments -->
+</div>
+				<!-- BEGIN .navigation .single-page-navigation -->
+				<div class="navigation single-page-navigation">
+					<div class="nav-previous">&larr; <a href="/tools/coding/form-builder/" rel="prev">Form builder</a>
+</div>
+					<div class="nav-next">
+<a href="/plugins/jquery/jquery-highlight/" rel="next">jQuery Highlight</a> &rarr;</div>
+				<!-- END .navigation .single-page-navigation -->
+				</div>
+
+							<!-- END #primary .hfeed-->
+			</div>
+
+
+    		<!-- BEGIN #sidebar .aside-->
+		<div id="sidebar" class="aside">
+
+		<div id="ds_related_categories_widget-2" class="widget DS_Related_Categories_Widget">
+<h3 class="widget-title">Related categories</h3>
+<ul><li><a href="/category/plugins/jquery/">jQuery <span class="meta">9</span></a></li></ul>
+</div>
+<div id="ds_related_posts_widget-3" class="widget DS_Related_Posts_Widget">
+<h3 class="widget-title">Related Posts in jQuery</h3>
+<ul>
+<li><a href="/plugins/jquery/jquery-360/">jQuery ThreeSixty <span class="meta">2014</span></a></li>
+<li><a href="/plugins/jquery/jquery-log/">jQuery Log <span class="meta">2013</span></a></li>
+<li><a href="/plugins/jquery/jquery-placeholder/">jQuery Placeholder <span class="meta">2013</span></a></li>
+<li><a href="/plugins/jquery/jquery-hashsync/">jQuery HashSync <span class="meta">2013</span></a></li>
+<li><a href="/plugins/jquery/jquery-tabsize/">jQuery TabSize <span class="meta">2010</span></a></li>
+<li><a href="/plugins/jquery/jquery-lorem/">jQuery Lorem <span class="meta">2010</span></a></li>
+<li><a href="/plugins/jquery/jquery-hierarchy/">jQuery Hierarchy <span class="meta">2008</span></a></li>
+<li><a href="/plugins/jquery/jquery-highlight/">jQuery Highlight <span class="meta">2008</span></a></li>
+<li><a href="/plugins/jquery/jquery-populate/">jQuery Populate <span class="meta">2008</span></a></li>
+</ul>
+</div>
+<div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"></div></div>
+		<!-- END #sidebar .aside-->
+		</div>
+
+
+<!-- FILE davestewart/footer.php -->
+
+        		<!-- END #content -->
+		</div>
+
+
+		<!-- BEGIN #footer -->
+		<div id="footer">
+
+		    <!-- BEGIN .footer-inner -->
+		    <div class="footer-inner">
+
+
+		        <!-- BEGIN .footer-col-1 -->
+<div class="footer-col-1">
+
+    <div id="ds_links-2" class="widget ds_links">
+<h3 class="widget-title">Commercial Portfolio</h3>
+<ul><li><a href="http://davestewart.co.uk/">davestewart.co.uk</a></li></ul>
+</div>
+<!-- END .footer-col-1 -->
+</div>
+
+<!-- BEGIN .footer-col-2 -->
+<div class="footer-col-2">
+
+    <div id="ds_links-4" class="widget ds_links">
+<h3 class="widget-title">Browse Projects</h3>
+<ul>
+<li><a href="/posts-by-category/">By Category</a></li>
+<li><a href="/posts-by-date/">By Date</a></li>
+<li>
+<a href="/posts-by-tag/">By Tag</a>  </li>
+</ul>
+</div>
+<!-- END .footer-col-2 -->
+</div>
+
+<!-- BEGIN .footer-col-3 -->
+<div class="footer-col-3">
+
+    <div id="ds_links-3" class="widget ds_links">
+<h3 class="widget-title">More Info</h3>
+<ul>
+<li><a href="https://twitter.com/dave_stewart">Contact</a></li>
+<li><a href="/about/">About</a></li>
+</ul>
+</div>
+<!-- END .footer-col-3 -->
+</div>
+
+		    <!-- END .footer-inner -->
+		    </div>
+
+		    <div class="footer-lower">
+		        <div class="footer-inner">
+		            <p class="copyright">&copy; Copyright 2022. Powered by <a href="http://wordpress.org/">WordPress</a></p>
+
+		        </div>
+		    </div>
+
+		<!-- END #footer -->
+		</div>
+
+		<a href="#" id="back-to-top"></a>
+
+
+
+	<!-- Theme Hook -->
+	<script type="text/javascript">
+/* <![CDATA[ */
+var zilla = {"ajaxurl":"\/wordpress\/wp-admin\/admin-ajax.php","nonce":"61b4b80d02","loading":"Loading..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.custom.js?ver=1.0"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/comment-reply.min.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js?ver=1.4.6"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var JQLBSettings = {"showTitle":"1","showCaption":"1","showNumbers":"1","fitToScreen":"0","resizeSpeed":"400","showDownload":"0","navbarOnTop":"0","marginSize":"0","slideshowSpeed":"4000","prevLinkTitle":"previous image","nextLinkTitle":"next image","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","pause":"(pause slideshow)","play":"(play slideshow)"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wordpress/wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js?ver=1.4.6"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery.color.min.js?ver=2.1.1"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/wp-embed.min.js?ver=4.9.18"></script>
+
+	<!-- Ran 42 queries 1.43 seconds -->
+<!-- END body-->
+</body>
+<!-- END html-->
+</html>

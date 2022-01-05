@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!-- BEGIN html --><html lang="en-US">
+<!-- A ThemeZilla design (http://www.themezilla.com) - Proudly powered by WordPress (http://wordpress.org) -->
+
+<!-- BEGIN head -->
+<head>
+
+	<!-- Meta Tags -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="generator" content="Hoarder 1.1.1">
+<meta name="generator" content="ZillaFramework 1.0.2.5">
+
+	<!-- Title -->
+	<title>XML / XSLT site management tool | Dave Stewart IO</title>
+
+	<!-- RSS & Pingbacks -->
+	<link rel="alternate" type="application/rss+xml" title="Dave Stewart IO RSS Feed" href="/feed/">
+	<link rel="pingback" href="/wordpress/xmlrpc.php">
+
+	<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Dave Stewart IO &raquo; XML / XSLT site management tool Comments Feed" href="/tools/other-tools/xml-site-manager/feed/">
+<link rel="stylesheet" id="hoarder-style-css" href="/wordpress/wp-content/themes/davestewart/style.css?ver=1.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="jquery.lightbox.min.css-css" href="/wordpress/wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css?ver=1.4.6" type="text/css" media="all">
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/superfish.js?ver=1.4.8"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/supersubs.js?ver=0.2"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.flexslider-min.js?ver=2.0"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.jplayer.min.js?ver=2.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.imagesloaded.min.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.isotope.min.js?ver=1.5.19"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.fitvids.js?ver=1.0"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/includes/js/twitter.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/vendor/jquery/jquery.sticky.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/vendor/jquery/jquery.cookie.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/assets/js/zilla-media.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/assets/js/scripts.js?ver=2.0.1"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress/wp-includes/wlwmanifest.xml">
+<link rel="canonical" href="/tools/other-tools/xml-site-manager/">
+<link rel="shortlink" href="/?p=7">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Ftools%2Fother-tools%2Fxml-site-manager%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Ftools%2Fother-tools%2Fxml-site-manager%2F&#038;format=xml">
+
+<style type="text/css">.wp-editor-container{
+		border:1px solid #DDD;
+		margin-bottom:10px;
+	}</style>
+
+<!-- END head -->
+</head>
+
+<!-- BEGIN body -->
+<body class="post-template-default single single-post postid-7 single-format-standard no-js unknown post-xml-site-manager zilla layout-2cr">
+
+	    		<!-- BEGIN #header -->
+		<div id="header">
+
+		    <!-- BEGIN .header-inner -->
+		    <div class="header-inner">
+
+    			<!-- BEGIN #logo -->
+    			<div id="logo">
+    				<a href="/">Dave Stewart</a> <span>|</span> <a href="http://davestewart.co.uk/" title="Go to davestewart.co.uk">io</a>
+    				<p id="tagline">Research » Tooling » Open Sorcery</p>
+    			<!-- END #logo -->
+    			</div>
+
+
+	        <!-- END .header-inner -->
+	        </div>
+
+		<!-- END #header-->
+		</div>
+
+		<!-- BEGIN .main-navigation -->
+		<div class="main-navigation">
+
+		        		<!-- BEGIN #primary-nav -->
+    		<div id="primary-nav">
+    		    <ul id="primary-menu" class="menu">
+<li id="menu-item-373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-373"><a href="/">Home</a></li>
+<li id="menu-item-369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-369"><a href="/category/frameworks/">Frameworks</a></li>
+<li id="menu-item-368" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-368"><a href="/category/tools/">Tools</a></li>
+<li id="menu-item-887" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-887"><a href="/all/plugins/">Plugins</a></li>
+<li id="menu-item-888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-888"><a href="/all/extensions/">Extensions</a></li>
+<li id="menu-item-1064" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1064"><a href="/category/setup/">Setup</a></li>
+<li id="menu-item-977" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-977"><a href="/posts-by-category/">Everything</a></li>
+<li id="menu-item-1006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1006"><a href="/about/">About</a></li>
+</ul>
+    		    <!-- BEGIN #searchform-->
+<form method="get" id="searchform" action="/">
+	<fieldset>
+		<input type="text" name="s" id="s">
+	</fieldset>
+<!-- END #searchform-->
+</form>    		<!-- END #primary-nav -->
+    		</div>
+
+		<!-- END .main-navigation -->
+		</div>
+
+		<!-- BEGIN #content -->
+		<div id="content" class="clearfix">
+
+
+
+
+<!-- FILE davestewart/single.php -->
+
+			<!-- BEGIN #primary .hfeed-->
+			<div id="primary" class="hfeed">
+
+								<!-- BEGIN .hentry -->
+				<div class="post-7 post type-post status-publish format-standard hentry category-other-tools" id="post-7">
+
+    				<!-- FILE davestewart/content.php -->
+<div class="post-thumb">
+
+
+</div>
+
+    <h1 class="entry-title">XML / XSLT site management tool</h1>
+	<div class="entry-meta-header">
+			</div>
+
+
+
+<!-- BEGIN .entry-content -->
+<div class="entry-content">
+
+	<p>Fancy a quick &amp; easy, yet extensible &amp; robust login manager to organise &amp; store all your urls, usernames and passwords, in whatever categories your care to put them?</p>
+<p>Simple. Just store your user / site details in an easily editable <a href="/resources/xml/Login%20Manager/login-manager-no-xsl.xml">XML file like this</a> and use XSLT to transform it (on the fly) into a really easy HTML page like this&#8230;</p>
+<p><a class="image" href="/resources/xml/Login%20Manager/login-manager.xml"><img src="/resources/xml/Login%20Manager/img/site-manager-splash.gif" alt=""></a></p>
+<p>Intrigued? It&#039;s not as difficult as you think.</p>
+<h3>Information overload</h3>
+<p>At the last count, I have about 15 &#8211; 20 sites that I manage for myself and my clients. This means I have to remember a</p>
+<ul>
+<li>url</li>
+<li>username</li>
+<li>password</li>
+</ul>
+<p>For:</p>
+<ul>
+<li>Site login</li>
+<li>Site database</li>
+<li>WordPress login</li>
+<li>WordPress database</li>
+</ul>
+<p>So for 15 &#8211; 20 sites we&#039;re looking at anywhere between</p>
+<ul>
+<li>45 (15 sites x 1 login x 3 url, username &amp; password) to</li>
+<li>240 (20 sites x 4 logins x 3 url, username &amp; password) bits of information.</li>
+</ul>
+<p>What a headache!</p>
+<h3>From bookmarks to JavaScript to XML</h3>
+<p>So, for the last few years or so, I&#039;ve resorted to keeping bookmarks in each client&#039;s folder, along with a text file with the relevant details. However, a few months ago I realised that I may be able to bypass some of the manual login<span lang="EN-GB"> palaver</span> by storing the whole login url as one long GET string, and calling it straight through the browser:</p>
+<pre>http://www.mysite.co.uk/login.php?username=dave&amp;password=ilikefish</pre>
+<p>This works on some sites, but for others that don&#039;t like GET and take only a POST, it didn&#039;t work.</p>
+<p>So, I thought how about having an HTML / JavaScript page with a form that has it&#039;s values (name, password, etc) set dynamically by selecting a drop down, then connects to the server and does the login like that?</p>
+<p><img src="/resources/xml/Login%20Manager/img/site-manager-dropdowns.gif" alt="" width="600" height="167"></p>
+<p>Eureka! It worked very nicely thank you. So I&#039;ve been going along with this quite happily for a while until I had to add a few more sites, and started to get a bit overwhelmed with the sheer amount of data I was having to put into all these JavaScript arrays.</p>
+<p>Hmm&#8230; what do do now? How best to store all this data? Well, XML seems like the logical choice, but how to actually parse and search that XML from within the HTML file? Embed it as HTML and use some DOM manipulation? Regular expressions? Perhaps I should use jQuery and it&#039;s AJAX capabilities?</p>
+<p>Then all of a sudden it struck me. XSLT! My only real memory of XSLT (Extensible Stylesheet Language Transformation) were from the chapters in my XML book, and I knew that it was pretty dry stuff that I&#039;d probably never use&#8230; however here it was, about to come to my rescue.</p>
+<h3>XML + XSLT = HTML</h3>
+<p>In a nutshell, XSLT allows you to take a skeleton XML document and &#034;transform&#034; (move it around, add stuff, repeat stuff) it into a fleshed-out HTML (or any other markup) document by applying rules and templates to individual XML tags.</p>
+<p>In a way similar to how CSS styles HTML by using selectors to select nodes, and change the visual result&#8230;</p>
+<pre> p {
+    color:red
+    }</pre>
+<p>&#8230;XSLT can apply your own rules and templates to nodes&#8230;</p>
+<pre>&lt;xsl:template match="category"&gt;
+	&lt;h2&gt;&lt;xsl:value-of select="@name"/&gt;&lt;/h2&gt;
+	&lt;div class="category"&gt;
+		&lt;xsl:apply-templates/&gt;
+	&lt;/div&gt;
+&lt;/xsl:template&gt;
+</pre>
+<p>&#8230;to physically change their structure and markup, creating a brand new hybrid document.</p>
+<p>You can think of XSLT as a set of &#034;templates&#034; with some basic logic for transforming individual tags.</p>
+<p>For example, let&#039;s say you want to transform a list of names, phone numbers, and addresses specified in &lt;ul&gt; and &lt;li&gt; tags to something a little more presentational. You could specify that the first &lt;li class=&#034;name&#034;&gt; should be transformed to a &lt;h3&gt;, and the second &lt;li class=&#034;number&#034;&gt; be transformed to a &lt;div&gt;, then the rest of the list remain as a list. Finally, wrap the whole thing in a &lt;div class=&#034;entry&#034;&gt;, and for the fun of it, add a &lt;hr/&gt; to the end.</p>
+<p>The end result is full HTML output viewable in the browser, and if CSS styling is applied, looks and behaves no differently from an HTML document that you&#039;d created yourself.</p>
+<p>The advantage of styling XML with XSLT is that you keep data and presentation completely separate, and therefore your data is far easier to manage.</p>
+<p>To make the XSLT act upon your XML is as simple as specify a link to the XSL file in the head of the XML file, in the same way a CSS file is specified in the head of an HTML document.</p>
+<pre><span class="pi">&lt;?xml-stylesheet type="text/xsl" href="login-manager.xsl"?&gt;</span></pre>
+<h3>Requirements</h3>
+<p>So &#8211; back to my Login Manager scenario. I wanted to process my skeleton XML of all my urls, usernames and passwords to create a new document that had:</p>
+<ul>
+<li>Clear sections for each of my top-level categories: Misc, Personal, Business</li>
+<li>In each category, a list of sites with a title and text-based link</li>
+<li>For each site, a list of login types</li>
+<li>For each login type, a mini login form that replicates a standard login, with
+<ul>
+<li>hidden form fields for username, password, or ANY attributes I specify</li>
+<li>target url specified as the form&#039;s action</li>
+<li>a login button to send the variables and perform the login</li>
+</ul>
+</li>
+</ul>
+<h3>Basic XML structure</h3>
+<p>Login data is not that complicated (url, username password) so there&#039;s only need for a few basic tags, plus some extra tags to organise the data:</p>
+<ul>
+<li>
+<strong>category</strong> &#8211; groups together particular sites under a common heading, e.g. &#034;Business&#034;, &#034;Personal&#034;</li>
+<li>
+<strong>site</strong> &#8211; groups together all the different logins for a single site</li>
+<li>
+<strong>application</strong> &#8211; group together any application-specific login data, such as WordPress admin &amp; database logins</li>
+</ul>
+<p>Then we have some specific login types:</p>
+<ul>
+<li>
+<strong>login</strong> | <strong>database</strong> &#8211; login to an application using HTTP (form data)</li>
+<li>
+<strong>folder</strong> &#8211; connect to a password protected folder using URL syntax (protocol//user:pass@domain/path)</li>
+<li>
+<strong>page</strong> &#8211; just load a page without passing any variables</li>
+</ul>
+<p>And finally there&#039;s a few basic attributes:</p>
+<ul>
+<li>
+<strong>name</strong> &#8211; the name of the category, site or application</li>
+<li>
+<strong>url</strong> &#8211; the full http: url of the site</li>
+<li>
+<strong>username</strong> &#8211; user name</li>
+<li>
+<strong>password</strong> &#8211; password</li>
+</ul>
+<p>If you need to pass any other attributes, just add them to the specific <strong>login</strong> or <strong>database</strong> tag and they will be included in the final login forms the XSLT will create.</p>
+<p>This is how the XML structure would look for one site with 4 login types, organised under a category heading. Note only the few tags listed above.</p>
+<p><img src="/resources/xml/Login%20Manager/img/site-manager-xml-schema.gif" alt="" width="259" height="441"></p>
+<p>And here&#039;s the final XML as it looks in XML Notepad (click to see a dummy XML file):</p>
+<p><a class="image" href="/resources/xml/Login%20Manager/login-manager-no-xsl.xml"><img src="/resources/xml/Login%20Manager/img/site-manager-xml.gif" alt="" width="600" height="479"></a></p>
+<h3>How I&#039;ve leveraged XSLT in this application</h3>
+<p>Although XSLT is markup (in fact it&#039;s XML), it&#039;s not just dumb text. XSLT is actually a language, and is capable of making decisions as it processes the XML. Each kind of XSLT tag is in effect a different command, with it&#039;s attributes acting as parameters to that command.</p>
+<p>For example, the &lt;xsl:choice&gt; tag could be seen as an <strong>if/then</strong> or <strong>switch/case</strong> construct in a real programming language, so you can use it to make decisions as you process the document. In other words, when the parser is processing one of your &#034;mini-templates&#034; and it comes across an &lt;xsl:choice&gt; tag, you could change exactly how your XSLT rule will build the next bit of HTML output. I&#039;ve used this to map the <strong>username</strong> and <strong>password</strong> attributes stored in the XML file to custom field names, depending on each login application&#039;s form requirements.</p>
+<p>For example, WordPress expects <strong>log</strong> and <strong>pwd</strong> rather than <em>username</em> and <em>password</em>, so with a &lt;xsl:choice&gt; tag I just instruct the XSLT parser to output these preferred field names where any <strong>login</strong> tag has a parent tag of type <strong>application</strong>, with it&#039;s <strong>name</strong> attribute set to &#034;WordPress&#034;.</p>
+<p>I&#039;ve put a lot of comments in the XSL file so it should all become clear.</p>
+<p>Speaking of which, it&#039;s about time to take a look at <a href="/resources/xml/Login%20Manager/login-manager.xsl">the XSLT file</a>. Note the:</p>
+<ol>
+<li>XSL templates for each kind of tag, for example:
+<ul>
+<li>the root tag: <strong>&lt;xsl:template match=&#034;/sites&#034;&gt;</strong>
+</li>
+<li>any site tags: <strong>&lt;xsl:template match=&#034;site&#034;&gt;</strong>
+</li>
+<li>any folder tags: <strong>&lt;xsl:template match=&#034;folder&#034;&gt;</strong>
+</li>
+<li>any login or database tags (which are treated the same): <strong>&lt;xsl:template match=&#034;login|database&#034;&gt;</strong>
+</li>
+</ul>
+</li>
+<li>the actual <strong>HTML</strong> inside each of the templates that get printed to the page for each tag</li>
+<li>Any logic associated with the rules, e.g. <strong>&lt;xsl:choose&gt;</strong> and it&#039;s children</li>
+<li>How XSL outputs <strong>actual values</strong> from the XML, e.g.
+<ul>
+<li>a node&#039;s name: <strong>&lt;xsl:value-of select=&#034;name(.)&#034;/&gt;</strong>
+</li>
+<li>the value of a url attribute: <strong>&lt;xsl:value-of select=&#034;@url&#034;/&gt;</strong>
+</li>
+</ul>
+</li>
+<li>How XSL builds HTML manually, including
+<ul>
+<li>tags <strong>&lt;xsl:element name=&#034;form&#034;&gt;</strong> and also</li>
+<li>attributes <strong>&lt;xsl:attribute name=&#034;method&#034;&gt;<br>
+</strong>
+</li>
+</ul>
+</li>
+</ol>
+<h3>End result</h3>
+<p>Below is the end result of XSLT applying all those tag-specific mini-templates to the XML. Click the image to see the live results with a dummy XML file.<br>
+<a class="image" href="/resources/xml/Login%20Manager/login-manager.xml"><img src="/resources/xml/Login%20Manager/img/site-manager-html.gif" alt=""></a></p>
+<p>Pretty comprehensive I think you&#039;ll agree.</p>
+<p>And in case you still haven&#039;t quite cottoned on &#8211;<strong> yes &#8211; this is an XML file you are looking at!</strong> If you don&#039;t believe me, just do a &#034;View Source&#034; to see the actual XML, and marvel at what a stunning job the XSLT has done.</p>
+<h3>Taking the file and using it yourself</h3>
+<p>I&#039;m a big fan of choosing the right tool for the job, and in this case XSLT has been absolutely perfect. I wrote a fairly basic XML file and it didn&#039;t take long to learn the few commands I needed to turn it into a really useful HTML document.</p>
+<p>If you want to use this to handle your own site logins, feel free to take and update the file. As long as you stick to the <strong>category &gt; site &gt; (application) &gt; login &gt; attributes</strong> structure, the XSLT will give you a user-friendly front-end to your XML, every time.</p>
+<p>Just place any standard login and database settings under a login or database tag, and group any application-specific settings under an <strong>application</strong> tag, and the XSLT will create a new named sub-section for you.</p>
+<p>If you wish to pass any other specific variables to a login script (for example you may have a landing page specified, ala Google Analytics), just add these attributes to your <strong>login</strong> or <strong>database</strong> tags.</p>
+<h3>Files and Links</h3>
+<p>I&#039;m certainly no expert on XSLT so I&#039;m not here to provide the world with tutorial, but I am up for sharing the code I&#039;ve written, as well as providing links to the pages on the Internet that helped me.</p>
+<ul>
+<li>Here&#039;s a <a href="/resources/xml/Login%20Manager/login-manager.zip">zip of the 3 files (XML, XSL &amp; CSS)</a> you&#039;ll need to build your own Login Manager</li>
+</ul>
+<p>These pages got me most of the way:</p>
+<ul>
+<li><a href="http://www.architag.com/tag/Article.asp?v=15&amp;i=8&amp;p=1&amp;s=1">An excellent tutorial on transforming XML to HTML</a></li>
+<li><a href="http://www.w3schools.com/xsl/el_element.asp">Building elements manually in XSL</a></li>
+<li>
+<a href="http://www.w3schools.com/xsl/el_attribute.asp">Adding attributes to the elements in XSL</a> and <a href="http://www.xml.com/pub/a/2002/04/03/attributes.html">Putting attributes to work</a>
+</li>
+<li><a href="http://www.w3schools.com/xsl/xsl_for_each.asp">Basic looping in XSLT</a></li>
+<li><a href="http://www.w3schools.com/xsl/xsl_choose.asp">Applying logic to your XSLT output</a></li>
+<li><a href="http://www.w3schools.com/xsl/xsl_w3celementref.asp">XSLT Elements Reference</a></li>
+<li><a href="http://www.w3schools.com/xpath/xpath_functions.asp">XPath, XQuery, and XSLT Function Reference</a></li>
+</ul>
+<p>And here&#039;s some software you&#039;ll find useful:</p>
+<ul>
+<li>
+<a href="http://www.snapfiles.com/get/xmlnotepad.html">Microsoft XML Notepad</a>. Lightening quick XML editing with a small footprint. Great for editing small xml files.</li>
+<li>
+<a href="http://architag.com/xray/">Architag XRay</a>. Real-time XSLT processing so you can see your code in action without having to preview in a browser</li>
+</ul>
+<p>Hopefully someone will find this as useful as I have!</p>
+<p>Cheers,</p>
+<p>Dave</p>
+<!-- END .entry-content -->
+</div>
+<!-- FILE davestewart/content-meta.php -->
+<!-- BEGIN .entry-meta-footer-->
+<div class="entry-meta-footer">
+	<!--
+    <span class="comment-count">Comments: <a href="/tools/other-tools/xml-site-manager/#comments">1</a></span>
+    <span class="author">Posted by: <a href="/author/admin/" title="Posts by Dave Stewart" rel="author">Dave Stewart</a></span>
+	-->
+
+
+
+
+	<div class="entry-categories">Categories: <a href="/category/tools/" title="View all posts in Tools">Tools</a>, <a href="/category/tools/other-tools/" title="View all posts in Other">Other</a>
+</div>
+    <div class="entry-tags"></div>
+	<div class="published">Date: <span style="font-weight:normal">December 2007</span>
+</div>
+
+<!-- END .entry-meta-footer-->
+</div>
+
+                                <!-- END .hentry-->
+				</div>
+
+
+<!-- BEGIN #comments -->
+<div id="comments">
+
+	        <h3 class="comments-title">1 Comment</h3>
+
+        	<ol class="commentlist">
+                    <li class="comment even thread-even depth-1" id="li-comment-1719">
+
+            <div id="comment-1719">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/f6faeb1f4b96e0cb7fe496d3afc2df12?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/f6faeb1f4b96e0cb7fe496d3afc2df12?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://www.eshoptipps.de/" rel="external nofollow" class="url">jan berger</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/tools/other-tools/xml-site-manager/#comment-1719">November 17, 2008 at 5:12 pm</a> &middot; </div>
+
+
+                    <p>awesome tool dave. thanks! i have the idea, that all your stuff fit my needs 🙂 </p>
+<p>cheers jan</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+            </ol>
+
+
+<!-- END #comments -->
+</div>
+				<!-- BEGIN .navigation .single-page-navigation -->
+				<div class="navigation single-page-navigation">
+					<div class="nav-previous">&larr; <a href="/extensions/3dsmax/rendering/network-render-all-cameras/" rel="prev">Network-Render all Cameras</a>
+</div>
+					<div class="nav-next">
+<a href="/tools/coding/form-builder/" rel="next">Form builder</a> &rarr;</div>
+				<!-- END .navigation .single-page-navigation -->
+				</div>
+
+							<!-- END #primary .hfeed-->
+			</div>
+
+
+    		<!-- BEGIN #sidebar .aside-->
+		<div id="sidebar" class="aside">
+
+		<div id="ds_related_categories_widget-2" class="widget DS_Related_Categories_Widget">
+<h3 class="widget-title">Related categories</h3>
+<ul><li><a href="/category/tools/other-tools/">Other <span class="meta">2</span></a></li></ul>
+</div>
+<div id="ds_related_posts_widget-3" class="widget DS_Related_Posts_Widget">
+<h3 class="widget-title">Related Posts in Other</h3>
+<ul>
+<li><a href="/tools/other-tools/jquery-bookmarklet/">jQuery Bookmarklet <span class="meta">2008</span></a></li>
+<li><a href="/tools/other-tools/xml-site-manager/">XML / XSLT site management tool <span class="meta">2007</span></a></li>
+</ul>
+</div>
+<div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"></div></div>
+		<!-- END #sidebar .aside-->
+		</div>
+
+
+<!-- FILE davestewart/footer.php -->
+
+        		<!-- END #content -->
+		</div>
+
+
+		<!-- BEGIN #footer -->
+		<div id="footer">
+
+		    <!-- BEGIN .footer-inner -->
+		    <div class="footer-inner">
+
+
+		        <!-- BEGIN .footer-col-1 -->
+<div class="footer-col-1">
+
+    <div id="ds_links-2" class="widget ds_links">
+<h3 class="widget-title">Commercial Portfolio</h3>
+<ul><li><a href="http://davestewart.co.uk/">davestewart.co.uk</a></li></ul>
+</div>
+<!-- END .footer-col-1 -->
+</div>
+
+<!-- BEGIN .footer-col-2 -->
+<div class="footer-col-2">
+
+    <div id="ds_links-4" class="widget ds_links">
+<h3 class="widget-title">Browse Projects</h3>
+<ul>
+<li><a href="/posts-by-category/">By Category</a></li>
+<li><a href="/posts-by-date/">By Date</a></li>
+<li>
+<a href="/posts-by-tag/">By Tag</a>  </li>
+</ul>
+</div>
+<!-- END .footer-col-2 -->
+</div>
+
+<!-- BEGIN .footer-col-3 -->
+<div class="footer-col-3">
+
+    <div id="ds_links-3" class="widget ds_links">
+<h3 class="widget-title">More Info</h3>
+<ul>
+<li><a href="https://twitter.com/dave_stewart">Contact</a></li>
+<li><a href="/about/">About</a></li>
+</ul>
+</div>
+<!-- END .footer-col-3 -->
+</div>
+
+		    <!-- END .footer-inner -->
+		    </div>
+
+		    <div class="footer-lower">
+		        <div class="footer-inner">
+		            <p class="copyright">&copy; Copyright 2022. Powered by <a href="http://wordpress.org/">WordPress</a></p>
+
+		        </div>
+		    </div>
+
+		<!-- END #footer -->
+		</div>
+
+		<a href="#" id="back-to-top"></a>
+
+
+
+	<!-- Theme Hook -->
+	<script type="text/javascript">
+/* <![CDATA[ */
+var zilla = {"ajaxurl":"\/wordpress\/wp-admin\/admin-ajax.php","nonce":"61b4b80d02","loading":"Loading..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.custom.js?ver=1.0"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/comment-reply.min.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js?ver=1.4.6"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var JQLBSettings = {"showTitle":"1","showCaption":"1","showNumbers":"1","fitToScreen":"0","resizeSpeed":"400","showDownload":"0","navbarOnTop":"0","marginSize":"0","slideshowSpeed":"4000","prevLinkTitle":"previous image","nextLinkTitle":"next image","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","pause":"(pause slideshow)","play":"(play slideshow)"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wordpress/wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js?ver=1.4.6"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery.color.min.js?ver=2.1.1"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/wp-embed.min.js?ver=4.9.18"></script>
+
+	<!-- Ran 42 queries 1.35 seconds -->
+<!-- END body-->
+</body>
+<!-- END html-->
+</html>

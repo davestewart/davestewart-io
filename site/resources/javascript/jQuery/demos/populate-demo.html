@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Populate Demo</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	
+	<script type="text/javascript" src="/lib/js/jquery/jquery-1.2.1.pack.js"></script>
+	<script type="text/javascript" src="/lib/js/jquery/jquery.populate.js"></script>
+
+	<script type="text/javascript" src="/resources/javascript/jQuery/demos/js/tabs.js"></script>
+
+	<script type="text/javascript">
+	
+		$(document).ready(
+			function(){
+				initTabs()
+				}
+			);
+			
+		function populateForm(type){
+			var form		= document.forms['form_' + type];
+			var formJSON	= document.forms['json_' + type];
+			
+			var text		= formJSON['json'].value;
+			text			= text.replace(/(^\s+|\s+$)/, '');
+			text			= "(" + text + ");";
+
+			try{var json = eval(text)}
+			catch(err){
+				alert('That appears to be invalid JSON!')
+				return false;
+				}
+			
+			$(form).populate(json, {debug:1})
+			}
+			
+		function resetForms(type){
+			document.forms['form-' + type].reset()
+			document.forms['json-' + type].reset()
+			}
+			
+		function viewVariables(form){
+			}
+			
+		function viewJSON(form){
+			}
+	</script>
+	
+	<style type="text/css" media="screen">@import "/resources/javascript/jQuery/demos/css/main.css";
+		@import "/resources/javascript/jQuery/demos/css/form.css";
+		@import "/resources/javascript/jQuery/demos/css/form-ie.css";
+		@import "/resources/javascript/jQuery/demos/css/tabs.css";
+		
+		body{
+			overflow:visible;
+			}</style>
+	<!--[if lte IE 7]>
+	<style type="text/css" media="all">
+		@import "error-fields1-ie.css";
+	</style>
+	<![endif]-->
+	<style type="text/css" media="screen">/* code */
+		
+			thead td{
+				border-bottom: 1px solid #ccc !important;
+				font-weight:bold;
+				}
+		
+			code, 
+			pre{
+				margin:10px 15px;
+				font-family:"Courier New", Courier, monospace;
+				font-size:11px;
+				color:#3366FF;
+				padding:5px;
+				white-space:pre;
+				}
+		
+			.code{
+				font-family:"Courier New", Courier, monospace;
+				font-size:11px;
+				color:#3366FF;
+				padding:2px;
+				white-space:pre;
+				}
+		
+				
+			.red {
+				color:#f00;
+				font-style:italic;
+				}
+				
+			.no-border{
+				border:none !important;
+				}
+				
+			.plain{
+				border:none !important;
+				list-style:none !important;
+				}</style>
+</head>
+<body>
+	<div id="page">
+	
+		<div id="header">
+			<h1>jQuery &quot;Populate&quot;  Demo</h1>
+			<h2>jQuery plugin to populate an HTML form with values, on the client, rather than server-side</h2>
+		</div>
+		
+		<hr>
+		<ul id="tab-list-main" class="tab-list" section="#section-main">
+			<li class="active" section="#intro"><a class="" href="javascript:;">Introduction</a></li>
+			<li class="inactive" section="#simple-demo"><a class="" href="javascript:;">Simple</a></li>
+			<li class="inactive" section="#complex-demo"><a class="" href="javascript:;">Complex</a></li>
+			<li class="inactive" section="#hierarchical-demo"><a class="" href="javascript:;">Hierarchal</a></li>
+			<li class="inactive" section="#text-demo"><a class="" href="javascript:;">Text</a></li>
+			<li class="inactive" section="#download"><a class="" href="javascript:;">Download</a></li>
+		</ul>
+		
+		<div class="content" id="section-main">
+			
+			<div id="intro" class="section">
+				<h3>An introduction to Populate</h3>
+				<h4>Overview</h4>
+				<p>Populate was designed as a client-side, post-load method of populating  HTML forms.</p>
+				<p>The advantages of this are:</p>
+				<ul>
+					<li> HTML markup (presentation) can be kept separate from database-output (data)</li>
+					<li>Forms can be re-populated without lengthy page loads, for example, using AJAX</li>
+				</ul>
+				<p>What this means in reality for the developer is that the actual HTML for form-heavy web pages need not be made fragile by iterspercing it with messy server-side logic, and pages can be developed, and redeveloped with more confidence and in a fraction of the time.</p>
+				<p>Populate supports:</p>
+				<ul>
+					<li>Population of all HTML form control-types (ignores buttons)</li>
+					<li>Population of checkbox arrays and other non-standard UI controls</li>
+					<li>Full PHP naming and deep data structures</li>
+				</ul>
+				<p>Being hierachical, the JSON format is particularly suited to working with how PHP handles form variables (also hierarchically), and Populate has been built with this inter-operatibilty in mind (see the <a href="#php-naming">last section</a> on this page).</p>
+				<h4>Basic Usage</h4>
+				<p>You need to do 3 things to have Populate automatically fill an HTML form with the correct values:</p>
+				<ul style="list-style-type:decimal">
+					<li>Include the blank HTML form in the body of the page</li>
+					<li>Get the relevant form data, e.g. user information, into JSON format</li>
+					<li>Output the JSON format  as the first agument of the Populate call</li>
+				</ul>
+				<p>The basic form for using Populate is:</p>
+				<pre>$(<span class="red">selector</span>).populate(<span class="red">JSON</span>, <span class="red">options</span><span class="red"></span>)</pre>
+				<p>For example, to populate a very simple form, you might output the following code after the form body:</p>
+				<pre>$(<span class="red">'#form'</span>).populate(<span class="red"></span><span class="red">{first_name:'Dave',last_name:'Stewart'}</span>)</pre>
+				<p>This would fill in the form fields named <span class="red">first_name</span> and <span class="red">last_name</span> with <span class="red">Dave</span> and <span class="red">Stewart</span> respectively.</p>
+				<h4>So what is JSON, and how do I get my data into JSON format in the first place?</h4>
+				<p><a href="http://www.json.org/">JSON</a> stands for JavaScript Object Notation, and it is a <a href="http://secretgeek.net/json_3mins.asp">very logical, consise and flexible format</a> for describing data (think XML, only lighter).</p>
+				<p>It can handle the following datatypes:</p>
+				<ul>
+					<li>Numbers</li>
+					<li>Strings</li>
+					<li>Object / Arrays</li>
+					<li>Boolean</li>
+					<li>null</li>
+				</ul>
+				<p>For example:</p>
+				<pre>{<span class="red">name</span>:<span class="red">value</span>, <span class="red">array</span>:[<span class="red">value</span>, <span class="red">value</span>, <span class="red">value</span>], <span class="red">object</span>:{<span class="red">name</span>:<span class="red">value</span>}}</pre>
+				<p>To get your data into JSON format, you can either build the string manually, or if you're working in PHP and you've just grabbed some database output for example, you would use a class that parses the data into JSON format, then output that to the page as part of your JavaScript call.</p>
+				<p>Here's how the code in a typical PHP / HTML page might look:</p>
+				<pre>&lt;?php
+<span class="red">    $results = $db-&gt;get_results($sql); </span>// get database data
+<span class="red">    $json = $JSON-&gt;encode($results);</span> // convert to JSON format
+?&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	$('#form').populate(<span class="red">&lt;?php echo $json; ?&gt;</span>); // jquery populate form
+&lt;/script&gt;</pre>
+				<p>If you go the class-way, it is important that your data structure has name/value pairs named the same as your form element names, so Populate can  associate the array-key names with the form-elements names.</p>
+				<p><strong>Note: </strong>The PHP classes to convert data-structures to JSON are included in the Download section.</p>
+
+
+
+				<h4>What data do I store in the JSON object to update my form?</h4>
+				<p>You should store both the <span class="red">name</span> attribute and the <span class="red">value</span> attribute of the targeted  form element.</p>
+				<p>For text boxes, this is pretty obvious, seeing as that's the only value that can be stored anyway:</p>
+				<pre>{<span class="red">name</span>:<span class="red">'Dave Stewart'</span>}</pre>
+				<p>But for items like radiobuttons, you may be tempted to store an index. Don't! Populate is going to be searching that array for an actual value to match up with. </p>
+				<p>Say, for example, you have a radiobutton array of 3 colours:</p>
+				<ul class="plain" style="padding-bottom:20px">
+					<li><label><input name="options" type="radio" value="red">  Red</label></li>
+					<li><label><input name="options" type="radio" value="green"> Green</label></li>
+					<li><label><input name="options" type="radio" value="blue"> Blue</label></li>
+				</ul>
+				<p>The code for these radiobuttons might look like this:</p>
+				<pre>&lt;input name=&quot;color&quot; type=&quot;radio&quot; value=&quot;red&quot;  /&gt; Red
+&lt;input name=&quot;color&quot; type=&quot;radio&quot; value=&quot;green&quot;  /&gt; Green
+&lt;input name=&quot;color&quot; type=&quot;radio&quot; value=&quot;blue&quot;  /&gt; Blue 				</pre>
+				<p>So if you wanted to have the second radiobutton checked, you would store the value of that radiobutton (green), and NOT the index (1):</p>
+				<pre>{color:<span class="red">'green'</span>}</pre>
+				<p>I may include support for indices in the future, but for now, it's values.</p>
+				<h4>How does Populate target each type of form element?</h4>
+				<p>Different HTML form elements have different datatypes, and are populated in different ways. This table lists how, and in what format Populate expects the JSON data.</p>
+				<table width="95%" border="0" cellspacing="0" cellpadding="3" class="no-border" style="margin-top:15px;">
+					<thead>
+						<tr>
+							<td> Element</td>
+							<td>What gets populated</td>
+							<td>JSON datatype</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Text field, Text area, Label, Hidden</td>
+							<td>Updates the field's text value</td>
+							<td>String value</td>
+						</tr>
+						<tr>
+							<td>Radio Buttons</td>
+							<td>Selects a radiobutton index</td>
+							<td>String value</td>
+						</tr>
+						<tr>
+							<td> Dropdown, List</td>
+							<td>Selects an item</td>
+							<td>String value</td>
+						</tr>
+						<tr>
+							<td> Checkbox (checkbox)</td>
+							<td>Checks or unchecks the box</td>
+							<td>String value</td>
+						</tr>
+						<tr>
+							<td>Checkbox array (checkbox[])</td>
+							<td>Checks or unchecks boxes</td>
+							<td>Array of string values</td>
+						</tr>
+						<tr>
+							<td>Multi-list</td>
+							<td>Selects multiple items</td>
+							<td>Array of string values</td>
+						</tr>
+						
+						<tr>
+							<td>Button, Submit</td>
+							<td>Updates the button's text</td>
+							<td>String value</td>
+						</tr>
+						<tr>
+							<td>Any other element</td>
+							<td>Updates the element's inner text</td>
+							<td>String</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+				<h4>
+<a name="php-naming"></a>What's all this about hierarchical forms and PHP naming, then?</h4>
+				<p> JSON is natively hierarchical, and PHP supports a very useful feature which is that any form fields named using square-bracket notation automatically transmit their values to the server hierarchically (not a lot of people know this, for some reason).</p>
+				<p>For example:</p>
+				<pre>
+&lt;input type=&quot;hidden&quot; name=&quot;<span class="red">id</span>&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;text&quot; name=&quot;<span class="red">contact</span>[<span class="red">first_name</span>]&quot; value=&quot;Dave&quot; /&gt;
+&lt;input type=&quot;text&quot; name=&quot;<span class="red">contact</span>[<span class="red">last_name</span>]&quot; value=&quot;Stewart&quot; /&gt;
+</pre>
+				<p>Would be interpreted natively by PHP as a multi-dimensional array:</p>
+				<pre>Array
+(
+    [<span class="red">id</span>] => 1
+    [<span class="red">contact</span>] => Array
+        (
+            [<span class="red">first_name</span>] => Dave
+            [<span class="red">last_name</span>] => Stewart
+        )
+
+)</pre>
+				<p>This makes it very easy to break up large forms into bite-sized chunks, and you can nest your levels as deep as you like - just[keep][adding][new][keys].</p>
+				<p>And when you want to repopulate the form, you just ensure your JSON is also hierarchical:</p>
+				<pre>{<span class="red">
+	id</span>:1, <span class="red">
+	contact</span>:
+	{<span class="red">
+		first_name</span>:'Dave', <span class="red">
+		last_name</span>:'Stewart'
+	}
+}</pre>
+				<p>For numeric arrays, just omit the key names from within the square brackets:</p>
+				<pre>
+&lt;input type=&quot;checkbox&quot; name=&quot;colors<span class="red">[]</span>&quot; value=&quot;red&quot; /&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;colors<span class="red">[]</span>&quot; value=&quot;green&quot; /&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;colors<span class="red">[]</span>&quot; value=&quot;blue&quot; /&gt;</pre>
+				<p>And to re-populate the form, you just just provide an array of values (note how the HTML element name has brackets, but the JSON object doesn't. Populate handles all this for you):</p>
+				<pre>{<span class="red">'colors'</span>:['green','blue']}</pre>
+				<p>So, by following naming conventions in your HTML forms, and using hierarchical JSON and Populate, you can:</p>
+				<ul>
+					<li>Keep data on both server and client in a hierarchical format</li>
+					<li>Reduce the drudgery of parsing large forms by compartmentalizing your data in sub-arrays</li>
+				</ul>
+				<p>&nbsp;</p>
+				
+				
+				<h4>Populate options </h4>
+				<p>As with most jQuery plugins,  Populate has some options you can set as part of the function call, for example:</p>
+				<pre>$(#'form').populate(json, <span class="red">{resetForm:false, debug:true}</span>)</pre>
+				<p>The following table lists those options, what they do, and the defaults.</p>
+				<table width="95%" border="0" cellspacing="0" cellpadding="5" class="no-border" style="margin-top:15px;">
+					<thead>
+						<tr>
+							<td> Option</td>
+							<td>What it does</td>
+							<td>Default</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>debug</td>
+							<td>If the user has Firebug, print to the console any badly-named elements, and create a global _populate object that contains debugging data</td>
+							<td>false</td>
+						</tr>
+						<tr>
+							<td>resetForm</td>
+							<td>Clears the form before populating it</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>phpNaming</td>
+							<td>When searching for elements in the form, automatically adds square brackets to any elements that are found that should contain array datatypes, e.g. &quot;colors[]&quot;, &quot;colors[]&quot;</td>
+							<td>true</td>
+						</tr>
+						<tr>
+							<td>phpIndices</td>
+							<td>Again, when targeting elements that should contain array datatypes, it ensures the name matched by populate contains 0-base indices, e.g. &quot;colors[0]&quot;, &quot;colors[1]&quot;</td>
+							<td>false</td>
+						</tr>
+						<tr>
+							<td>identifier</td>
+							<td>When targeting non-form elements, specifies the attribute to use for identifying them. Leave blank for &quot;id&quot;, or replace with something like &quot;name&quot; or &quot;href&quot;</td>
+							<td>'id'</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>&nbsp;</p>
+			</div>
+			
+			
+			<div id="simple-demo" class="section">
+
+				<h3>Populating a form with simple datatypes</h3>
+				<h4>Code example</h4>
+				<p>In its simplest format, named JSON objects just mirror the named form fields, so all you need to do to populate a form is to name your JSON objects identically to the fields in your HTML form, and include the values that you want to populate with.</p>
+				<pre>$('#form-simple').populate({
+<span class="red">	'name':'Dave Stewart',
+	'country':'scotland',
+	'contact':'phone'</span>
+})</pre>
+				<p>Experiment with the JSON sample below, click &quot;Populate&quot; to see the form update, then submit the form to see the raw variables.</p>
+				<h4>Form controls</h4>
+				<form name="form_simple" id="form-simple" action="html/results.php" method="post" target="_blank">
+					<fieldset class="no-border">
+						<ul class="controls">
+							<li>
+								<label for="name">Name</label>
+								<input name="name" id="name" type="text" class="text" maxlength="" value="">
+							</li>
+							<li>
+								<label for="country">Country</label>
+								<select name="country" id="country" class="select">
+									<option value="" selected>Select...</option>
+									<option value="">- - - - - - - - - - - - - - - - - - - - - - </option>
+									<option value="england">England</option>
+									<option value="scotland">Scotland</option>
+									<option value="wales">Wales</option>
+									<option value="ireland">Ireland</option>
+								</select>
+							</li>
+							<li>
+								<label for="contact">Contact</label>
+								<fieldset id="contact">
+									<label><input name="contact" id="" type="radio" class="radio" value="email"> Email</label>
+									<label><input name="contact" id="" type="radio" class="radio" value="phone"> Phone</label>
+									<label><input name="contact" id="" type="radio" class="radio" value="post"> Post</label>
+								</fieldset>
+							</li>
+							<li>
+								<input type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)">
+							</li>
+
+							<!--<li class="centered" style="border:none; padding-top:0px;">
+								<input name="submit" type="submit" class="button" value="View JSON..." onclick="viewJSON(this)" />
+							</li>-->
+					</ul>
+					</fieldset>
+				</form>
+				
+
+				<h4>JSON</h4>
+				<form name="json_simple" id="json-simple" action="">
+					<div style="padding:10px 20px 10px 10px;">
+						<textarea name="json" id="json" rows="6" wrap="virtual" class="textarea code" style="width:100% !important"></textarea>
+{
+'name':'Dave Stewart',
+'country':'scotland',
+'contact':'phone'
+}
+
+						<input type="button" class="button" value="Populate" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="populateForm('simple')">
+						<input type="button" class="button" value="Reset all" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="resetForms('simple')">
+					</div>
+
+				</form>
+					
+			</div>
+				
+				
+
+				<div id="complex-demo" class="section">
+				<h3>Populating a form with complex datatypes</h3>
+				<h4>Code example</h4>
+				<p>Sometimes you will want to send complex datatypes to the server, for example multi-list boxes that hold an array of values, or you might want to combine several values in one set of checkboxes.</p>
+				<p>For these elements, you make sure the values are held in an array:</p>
+				<pre>$('#form-complex).populate({
+	'name':'Dave Stewart',
+	'country':<span class="red">['scotland','ireland']</span>,
+	'contact':<span class="red">['email','phone']</span>
+})</pre>
+				<p>If you look at the source code, note how the complex-type elements  have square-brackets at the end of their names. This is ncessary in PHP to force the server to interpet the data from these controls as arrays.</p>
+				<p>Experiment with  the JSON sample below, click &quot;Populate&quot; to see the form update, then submit the form to see the raw variables.</p>
+				<h4>Form controls</h4>
+				<form name="form_complex" id="form-complex" action="html/results.php" method="post" target="_blank">
+					<fieldset class="no-border">
+					<ul class="controls">
+						<li>
+								<label for="name">Name</label>
+								<input name="name" id="name" type="text" class="text" maxlength="" value="">
+						</li>
+							
+						<li>
+							<label for="direction">Country</label>
+							<select name="country[]" id="country" class="select-multiple" multiple>
+								<option value="england">England</option>
+								<option value="scotland">Scotland</option>
+								<option value="wales">Wales</option>
+								<option value="ireland">Ireland</option>
+							</select>
+						</li>
+
+						<li>
+							<label for="contact">Contact Method</label>
+							<fieldset id="contact">
+							<label><input name="contact[]" id="" type="checkbox" class="checkbox" value="email"> Email</label>
+							<label><input name="contact[]" id="" type="checkbox" class="checkbox" value="phone"> Phone</label>
+							<label><input name="contact[]" id="" type="checkbox" class="checkbox" value="post"> Post</label>
+							</fieldset>
+						</li>
+						
+							
+							<li>
+								<input type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)">
+						</li>
+
+
+							<!--<li class="centered" style="border:none; padding-top:0px;">
+								<input name="submit" type="submit" class="button" value="View JSON..." onclick="viewJSON(this)" />
+							</li>-->
+					</ul>
+					</fieldset>
+				</form>
+				
+
+				<h4>JSON</h4>
+				<form name="json_complex" id="json-complex">
+					<div style="padding:10px 20px 10px 10px;">
+						<textarea name="json" rows="6" wrap="virtual" class="textarea code" style="width:100% !important"></textarea>{
+'name':'Dave Stewart',
+'country':['scotland','ireland'],
+'contact':['email','phone']
+}
+						<div class="json-sample" id="json-simple-sample">&nbsp;</div>
+						<input type="button" class="button" value="Populate" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="populateForm('complex')">
+						<input type="button" class="button" value="Reset all" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="resetForms('complex')">
+					</div>
+
+				</form>
+				
+			</div>
+					
+					
+			<div id="hierarchical-demo" class="section">
+				<h3>Populating a hierarchically-named form with hierarchical JSON data</h3>
+					
+				<h4>Code example</h4>
+				<p>When forms get large, it's often preferable to break them up into smaller sections. It makes it easier for the user, and if you name your form elements using PHP naming conventions, it makes it easy for the developer as well!</p>
+				<p>For the JSON, you just enlose your data objects within other named objects:</p>
+				<pre>$('#form-hierarchical').populate({
+	<span class="red">personal:{</span>
+		first_name:'Dave', 
+		last_name:'Stewart',
+		country:'england'
+		<span class="red">}</span>,
+	<span class="red">contact:{</span>
+		email:'fred@fred-bloggs.com',
+		phone:'020 0000 0000',
+		method:'email'
+		<span class="red">}</span>
+})</pre>
+				<p>.</p>
+				<h4>Form controls</h4>
+				<form name="form_hierarchal" id="form-hierarchal" action="html/results.php" method="post" target="_blank" style="margin-top:15px">
+					<fieldset>
+						<legend>Personal</legend>
+						<ul class="controls">
+							<li>
+								<label for="first-name">First Name</label>
+								<input name="personal[first_name]" id="personal-first-name" type="text" class="text" maxlength="" value="">
+							</li>
+							
+							<li>
+								<label for="last-name">Last Name</label>
+								<input name="personal[last_name]" id="personal-last-name" type="text" class="text" maxlength="" value="">
+							</li>
+							
+							<li>
+								<label for="personal[country]">Country</label>
+								<select name="personal[country]" id="personal-country" class="select-multiple">
+									<option value="" selected>Select...</option>
+									<option value="">- - - - - - - - - - - - - - - - - - - - - - </option>
+									<option value="england">England</option>
+									<option value="scotland">Scotland</option>
+									<option value="wales">Wales</option>
+									<option value="ireland">Ireland</option>
+								</select>
+							</li>
+
+						</ul>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Contact</legend>
+						<ul class="controls">
+						
+							<li>
+								<label for="email">Email</label>
+								<input name="contact[email]" id="email" type="text" class="text" maxlength="" value="">
+							</li>
+
+							<li>
+								<label for="phone">Phone</label>
+								<input name="contact[phone]" id="phone" type="text" class="text" maxlength="" value="">
+							</li>
+
+							<li>
+								<label for="method">Prefered</label>
+								<fieldset id="method">
+									<label><input name="contact[method]" id="" type="radio" class="radio" value="email"> Email</label>
+									<label><input name="contact[method]" id="" type="radio" class="radio" value="phone"> Phone</label>
+								</fieldset>
+							</li>
+
+						</ul>
+					</fieldset>
+					
+					
+					<fieldset class="plain">
+						<ul class="controls">
+							<li>
+								<input type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)">
+							</li>
+
+							<!--<li class="centered" style="border:none; padding-top:0px;">
+								<input name="submit" type="submit" class="button" value="View JSON..." onclick="viewJSON(this)" />
+							</li>-->
+						</ul>
+					</fieldset>
+				</form>
+				
+
+				<h4>JSON</h4>
+				<form name="json_hierarchal" id="json-hierarchal">
+					<div style="padding:10px 20px 10px 10px;">
+						<textarea name="json" rows="10" wrap="virtual" class="textarea code" style="width:100% !important"></textarea>{
+personal:{
+	first_name:'Dave', 
+	last_name:'Stewart',
+	country:'england'
+	},
+contact:{
+	email:'dave@davestewart',
+	phone:'020 0000 0000',
+	method:'phone'
+	}
+}
+
+						<div class="json-sample" id="json-simple-sample">&nbsp;</div>
+						<input type="button" class="button" value="Populate" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="populateForm('hierarchal')">
+						<input type="button" class="button" value="Reset all" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="resetForms('hierarchal')">
+					</div>
+
+				</form>
+				
+				
+			</div>
+			
+			
+			<div id="text-demo" class="section">
+				<h3>Populating non-form elements within a form</h3>
+					
+				<h4>Code example</h4>
+				<p>Sometimes as part of your form population, you'll want to update areas of text. Populate makes it easy to target the whole form, not just control elements, and update where necessary by changing that element's HTML.</p>
+				<p class="red">This functionality is currently buggy, and is undergoing review!</p>
+				<p></p>
+
+<!--				<pre>$('#form-simple').populate({
+	'first_name':'Fred', 
+	'last_name':'Bloggs', 
+	'e_mail_address':'fred@fred-bloggs.com'
+})</pre>
+				<p>.</p>
+				
+				<h4>Form controls</h4>
+				<form name="form_text" id="form-text" action="html/results.php" method="post" target="_blank">
+					<fieldset class="no-border">
+						<ul class="controls">
+							<li>
+								<label for="label">Contact</label>
+								<fieldset id="label">
+									<label><input name="contact" id="text-contact" type="radio" class="radio" value="email"  />Email</label>
+									<label><input name="contact" id="text-contact" type="radio" class="radio" value="phone"  />Phone</label>
+									<label><input name="contact" id="text-contact" type="radio" class="radio" value="post"  />Post</label>
+								</fieldset>
+							</li>
+							<li id="instructions">Instructions</li>
+							<li>
+								<input name="submit" type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)" />
+							</li>
+
+						</ul>
+					</fieldset>
+				</form>
+				
+
+				<h4>JSON</h4>
+				<p>Edit the JSON here, then click Populate to populate the form above</p>
+				<form name="json_text" id="json-text">
+					<div style="padding:10px 20px 10px 10px;">
+						<textarea name="json" rows="10" wrap="virtual" class="textarea code" style="width:100% !important" />{
+'contact':'phone',
+instructions:'Please include the dialing code.'
+}
+</textarea>
+						<div class="json-sample" id="json-simple-sample">&nbsp;</div>
+						<input type="button" class="button" value="Populate" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="populateForm('text')" />
+						<input type="button" class="button" value="Reset all" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="resetForms('text')" />
+					</div>
+
+				</form>
+-->
+
+			</div>
+				
+				
+			<div id="download" class="section">
+					<h3>Download Highlight here</h3>
+					<h4>Download</h4>
+					<p>JavaScript</p>
+					<ul>
+						<li><a href="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/jquery.populate.js" title="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/populate.js">Populate (no compression) 5.7k</a></li>
+						<li><a href="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/jquery.populate.pack.js" title="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/populate.pack.js">Populate (packer compression) 1.9k</a></li>
+					</ul>
+					<p>PHP</p>
+					<ul>
+						<li><a href="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/populate.func.zip">PHP jQuery helper functions</a></li>
+						<li><a href="http://mike.teczno.com/JSON/">PHP 4 JSON class</a></li>
+					</ul>
+					<p>Demo files</p>
+			<ul>
+						<li><a href="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/populate-demos.zip">Standalone demos</a></li>
+</ul>
+				<h4>Feedback</h4>
+				<p>If you have any comments, or wish to report any bugs or unexpected behaviour, please do so using the commenting system on the <a href="http://www.keyframesandcode.com/code/development/javascript/jquery-populate-plugin/">project's blog page</a>.</p>
+				<p>I can't promise to answer questions on usage (that's what this help is for!), but I'll do my best to fix bugs.</p>
+				<p>Cheers,</p>
+				<p>Dave</p>
+				<p>&nbsp;</p>
+			</div>
+			
+			<hr>
+		</div>
+
+</div>
+	<div style="height:500px;"></div>
+	<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-603607-3");
+		pageTracker._initData();
+		pageTracker._trackPageview('/code/Populate Demo');
+	</script>
+</body>
+
+
+
+
+</html>

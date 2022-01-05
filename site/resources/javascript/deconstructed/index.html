@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>JS Libs Deconstructed</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="JS.Libs Deconstructed is designed to visually and interactively deconstruct the internal code of various JavaScript libraries.">
+
+	<link rel="shortcut icon" href="/resources/javascript/deconstructed/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<p>.
+	<link rel="image_src" href="http://www.keyframesandcode.com/resources/javascript/deconstructed/assets/img/extra/facebook-thumbnail.png">
+
+	<link href="/resources/javascript/deconstructed/assets/css/formatting.css" rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/utils/base64.pack.js"></script>
+	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/utils/prettify.js"></script>
+	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/lib/jquery/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/core.js"></script>
+	<script type="text/javascript">
+		writeColorsStylesheet('')
+	</script>
+
+	<style type="text/css">.text{
+			width:32%;
+			}
+	
+		h2{
+			width:auto;
+			height:50px;
+			overflow:hidden;
+			text-align:center;
+			}
+			
+		h4{
+			color:#000;
+			font-size:18px;
+			margin:10px 0px 5px 0px;
+			}
+			
+		.logo{
+			padding:40px 20px;
+			}
+			
+		.logo a{
+			display:block;
+			background-repeat:no-repeat;
+			background-position:top;
+			height:50px;
+			overflow:hidden;
+			}
+			
+		.logo a:hover{
+			background-position:bottom;
+			}
+			
+		.logo a span{
+			display:block;
+			padding-top:50px;
+			}
+			
+		#jquery a{
+			background-image:url(/resources/javascript/deconstructed/assets/img/logos/jquery.png);
+			}
+			
+		#prototype a{
+			background-image:url(/resources/javascript/deconstructed/assets/img/logos/prototype.png);
+			}
+			
+		#mootools a{
+			background-image:url(/resources/javascript/deconstructed/assets/img/logos/mootools.png);
+			}
+			
+		#help li{
+			margin-bottom:3px;
+			}</style>
+
+</p>
+<div id="content">
+	<table width="100%" border="0" cellspacing="10" cellpadding="0" id="help">
+		<tr>
+			<td colspan="3">
+				<div class="text" style="text-align:center; padding:30px; position:relative; width:inherit">
+					<h1> <span class="highlight">JS Libs</span> Deconstructed</h1>
+					<h3>Navigate the physical library code to see what, where, and how the magic happens
+						<a id="home" href="http://www.keyframesandcode.com/code/" title="Back to the main blog...">Blog</a>
+					</h3>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" class="text">
+			<div style="position:relative">
+				<p class="large">The Deconstructed series is designed to visually and interactively deconstruct the internal code of JavaScript libraries, including <a href="/resources/javascript/deconstructed/jquery/">jQuery</a>, <a href="/resources/javascript/deconstructed/prototype/">Prototype</a> and <a href="/resources/javascript/deconstructed/mootools/">MooTools</a>.</p>
+				<p class="large">It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow.</p>
+				<p id="links"><a href="http://www.keyframesandcode.com/code/development/javascript/jquery/jquery-deconstructed/">comment</a> | <a href="javascript:m();void(0)">email</a> | <a href="http://twitter.com/dave_stewart/">follow</a></p>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td id="jquery" class="text">
+				<h2 class="logo" id="jquery">
+					<a href="/resources/javascript/deconstructed/jquery/"><span>jQuery</span></a>
+				</h2>
+				<p class="indent">jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.</p>
+				<h4>Summary</h4>
+				<ul>
+					<li>Focuses on <em>expressiveness</em>, quick and <em>easy coding</em>, and <em>plugins</em>
+</li>
+				</ul>
+				<h4>Advantages</h4>
+				<ul>
+					<li>Optimised for <em>DOM manipulation</em>
+</li>
+					<li>Operate on <em>multiple items</em> with no special syntax</li>
+					<li>CSS <em>selector-driven</em>
+</li>
+					<li>Method <em>chaining</em> makes writing code easy</li>
+					<li>
+<em>Intuitive</em> API and syntax</li>
+					<li>Modular <em>plugin archutecture</em> keeps the core lean</li>
+					<li>
+<em>Fastest</em> selector performance</li>
+					<li>
+<em>Single</em> namespace</li>
+				</ul>
+				<h4>Disadvantages</h4>
+				<ul>
+					<li>
+<em>DOM</em> rather than JavaScript oriented</li>
+					<li>Some developers have issues around &quot;this&quot; in callback functions</li>
+			</ul>
+</td>
+			<td id="prototype" class="text">
+				<h2 class="logo" id="prototype">
+					<a href="/resources/javascript/deconstructed/prototype/"><span>Prototype</span></a>
+				</h2>
+				<p class="indent">Prototype is a JavaScript Framework that aims to ease development of dynamic web applications, featuring a unique, easy-to-use toolkit for class-driven development and the nicest Ajax library around. </p>
+<h4>Summary</h4>
+<ul>
+	<li>Focuses on extension of native <em>classes</em>, <em>inheritance</em>, <em>legibility</em>
+</li>
+</ul>
+<h4>Advantages</h4>
+			<ul>
+				<li>Extensive <em>API</em>
+</li>
+				<li>Elegant <em>class-oriented syntax</em>
+</li>
+				<li>
+<em>Extend</em> native classes and the DOM with new methods</li>
+				<li>Useful <em>new Object types</em>
+</li>
+				</ul>
+			<h4>Disadvantages</h4>
+			<ul>
+				<li>More <em>verbose syntax</em> and API than jQuery</li>
+				<li>Too many <em>trivial methods</em> in the core</li>
+				<li>
+<em>Not as easy</em> as jQuery to update the DOM</li>
+				<li>
+<em>Slowest</em> of the 3 with regards to selector performance</li>
+				<li>Needs <em>script.aculo.us</em> for effects</li>
+				<li>
+<em>Clutters</em> global namespace</li>
+			</ul>
+</td>
+			<td id="mootools" class="text">
+				<h2 class="logo" id="mootools">
+					<a href="/resources/javascript/deconstructed/mootools/"><span>MooTools</span></a>
+				</h2>
+				<p class="indent">MooTools is a compact, modular, Object-Oriented JavaScript framework designed for the intermediate to advanced JavaScript developer. It allows you to write powerful, flexible, and cross-browser code with its elegant, well documented, and coherent API.</p>
+<h4>Summary</h4>
+				<ul>
+					<li>Focuses on extension, inheritance, legibility, reuse, and maintainability</li>
+				</ul>
+				<h4>Advantages</h4>
+				<ul>
+					<li>Consise <em>API</em>
+</li>
+					<li>Elegant <em>class-oriented syntax</em>
+</li>
+					<li>
+<em>Extends</em> native classes with new methods</li>
+					<li>
+<em>Lean</em> core</li>
+					<li>Can extend functionality with <em>plugins</em> and <em>mixins</em>
+</li>
+				</ul>
+				<h4>Disadvantages</h4>
+				<ul>
+					<li>More <em>verbose syntax</em> and API than jQuery</li>
+					<li>
+<em>Not as easy</em> as jQuery to update the DOM</li>
+				</ul>
+				<p>&nbsp;</p>
+
+			</td>
+		</tr>
+	</table>
+</div>
+
+	<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript">
+		var pageUrl = '/code/JS Libs Deconstructed'
+		var pageTracker = _gat._getTracker("UA-603607-3");
+		pageTracker._initData();
+		pageTracker._trackPageview(pageUrl);
+	</script>
+
+</body>
+</html>

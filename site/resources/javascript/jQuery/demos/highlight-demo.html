@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Highlight Demo</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	
+	<script type="text/javascript" src="/lib/js/jquery/jquery-1.2.1.pack.js"></script>
+	<script type="text/javascript" src="/lib/js/jquery/jquery.highlight.js"></script>
+
+	<script type="text/javascript" src="/resources/javascript/jQuery/demos/js/tabs.js"></script>
+
+	<script type="text/javascript">
+	
+		$(document).ready(
+			function(){
+			
+				// tabs
+					initTabs()
+					
+				// form demo
+					$('form').highlight()
+	
+				// table demos
+					$('#table1').highlight()
+					$('#table2').highlight('td')
+					with($('#table3')){
+						highlight('tr')
+						highlight('tr', 'highlight-selected', 'mousedown')
+						}
+						
+				// list demos
+					$('#list1').highlight(null, 'list-highlight')
+					$('#list2').highlight('ul', 'list-highlight')
+				}
+			);
+	</script>
+	
+	<style type="text/css" media="screen">@import "/resources/javascript/jQuery/demos/css/main.css";
+		@import "/resources/javascript/jQuery/demos/css/form.css";
+		@import "/resources/javascript/jQuery/demos/css/form-ie.css";
+		@import "/resources/javascript/jQuery/demos/css/tabs.css";</style>
+	<!--[if lte IE 7]>
+	<style type="text/css" media="all">
+		@import "error-fields1-ie.css";
+	</style>
+	<![endif]-->
+	<style type="text/css" media="screen">/* code */
+		
+			thead td{
+				border-bottom: 1px solid #ccc !important;
+				font-weight:bold;
+				}
+		
+			code, 
+			pre{
+				margin:10px 15px;
+				font-family:"Courier New", Courier, monospace;
+				font-size:11px;
+				color:#3366FF;
+				padding:5px;
+				white-space:pre;
+				}
+		
+	
+		/* General table styling... */
+		
+			table{
+				margin:15px;
+				border-right: 1px dotted #ccc;
+				border-bottom: 1px dotted #ccc;
+				}
+				
+			tr td{
+				border-top: 1px dotted #ccc;
+				border-left: 1px dotted #ccc;
+				}
+				
+			.no-border,
+			.no-border tr,
+			.no-border td
+				{
+				border:none;
+				}
+				
+		/* specific row styling for the table-row table ... */
+		
+			.row-highlight{
+				border:1px solid red !important;
+				background:#ccc;
+				}
+				
+			.highlight-selected{
+				background-image:url('/resources/javascript/jQuery/demos/img/highlight-selected.gif') !important;
+				}
+		/* specific row styling for the lists ... */
+		
+			#list1 ul,
+			#list1 li,
+			#list2 ul,
+			#list2 li
+				{
+				border:1px solid #fff;
+				width:auto;
+				}
+				
+			.list-highlight{
+				border:1px solid red !important;
+				}
+				
+		/* specific row styling for the - but NOT highlight related. Just to make the look pretty  ... */
+		
+			#list1 li,
+			#list2 li{
+				padding:2px;
+				cursor:default;
+				}
+	
+			.red {
+				color:#f00;
+				font-style:italic;
+				}
+				
+			.highlight{
+				background-image:url(/resources/javascript/jQuery/demos/img/highlight.gif);
+				}</style>
+</head>
+<body>
+	<div id="page">
+	
+		<div id="header">
+			<h1>jQuery &quot;Highlight&quot;  Demo</h1>
+			<h2>jQuery plugin to highlight a form field’s parent tag (or any other selector) as you tab into it</h2>
+		</div>
+		
+		<hr>
+		
+		<ul id="tab-list-main" class="tab-list" section="#section-main">
+			<li class="active" section="#intro"><a href="javascript:;">Introduction</a></li>
+			<li class="inactive" section="#form-demo"><a class="" href="javascript:;">Form Demo</a></li>
+			<li class="inactive" section="#table-demo"><a class="" href="javascript:;"> Table Demo</a></li>
+			<li class="inactive" section="#list-demo"><a class="" href="javascript:;"> List Demo</a></li>
+			<li class="inactive" section="#download"><a class="" href="javascript:;">Download</a></li>
+		</ul>
+		
+		<div class="content" id="section-main">
+			
+			<div id="intro" class="section">
+				<h3>An introduction to Highlight</h3>
+				<h4>Overview</h4>
+				<p>Highlight increases usability by highlighting  elements as you interact with the page. Its primary use is for forms, but it can also be used for tables, lists, or any element you specify.</p>
+				<p>Examples uses:</p>
+				<ul>
+					<li>Form-filling can be made clearer by highlighting  the element around a control as you tab into it</li>
+					<li>Table rows can be made more visible as you pass the mouse over them, or click them</li>
+					<li>Elements can be toggled as you click them</li>
+				</ul>
+				<h4>Basic Usage</h4>
+				<p>The basic form for using Highlight is:</p>
+				<pre>$(<span class="red">selector</span>).highlight(<span class="red">parentSelector</span>, <span class="red">highlightClass</span>, <span class="red">startEvent</span>, <span class="red">endEvent</span>)</pre>
+				<p>Highlight works by adding a class to a parent element to the one that was targeted.</p>
+				<p>For example, a text field might be contained by a li element, and this li element would have the default &quot;highlight&quot; class added to it as the text field was focused, and removed when it was blurred.</p>
+				<p>By default, Highlight chooses defaults for common usage, so it's easy to target elements with just the basic command, for example...</p>
+				<pre>$('form').highlight()</pre>
+				<p>...would set up a form to receive focus and blur events on all its controls, and highlight (add a class to a parent element) any controls' contained by list-item elements.</p>
+				<h4>Default tags and classes</h4>
+				<p>Highlight has some defaults for the more commonly-targeted HTML elements, as shown below:</p>
+				<table width="95%" border="0" cellspacing="0" cellpadding="3" class="no-border">
+					<thead>
+						<tr>
+							<td>selector</td>
+							<td>parentSelector</td>
+							<td>highlightClass</td>
+							<td>startEvent</td>
+							<td>endEvent</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>form</td>
+							<td>li</td>
+							<td>'highlight'</td>
+							<td>focus</td>
+							<td>blur</td>
+						</tr>
+						<tr>
+							<td>table</td>
+							<td>tr</td>
+							<td>'highlight'</td>
+							<td>mouseover</td>
+							<td>mouseout</td>
+						</tr>
+						<tr>
+							<td>ul, ol</td>
+							<td>li</td>
+							<td>'highlight'</td>
+							<td>mouseover</td>
+							<td>mouseout</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>These can easily be overridden, as shown in the next section.</p>
+				<h4>Customizing which elements are targeted and which classes are applied</h4>
+				<p> In order to highlight a different parent element, you would just add it as the first argument:</p>
+				<pre>$('form').highlight(<span class="red">'div'</span>)</pre>
+				<p>If you wanted to specify a different highlight class, you would specify that as the second argument:</p>
+				<pre>$('form').highlight('div', <span class="red">'some-class'</span>)
+$('form').highlight(null, <span class="red">'some-class'</span>)
+</pre>
+				<h4>Customizing when highlighting occurs by changing the event type</h4>
+				<p> In order to customize the events that cause elements to highlight, and de-highlight, you change the third and forth arguments to the start and end event names.</p>
+				<pre>$('#element').highlight('div', 'some-class', <span class="red">'mouseover'</span>, <span class="red">'mouseout'</span>)
+</pre>
+				<p>You can also choose to toggle the highlight, and you do this by only specifying one event:</p>
+				<pre>$('#element').highlight('div', 'some-class', <span class="red">'mousedown'</span>)	</pre>
+				<p>&nbsp;</p>
+			</div>
+			
+			
+			<div id="form-demo" class="section">
+				<h3>Example of highlight working within a form</h3>
+				<h4>Form controls</h4>
+				<p>The following code is used to achieve the form interaction below.				</p>
+				<pre>form.highlight()</pre>
+				<p>Highlight is automatically set up to bind to focus and blur events, and automatically targets any form controls, such as text fields or radio buttons.</p>
+				<p>Tab into, or select the form fields to see the control's parent li element receive the highlighting class.</p>
+				<form action="html/results.php" method="post" id="create" name="parameters">
+					<fieldset style="border:none">
+				<ul class="controls">
+<li>
+							<label for="label">Text field</label>
+							<input name="single-line-" id="label" type="text" class="text" maxlength="" value="">
+							</li>
+							<li>
+								<label for="multi-line">Text box</label>
+								<textarea name="controls[multi_line]" id="multi-line" class="textarea" rows="4" maxlength=""></textarea>
+							</li>
+							<li>
+								<label for="dropdown">Dropdown List</label>
+								<select name="controls[dropdown]" id="dropdown" class="select">
+									<option value="" selected>Select...</option>
+									<option value="">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </option>
+									<option value="option 1">Option 1</option>
+									<option value="option 2">Option 2</option>
+									<option value="option 3">Option 3</option>
+								</select>
+							</li>
+							<li>
+								<label for="radio">Radio Buttons</label>
+								<fieldset id="radio">
+									<label><input name="controls[radio][]" id="controls-radio-1" type="radio" class="radio" value="option 1"> Option 1</label>
+									<label><input name="controls[radio][]" id="controls-radio-2" type="radio" class="radio" value="option 2"> Option 2</label>
+									<label><input name="controls[radio][]" id="controls-radio-3" type="radio" class="radio" value="option 3"> Option 3</label>
+								</fieldset>
+							</li>
+							<li>
+								<label for="checkboxes">Check-boxes</label>
+								<fieldset id="checkboxes">
+									<label><input name="controls[checkboxes][]" id="" type="checkbox" class="checkbox" value="check 1"> Check 1</label>
+									<label><input name="controls[checkboxes][]" id="" type="checkbox" class="checkbox" value="check 2"> Check 2</label>
+									<label><input name="controls[checkboxes][]" id="" type="checkbox" class="checkbox" value="check 3"> Check 3</label>
+								</fieldset>
+							</li>
+							<li>
+								<input name="Button" type="button" class="button centered" value="Submit">
+							</li>
+					</ul>
+				</fieldset>
+</form>
+					
+				</div>
+				
+				
+
+				<div id="table-demo" class="section">
+					<h3>Example of highlight working within tables</h3>
+					<h4>Table rows</h4>
+					<p>The following code is used to highlight the table rows.</p>
+					<pre>$('#table1').highlight()</pre>
+					<p>Move your mouse over the table to see the table rows receive the highlighting class.</p>
+					<table width="90%" border="0" cellspacing="0" cellpadding="2" id="table1">
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+					</table>
+					
+					<h4>Table cells</h4>
+					<p>The following code is used to highlight the table cells as the mouse passes over them.</p>
+					<pre>$('#table2').highlight('td')</pre>
+					<p>Move your mouse over the table to see the table cells receive the highlighting class.</p>
+					<table width="90%" border="0" cellspacing="0" cellpadding="2" id="table2">
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+					</table>
+					
+					<h4>Toggling table rows</h4>
+					<p>The following code is used to toggle table rows off and on as you click them.</p>
+					<pre>$('#table3')
+	.highlight('tr')
+	.highlight('tr', 'highlight-selected', 'mousedown');</pre>
+					<p>Click the table rows to toggle the highlighting class.</p>
+					<table width="90%" border="0" cellspacing="0" cellpadding="2" id="table3">
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+						<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+					</table>
+					</div>
+				<div id="list-demo" class="section">
+					<h3>Example of highlight working on list items</h3>
+					
+					<h4>List items</h4>
+					<p>The following code is used to highlight a list's elements as the mouse passes over them.</p>
+					<pre>$('#list1').highlight(null, 'list-highlight')<br></pre>
+					<p>Move your mouse over the list to see the list items receive the highlighting class</p>
+					<ul id="list1">
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+						<li>Item 4</li>
+					</ul>
+					<h4>List items' containing element</h4>
+					<p>The following code is used to highlight  sub-lists' immediate parent lists as the mouse passes over them.</p>
+					<pre>$('#list2').highlight('ul', 'list-highlight')</pre>
+					<p>Move your mouse over the sub-list items to see their immediate parent ul receive the highlighting class</p>
+					<ul id="list2">
+						<li>Item 1
+							<ul>
+								<li>Item 1
+									<ul>
+										<li>Item 1</li>
+										<li>Item 2</li>
+										<li>Item 3</li>
+										<li>Item 4</li>
+									</ul>
+								</li>
+								<li>Item 2</li>
+								<li>Item 3</li>
+								<li>Item 4</li>
+							</ul>
+						</li>
+						<li>Item 3</li>
+						<li>Item 4</li>
+						<li>Item 4</li>
+					</ul>
+			</div>
+				
+				
+			<div id="download" class="section">
+					<h3>Download Highlight here</h3>
+					<h4>Download</h4>
+					<p>Download <a href="/resources/javascript/jQuery/highlight/jquery.highlight.js">jquery.highlight.js</a>.</p>
+					<h4>Feedback</h4>
+					<p>If you have any comments, or wish to report any bugs or unexpected behaviour, please do so using the commenting system on the <a href="http://www.keyframesandcode.com/code/development/javascript/jquery-highlight-plugin/">project's blog page</a>.</p>
+					<p>I can't promise to answer questions on usage (that's what this help is for!), but I'll do my best to fix bugs.</p>
+					<p>Cheers,</p>
+					<p>Dave</p>
+					<p>&nbsp;</p>
+				<p>&nbsp;</p>
+			</div>
+			
+			<hr>
+		</div>
+
+</div>
+	<div style="height:500px;"></div>
+	<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-603607-3");
+		pageTracker._initData();
+		pageTracker._trackPageview('/code/Highlight Demo');
+	</script>
+</body>
+
+
+
+
+</html>

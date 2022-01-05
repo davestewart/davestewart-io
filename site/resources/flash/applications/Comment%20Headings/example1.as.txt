@@ -1,0 +1,270 @@
+﻿package measurements
+{
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.display.MovieClip;
+    
+    import flash.display.BlendMode;
+    
+    import flash.display.LineScaleMode;
+    import flash.display.CapsStyle;
+    import flash.display.JointStyle;
+    import flash.display.Shape;
+    
+    import flash.display.Stage;
+    import flash.display.Graphics;
+    import flash.display.Sprite;
+    import flash.display.DisplayObject; 
+    import flash.display.DisplayObjectContainer; 
+    import flash.display.SimpleButton;
+    
+    import flash.geom.Point;
+
+    import canvasses.CurvedCanvas;
+    import measurements.Measurement;
+    import measurements.Handle;
+    import measurements.Anchor;
+
+    public dynamic class CurvedMeasurement extends Measurement
+    {
+        
+        // ------------------------------------------------------------------------------------------------------------------------
+        //
+        //    ██  ██            ██       ██    ██             
+        //    ██  ██                     ██    ██             
+        //    ██  ██ █████ ████ ██ █████ █████ ██ █████ █████ 
+        //    ██  ██    ██ ██   ██    ██ ██ ██ ██ ██ ██ ██    
+        //    ██  ██ █████ ██   ██ █████ ██ ██ ██ █████ █████ 
+        //     ████  ██ ██ ██   ██ ██ ██ ██ ██ ██ ██       ██ 
+        //      ██   █████ ██   ██ █████ █████ ██ █████ █████ 
+        //
+        // ------------------------------------------------------------------------------------------------------------------------
+        // Variables
+    
+            // line
+                private var segments            :Number;
+                private var handle1             :Handle;
+                private var handle2             :Handle;
+                private var currentHandle       :Handle;
+                
+    
+        // ------------------------------------------------------------------------------------------------------------------------
+        //
+        //    ██████                    ██                     ██              
+        //    ██                        ██                     ██              
+        //    ██     █████ █████ █████ █████ ████ ██ ██ █████ █████ █████ ████ 
+        //    ██     ██ ██ ██ ██ ██     ██   ██   ██ ██ ██     ██   ██ ██ ██   
+        //    ██     ██ ██ ██ ██ █████  ██   ██   ██ ██ ██     ██   ██ ██ ██   
+        //    ██     ██ ██ ██ ██    ██  ██   ██   ██ ██ ██     ██   ██ ██ ██   
+        //    ██████ █████ ██ ██ █████  ████ ██   █████ █████  ████ █████ ██   
+        //
+        // ------------------------------------------------------------------------------------------------------------------------
+        // Constructor
+        
+            public function CurvedMeasurement(canvas:CurvedCanvas, index:uint = 0, start:Boolean = true)
+            {
+                super(canvas, index);
+                this.LINE_COLOR    = 0xff0000;
+                this.segments      = 100;
+
+            }
+        
+        // ------------------------------------------------------------------------------------------------------------------------
+        //
+        //    ██████                   ██         
+        //    ██                       ██         
+        //    ██     ████ █████ █████ █████ █████ 
+        //    ██     ██   ██ ██    ██  ██   ██ ██ 
+        //    ██     ██   █████ █████  ██   █████ 
+        //    ██     ██   ██    ██ ██  ██   ██    
+        //    ██████ ██   █████ █████  ████ █████ 
+        //
+        // ------------------------------------------------------------------------------------------------------------------------
+        // Create
+
+            public function create(anchor1Pos:Point, anchor2Pos:Point, handle1Pos:Point, handle2Pos:Point):void
+            {
+        
+                trace('canvas:' + this.canvas);
+        
+                // objects
+                    anchor1                = new Anchor();
+                    anchor2                = new Anchor();
+                    anchor1.name           = 'anchor1';
+                    anchor2.name           = 'anchor2';
+                    currentAnchor          = anchor2;
+                    
+                    handle1                = new Handle();
+                    handle2                = new Handle();
+                    handle1.name           = 'handle1';
+                    handle2.name           = 'handle2';
+                    currentHandle          = handle2;
+                    
+    
+                    handle1.blendMode      = BlendMode.LAYER;
+                // positions
+                    anchor1.setPos(anchor1Pos.x, anchor1Pos.y);
+                    anchor2.setPos(anchor2Pos.x, anchor2Pos.y);
+                    handle1.setPos(handle1Pos.x, handle1Pos.y);
+                    handle2.setPos(handle2Pos.x, handle2Pos.y);
+            
+                // display
+                    this.canvas.addChild(this);
+                    addChild(anchor1);
+                    addChild(anchor2);
+                    addChild(handle1);
+                    addChild(handle2);
+                    
+                    rotateHandles(anchor1, handle1);
+                    rotateHandles(anchor2, handle2);
+                    
+                    draw();
+                
+                // interactivity
+                    addInteractivity()
+    
+            }
+            
+    
+        // ------------------------------------------------------------------------------------------------------------------------
+        //
+        //    ██  ██                ██ ██                  
+        //    ██  ██                ██ ██                  
+        //    ██  ██ █████ █████ █████ ██ █████ ████ █████ 
+        //    ██████    ██ ██ ██ ██ ██ ██ ██ ██ ██   ██    
+        //    ██  ██ █████ ██ ██ ██ ██ ██ █████ ██   █████ 
+        //    ██  ██ ██ ██ ██ ██ ██ ██ ██ ██    ██      ██ 
+        //    ██  ██ █████ ██ ██ █████ ██ █████ ██   █████ 
+        //
+        // ------------------------------------------------------------------------------------------------------------------------
+        // Handlers
+    
+            private function downHandler(evt:Event):Boolean
+            {
+                
+                // events
+                    evt.stopPropagation();
+                    
+                //do it
+                    if(evt.target.constructor == Handle)
+                    {
+                        currentHandle = Handle(evt.target);
+                        setChildIndex(currentHandle, 1);
+                        canvas.stage.addEventListener(MouseEvent.MOUSE_MOVE, this.dragHandle);
+                    }
+                    else if(evt.target.constructor == Anchor)
+                    {
+                        currentHandle = Handle(Anchor(evt.target));
+                        setChildIndex(currentHandle, 1);
+                        canvas.stage.addEventListener(MouseEvent.MOUSE_MOVE, this.dragHandle);
+                    }
+                // return
+                    return true;
+            }
+            
+            private function upHandler(evt:Event):void
+            {
+                canvas.stage.removeEventListener(MouseEvent.MOUSE_MOVE, this.dragHandle);
+            }
+
+            private function dragHandle(evt:MouseEvent):void
+            {
+                // trace(currentHandle.name, currentHandle.constructor == Handle)
+                
+                currentHandle.x        = mouseX;
+                currentHandle.y        = mouseY;
+                
+                this.rotateHandles(anchor1, handle1);
+                this.rotateHandles(anchor2, handle2);
+                draw();
+                //this.updateLength();
+                
+                evt.updateAfterEvent();
+                
+            }
+            
+        // ------------------------------------------------------------------------------------------------------------------------
+        //
+        //    ██  ██  ██   ██ ██ ██  ██   ██             
+        //    ██  ██  ██      ██     ██                  
+        //    ██  ██ █████ ██ ██ ██ █████ ██ █████ █████ 
+        //    ██  ██  ██   ██ ██ ██  ██   ██ ██ ██ ██    
+        //    ██  ██  ██   ██ ██ ██  ██   ██ █████ █████ 
+        //    ██  ██  ██   ██ ██ ██  ██   ██ ██       ██ 
+        //    ██████  ████ ██ ██ ██  ████ ██ █████ █████ 
+        //
+        // ------------------------------------------------------------------------------------------------------------------------
+        // Utilities
+    
+            override public function draw():void
+            {
+                
+                // variables
+                    var length        :Number        = 0;
+                    var step          :Number        = 1 / segments;
+                    
+                    var x             :Number;
+                    var y             :Number;
+                    
+                    var xOld          :Number        = anchor1.x;
+                    var yOld          :Number        = anchor1.y;
+                    
+                    var dx            :Number;
+                    var dy            :Number;
+                    
+                // draw line
+                    gfx.clear()
+                    gfx.moveTo(xOld, yOld);
+                    gfx.lineStyle(LINE_WIDTH, LINE_COLOR, LINE_ALPHA, false, LineScaleMode.VERTICAL, CapsStyle.NONE, JointStyle.MITER, 10);
+                    
+                // This loops draws each step of the curve
+                    for (var i:Number = 0; i <= 1; i += step)
+                    {
+                        // position
+                            x             = Math.pow(i, 3) * (anchor2.x + 3 * (handle1.x - handle2.x) - anchor1.x) + 3 * Math.pow(i, 2) * (anchor1.x - 2 * handle1.x + handle2.x) + 3 * i * (handle1.x - anchor1.x) + anchor1.x;
+                            y             = Math.pow(i, 3) * (anchor2.y + 3 * (handle1.y - handle2.y) - anchor1.y) + 3 * Math.pow(i, 2) * (anchor1.y - 2 * handle1.y + handle2.y) + 3 * i * (handle1.y - anchor1.y) + anchor1.y;
+                            gfx.lineTo(x, y);
+                            
+                        // length
+                            dx            = x - xOld;
+                            dy            = y - yOld;
+                            xOld          = x;
+                            yOld          = y;
+                            length        += Math.sqrt(dx * dx + dy * dy);
+                    } 
+                    
+                // As a final step, make sure the curve ends on the second anchor
+                
+                    // position
+                        gfx.lineTo(anchor2.x, anchor2.y);
+                        
+                    // length
+                        dx                = anchor2.x - xOld;
+                        dy                = anchor2.y - yOld;
+                        length            += Math.sqrt(dx * dx + dy * dy);
+                        this.length       = length;
+                        
+                        
+                // draw handles
+                    gfx.lineStyle(LINE_WIDTH / 2, LINE_COLOR, LINE_ALPHA / 2, false, LineScaleMode.VERTICAL, CapsStyle.NONE, JointStyle.MITER, 10);
+                    
+                    gfx.moveTo(anchor1.x, anchor1.y);
+                    gfx.lineTo(handle1.x, handle1.y);
+                    
+                    gfx.moveTo(anchor2.x, anchor2.y);
+                    gfx.lineTo(handle2.x, handle2.y);
+            }
+            
+            private function rotateHandles(a:DisplayObject, b:DisplayObject)
+            {
+                var dx            = a.x - b.x;
+                var dy            = a.y - b.y;
+                var r             = Math.atan2(dy, dx) * 180 /  Math.PI;
+                a.rotation        = r;
+                b.rotation        = r;
+            }
+            
+        }
+        
+
+}

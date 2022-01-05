@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<!-- BEGIN html --><html lang="en-US">
+<!-- A ThemeZilla design (http://www.themezilla.com) - Proudly powered by WordPress (http://wordpress.org) -->
+
+<!-- BEGIN head -->
+<head>
+
+	<!-- Meta Tags -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="generator" content="Hoarder 1.1.1">
+<meta name="generator" content="ZillaFramework 1.0.2.5">
+
+	<!-- Title -->
+	<title>jQuery Highlight | Dave Stewart IO</title>
+
+	<!-- RSS & Pingbacks -->
+	<link rel="alternate" type="application/rss+xml" title="Dave Stewart IO RSS Feed" href="/feed/">
+	<link rel="pingback" href="/wordpress/xmlrpc.php">
+
+	<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Dave Stewart IO &raquo; jQuery Highlight Comments Feed" href="/plugins/jquery/jquery-highlight/feed/">
+<link rel="stylesheet" id="hoarder-style-css" href="/wordpress/wp-content/themes/davestewart/style.css?ver=1.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="jquery.lightbox.min.css-css" href="/wordpress/wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css?ver=1.4.6" type="text/css" media="all">
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/superfish.js?ver=1.4.8"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/supersubs.js?ver=0.2"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.flexslider-min.js?ver=2.0"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.jplayer.min.js?ver=2.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.imagesloaded.min.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.isotope.min.js?ver=1.5.19"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.fitvids.js?ver=1.0"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/includes/js/twitter.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/vendor/jquery/jquery.sticky.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/vendor/jquery/jquery.cookie.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/assets/js/zilla-media.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/assets/js/scripts.js?ver=2.0.1"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress/wp-includes/wlwmanifest.xml">
+<link rel="canonical" href="/plugins/jquery/jquery-highlight/">
+<link rel="shortlink" href="/?p=16">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fplugins%2Fjquery%2Fjquery-highlight%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fplugins%2Fjquery%2Fjquery-highlight%2F&#038;format=xml">
+
+<style type="text/css">.wp-editor-container{
+		border:1px solid #DDD;
+		margin-bottom:10px;
+	}</style>
+
+<!-- END head -->
+</head>
+
+<!-- BEGIN body -->
+<body class="post-template-default single single-post postid-16 single-format-standard no-js unknown post-jquery-highlight zilla layout-2cr">
+
+	    		<!-- BEGIN #header -->
+		<div id="header">
+
+		    <!-- BEGIN .header-inner -->
+		    <div class="header-inner">
+
+    			<!-- BEGIN #logo -->
+    			<div id="logo">
+    				<a href="/">Dave Stewart</a> <span>|</span> <a href="http://davestewart.co.uk/" title="Go to davestewart.co.uk">io</a>
+    				<p id="tagline">Research » Tooling » Open Sorcery</p>
+    			<!-- END #logo -->
+    			</div>
+
+
+	        <!-- END .header-inner -->
+	        </div>
+
+		<!-- END #header-->
+		</div>
+
+		<!-- BEGIN .main-navigation -->
+		<div class="main-navigation">
+
+		        		<!-- BEGIN #primary-nav -->
+    		<div id="primary-nav">
+    		    <ul id="primary-menu" class="menu">
+<li id="menu-item-373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-373"><a href="/">Home</a></li>
+<li id="menu-item-369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-369"><a href="/category/frameworks/">Frameworks</a></li>
+<li id="menu-item-368" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-368"><a href="/category/tools/">Tools</a></li>
+<li id="menu-item-887" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-887"><a href="/all/plugins/">Plugins</a></li>
+<li id="menu-item-888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-888"><a href="/all/extensions/">Extensions</a></li>
+<li id="menu-item-1064" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1064"><a href="/category/setup/">Setup</a></li>
+<li id="menu-item-977" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-977"><a href="/posts-by-category/">Everything</a></li>
+<li id="menu-item-1006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1006"><a href="/about/">About</a></li>
+</ul>
+    		    <!-- BEGIN #searchform-->
+<form method="get" id="searchform" action="/">
+	<fieldset>
+		<input type="text" name="s" id="s">
+	</fieldset>
+<!-- END #searchform-->
+</form>    		<!-- END #primary-nav -->
+    		</div>
+
+		<!-- END .main-navigation -->
+		</div>
+
+		<!-- BEGIN #content -->
+		<div id="content" class="clearfix">
+
+
+
+
+<!-- FILE davestewart/single.php -->
+
+			<!-- BEGIN #primary .hfeed-->
+			<div id="primary" class="hfeed">
+
+								<!-- BEGIN .hentry -->
+				<div class="post-16 post type-post status-publish format-standard hentry category-jquery tag-javascript" id="post-16">
+
+    				<!-- FILE davestewart/content.php -->
+<div class="post-thumb">
+
+
+</div>
+
+    <h1 class="entry-title">jQuery Highlight</h1>
+	<div class="entry-meta-header">
+			</div>
+
+
+
+<!-- BEGIN .entry-content -->
+<div class="entry-content">
+
+	<p>Highlight increases usability by highlighting elements as you interact with the page.</p>
+<p>Its primary use is for forms, but it can also be used for tables, lists, or any element you specify. It can also be used to toggle elements on and off, for example, table rows.</p>
+<p><a class="plain" href="/resources/javascript/jQuery/demos/highlight-demo.html"><img src="/resources/javascript/jQuery/highlight/form-example.gif" alt=""></a></p>
+<h3>Examples uses:</h3>
+<ul>
+<li>Form-filling can be made clearer by highlighting the element around a control as you tab into it</li>
+<li>Table rows can be made more visible as you pass the mouse over them, or click them</li>
+<li>Elements can be toggled as you click them</li>
+</ul>
+<h3>Code example</h3>
+<p>Because of the defaults, basic usage can be as simple as:</p>
+<pre>$('form').highlight();</pre>
+<p>The method signature for Highlight is:</p>
+<pre>$(<span class="red">selector</span>).highlight(<span class="red">parentSelector</span>, <span class="red">highlightClass</span>, <span class="red">startEvent</span>, <span class="red">endEvent</span>);</pre>
+<h3>Demo</h3>
+<p><a href="/resources/javascript/jQuery/demos/highlight-demo.html">View the Highlight demo</a> which has examples for forms, tables, and lists.</p>
+<h3>Download</h3>
+<ul>
+<li><a href="/resources/javascript/jQuery/highlight/jquery.highlight.js">jquery.highlight.js</a></li>
+<li><a href="/resources/javascript/jQuery/highlight/jquery.highlight.pack.js">jquery.highlight.pack.js</a></li>
+</ul>
+<p>&nbsp;</p>
+<!-- END .entry-content -->
+</div>
+<!-- FILE davestewart/content-meta.php -->
+<!-- BEGIN .entry-meta-footer-->
+<div class="entry-meta-footer">
+	<!--
+    <span class="comment-count">Comments: <a href="/plugins/jquery/jquery-highlight/#comments">32</a></span>
+    <span class="author">Posted by: <a href="/author/admin/" title="Posts by Dave Stewart" rel="author">Dave Stewart</a></span>
+	-->
+
+
+
+
+	<div class="entry-categories">Categories: <a href="/category/plugins/" title="View all posts in Plugins">Plugins</a>, <a href="/category/plugins/jquery/" title="View all posts in jQuery">jQuery</a>
+</div>
+    <div class="entry-tags">Tags: <a href="/tag/javascript/" rel="tag">JavaScript</a>
+</div>
+	<div class="published">Date: <span style="font-weight:normal">February 2008</span>
+</div>
+
+<!-- END .entry-meta-footer-->
+</div>
+
+                                <!-- END .hentry-->
+				</div>
+
+
+<!-- BEGIN #comments -->
+<div id="comments">
+
+	        <h3 class="comments-title">32 Comments</h3>
+
+        	<ol class="commentlist">
+                    <li class="comment even thread-even depth-1" id="li-comment-377">
+
+            <div id="comment-377">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/d7cdd92d9743a51897a8b8f95ce8e68f?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/d7cdd92d9743a51897a8b8f95ce8e68f?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://www.webio.eu/" rel="external nofollow" class="url">Webio.eu</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-377">June 9, 2008 at 7:15 am</a> &middot; </div>
+
+
+                    <p>Hi, I thing i found little css bug,<br>
+for example when i definned the css color for table row via </p>
+<p>tr .odd<br>
+{<br>
+background-color: aqua;<br>
+}</p>
+<p>your style &#034;switcher&#034; will not switch the aqua color with highlighted color for example defined in </p>
+<p>.highlight {<br>
+background-color: gray;<br>
+}</p>
+<p>So the odd wors remain aqua. Can you test this ?<br>
+Thanks o lot Mike</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-378">
+
+            <div id="comment-378">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-378">June 9, 2008 at 10:21 am</a> &middot; </div>
+
+
+                    <p>Hi Mike,<br>
+Well at the moment the plugin adds to (not replaces) the style on the element, so it may be that you need to either</p>
+<p>1) place the .highlight rule after (or is it before?) your .odd rule, so it has a higher precedence<br>
+2) mark .highlight&#039;s background-color as !important (background-color: gray !important;) in the CSS<br>
+3) I could maybe look at adding a &#034;replace&#034; option to the plugin (but I&#039;d rather not!)</p>
+<p>Let me know how you get on.</p>
+<p>Dave</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-396">
+
+            <div id="comment-396">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/d7cdd92d9743a51897a8b8f95ce8e68f?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/d7cdd92d9743a51897a8b8f95ce8e68f?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://www.webio.eu/" rel="external nofollow" class="url">Webio.eu</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-396">June 12, 2008 at 8:41 am</a> &middot; </div>
+
+
+                    <p>Thanks for answer, Yes the !important helps. Have a Nice day Dave.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-456">
+
+            <div id="comment-456">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/25bf400044e1db18827f0aff1e0ee8a6?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/25bf400044e1db18827f0aff1e0ee8a6?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://www.larryhead.com/" rel="external nofollow" class="url">Adam F</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-456">June 23, 2008 at 3:36 pm</a> &middot; </div>
+
+
+                    <p>Hi there,</p>
+<p>Thanks for the great jQuery plugin, I&#039;m now using it on my website&#039;s contact form!</p>
+<p>-Adam</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-2979">
+
+            <div id="comment-2979">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/139cc21f85271f41bfc380581bbc9da4?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/139cc21f85271f41bfc380581bbc9da4?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">John</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-2979">January 26, 2009 at 12:19 am</a> &middot; </div>
+
+
+                    <p>Sorry To Bother </p>
+<p>New to web building </p>
+<p>I would really like to use this but i don&#039;t know exactly what to do</p>
+<p>I save the jquery.highlight.js.  but don&#039;t know how to use it</p>
+<p>any help would be greatly appreciated </p>
+<p>thanks</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-3535">
+
+            <div id="comment-3535">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-3535">February 25, 2009 at 1:36 pm</a> &middot; </div>
+
+
+                    <p>View the demo page (url above) John, which has all the information you need 😉</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-29954">
+
+            <div id="comment-29954">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/f5691b23026c66b5c98cd6644f5a851c?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/f5691b23026c66b5c98cd6644f5a851c?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Drew</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-29954">July 13, 2009 at 11:27 pm</a> &middot; </div>
+
+
+                    <p>Is there any way to exclude a form field from being highlighted. I have some options that I don&#039;t want to be highlighted. Also do you know of a way for the page to load with the first form option to be already highlighted?</p>
+<p>Thanks</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-31266">
+
+            <div id="comment-31266">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-31266">July 23, 2009 at 4:53 pm</a> &middot; </div>
+
+
+                    <p>Hi Drew,<br>
+Hmm.. sorry, I don&#039;t think I included that functionality (it&#039;s been a while since I looked at the plugin). Feel free to reverse engineer it though. </p>
+<p>Thinking about it though, the easiest way would be a CSS solution.</p>
+<p>Add a class to those elements you don&#039;t want highlighted, such as class=&#034;no-highlight&#034; with a rule that effectively does the opposite of your highlight rule. Set whichever declaration to !important in the CSS, such as background:none !important, and it should override any highlighting.</p>
+<p>Hope that helps.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-32258">
+
+            <div id="comment-32258">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/ce1878196c54d6f7e83bf30999dda201?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/ce1878196c54d6f7e83bf30999dda201?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Roman</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-32258">August 1, 2009 at 7:10 pm</a> &middot; </div>
+
+
+                    <p>Hi! 🙂<br>
+seems demo doesn&#039;t work in Safari (at least v. 4.0) as to radio and check input fields?</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-50177">
+
+            <div id="comment-50177">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/f674cfc7cf555ddad3ce84be7fd9f424?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/f674cfc7cf555ddad3ce84be7fd9f424?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://theadhamian.wordpress.com/" rel="external nofollow" class="url">3m masr</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-50177">December 1, 2009 at 8:33 pm</a> &middot; </div>
+
+
+                    <p>we need a detailed documentation for this great plugin please !</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-50294">
+
+            <div id="comment-50294">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-50294">December 5, 2009 at 1:45 pm</a> &middot; </div>
+
+
+                    <p>Yup &#8211; click the image above and you&#039;ll get taken to the documentation pages!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-50446">
+
+            <div id="comment-50446">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/5087643534ac14701ce3014642283168?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/5087643534ac14701ce3014642283168?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">JT</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-50446">December 7, 2009 at 5:04 pm</a> &middot; </div>
+
+
+                    <p>Hi, </p>
+<p>How have you licensed your code?  What restrictions do you have on its use?  I can&#039;t find any indication on your demo web pages or in your source code.</p>
+<p>Thanks,</p>
+<p>JT</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-50491">
+
+            <div id="comment-50491">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-50491">December 10, 2009 at 1:54 am</a> &middot; </div>
+
+
+                    <p>Go ahead and use it JT. If I&#039;ve published it with the intention of people viewing the source, that&#039;s as good as a licence for me.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-51453">
+
+            <div id="comment-51453">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/51d4559d326e8515c726c64ce04acc06?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/51d4559d326e8515c726c64ce04acc06?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://askask.com/" rel="external nofollow" class="url">Ask Bjørn Hansen</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51453">January 2, 2010 at 12:11 am</a> &middot; </div>
+
+
+                    <p>I just wanted to comment too that it doesn&#039;t seem to work for radio buttons and check boxes in Safari 4.  🙂  Otherwise: very neat!</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor even depth-2" id="li-comment-51511">
+
+            <div id="comment-51511">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51511">January 29, 2010 at 1:16 pm</a> &middot; </div>
+
+
+                    <p>Bloody Apple changing things as usual!</p>
+<p>OK &#8211; I&#039;ll see what I can do at some point in the near future. Thanks for the heads-up.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-even depth-1" id="li-comment-51561">
+
+            <div id="comment-51561">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/95ffbb42432dd0f5fd7cda64f6d1ba8f?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/95ffbb42432dd0f5fd7cda64f6d1ba8f?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=3335395" rel="external nofollow" class="url">Gary Stafford</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51561">April 10, 2010 at 3:05 am</a> &middot; </div>
+
+
+                    <p>Thanks for the great plug-in. I fitted it to several tables in ASP.NET Web Forms/AJAX-based pages with a few tweaks. Here&#039;s my code for anyone interested:</p>
+<p><code></code></p>
+<p>    function pageLoad() {<br>
+        $("#priceTable").highlight();<br>
+    };</p>
+<p>    .highlight<br>
+    {<br>
+        background-color: #999966;<br>
+    }</p>
+<p></p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-51599">
+
+            <div id="comment-51599">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/15601a761ab5b6854410b8bf43aa68dd?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/15601a761ab5b6854410b8bf43aa68dd?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">JD</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51599">April 26, 2010 at 9:47 am</a> &middot; </div>
+
+
+                    <p>I didn&#039;t see anything on your site about licensing? Is this public domain &#8211; if I wanted to include it in a commercial application would you have any objections?</p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor odd alt depth-2" id="li-comment-51671">
+
+            <div id="comment-51671">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51671">July 21, 2010 at 10:16 pm</a> &middot; </div>
+
+
+                    <p>Go for it 🙂</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-51723">
+
+            <div id="comment-51723">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/9ebe9e5c78b34fd08dab8893abb01035?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/9ebe9e5c78b34fd08dab8893abb01035?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Ramesh</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51723">September 21, 2010 at 9:43 am</a> &middot; </div>
+
+
+                    <p>m beginer of web progamming so  i need suggestion which book is good to learn things fastly&#8230;</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-51734">
+
+            <div id="comment-51734">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51734">October 6, 2010 at 11:14 am</a> &middot; </div>
+
+
+                    <p>Hi Ramesh, bit of a vague question really! I&#039;d suggest reading anything by John Resig, and just playing, playing, playing.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-51751">
+
+            <div id="comment-51751">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/6fc1fe1aebcbe3a04ad2d11b829f7470?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/6fc1fe1aebcbe3a04ad2d11b829f7470?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Marcus Tucker</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51751">November 19, 2010 at 10:34 am</a> &middot; </div>
+
+
+                    <p>Interesting plugin.</p>
+<p>Spotted two issues with the demos&#8230;</p>
+<p>1) Focus effect doesn&#039;t work with radiobuttons or checkboxes in Chrome (haven&#039;t tested in other browsers)</p>
+<p>2) List highlight demo only highlights the sub and sub-sub ULs, not the outermost one.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-51762">
+
+            <div id="comment-51762">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/83f9ef367b9f2c55cf678aacc0a162a5?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/83f9ef367b9f2c55cf678aacc0a162a5?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://mh.netnet.net/" rel="external nofollow" class="url">1Cr</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51762">January 19, 2011 at 12:07 am</a> &middot; </div>
+
+
+                    <p>Sorry for posting almost 3 years after the original release, but I just wanted to note that Highlight seems to lose functionality with jQuery 1.4.4.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-even depth-1" id="li-comment-51838">
+
+            <div id="comment-51838">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/45852c33ba5bfbfba70161bf206c968a?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/45852c33ba5bfbfba70161bf206c968a?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">ej</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51838">April 19, 2011 at 11:04 pm</a> &middot; </div>
+
+
+                    <p>Needed to change your if/else block for other selectors when getting the elements array, * wasn&#039;t working. </p>
+<p><code></code></p>
+<p>                        var elements = NULL;</p>
+<p>                        if(tagName.match(/^(table|tbody)$/) != null)<br>
+                        {<br>
+                            selector = selector || 'tr';<br>
+                            elements = jQuery(selector, this);<br>
+                        }<br>
+                        else if(tagName.match(/^(ul|ol)$/) != null)<br>
+                        {<br>
+                            selector = selector || 'li';<br>
+                            elements =  jQuery(selector, this);<br>
+                        }<br>
+                        else<br>
+                        {<br>
+                            elements = null jQuery(this);<br>
+                        }</p>
+<p></p>
+                </div>
+
+            </div>
+	<ul class="children">
+        <li class="comment byuser comment-author-admin bypostauthor odd alt depth-2" id="li-comment-52042">
+
+            <div id="comment-52042">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-52042">August 6, 2014 at 10:41 am</a> &middot; </div>
+
+
+                    <p>Thanks ej, I&#039;ve added thia as a Github issue and will look into it: <a href="https://github.com/davestewart/jquery-populate/issues/3">https://github.com/davestewart/jquery-populate/issues/3</a></p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+</ul>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-51839">
+
+            <div id="comment-51839">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/45852c33ba5bfbfba70161bf206c968a?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/45852c33ba5bfbfba70161bf206c968a?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">ej</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51839">April 19, 2011 at 11:06 pm</a> &middot; </div>
+
+
+                    <p>That null there was an accident. Debugged it looks like this:</p>
+<p>                        var elements = null;</p>
+<p>                        if(tagName.match(/^(table|tbody)$/) != null)<br>
+                        {<br>
+                            selector = selector || &#039;tr&#039;;<br>
+                            elements = jQuery(selector, this);<br>
+                        }<br>
+                        else if(tagName.match(/^(ul|ol)$/) != null)<br>
+                        {<br>
+                            selector = selector || &#039;li&#039;;<br>
+                            elements =  jQuery(selector, this);<br>
+                        }<br>
+                        else<br>
+                        {<br>
+                            elements = jQuery(this);<br>
+                        }</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-even depth-1" id="li-comment-51853">
+
+            <div id="comment-51853">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/109d7e946dd1d812a969d73228bb3347?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/109d7e946dd1d812a969d73228bb3347?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://underconstruction/" rel="external nofollow" class="url">Daniel</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51853">June 9, 2011 at 3:44 pm</a> &middot; </div>
+
+
+                    <p>Hi Dave-</p>
+<p>I love your highlight jquery plug in!!!  One quick question: Does the download include a CSS file to go along with it? I am terrible at styling and would not know how to setup the css to do the highlighting and such. Any and all help will be greatly appreciated.</p>
+<p>Do you have any more plugins? Great work!!</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-51859">
+
+            <div id="comment-51859">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/d6e95030ad7d4e06511afe4e1bab78c3?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/d6e95030ad7d4e06511afe4e1bab78c3?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">aby</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51859">July 7, 2011 at 8:13 pm</a> &middot; </div>
+
+
+                    <p>can you post the code ?</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-even depth-1" id="li-comment-51860">
+
+            <div id="comment-51860">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/ebde046ca76458d9dcfc0cdebe0bd1e9?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/ebde046ca76458d9dcfc0cdebe0bd1e9?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Salem</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51860">July 13, 2011 at 3:56 pm</a> &middot; </div>
+
+
+                    <p>You,my good sir,rock!Thanks for tjhe amazing piece of code 🙂</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-51963">
+
+            <div id="comment-51963">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/d7191b995e2018dae43db14d37658b3f?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/d7191b995e2018dae43db14d37658b3f?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn"><a href="http://danielbrinca.com/" rel="external nofollow" class="url">Daniel Brinca</a></cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51963">June 8, 2013 at 5:39 pm</a> &middot; </div>
+
+
+                    <p>To workaround the Chrome/Webkit issue, that prevents checkboxes/radios from receiving focus/blur events, I&#039;ve modified the script with the following changes:<br>
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br>
+var specialElements = $(&#034;[type=checkbox], [type=radio]&#034;, this); //workaround for webkit&#039;s focus/blur bug</p>
+<p>var highlight_on = function(){<br>
+	$(&#039;.&#039; + className).removeClass(className);</p>
+<p>	var parents	= jQuery(this).parents(selector);<br>
+	var parent	= jQuery(parents.get(0));<br>
+	parent.addClass(className);<br>
+};</p>
+<p>var highlight_off = function(){<br>
+	var parents	= jQuery(this).parents(selector);<br>
+	var parent	= jQuery(parents.get(0));<br>
+	parent.removeClass(className);<br>
+}</p>
+<p>elements.bind(&#039;focus&#039;, highlight_on);<br>
+elements.bind(&#039;blur&#039;, highlight_off);</p>
+<p>specialElements.bind(&#039;click&#039;, highlight_on);<br>
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;</p>
+<p>To patch, just replace this for the code on lines 29-49 of jquery.highlight.js</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment odd alt thread-even depth-1" id="li-comment-51975">
+
+            <div id="comment-51975">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://0.gravatar.com/avatar/cca3ab246e1e4776d2229d21db5f16e1?s=56&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/cca3ab246e1e4776d2229d21db5f16e1?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Wellington Torrejais da Silva</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51975">September 10, 2013 at 6:48 pm</a> &middot; </div>
+
+
+                    <p>Good job. Thanks.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment even thread-odd thread-alt depth-1" id="li-comment-51984">
+
+            <div id="comment-51984">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://2.gravatar.com/avatar/8f1685e961dcb44a84846fd0900f4df6?s=56&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/8f1685e961dcb44a84846fd0900f4df6?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Pfft</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-51984">December 6, 2013 at 10:36 am</a> &middot; </div>
+
+
+                    <p>This is the worst tutorial ever. I know what you mean, but a new user would be completely lost. Get off your high fucking horse.</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+        <li class="comment byuser comment-author-admin bypostauthor odd alt thread-even depth-1" id="li-comment-52033">
+
+            <div id="comment-52033">
+
+                <span class="avatar-overlay"></span>
+                <img alt="" src="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=56&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/75932209e8d11a3b66fd0a2c948dcd01?s=112&#038;d=mm&#038;r=g 2x" class="avatar avatar-56 photo" height="56" width="56">
+                <div class="comment-body">
+                    <div class="comment-author vcard">
+                        <cite class="fn">Dave Stewart</cite>                    </div>
+
+                    <div class="comment-meta commentmetadata">
+<a href="/plugins/jquery/jquery-highlight/#comment-52033">August 6, 2014 at 7:10 am</a> &middot; </div>
+
+
+                    <p>Sorry all, I&#039;ve completely neglected this blog for a few years now, even though it gets a good amount of traffic from the jQuery site. </p>
+<p>I&#039;m updating the site at the moment so will be addressing most of these issues (Assuming people are still using the plugin!)</p>
+                </div>
+
+            </div>
+	</li>
+<!-- #comment-## -->
+            </ol>
+
+
+<!-- END #comments -->
+</div>
+				<!-- BEGIN .navigation .single-page-navigation -->
+				<div class="navigation single-page-navigation">
+					<div class="nav-previous">&larr; <a href="/plugins/jquery/jquery-populate/" rel="prev">jQuery Populate</a>
+</div>
+					<div class="nav-next">
+<a href="/plugins/wordpress/wordpress-template-page-redirect/" rel="next">WordPress Page Redirect template</a> &rarr;</div>
+				<!-- END .navigation .single-page-navigation -->
+				</div>
+
+							<!-- END #primary .hfeed-->
+			</div>
+
+
+    		<!-- BEGIN #sidebar .aside-->
+		<div id="sidebar" class="aside">
+
+		<div id="ds_related_categories_widget-2" class="widget DS_Related_Categories_Widget">
+<h3 class="widget-title">Related categories</h3>
+<ul><li><a href="/category/plugins/jquery/">jQuery <span class="meta">9</span></a></li></ul>
+</div>
+<div id="ds_related_posts_widget-3" class="widget DS_Related_Posts_Widget">
+<h3 class="widget-title">Related Posts in jQuery</h3>
+<ul>
+<li><a href="/plugins/jquery/jquery-360/">jQuery ThreeSixty <span class="meta">2014</span></a></li>
+<li><a href="/plugins/jquery/jquery-log/">jQuery Log <span class="meta">2013</span></a></li>
+<li><a href="/plugins/jquery/jquery-placeholder/">jQuery Placeholder <span class="meta">2013</span></a></li>
+<li><a href="/plugins/jquery/jquery-hashsync/">jQuery HashSync <span class="meta">2013</span></a></li>
+<li><a href="/plugins/jquery/jquery-tabsize/">jQuery TabSize <span class="meta">2010</span></a></li>
+<li><a href="/plugins/jquery/jquery-lorem/">jQuery Lorem <span class="meta">2010</span></a></li>
+<li><a href="/plugins/jquery/jquery-hierarchy/">jQuery Hierarchy <span class="meta">2008</span></a></li>
+<li><a href="/plugins/jquery/jquery-highlight/">jQuery Highlight <span class="meta">2008</span></a></li>
+<li><a href="/plugins/jquery/jquery-populate/">jQuery Populate <span class="meta">2008</span></a></li>
+</ul>
+</div>
+<div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"></div></div>
+		<!-- END #sidebar .aside-->
+		</div>
+
+
+<!-- FILE davestewart/footer.php -->
+
+        		<!-- END #content -->
+		</div>
+
+
+		<!-- BEGIN #footer -->
+		<div id="footer">
+
+		    <!-- BEGIN .footer-inner -->
+		    <div class="footer-inner">
+
+
+		        <!-- BEGIN .footer-col-1 -->
+<div class="footer-col-1">
+
+    <div id="ds_links-2" class="widget ds_links">
+<h3 class="widget-title">Commercial Portfolio</h3>
+<ul><li><a href="http://davestewart.co.uk/">davestewart.co.uk</a></li></ul>
+</div>
+<!-- END .footer-col-1 -->
+</div>
+
+<!-- BEGIN .footer-col-2 -->
+<div class="footer-col-2">
+
+    <div id="ds_links-4" class="widget ds_links">
+<h3 class="widget-title">Browse Projects</h3>
+<ul>
+<li><a href="/posts-by-category/">By Category</a></li>
+<li><a href="/posts-by-date/">By Date</a></li>
+<li>
+<a href="/posts-by-tag/">By Tag</a>  </li>
+</ul>
+</div>
+<!-- END .footer-col-2 -->
+</div>
+
+<!-- BEGIN .footer-col-3 -->
+<div class="footer-col-3">
+
+    <div id="ds_links-3" class="widget ds_links">
+<h3 class="widget-title">More Info</h3>
+<ul>
+<li><a href="https://twitter.com/dave_stewart">Contact</a></li>
+<li><a href="/about/">About</a></li>
+</ul>
+</div>
+<!-- END .footer-col-3 -->
+</div>
+
+		    <!-- END .footer-inner -->
+		    </div>
+
+		    <div class="footer-lower">
+		        <div class="footer-inner">
+		            <p class="copyright">&copy; Copyright 2022. Powered by <a href="http://wordpress.org/">WordPress</a></p>
+
+		        </div>
+		    </div>
+
+		<!-- END #footer -->
+		</div>
+
+		<a href="#" id="back-to-top"></a>
+
+
+
+	<!-- Theme Hook -->
+	<script type="text/javascript">
+/* <![CDATA[ */
+var zilla = {"ajaxurl":"\/wordpress\/wp-admin\/admin-ajax.php","nonce":"61b4b80d02","loading":"Loading..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.custom.js?ver=1.0"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/comment-reply.min.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js?ver=1.4.6"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var JQLBSettings = {"showTitle":"1","showCaption":"1","showNumbers":"1","fitToScreen":"0","resizeSpeed":"400","showDownload":"0","navbarOnTop":"0","marginSize":"0","slideshowSpeed":"4000","prevLinkTitle":"previous image","nextLinkTitle":"next image","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","pause":"(pause slideshow)","play":"(play slideshow)"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wordpress/wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js?ver=1.4.6"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery.color.min.js?ver=2.1.1"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/wp-embed.min.js?ver=4.9.18"></script>
+
+	<!-- Ran 40 queries 1.58 seconds -->
+<!-- END body-->
+</body>
+<!-- END html-->
+</html>

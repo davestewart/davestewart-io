@@ -1,0 +1,27 @@
+fieldset
+{
+	position: relative;
+}
+
+legend
+{
+	position: relative;
+	left: -7px;
+	top: -0.75em;
+}
+
+fieldset ol
+{
+	padding-top: 0.25em;
+}
+
+hr{
+	height:35px;
+	margin:-8px -25px !important;
+	padding:0px 50px;
+	color:#aaa;
+	background-color:#aaa;
+	border:1px solid #aaa;
+	clear:both;
+	overflow:visible;
+	}

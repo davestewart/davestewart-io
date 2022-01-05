@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!-- BEGIN html --><html lang="en-US">
+<!-- A ThemeZilla design (http://www.themezilla.com) - Proudly powered by WordPress (http://wordpress.org) -->
+
+<!-- BEGIN head -->
+<head>
+
+	<!-- Meta Tags -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="generator" content="Hoarder 1.1.1">
+<meta name="generator" content="ZillaFramework 1.0.2.5">
+
+	<!-- Title -->
+	<title>Extract project libraries to their own git repositories  | Dave Stewart IO</title>
+
+	<!-- RSS & Pingbacks -->
+	<link rel="alternate" type="application/rss+xml" title="Dave Stewart IO RSS Feed" href="/feed/">
+	<link rel="pingback" href="/wordpress/xmlrpc.php">
+
+	<link rel="dns-prefetch" href="//s.w.org">
+<link rel="stylesheet" id="hoarder-style-css" href="/wordpress/wp-content/themes/davestewart/style.css?ver=1.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="jquery.lightbox.min.css-css" href="/wordpress/wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css?ver=1.4.6" type="text/css" media="all">
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/superfish.js?ver=1.4.8"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/supersubs.js?ver=0.2"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.flexslider-min.js?ver=2.0"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.jplayer.min.js?ver=2.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.imagesloaded.min.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.isotope.min.js?ver=1.5.19"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.fitvids.js?ver=1.0"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/includes/js/twitter.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/vendor/jquery/jquery.sticky.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/vendor/jquery/jquery.cookie.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/assets/js/zilla-media.js?ver=2.0.1"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/davestewart/assets/js/scripts.js?ver=2.0.1"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress/wp-includes/wlwmanifest.xml">
+<link rel="canonical" href="/setup/extract-libraries-to-their-own-repositories/">
+<link rel="shortlink" href="/?p=1061">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsetup%2Fextract-libraries-to-their-own-repositories%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsetup%2Fextract-libraries-to-their-own-repositories%2F&#038;format=xml">
+
+<style type="text/css">.wp-editor-container{
+		border:1px solid #DDD;
+		margin-bottom:10px;
+	}</style>
+
+<!-- END head -->
+</head>
+
+<!-- BEGIN body -->
+<body class="post-template-default single single-post postid-1061 single-format-standard no-js unknown post-extract-libraries-to-their-own-repositories zilla layout-2cr">
+
+	    		<!-- BEGIN #header -->
+		<div id="header">
+
+		    <!-- BEGIN .header-inner -->
+		    <div class="header-inner">
+
+    			<!-- BEGIN #logo -->
+    			<div id="logo">
+    				<a href="/">Dave Stewart</a> <span>|</span> <a href="http://davestewart.co.uk/" title="Go to davestewart.co.uk">io</a>
+    				<p id="tagline">Research » Tooling » Open Sorcery</p>
+    			<!-- END #logo -->
+    			</div>
+
+
+	        <!-- END .header-inner -->
+	        </div>
+
+		<!-- END #header-->
+		</div>
+
+		<!-- BEGIN .main-navigation -->
+		<div class="main-navigation">
+
+		        		<!-- BEGIN #primary-nav -->
+    		<div id="primary-nav">
+    		    <ul id="primary-menu" class="menu">
+<li id="menu-item-373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-373"><a href="/">Home</a></li>
+<li id="menu-item-369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-369"><a href="/category/frameworks/">Frameworks</a></li>
+<li id="menu-item-368" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-368"><a href="/category/tools/">Tools</a></li>
+<li id="menu-item-887" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-887"><a href="/all/plugins/">Plugins</a></li>
+<li id="menu-item-888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-888"><a href="/all/extensions/">Extensions</a></li>
+<li id="menu-item-1064" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1064"><a href="/category/setup/">Setup</a></li>
+<li id="menu-item-977" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-977"><a href="/posts-by-category/">Everything</a></li>
+<li id="menu-item-1006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1006"><a href="/about/">About</a></li>
+</ul>
+    		    <!-- BEGIN #searchform-->
+<form method="get" id="searchform" action="/">
+	<fieldset>
+		<input type="text" name="s" id="s">
+	</fieldset>
+<!-- END #searchform-->
+</form>    		<!-- END #primary-nav -->
+    		</div>
+
+		<!-- END .main-navigation -->
+		</div>
+
+		<!-- BEGIN #content -->
+		<div id="content" class="clearfix">
+
+
+
+
+<!-- FILE davestewart/single.php -->
+
+			<!-- BEGIN #primary .hfeed-->
+			<div id="primary" class="hfeed">
+
+								<!-- BEGIN .hentry -->
+				<div class="post-1061 post type-post status-publish format-standard hentry category-setup tag-php-tag tag-github tag-open-source" id="post-1061">
+
+    				<!-- FILE davestewart/content.php -->
+<div class="post-thumb">
+
+
+</div>
+
+    <h1 class="entry-title">Extract project libraries to their own git repositories</h1>
+	<div class="entry-meta-header">
+			</div>
+
+
+
+<!-- BEGIN .entry-content -->
+<div class="entry-content">
+
+	<h2>Overview</h2>
+<p>I often find myself developing code for a project which over the course of the job turns out to be a useful general library which I&#039;d like to use for other projects. Rather than copy/pasting this code to a new folder and starting a fresh Git repository, I&#039;ll want to take the commit history for that library and its subfolders, and start with that.</p>
+<p>Based on <a href="http://stackoverflow.com/questions/32940679/how-do-i-git-subtree-split-but-maintain-the-full-folder-hierarchy">this</a> Stack Overflow post, there are a couple of approaches to do that:</p>
+<ol>
+<li>Extract only the folder and subfolders</li>
+<li>Extract the full path (if you have a root folder structure you want to keep)</li>
+</ol>
+<p>For now I&#039;m going to demonstrate the first.</p>
+<p>There&#039;s a lot of complicated sounding information out there, which often assumes you know what you&#039;re doing on the git command line (which I don&#039;t) so:</p>
+<ul>
+<li>I&#039;ll use an actual project to illustrate how this is done</li>
+<li>I&#039;ll break it down in super-easy steps, with full code output, so you can see what&#039;s happening</li>
+<li>I&#039;ll highlight the code you type in red</li>
+<li>I&#039;ll underline the names of folders and repositories to make it clear what you should swap out for your own values, and what&#039;s just a git command</li>
+</ul>
+<p>Note that this was done on a mac, so the paths are normal, absolute paths.</p>
+<ul>
+<li>Windows users, use the standard path syntax for Windows, c:/path/to/files</li>
+<li>All users, use quotes for pathnames with spaces: &#034;c:/path/to/some folder/with lots of files&#034;</li>
+</ul>
+<h2>Technique 1: Extract only folder and subfolders</h2>
+<h3>Overview</h3>
+<p>This technique results in a brand new repo, with the subfolder contents in the root:</p>
+<pre>+- original                 +- some-lib
+    +- blah                     +- ClassA
+    +- libs                     +- ClassB
+        +- lib1                 +- ClassC
+        +- lib2
+        +- lib3         -&gt;
+            +- ClassA
+            +- ClassB
+            +- ClassC
+</pre>
+<p>This is useful in languages like PHP, when extracting a library to use with Composer, as Composer recreates the intermediate namespacing folders (e.g. davestewart/some-lib/) when you <code>require</code> the package from Packagist.</p>
+<p>We use git subtree split to copy the folder into a new branch in the original repo, which you then pull into a new repo.</p>
+<h3>Code</h3>
+<p>To start, we&#039;ll create a temporary branch in your original project repo.</p>
+<p>Go to the original repo&#039;s folder (path/to/original-repo) and split the library subfolder (path/to/lib-folder) into a new branch (some-lib):</p>
+<pre>$ <span style="color: red;">cd <span style="text-decoration: underline;">/path/to/original-repo</span></span>
+$ <span style="color: red;">git subtree split -P <span style="text-decoration: underline;">path/to/lib-folder</span> -b <span style="text-decoration: underline;">some-lib</span></span>
+Created branch 'some-lib'
+f4b2b26a2681b71cfdbb71cd24fb09a9a9626e66</pre>
+<p>Next, we&#039;ll make a new repo and pull in the temporary branch.</p>
+<p>Create and initialize a new repo (/path/to/new-repo):</p>
+<pre>$ <span style="color: red;">mkdir <span style="text-decoration: underline;">/path/to/new-repo</span></span>
+$ <span style="color: red;">cd <span style="text-decoration: underline;">/path/to/new-repo</span></span>
+$ <span style="color: red;">git init</span>
+Initialized empty Git repository in /path/to/new-repo/.git/</pre>
+<p>The final step is to grab the branch you created a moment ago.</p>
+<p>From the new repo (current folder) pull the newly-created branch (some-lib) from the original repo (/path/to/original-repo):</p>
+<pre>$ <span style="color: red;">git pull <span style="text-decoration: underline;">/path/to/original-repo</span> <span style="text-decoration: underline;">some-lib</span></span>
+remote: Counting objects: 235, done.
+remote: Compressing objects: 100% (217/217), done.
+remote: Total 235 (delta 90), reused 16 (delta 3)
+Receiving objects: 100% (235/235), 61.53 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (90/90), done.
+From /path/to/original-repo
+ * branch            crud-lib   -&gt; FETCH_HEAD
+</pre>
+<p>Do a quick file listing, just to see if it&#039;s worked:</p>
+<pre>$ <span style="color: red;">ls -l</span>
+total 536
+drwxr-xr-x@ 1 Dave  staff   189B 30 Mar 17:14 docs/
+drwxr-xr-x@ 1 Dave  staff   756B 30 Mar 17:14 src/
+drwxr-xr-x@ 1 Dave  staff   504B 30 Mar 17:14 views/
+</pre>
+<p>You can check the logs as well, just to see that it is <em>only</em> the commit history from this folder:</p>
+<pre>$ <span style="color: red;">git shortlog</span>
+Dave Stewart (37):
+      Moved crud helper files to their own namespace
+      Moved local packages around
+      Major rewrite of CrudHelper to CrudService
+      Updated CrudService with explicit getters and additional flexibility to set values and use the class flexibly
+      Various improvements and optimisations on CrudService package
+      Minor updates to crud view data structures
+      Various minor Crud updates
+      Various improvements to CRUD views and structure, and moved Entity Controllers to controllers/entities folder
+      Added proper index redirecting
+      Moved all querying to internal query builder, broke out call() and query() methods, added filter() method, added magic properties and method calls
+      Updated CrudService to work with updated CrudRepo
+      Updated CrudMeta behaviour for index pages
+      Separated CrudRepo functionality into standalone methods, as well as various other tidy ups and comments
+      Added robust CrudMeta getter and setter methods
+      Made CrudService::index() method internals more readable
+      Moved CrudMethods trait to traits subfolder
+      Converted CrudRepo interface to base class, and made some minor code optimisations in EloquentRepo
+      Added control() helper to CrudServiceProvider
+      Various major optimisations to CrudService, CrudMata and CrudField
+      Added CrudControl and FormControl classes
+      Added new exception class
+      Added field-centric validation messages
+      Moved all field-generation functionality to CrudMetaService
+      Moved and minor updates to CrudService
+      Minor bug fixes to CrudMeta/CrudMetaService refactor
+      Added back rules, and added required class to control classes
+      Moved stub view files
+      Renamed CRUD validation messages file
+      Added confirmation messages to crud messages
+      First iteration of CrudValidator
+      Updated language files
+      Added basics of translation service
+      Reorganised CrudMeta and removed status / language functionality
+      Found cleaner way for CrudValidator to display proper messages
+      Various major improvements in fields and controls to add more flexibility and functionality
+      Moved loadRelated() functionality from CrudService to CrudRepo
+      Various improvements to CrudMetaService
+
+</pre>
+<p>That&#039;s all there is to it 🙂</p>
+<p>If you&#039;re writing PHP, and still developing your package, see <a href="/setup/develop-a-composer-package-within-a-live-project">this post</a> to see how to use Composer to manage and include your new package whilst at the same time continuing local development on it.</p>
+<h2>Technique 2: Extract folder and subfolders</h2>
+<h3>Overview</h3>
+<p>This technique results in a brand new repo, with the the entire, filtered subtree in the root:</p>
+<pre>+- original                 +- some-lib
+    +- blah                     +- libs
+    +- libs                         +- lib3
+        +- lib1                         +- ClassA
+        +- lib2                         +- ClassB
+        +- lib3         -&gt;              +- ClassC
+            +- ClassA
+            +- ClassB
+            +- ClassC
+</pre>
+<p>This is useful for languages like ActionScript, where you need the full folder structure in order to find the classes by folder.</p>
+<h3>Code</h3>
+<p>I&#039;ll cover this at some point, but in the meantime, look at the second option covered in the Stack Overflow link below.</p>
+<h2>Links</h2>
+<p>I used the following resources to compile this post:</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/32940679/how-do-i-git-subtree-split-but-maintain-the-full-folder-hierarchy">http://stackoverflow.com/questions/32940679/how-do-i-git-subtree-split-but-maintain-the-full-folder-hierarchy</a></li>
+</ul>
+<!-- END .entry-content -->
+</div>
+<!-- FILE davestewart/content-meta.php -->
+<!-- BEGIN .entry-meta-footer-->
+<div class="entry-meta-footer">
+	<!--
+    <span class="comment-count">Comments: <span>Comments Off<span class="screen-reader-text"> on Extract project libraries to their own git repositories</span></span></span>
+    <span class="author">Posted by: <a href="/author/admin/" title="Posts by Dave Stewart" rel="author">Dave Stewart</a></span>
+	-->
+
+
+
+
+	<div class="entry-categories">Categories: <a href="/category/setup/" title="View all posts in Setup">Setup</a>
+</div>
+    <div class="entry-tags">Tags: <a href="/tag/php-tag/" rel="tag">PHP</a>, <a href="/tag/github/" rel="tag">Github</a>, <a href="/tag/open-source/" rel="tag">Open Source</a>
+</div>
+	<div class="published">Date: <span style="font-weight:normal">March 2016</span>
+</div>
+
+<!-- END .entry-meta-footer-->
+</div>
+
+                                <!-- END .hentry-->
+				</div>
+
+
+<!-- BEGIN #comments -->
+<div id="comments">
+
+		<p class="nocomments">Comments are closed.</p>
+
+
+<!-- END #comments -->
+</div>
+				<!-- BEGIN .navigation .single-page-navigation -->
+				<div class="navigation single-page-navigation">
+					<div class="nav-previous">&larr; <a href="/setup/configuring-sites-in-laravel-homestead/" rel="prev">Configuring sites in Laravel Homestead</a>
+</div>
+					<div class="nav-next">
+<a href="/setup/wordpress-contact-form-setup/" rel="next">WordPress contact form setup</a> &rarr;</div>
+				<!-- END .navigation .single-page-navigation -->
+				</div>
+
+							<!-- END #primary .hfeed-->
+			</div>
+
+
+    		<!-- BEGIN #sidebar .aside-->
+		<div id="sidebar" class="aside">
+
+		<div id="ds_related_categories_widget-2" class="widget DS_Related_Categories_Widget">
+<h3 class="widget-title">Related categories</h3>
+<ul><li><a href="/category/setup/">Setup <span class="meta">6</span></a></li></ul>
+</div>
+<div id="ds_related_posts_widget-3" class="widget DS_Related_Posts_Widget">
+<h3 class="widget-title">Related Posts in Setup</h3>
+<ul>
+<li><a href="/setup/wordpress-contact-form-setup/">WordPress contact form setup <span class="meta">2018</span></a></li>
+<li><a href="/setup/extract-libraries-to-their-own-repositories/">Extract project libraries to their own git repositories  <span class="meta">2016</span></a></li>
+<li><a href="/setup/configuring-sites-in-laravel-homestead/">Configuring sites in Laravel Homestead <span class="meta">2015</span></a></li>
+<li><a href="/setup/fix-windows-broken-ssh-console/">Fix Windows broken SSH console output <span class="meta">2015</span></a></li>
+<li><a href="/setup/sourceview-indentation-fix/">Github & Bitbucket indentation fix <span class="meta">2015</span></a></li>
+<li><a href="/setup/flashdevelop-setup/">FlashDevelop setup <span class="meta">2014</span></a></li>
+</ul>
+</div>
+<div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"></div></div>
+		<!-- END #sidebar .aside-->
+		</div>
+
+
+<!-- FILE davestewart/footer.php -->
+
+        		<!-- END #content -->
+		</div>
+
+
+		<!-- BEGIN #footer -->
+		<div id="footer">
+
+		    <!-- BEGIN .footer-inner -->
+		    <div class="footer-inner">
+
+
+		        <!-- BEGIN .footer-col-1 -->
+<div class="footer-col-1">
+
+    <div id="ds_links-2" class="widget ds_links">
+<h3 class="widget-title">Commercial Portfolio</h3>
+<ul><li><a href="http://davestewart.co.uk/">davestewart.co.uk</a></li></ul>
+</div>
+<!-- END .footer-col-1 -->
+</div>
+
+<!-- BEGIN .footer-col-2 -->
+<div class="footer-col-2">
+
+    <div id="ds_links-4" class="widget ds_links">
+<h3 class="widget-title">Browse Projects</h3>
+<ul>
+<li><a href="/posts-by-category/">By Category</a></li>
+<li><a href="/posts-by-date/">By Date</a></li>
+<li>
+<a href="/posts-by-tag/">By Tag</a>  </li>
+</ul>
+</div>
+<!-- END .footer-col-2 -->
+</div>
+
+<!-- BEGIN .footer-col-3 -->
+<div class="footer-col-3">
+
+    <div id="ds_links-3" class="widget ds_links">
+<h3 class="widget-title">More Info</h3>
+<ul>
+<li><a href="https://twitter.com/dave_stewart">Contact</a></li>
+<li><a href="/about/">About</a></li>
+</ul>
+</div>
+<!-- END .footer-col-3 -->
+</div>
+
+		    <!-- END .footer-inner -->
+		    </div>
+
+		    <div class="footer-lower">
+		        <div class="footer-inner">
+		            <p class="copyright">&copy; Copyright 2022. Powered by <a href="http://wordpress.org/">WordPress</a></p>
+
+		        </div>
+		    </div>
+
+		<!-- END #footer -->
+		</div>
+
+		<a href="#" id="back-to-top"></a>
+
+
+
+	<!-- Theme Hook -->
+	<script type="text/javascript">
+/* <![CDATA[ */
+var zilla = {"ajaxurl":"\/wordpress\/wp-admin\/admin-ajax.php","nonce":"61b4b80d02","loading":"Loading..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/hoarder/js/jquery.custom.js?ver=1.0"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/comment-reply.min.js?ver=4.9.18"></script>
+<script type="text/javascript" src="/wordpress/wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js?ver=1.4.6"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var JQLBSettings = {"showTitle":"1","showCaption":"1","showNumbers":"1","fitToScreen":"0","resizeSpeed":"400","showDownload":"0","navbarOnTop":"0","marginSize":"0","slideshowSpeed":"4000","prevLinkTitle":"previous image","nextLinkTitle":"next image","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","pause":"(pause slideshow)","play":"(play slideshow)"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wordpress/wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js?ver=1.4.6"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/jquery/jquery.color.min.js?ver=2.1.1"></script>
+<script type="text/javascript" src="/wordpress/wp-includes/js/wp-embed.min.js?ver=4.9.18"></script>
+
+	<!-- Ran 36 queries 1.47 seconds -->
+<!-- END body-->
+</body>
+<!-- END html-->
+</html>
