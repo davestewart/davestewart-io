@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Form Builder</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	
+	<script type="text/javascript" src="/lib/js/jquery/jquery-1.2.1.pack.js"></script>
+
+	<script type="text/javascript" src="/lib/js/jquery/jquery.validate.pack.js"></script>
+	<script type="text/javascript" src="/lib/js/jquery/jquery.delegate.js"></script>
+	<script type="text/javascript" src="/lib/js/jquery/jquery.metadata.pack.js"></script>
+	
+	<script type="text/javascript" src="/lib/js/jquery/jquery.interface.js"></script>
+	<script type="text/javascript" src="/lib/js/jquery/jquery.$$.js"></script>
+
+	<script type="text/javascript" src="js/form-creator-08.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+		
+
+			var required = $$('#validation[required]')
+		
+			required.bind(
+				'click',
+				function(){
+					var state	= this.checked
+					var check	= $$('#validation[class]')
+					var label	= check.parents('label')
+					
+					check.attr('disabled', state ? '' : 'disabled')
+					label.toggleClass('disabled')
+					}
+				)
+		
+			$.metadata.setType("attr", "validation");
+			$("#create").validate()
+			
+			if($('#html').EnableTabs){
+				$('#html').EnableTabs()
+				}
+			
+			initTabs()
+			
+			updateAll()
+
+		});
+	
+	</script>
+
+
+	
+	<script type="text/javascript">
+	
+		function initTabs(){
+		
+			var tabs	= $('#tab-list-main a, #tab-list-preview a')
+			tabs.bind
+				(
+				'click',
+				function(e, i){
+					showTab(e)
+					}
+				)
+				
+			var tabs	= $('#tab-list-main a:first, #tab-list-preview a:first')
+			tabs.each(
+				function(e, i){
+					showTab(this)
+					}
+				)
+
+			/*tabs.bind
+				(
+				'mouseover',
+				function(e, i){showTab(e, true)}
+				).bind
+				(
+				'mouseout',
+				function(e, i){showTab(e, false)}
+				)
+			*/
+	
+			}
+	
+		function showTab(element, preview){
+		
+			// get element		
+				if(element.target){
+					element = element.target
+					}
+
+			// variables
+				var tabGroup		= $(element).parents('ul')
+				var tab				= $(element).parents('li')
+				
+				var sectionGroup	= $(tabGroup.attr('section'))
+				var sectionName		= tab.attr('section')
+				var section			= $(sectionName, sectionGroup)
+				
+			// preview
+				/*
+				if(preview != undefined){
+					var id = sectionName+ ' h3'
+					var previewHeader	= $(id)
+					
+					if(preview == true){
+						$('#section-main-design h3').text(previewHeader.text())
+						return
+						}
+					else if(preview === false){
+						return
+						}
+					}
+				*/
+
+			// update tabs
+				$('li', tabGroup).removeClass('active').addClass('inactive')
+				tab.removeClass('inactive').addClass('active')
+				
+			// update sections
+ 				$('.section', sectionGroup).hide()
+				section.show()
+				
+			}
+			
+	</script>
+	
+	<style type="text/css" media="screen">
+	
+		@import "css/main.css";
+		@import "css/form.css";
+		@import "css/form-ie.css";
+		@import "css/tabs.css";
+		
+	</style>
+	<!--[if lte IE 7]>
+	<style type="text/css" media="all">
+		@import "error-fields1-ie.css";
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<div id="page">
+	
+		<div id="header">
+			<h1>Form Builder</h1>
+			<h2>Easily build the base HTML for accessible, validated form elements</h2>
+		</div>
+		
+		<hr />
+		
+		<ul id="tab-list-main" class="tab-list" section="#section-main">
+			<li class="active"   section="#section-main-design"><a href="javascript:;">Design</a></li>
+			<li class="inactive" section="#section-main-names"><a class="" href="javascript:;">Data</a></li>
+			<li class="inactive" section="#section-main-ids"><a class="" href="javascript:;">Ids</a></li>
+			<li class="inactive" section="#section-main-validation"><a class="" href="javascript:;">Validation</a></li>
+			<li class="inactive" section="#section-main-markup"><a class="" href="javascript:;">Markup</a></li>
+			<li class="inactive" section="#section-main-data"><a class="" href="javascript:;">Options</a></li>
+		</ul>
+		
+		<div class="content" id="section-main">
+			
+			<form action="html/results.php" method="post" id="create" name="parameters">
+
+
+				<div id="section-main-design" class="section">
+					<h3>Enter labels, values, and UI type. This is the raw &quot;DNA&quot; of the form, that all further options will process.</h3>
+					<fieldset>
+						<legend>Content Options</legend>
+						<ul>
+							<li>
+								<label for="content[labels]"><span class="required">Labels</span><br />
+								<span class="info">Separate items with line breaks or commas</span></label>
+								<textarea id="content[labels]" name="content[labels]" class="text" rows="3" onchange="updateAll()" onkeyup="updateAll()">First Name
+Last Name
+E-mail Address</textarea>
+								<label for="content[labels]" class="error">This must contain some text</label>
+							</li>
+	
+							<li>
+								<label for="content[values]">Values<br />
+								<span class="info">Leave blank to use labels</span></label>
+								<textarea id="content[values]" name="content[values]" class="text" rows="3" onchange="updateAll()" onkeyup="updateAll()"></textarea>
+							</li>
+						</ul>
+					</fieldset>
+					
+				<fieldset>
+						<legend>Control Options</legend>
+						<ul>
+							<li>
+								<label for="control[type]"><span class="required">Type</span></label>
+								<select name="control[type]" id="control[type]" class="select" validation="required:true" onchange="updateAll()" onkeyup="updateAll()">
+									<optgroup label="Single controls">
+										<option value="text">Text</option>
+										<option value="textarea">Textarea</option>
+										<option value="label">Label</option>
+										<option value="hidden">Hidden</option>
+									</optgroup>
+									<optgroup label="Combined control">
+										<option value="radio">Radio buttons</option>
+										<option value="checkbox">Checkboxes</option>
+										<option value="select">Dropdown</option>
+										<option value="select-multiple">List</option>
+									</optgroup>
+								</select>
+							</li>
+							
+							<li id="control[label]-list">
+								<label for="control[label]"><span class="required">Group label</span></label>
+								<input name="control[label]" id="control[label]" type="text" class="text" onchange="updateAll()" onkeyup="updateAll()" value="Contact"/>
+							</li>
+	
+							<li id="control[options][select]-list">
+								<label for="control-options">Control options</label>
+								<fieldset>
+									<label><input name="control[options][select]" id="control[options][select]" type="checkbox" value="1" onclick="updateAll()" /> Add "Select..." </label>
+								</fieldset>
+							</li>
+							
+							<li id="control[options][multiple]-list">
+								<label for="control-options">Control options</label>
+								<fieldset>
+									<label><input name="control[options][multiple]" id="control[options][multiple]" type="checkbox" value="1" onclick="updateAll()" /> Allow Multiple selections </label>
+								</fieldset>
+							</li>
+							
+							<li id="control[options][length]-list">
+								<label for="max-length">Max length</label>
+								<input type="text" name="control[options][length]" id="control[options][length]" maxlength="4" class="text" value=""  onchange="updateAll()" onkeyup="updateAll()" />
+							</li>
+
+							<li id="control[options][rows]-list">
+								<label for="max-length">Rows</label>
+								<input type="text" name="control[options][rows]" id="control[options][rows]" maxlength="2" class="text" value="4" onchange="updateAll()" onkeyup="updateAll()" />
+							</li>
+						</ul>
+					</fieldset>
+
+				</div>
+				
+				
+
+				<div id="section-main-names" class="section">
+					<h3>Define the server-side data structure by specifying the formatting of &quot;name&quot; attributes</h3>
+				
+
+					<fieldset>
+						<legend>Prefix</legend>
+						<ul>
+							<li id="data[prefix]-list">
+								<label for="data[prefix]">Prefix with</label>
+								<input name="data[prefix]" type="text" class="text" id="data[prefix]" onchange="updateAll(); updateName()" onkeyup="updateAll(); updateName()" value="user"/>
+							</li>
+						</ul>
+					</fieldset>
+					
+
+				<fieldset>
+						<legend>Auto-formatting</legend>
+						<ul>
+							<li>
+								<label for="attributes[name][hierarchy]">Hierarchy naming style</label>
+								<select name="attributes[name][hierarchy]" id="attributes[name][hierarchy]" class="select" onchange="updateAll(); updateName()" onkeyup="updateAll(); updateName()">
+									<option value="[]">Square brackets ([])</option>
+									<option value="-">Dashes (-)</option>
+									<option value=":">Colons (:)</option>
+									<option value=".">Dots (.)</option>
+									<option value="">None</option>
+								</select>
+							</li>
+							<li>
+								<label for="attributes[name][spaces]">Space characters</label>
+								<select name="attributes[name][spaces]" id="attributes[name][spaces]" class="select" onchange="updateAll(); updateName()" onkeyup="updateAll(); updateName()">
+									<option value="-">Replace with dashes (-)</option>
+									<option value="_" selected="selected">Replace with underscores (_)</option>
+									<option value=" ">Ignore</option>
+									<option value="">Delete</option>
+								</select>
+							</li>
+							<li>
+								<label for="attributes[name][illegal]">Illegal characters</label>
+								<select name="attributes[name][illegal]" id="attributes[name][illegal]" class="select" onchange="updateAll(); updateName()" onkeyup="updateAll(); updateName()">
+									<option value="_" selected="selected">Replace with underscores (_)</option>
+									<option value="" selected="selected">Delete</option>
+								</select>
+							</li>
+							<li>
+								<label for="attributes[name][example]">Example</label>
+								<label class="text" id="attributes[name][example]">prefix[element_name]</label>
+							</li>
+						</ul>
+					</fieldset>
+					
+				<fieldset>
+						<legend>Options</legend>
+						<ul>
+							<li id="data[type]-list">
+								<label for="data[type]">Datatype for compound values (checkboxes)</label>
+								<fieldset>
+									<label><input name="data[type]" type="radio" value="numeric" onclick="updateAll(); updateName()" checked="checked" /> 
+									Numeric Array: <em>group_label[]</em></label>
+									<label><input name="data[type]" type="radio" value="associative" onclick="updateAll(); updateName()" /> 
+									Associative Array: <em>group_label[element_name]</em> </label>
+									<label><input name="data[type]" type="radio" value="value" onclick="updateAll(); updateName()" /> Individual Values: <em>element_name</em> </label>
+								</fieldset>
+							</li>
+						</ul>
+					</fieldset>
+
+
+				</div>
+				
+
+				<div id="section-main-ids" class="section">
+					<h3>Automatically format &quot;id&quot; attrbutes for client-side document traversal</h3>
+					<fieldset>
+						<legend> Auto-formatting</legend>
+						<ul>
+							<li>
+								<label for="attributes[id][hierarchy]">Hierarchy naming style</label>
+								<select name="attributes[id][hierarchy]" id="attributes[id][hierarchy]" class="select" onchange="updateAll(); updateId()" onkeyup="updateAll(); updateId()">
+									<option value="[]">Square brackets ([])</option>
+									<option value="-">Dashes (-)</option>
+									<option value=":">Colons (:)</option>
+									<option value=".">Dots (.)</option>
+									<option value="" selected="selected">None</option>
+								</select>
+							</li>
+							<li>
+								<label for="attributes[id][spaces]">Space characters</label>
+								<select name="attributes[id][spaces]" id="attributes[id][spaces]" class="select" onchange="updateAll(); updateId()" onkeyup="updateAll(); updateId()">
+									<option value="-" selected="selected">Replace with dashes (-)</option>
+									<option value="_">Replace with underscores (_)</option>
+									<option value=" ">Ignore</option>
+									<option value="">Delete</option>
+								</select>
+							</li>
+							<li>
+								<label for="attributes[id][illegal]">Illegal characters</label>
+								<select name="attributes[id][illegal]" id="attributes[id][illegal]" class="select" onchange="updateAll(); updateId()" onkeyup="updateAll(); updateId()">
+									<option value="_">Replace with underscores (_)</option>
+									<option value="" selected="selected">Delete</option>
+								</select>
+							</li>
+							<li>
+								<label for="attributes[id][example]">Example</label>
+								<label class="text" id="attributes[id][example]">element-id</label>
+							</li>
+						</ul>
+					</fieldset>
+
+
+				</div>
+				
+				<div id="section-main-validation" class="section">
+				
+					<h3>Turn validation on or off, and define basic validation options</h3>
+
+					<fieldset>
+						<legend>What is this?</legend>
+						<p style="padding:0px 20px">This web app uses the <em> <a href="http://jquery.com/">jQuery</a> </em>Validation plugin</em>, which makes form validation as easy as adding attributes to a form control, and clicking Submit.</p>
+						<p style="padding:0px 20px">Read the full documentation and download the plugin <a href="http://docs.jquery.com/Plugins/Validation">here</a>.</p>
+					</fieldset>
+
+				<fieldset>
+						<legend>Options</legend>
+						<ul>
+							<li id="validation-list">
+								<label for="validation[required]">Options</label>
+								<fieldset>
+									<label><input name="validation[required]" id="validation[required]" type="checkbox"  value="1" checked="checked" onclick="updateAll()" /> Field is required</label>
+									<label><input name="validation[class]" id="validation[class]" type="checkbox" class="indent" value="1" checked="checked" onclick="updateAll()" /> Add &quot;required&quot; &lt;span&gt; to control label</label>
+									<label><input name="validation[error]" id="validation[error]" type="checkbox" class="indent" value="1" checked="checked" onclick="updateAll()" /> Add &quot;error&quot; &lt;label&gt; below control</label>
+								</fieldset>
+							</li>
+							<li>
+								<label for="validation[attribute]">Validation attribute name</label>
+								<input type="text" name="validation[attribute]" id="validation[attribute]" class="text" value="validation"  onchange="updateAll()" onkeyup="updateAll()" />
+							</li>
+							<li>
+								<label for="validation[required_class]">Required &lt;span&gt; class</label>
+								<input type="text" name="validation[required_class]" id="validation[required_class]" class="text" value="required"  onchange="updateAll()" onkeyup="updateAll()" />
+							</li>
+							<li>
+								<label for="validation[error_class]">Error &lt;label&gt; class</label>
+								<input type="text" name="validation[error_class]" id="validation[error_class]" class="text" value="error"  onchange="updateAll()" onkeyup="updateAll()" />
+							</li>
+						</ul>
+					</fieldset>
+					
+				</div>
+				
+				<div id="section-main-markup" class="section">
+					<h3>Customize various aspects of the final HTML</h3>
+					<fieldset>
+						<legend>HTML</legend>
+						<ul>
+							<li>
+								<label for="markup[html][wrap]">Wrap control markup with</label>
+								<select name="markup[html][wrap]" id="markup[html][wrap]" class="select" onchange="updateAll()" onkeyup="updateAll()">
+									<option value="li">List-item elements (li)</option>
+									<option value="div">Div elements (div)</option>
+									<option value="">Don't wrap elements</option>
+								</select>
+							</li>
+							
+							<li>
+								<label for="markup[html][indent]">Auto-indent when selecting</label>
+								<select name="markup[html][indent]" id="markup[html][indent]" class="select" onchange="updateAll()" onkeyup="updateAll()">
+									<option value="0">Don't indent</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7" selected="selected">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+								</select>
+							</li>
+						</ul>
+					</fieldset>
+
+				<fieldset>
+						<legend>CSS</legend>
+						<ul>
+							<li>
+								<label for="markup[css][control]">Non-CSS2 browsers</label>
+								<label style="width:300px;"><input name="markup[css][control]" type="checkbox" class="checkbox" id="markup[css][control]" onclick="updateAll()" value="1" checked="checked" /> Classify controls based on type (ie class="checkbox")</label>
+							</li>
+						</ul>
+					</fieldset>
+
+				</div>
+				
+				
+				<div id="section-main-data" class="section">
+					<h3>Control how initial values will be parsed to create individual controls and attributes</h3>
+					<fieldset>
+						<legend>Label / Value Parsing</legend>
+						<ul>
+							<li>
+								<label for="data[split]">Split data at</label>
+								<fieldset id="data[split]-fieldset">
+									<label><input name="data[split]" type="checkbox" class="checkbox" id="data[split]" value="\n" checked="checked" onclick="updateAll()" /> Linebreaks</label>
+									<label><input name="data[split]" type="checkbox" class="checkbox" id="data[split]" value="\t" checked="checked" onclick="updateAll()" /> Tabs</label>
+									<label><input name="data[split]" type="checkbox" class="checkbox" id="data[split]" value="," checked="checked" onclick="updateAll()" /> Commas</label>
+									<label><input name="data[split]" type="checkbox" class="checkbox" id="data[split]" value="\s" onclick="updateAll()" /> Whitespace</label>
+								</fieldset>
+							</li>
+							
+							<li>
+								<label for="data[options]">Options</label>
+								<fieldset id="data[options]">
+									<label><input type="checkbox" name="data[options][ignore_multiple]" id="data[options][ignore_multiple]" class="checkbox" value="ignore multiple consecutive delimiters" checked="checked" onclick="updateAll()" /> Ignore multiple consecutive delimiters</label>
+									<label><input type="checkbox" name="data[options][skip_empty]" id="data[options][skip_empty]" class="checkbox" value="skip empty entities" checked="checked" onclick="updateAll()" /> Skip empty entities</label>
+								</fieldset>
+							</li>
+
+							<li>
+								<label for="data[optgroup]">Signify start of &lt;optgroup&gt; with</label>
+								<input type="text" name="data[optgroup]" id="data[optgroup]" class="text" maxlength="1" value="#" onchange="updateAll()" onclick="updateAll()" />
+							</li>
+						</ul>
+					</fieldset>		
+					
+				<fieldset>
+						<legend>ID / Name Options</legend>
+						<ul>
+
+							<li>
+								<label for="data[options][truncate]">Truncate</label>
+								<select name="data[options][truncate]" id="data[options][truncate]" class="select"  onchange="updateAll()" onkeyup="updateAll()">
+									<option value="[^\w-_ ]">At first illegal character</option>
+									<option value="\s">At first space</option>
+									<option value="">No</option>
+								</select>
+							</li>
+						</ul>
+					</fieldset>
+					
+				<fieldset>
+						<legend>This Form's Values</legend>
+						<ul>
+							<li>
+								<input type="submit" class="button centered" value="View..." />
+							</li>
+						</ul>
+					</fieldset>
+
+
+				</div>
+				
+				
+				
+				
+			</form>
+			
+			<hr />
+		</div>
+
+		<ul id="tab-list-preview" class="tab-list" section="#section-preview">
+			<li class="active" section="#preview"><a href="javascript:;">Preview</a></li>
+			<li class="inactive" section="#code"><a href="javascript:;">HTML</a></li>
+			<li class="inactive" section="#code, #preview"><a href="javascript:;">Both</a></li>
+		</ul>
+		<div class="content" id="section-preview">
+			<form id="code" name="code" class="section">
+				<h3>Generated HTML code. Editing the code will update the live preview.</h3>
+				<fieldset>
+					<legend>HTML</legend>
+					<div style="padding:10px 20px 10px 10px;">
+						<textarea name="html" rows="4" wrap="off" class="text" id="html"  onchange="updateForm()" onkeyup="updateForm()" style="width:100% !important"></textarea>
+						<input type="button" name="select_and_indent" id="select_and_indent" onclick="selectHTML()" value="Select (and indent) HTML"  style="width:100% !important; margin:10px 0px 0px 5px;" />
+					</div>
+				</fieldset>
+				<div style="clear:both"></div>
+			</form>
+
+			<form id="preview" name="preview" action="html/results.php" method="post" class="section">
+				<h3>Live preview of generated HTML code, with full validation if specified. Submit form to view data structure.</h3>
+				<fieldset>
+					<legend>Preview</legend>
+					<ul id="elements">
+						<!-- placeholder for form controls -->
+					</ul>
+					<ul>
+						<li>
+							<input name="" type="submit" class="submit" value="Submit" />
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+			
+			
+			
+			<hr />
+		</div>
+	</div>
+	
+	<div style="height:500px;"></div>
+	
+
+</body>
+
+
+
+
+</html>

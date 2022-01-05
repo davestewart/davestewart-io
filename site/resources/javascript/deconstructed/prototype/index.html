@@ -3,47 +3,45 @@
 <head>
 	<title>Prototype Deconstructed</title>
 	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="description" content="jQuery Deconstructed is designed to visually and interactively deconstruct the internal code of the jQuery library. It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow.">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="jQuery Deconstructed is designed to visually and interactively deconstruct the internal code of the jQuery library. It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow." />
 	
-	<link rel="shortcut icon" href="/resources/javascript/deconstructed/favicon.ico" type="image/x-icon">
-</head>
-<body>
-<p>.
-	<link rel="image_src" href="http://www.keyframesandcode.com/resources/javascript/deconstructed/assets/img/extra/facebook-thumbnail.png">
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />.
+	<link rel="image_src" href="http://www.keyframesandcode.com/resources/javascript/deconstructed/assets/img/extra/facebook-thumbnail.png" />
 
-	<link href="/resources/javascript/deconstructed/assets/css/prettify.css" rel="stylesheet" type="text/css">
-	<link href="/resources/javascript/deconstructed/assets/css/formatting.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/prettify.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/formatting.css" rel="stylesheet" type="text/css" />
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/utils/base64.pack.js"></script>
-	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/utils/prettify.js"></script>
-	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/lib/jquery/jquery.cookie.js"></script>
-	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/core.js"></script>
+	<script type="text/javascript" src="../assets/js/utils/base64.pack.js"></script>
+	<script type="text/javascript" src="../assets/js/utils/prettify.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/jquery/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../assets/js/core.js"></script>
 	
 	<script type="text/javascript">
 		writeColorsStylesheet('../')
 	</script>
 	
-	<style type="text/css"></style>
+	<style type="text/css">
 
-</p>
+	</style>
+</head>
+<body onload="prettyPrint()">
 <div id="content">
 	<table width="100%" border="0" cellspacing="10" cellpadding="0" id="help">
 		<tr>
 			<td colspan="2">
 				<div class="text" style="text-align:center; padding:30px; position:relative; width:inherit">
-					<h1>
-<span class="highlight">Prototype</span> Deconstructed</h1>
+					<h1><span class="highlight">Prototype</span> Deconstructed</h1>
 					<h3>Navigate the physical Prototype code to see what, where, and how the magic happens</h3>
-					<a id="home" href="/resources/javascript/deconstructed/" title="Deconstructed home page...">Home</a>
+					<a id="home" href="../" title="Deconstructed home page...">Home</a>
 				</div>
 			</td>
 		</tr>
 		<tr>
 			<td rowspan="2" class="text" id="intro" style="width:60%">
 				<div style="position:relative">
-					<p class="large hightlight">The Deconstructed series is designed to visually and interactively deconstruct the internal code of JavaScript libraries, including <a href="/resources/javascript/deconstructed/jquery/">jQuery</a>, <a href="/resources/javascript/deconstructed/prototype/">Prototype</a> and <a href="/resources/javascript/deconstructed/mootools/">MooTools</a>.</p>
+					<p class="large hightlight">The Deconstructed series is designed to visually and interactively deconstruct the internal code of JavaScript libraries, including <a href="../jquery/">jQuery</a>, <a href="../prototype/">Prototype</a> and <a href="../mootools/">MooTools</a>.</p>
 					<p class="large">It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow. </p>
 					<p class="large"><em>Instructions: click  <span class="highlight" title="Function, Property and Code blocks">element</span> headers to view specific code. Click <span class="highlight" title="Section, Class, Extend and Object blocks">group</span> headers to preview all nested descriptions. <span class="highlight" title="For example, CTRL+Clicking the main Code container will open ALL blocks in the entire page">CTRL+click</span> group headers to view all nested code. Click <span class="highlight" title="Those with a link indicator or icon">function</span> names to view official API docs.</em></p>
 					<p id="links"><a href="http://www.keyframesandcode.com/code/development/javascript/jquery/jquery-deconstructed/">comment</a> | <a href="javascript:m();void(0)">email</a> | <a href="http://twitter.com/dave_stewart/">follow</a></p>
@@ -115,7 +113,7 @@
 					<label for="hover">Hover: </label>
 					<select name="hover" id="hover" style="width:100px;">
 						<option value="yes">Yes</option>
-						<option value="no" selected>No</option>
+						<option value="no" selected="selected">No</option>
 					</select>
 				</p>
 			</td>
@@ -136,7 +134,7 @@
  *--------------------------------------------------------------------------*/</pre>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a title="View the documentation for ">Core functionality</a></p>
+					<p class="title"><span class="type">Section : </span><a href="" title="View the documentation for ">Core functionality</a></p>
 				</div>
 				<div class="block object"> <a name="Prototype" id="Prototype"></a>
 					<div class="head">
@@ -168,8 +166,7 @@ var Prototype = {</pre>
 			MobileSafari:   /Apple.*Mobile.*Safari/.test(ua)
 		}
 	})(),</pre>
-					</div>
-<div class="block variables">
+					</div><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>BrowserFeatures</strong></p>
 </div>
@@ -198,15 +195,13 @@ var Prototype = {</pre>
 			return isSupported;
 		})()
 	},</pre>
-					</div>
-<div class="block variables">
+					</div><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>ScriptFragment</strong></p>
 </div>
 <pre class="body prettyprint">
 	ScriptFragment: '&lt;script[^&gt;]*&gt;([\\S\\s]*?)&lt;\/script&gt;',</pre>
-					</div>
-<div class="block variables">
+					</div><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>JSONFilter</strong></p>
 </div>
@@ -239,8 +234,7 @@ var Prototype = {</pre>
 					<pre class="body prettyprint">
 if (Prototype.Browser.MobileSafari)
 	Prototype.BrowserFeatures.SpecificElementExtensions = false;</pre>
-				</div>
-<div class="block variables">
+				</div><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>Abstract</strong></p>
 </div>
@@ -374,7 +368,7 @@ var Class = (function() {</pre>
 			</div>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a title="View the documentation for ">Extend native classes</a></p>
+					<p class="title"><span class="type">Section : </span><a href="" title="View the documentation for ">Extend native classes</a></p>
 				</div>
 				<div class="block extend"> <a name="Object" id="Object"></a>
 					<div class="head">
@@ -767,8 +761,7 @@ Object.extend(Function.prototype, (function() {</pre>
 					</div>
 					<pre class="body">
 })());</pre>
-				</div>
-<div class="block variables">
+				</div><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>Date.prototype.toJSON</strong></p>
 </div>
@@ -781,15 +774,13 @@ Date.prototype.toJSON = function() {
 		this.getUTCMinutes().toPaddedString(2) + ':' +
 		this.getUTCSeconds().toPaddedString(2) + 'Z&quot;';
 };</pre>
-				</div>
-<div class="block variables">
+				</div><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>RegExp.prototype.match</strong></p>
 </div>
 <pre class="body prettyprint">
 RegExp.prototype.match = RegExp.prototype.test;</pre>
-				</div>
-<div class="block variables">
+				</div><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>RegExp.escape</strong></p>
 </div>
@@ -797,8 +788,7 @@ RegExp.prototype.match = RegExp.prototype.test;</pre>
 RegExp.escape = function(str) {
 	return String(str).replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
 };</pre>
-				</div>
-<div class="block extend class"> <a name="PeriodicalExecuter"></a>
+				</div><div class="block extend class"> <a name="PeriodicalExecuter"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://www.prototypejs.org/api/periodicalExecuter" title="View the documentation for PeriodicalExecuter">PeriodicalExecuter</a></p>
 <p class="desc">This is a simple facility for periodical execution of a function. This essentially encapsulates the native clearInterval/setInterval mechanism found in native Window objects</p>
@@ -1339,8 +1329,7 @@ Object.extend(String.prototype, (function() {</pre>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
 					<p class="title"><span class="type">Section : </span><a href="http://www.prototypejs.org/learn/class-inheritance" title="View the documentation for ">Additional Prototype classes</a></p>
-				</div>
-<div class="block extend class"> <a name="Template"></a>
+				</div><div class="block extend class"> <a name="Template"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://www.prototypejs.org/api/template" title="View the documentation for Template">Template</a></p>
 <p class="desc">The Template class is used to produce formatted output of text strings</p>
@@ -1404,7 +1393,7 @@ var Template = Class.create({</pre>
 				</div>
 				<div class="block object"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Object : </span><a title="View the documentation for ">$break</a></p>
+						<p class="title"><span class="type">Object : </span><a href="" title="View the documentation for ">$break</a></p>
 						<p class="desc">Object</p>
 					</div>
 					<pre class="body prettyprint">
@@ -1832,8 +1821,7 @@ Array.from = $A;</pre>
 						<p class="desc">Prototype extends all native Javascript arrays with quite a few powerful methods</p>
 					</div>
 					<pre class="body">
-(function() {</pre>
-<div class="block code">
+(function() {</pre><div class="block code">
 <div class="head">
 <p class="title"><span class="type">Code : </span><strong>Borrow native methods</strong></p>
 </div>
@@ -1852,8 +1840,7 @@ Array.from = $A;</pre>
 		for (var i = 0, length = this.length; i &lt; length; i++)
 			iterator(this[i]);
 	}</pre>
-					</div>
-<div class="block variables">
+					</div><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>_each</strong></p>
 </div>
@@ -2108,8 +2095,7 @@ Array.from = $A;</pre>
 function $H(object) {
 	return new Hash(object);
 };</pre>
-				</div>
-<div class="block extend class"> <a name="Hash"></a>
+				</div><div class="block extend class"> <a name="Hash"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://www.prototypejs.org/api/Hash" title="View the documentation for Hash">Hash</a></p>
 <p class="desc">Hash can be thought of as an associative array, binding unique keys to values (which are not necessarily unique), though it can not guarantee consistent order its elements when iterating. </p>
@@ -2328,8 +2314,7 @@ var Hash = Class.create(Enumerable, (function() {</pre>
 					</div>
 					<pre class="body">
 })());</pre>
-				</div>
-<div class="block variables">
+				</div><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>Hash.from</strong></p>
 </div>
@@ -2464,8 +2449,7 @@ Object.extend(Number.prototype, (function() {</pre>
 function $R(start, end, exclusive) {
 	return new ObjectRange(start, end, exclusive);
 }</pre>
-				</div>
-<div class="block extend class"> <a name="ObjectRange"></a>
+				</div><div class="block extend class"> <a name="ObjectRange"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://www.prototypejs.org/api/objectRange" title="View the documentation for ObjectRange">ObjectRange</a></p>
 <p class="desc">Ranges represent an interval of values. The value type just needs to be “compatible,” that is, to implement a succ method letting us step from one value to the next (its successor)</p>
@@ -2638,8 +2622,7 @@ Ajax.Responders.register({
 	onCreate:   function() { Ajax.activeRequestCount++ },
 	onComplete: function() { Ajax.activeRequestCount-- }
 });</pre>
-				</div>
-<div class="block extend class"> <a name="Ajax.Base"></a>
+				</div><div class="block extend class"> <a name="Ajax.Base"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><strong>Ajax.Base</strong></p>
 <p class="desc">Ajax base class for all Ajax classes</p>
@@ -2676,16 +2659,14 @@ Ajax.Base = Class.create({</pre>
 					</div>
 					<pre class="body">
 });</pre>
-				</div>
-<div class="block extend class"> <a name="Ajax.Request"></a>
+				</div><div class="block extend class"> <a name="Ajax.Request"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://www.prototypejs.org/api/Ajax.Request" title="View the documentation for Ajax.Request">Ajax.Request</a></p>
 <p class="desc">Initiates and processes an AJAX request</p>
 </div>
 <pre class="body">
 
-Ajax.Request = Class.create(Ajax.Base, {</pre>
-<div class="block variables">
+Ajax.Request = Class.create(Ajax.Base, {</pre><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>_complete</strong></p>
 </div>
@@ -2930,8 +2911,7 @@ Ajax.Request = Class.create(Ajax.Base, {</pre>
 					<pre class="body prettyprint">
 Ajax.Request.Events =
 	['Uninitialized', 'Loading', 'Loaded', 'Interactive', 'Complete'];</pre>
-				</div>
-<div class="block extend class"> <a name="Ajax.Response"></a>
+				</div><div class="block extend class"> <a name="Ajax.Response"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://www.prototypejs.org/api/ajax/response" title="View the documentation for Ajax.Response">Ajax.Response</a></p>
 <p class="desc">The object passed as the first argument of all Ajax requests callbacks</p>
@@ -3031,7 +3011,7 @@ Ajax.Response = Class.create({</pre>
 					</div>
 <div class="block function"> <a name="getAllResponseHeaders"></a>
 <div class="head">
-<p class="title"><span class="type">Function : </span><a href="/resources/javascript/deconstructed/prototype/getResponseHeader">getAllResponseHeaders</a></p>
+<p class="title"><span class="type">Function : </span><a href="getResponseHeader">getAllResponseHeaders</a></p>
 <p class="desc">Returns a string containing all headers separated by a line break. Throws an error otherwise. This is just a wrapper around the xmlHttpRequest object’s native method. Prefer it’s shorter counterpart getAllHeaders</p>
 </div>
 <pre class="body prettyprint">
@@ -3080,8 +3060,7 @@ Ajax.Response = Class.create({</pre>
 					</div>
 					<pre class="body">
 });</pre>
-				</div>
-<div class="block extend class"> <a name="Ajax.Updater"></a>
+				</div><div class="block extend class"> <a name="Ajax.Updater"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://www.prototypejs.org/api/ajax/updater" title="View the documentation for Ajax.Updater">Ajax.Updater</a></p>
 <p class="desc">Performs an AJAX request and updates a container’s contents based on the response text</p>
@@ -3137,8 +3116,7 @@ Ajax.Updater = Class.create(Ajax.Request, {</pre>
 					</div>
 					<pre class="body">
 });</pre>
-				</div>
-<div class="block extend class"> <a name="Ajax.PeriodicalUpdater"></a>
+				</div><div class="block extend class"> <a name="Ajax.PeriodicalUpdater"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://www.prototypejs.org/api/Ajax.PeriodicalUpdater" title="View the documentation for Ajax.PeriodicalUpdater">Ajax.PeriodicalUpdater</a></p>
 <p class="desc">Periodically performs an AJAX request and updates a container’s contents based on the response text. Offers a mechanism for “decay,” which lets it trigger at widening intervals while the response is unchanged</p>
@@ -3243,7 +3221,7 @@ function $(element) {
 				</div>
 				<div class="block function"> <a name=""></a>
 					<div class="head">
-						<p class="title"><span class="type">Function : </span><a title="View the documentation for ">_getElementsByXPath</a></p>
+						<p class="title"><span class="type">Function : </span><a href="" title="View the documentation for ">_getElementsByXPath</a></p>
 						<p class="desc">Description</p>
 					</div>
 					<pre class="body prettyprint">
@@ -5462,8 +5440,7 @@ if (Prototype.BrowserFeatures.SelectorsAPI &amp;&amp;
 <p class="desc"> A class that queries the document for elements that match a given CSS selector. </p>
 </div>
 <pre class="body">
-Object.extend(Selector, {</pre>
-<div class="block variables">
+Object.extend(Selector, {</pre><div class="block variables">
 <div class="head">
 <p class="title"><span class="type">Properties : </span><strong>_cache</strong></p>
 </div>
@@ -5472,7 +5449,7 @@ Object.extend(Selector, {</pre>
 					</div>
 					<div class="block object"> <a name=""></a>
 						<div class="head">
-							<p class="title"><span class="type">Object : </span><a title="View the documentation for ">xpath</a></p>
+							<p class="title"><span class="type">Object : </span><a href="" title="View the documentation for ">xpath</a></p>
 						</div>
 						<pre class="body prettyprint">
 	xpath: {
@@ -5580,7 +5557,7 @@ Object.extend(Selector, {</pre>
 					</div>
 					<div class="block object"> <a name=""></a>
 						<div class="head">
-							<p class="title"><span class="type">Object : </span><a title="View the documentation for ">criteria</a></p>
+							<p class="title"><span class="type">Object : </span><a href="" title="View the documentation for ">criteria</a></p>
 						</div>
 						<pre class="body prettyprint">
 	criteria: {
@@ -5604,7 +5581,7 @@ Object.extend(Selector, {</pre>
 					</div>
 					<div class="block object"> <a name=""></a>
 						<div class="head">
-							<p class="title"><span class="type">Object : </span><a title="View the documentation for ">patterns</a></p>
+							<p class="title"><span class="type">Object : </span><a href="" title="View the documentation for ">patterns</a></p>
 						</div>
 						<pre class="body prettyprint">
 	patterns: [
@@ -5623,7 +5600,7 @@ Object.extend(Selector, {</pre>
 					</div>
 					<div class="block object"> <a name=""></a>
 						<div class="head">
-							<p class="title"><span class="type">Object : </span><a title="View the documentation for ">assertions</a></p>
+							<p class="title"><span class="type">Object : </span><a href="" title="View the documentation for ">assertions</a></p>
 						</div>
 						<pre class="body prettyprint">
 	assertions: {
@@ -5651,7 +5628,7 @@ Object.extend(Selector, {</pre>
 					</div>
 					<div class="block object"> <a name=""></a>
 						<div class="head">
-							<p class="title"><span class="type">Object : </span><a title="View the documentation for ">handlers</a></p>
+							<p class="title"><span class="type">Object : </span><a href="" title="View the documentation for ">handlers</a></p>
 						</div>
 						<pre class="body prettyprint">
 	handlers: {
@@ -5862,7 +5839,7 @@ Object.extend(Selector, {</pre>
 					</div>
 					<div class="block object"> <a name=""></a>
 						<div class="head">
-							<p class="title"><span class="type">Object : </span><a title="View the documentation for ">pseudos</a></p>
+							<p class="title"><span class="type">Object : </span><a href="" title="View the documentation for ">pseudos</a></p>
 						</div>
 						<pre class="body prettyprint">
 	pseudos: {
@@ -5990,7 +5967,7 @@ Object.extend(Selector, {</pre>
 					</div>
 					<div class="block object"> <a name=""></a>
 						<div class="head">
-							<p class="title"><span class="type">Object : </span><a title="View the documentation for ">operators</a></p>
+							<p class="title"><span class="type">Object : </span><a href="" title="View the documentation for ">operators</a></p>
 						</div>
 						<pre class="body prettyprint">
 	operators: {
@@ -6094,7 +6071,7 @@ function $$() {
 			</div>
 			<div class="block section"> <a name=""></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a title="View the documentation for ">Form</a></p>
+					<p class="title"><span class="type">Section : </span><a href="" title="View the documentation for ">Form</a></p>
 				</div>
 				<div class="block object"> <a name=""></a>
 					<div class="head">
@@ -6456,8 +6433,7 @@ var $F = Form.Element.Methods.getValue;</pre>
 				<div class="block object"> <a name="Form.Element.Serializers" id="Form.Element.Serializers"></a>
 					<div class="head">
 						<p class="title"><span class="type">Object : </span><strong>Form.Element.Serializers</strong></p>
-						<p class="desc">Form serialization functions</p>
-</div>
+						<p class="desc">Form serialization functions</p></div>
 					<pre class="body prettyprint">
 Form.Element.Serializers = {
 
@@ -6562,8 +6538,7 @@ Abstract.TimedObserver = Class.create(PeriodicalExecuter, {</pre>
 					</div>
 					<pre class="body prettyprint">
 });</pre>
-				</div>
-<div class="block extend class"> <a name="Form.Element.Observer"></a>
+				</div><div class="block extend class"> <a name="Form.Element.Observer"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://www.prototypejs.org/api/timedObserver/form-element-observer" title="View the documentation for Form.Element.Observer">Form.Element.Observer</a></p>
 <p class="desc">orm.Element observer implements the getValue() method using Form.Element.getValue() on the given element. See Abstract.TimedObserver for general documentation on timed observers</p>
@@ -6584,8 +6559,7 @@ Form.Element.Observer = Class.create(Abstract.TimedObserver, {
 </div>
 <pre class="body">
 });</pre>
-				</div>
-<div class="block extend class"> <a name="Form.Observer"></a>
+				</div><div class="block extend class"> <a name="Form.Observer"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://www.prototypejs.org/api/timedObserver/form-observer" title="View the documentation for Form.Observer">Form.Observer</a></p>
 <p class="desc">Form observer implements the getValue() method using Form.serialize() on the element from the first argument. See Abstract.TimedObserver for general documentation on timed observers</p>
@@ -6609,8 +6583,7 @@ Form.Observer = Class.create(Abstract.TimedObserver, {
 </div>
 <pre class="body">
 });</pre>
-				</div>
-<div class="block extend class"> <a name="EventObserver" id="EventObserver"></a>
+				</div><div class="block extend class"> <a name="EventObserver" id="EventObserver"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://api.prototypejs.org/dom/abstract/eventobserver/" title="View the documentation for Abstract.EventObserver">Abstract.EventObserver</a></p>
 <p class="desc">No info</p>
@@ -6682,8 +6655,7 @@ Abstract.EventObserver = Class.create({</pre>
 					</div>
 					<pre class="body">
 });</pre>
-				</div>
-<div class="block extend class"> <a name="Form.Element.EventObserver"></a>
+				</div><div class="block extend class"> <a name="Form.Element.EventObserver"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://api.prototypejs.org/dom/form/element/eventobserver/" title="View the documentation for Form.Element.EventObserver">Form.Element.EventObserver</a></p>
 <p class="desc">No info</p>
@@ -6695,8 +6667,7 @@ Form.Element.EventObserver = Class.create(Abstract.EventObserver, {
 		return Form.Element.getValue(this.element);
 	}
 });</pre>
-				</div>
-<div class="block extend class"> <a name="Form.EventObserver"></a>
+				</div><div class="block extend class"> <a name="Form.EventObserver"></a>
 <div class="head">
 <p class="title"><span class="type">Class : </span><a href="http://api.prototypejs.org/dom/form/element/eventobserver/" title="View the documentation for Form.EventObserver">Form.EventObserver</a></p>
 <p class="desc">No info</p>
@@ -6711,7 +6682,7 @@ Form.EventObserver = Class.create(Abstract.EventObserver, {
 		</div>
 			<div class="block section"> <a name="Event" id="Event"></a>
 				<div class="head">
-					<p class="title"><span class="type">Section : </span><a title="View the documentation for ">Event</a></p>
+					<p class="title"><span class="type">Section : </span><a href="" title="View the documentation for ">Event</a></p>
 				</div>
 				<div class="block code" style="background:none"> <a name="Event" id="Event"></a>
 					<div class="head">
@@ -7290,6 +7261,5 @@ Element.addMethods();</pre>
 		pageTracker._initData();
 		pageTracker._trackPageview(pageUrl);
 	</script>
-
 </body>
 </html>

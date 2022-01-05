@@ -1,0 +1,83 @@
+
+/* BLOCK ICONS */
+
+	#lib.icons div.block > .head
+	{
+		background-image:url("../../img/icons/icon-closed-grey.gif");
+	}
+	
+	#lib.icons div.block.open > .head
+	{
+		background-image:url("../../img/icons/icon-open-grey.gif");
+	}
+	
+	#lib.icons div.block > .head > p > a, 
+	#lib.icons div.block > .head > p > a:link{
+		background-image:url("../../img/icons/icon-link-grey.gif");
+		}
+
+/* HEAD LINKS */
+
+	.head,
+	.head *{
+		color:#333;
+		font-weight:normal;
+		font-family:Arial, Helvetica, sans-serif
+		}
+
+	.block > .head > p > a:link,
+	.block > .head > p > a:visited{
+		color:#333;
+		border-bottom:1px dotted #666;
+		font-weight:bold;
+	}
+
+	.block > .head > p > a:hover{
+		color:#FFF;
+	}
+
+/* FORMATTING */
+
+	body{ background-color:#F6F6F6; }
+
+/* SECTION COLORS */
+
+	.section { border-left:10px solid #d8efff; }
+	.section > .head { background-color:#d8efff; }
+	
+	.extend { border-left:10px solid #d8d8d8; }
+	.extend > .head { background-color:#d8d8d8; }
+	
+	.object { border-left:10px solid #e6e6e6; }
+	.object > .head { background-color:#e6e6e6; }
+	
+	.function { border-left:10px solid #f8d7d7; }
+	.function > .head { background-color:#f8d7d7; }
+	
+	.variables { border-left:10px solid #fff7d8; }
+	.variables > .head { background-color:#fff7d8; }
+	
+	.code { border-left:10px solid #e6f8d7; }
+	.code > .head { background-color:#e6f8d7; }
+	
+	
+/* SECTION COLORS (HOVER) */
+
+	#lib.hover .section:hover { border-left:10px solid #C1E7FF; }
+	#lib.hover .section:hover > .head { background-color:#C1E7FF; }
+	
+	#lib.hover .extend:hover { border-left:10px solid #C7C7C7; }
+	#lib.hover .extend:hover > .head { background-color:#C7C7C7; }
+	
+	#lib.hover .object:hover { border-left:10px solid #D4D4D4; }
+	#lib.hover .object:hover > .head { background-color:#D4D4D4; }
+	
+	#lib.hover .function:hover { border-left:10px solid #F5C9C9; }
+	#lib.hover .function:hover > .head { background-color:#F5C9C9; }
+	
+	#lib.hover .variables:hover { border-left:10px solid #FFEEA8; }
+	#lib.hover .variables:hover > .head { background-color:#FFEEA8; }
+	
+	#lib.hover .code:hover { border-left:10px solid #D0F2B5; }
+	#lib.hover .code:hover > .head { background-color:#D0F2B5; }
+	

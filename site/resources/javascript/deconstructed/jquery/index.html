@@ -3,47 +3,45 @@
 <head>
 	<title>jQuery Deconstructed</title>
 	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="description" content="jQuery Deconstructed is designed to visually and interactively deconstruct the internal code of the jQuery library. It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow.">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="jQuery Deconstructed is designed to visually and interactively deconstruct the internal code of the jQuery library. It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow." />
 	
-	<link rel="shortcut icon" href="/resources/javascript/deconstructed/favicon.ico" type="image/x-icon">
-</head>
-<body>
-<p>.
-	<link rel="image_src" href="http://www.keyframesandcode.com/resources/javascript/deconstructed/assets/img/extra/facebook-thumbnail.png">
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />.
+	<link rel="image_src" href="http://www.keyframesandcode.com/resources/javascript/deconstructed/assets/img/extra/facebook-thumbnail.png" />
 
-	<link href="/resources/javascript/deconstructed/assets/css/prettify.css" rel="stylesheet" type="text/css">
-	<link href="/resources/javascript/deconstructed/assets/css/formatting.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/prettify.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/formatting.css" rel="stylesheet" type="text/css" />
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/utils/base64.pack.js"></script>
-	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/utils/prettify.js"></script>
-	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/lib/jquery/jquery.cookie.js"></script>
-	<script type="text/javascript" src="/resources/javascript/deconstructed/assets/js/core.js"></script>
+	<script type="text/javascript" src="../assets/js/utils/base64.pack.js"></script>
+	<script type="text/javascript" src="../assets/js/utils/prettify.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/jquery/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../assets/js/core.js"></script>
 	
 	<script type="text/javascript">
 		writeColorsStylesheet('../')
 	</script>
 
-	<style type="text/css"></style>
+	<style type="text/css">
 
-</p>
+	</style>
+</head>
+<body onload="prettyPrint()">
 <div id="content">
 	<table width="100%" border="0" cellspacing="10" cellpadding="0" id="help">
 		<tr>
 			<td colspan="2">
 				<div class="text" style="text-align:center; padding:30px; position:relative; width:inherit">
-					<h1>
-<span class="highlight">jQuery</span> Deconstructed</h1>
+					<h1><span class="highlight">jQuery</span> Deconstructed</h1>
 					<h3>Navigate the physical jQuery code to see what, where, and how the magic happens</h3>
-					<a id="home" href="/resources/javascript/deconstructed/" title="Deconstructed home page...">Home</a>
+					<a id="home" href="../" title="Deconstructed home page...">Home</a>
 				</div>
 			</td>
 		</tr>
 		<tr>
 			<td rowspan="2" class="text" id="intro" style="width:60%">
 				<div style="position:relative">
-					<p class="large hightlight">The Deconstructed series is designed to visually and interactively deconstruct the internal code of JavaScript libraries, including <a href="/resources/javascript/deconstructed/jquery/">jQuery</a>, <a href="/resources/javascript/deconstructed/prototype/">Prototype</a> and <a href="/resources/javascript/deconstructed/mootools/">MooTools</a>.</p>
+					<p class="large hightlight">The Deconstructed series is designed to visually and interactively deconstruct the internal code of JavaScript libraries, including <a href="../jquery/">jQuery</a>, <a href="../prototype/">Prototype</a> and <a href="../mootools/">MooTools</a>.</p>
 					<p class="large">It breaks the physical JavaScript into visual blocks that you can easiliy navigate. Each block opens to reveal its internal code. Clickable hyperlinks allow you to follow program flow. </p>
 					<p class="large"><em>Instructions: click  <span class="highlight" title="Function, Property and Code blocks">element</span> headers to view specific code. Click <span class="highlight" title="Section, Class, Extend and Object blocks">group</span> headers to preview all nested descriptions. <span class="highlight" title="For example, CTRL+Clicking the main Code container will open ALL blocks in the entire page">CTRL+click</span> group headers to view all nested code. Click <span class="highlight" title="Those with a link indicator or icon">function</span> names to view official API docs.</em></p>
 					<p id="links"><a href="http://www.keyframesandcode.com/code/development/javascript/jquery/jquery-deconstructed/">comment</a> | <a href="javascript:m();void(0)">email</a> | <a href="http://twitter.com/dave_stewart/">follow</a></p>
@@ -111,7 +109,7 @@
 					<label for="hover">Hover: </label>
 					<select name="hover" id="hover" style="width:100px;">
 						<option value="yes">Yes</option>
-						<option value="no" selected>No</option>
+						<option value="no" selected="selected">No</option>
 					</select>
 				</p>
 			</td>
@@ -181,7 +179,7 @@
 	rnotwhite = /\S/,
 
 	// Used for trimming whitespace
-	rtrim = /^(\s| )+|(\s| )+$/g,
+	rtrim = /^(\s|\u00A0)+|(\s|\u00A0)+$/g,
 
 	// Match a standalone tag
 	rsingleTag = /^&lt;(\w+)\s*\/?&gt;(?:&lt;\/\1&gt;)?$/,
@@ -4100,14 +4098,14 @@ var Expr = Sizzle.selectors =
 {
 	order: [ &quot;ID&quot;, &quot;NAME&quot;, &quot;TAG&quot; ],
 	match: {
-		ID: /#((?:[\wÀ-&#65535;-]|\\.)+)/,
-		CLASS: /\.((?:[\wÀ-&#65535;-]|\\.)+)/,
-		NAME: /\[name=['&quot;]*((?:[\wÀ-&#65535;-]|\\.)+)['&quot;]*\]/,
-		ATTR: /\[\s*((?:[\wÀ-&#65535;-]|\\.)+)\s*(?:(\S?=)\s*(['&quot;]*)(.*?)\3|)\s*\]/,
-		TAG: /^((?:[\wÀ-&#65535;\*-]|\\.)+)/,
+		ID: /#((?:[\w\u00c0-\uFFFF-]|\\.)+)/,
+		CLASS: /\.((?:[\w\u00c0-\uFFFF-]|\\.)+)/,
+		NAME: /\[name=['&quot;]*((?:[\w\u00c0-\uFFFF-]|\\.)+)['&quot;]*\]/,
+		ATTR: /\[\s*((?:[\w\u00c0-\uFFFF-]|\\.)+)\s*(?:(\S?=)\s*(['&quot;]*)(.*?)\3|)\s*\]/,
+		TAG: /^((?:[\w\u00c0-\uFFFF\*-]|\\.)+)/,
 		CHILD: /:(only|nth|last|first)-child(?:\((even|odd|[\dn+-]*)\))?/,
 		POS: /:(nth|eq|gt|lt|first|last|even|odd)(?:\((\d*)\))?(?=[^-]|$)/,
-		PSEUDO: /:((?:[\wÀ-&#65535;-]|\\.)+)(?:\((['&quot;]?)((?:\([^\)]+\)|[^\(\)]*)+)\2\))?/
+		PSEUDO: /:((?:[\w\u00c0-\uFFFF-]|\\.)+)(?:\((['&quot;]?)((?:\([^\)]+\)|[^\(\)]*)+)\2\))?/
 	},
 	leftMatch: {},
 	attrMap: {
@@ -7620,8 +7618,7 @@ jQuery.extend({
 	},
 		</pre>
 					</div>
-					<div class="block function">
-<a name="easing" id="swing2"></a> <a name="linear"></a><a name="swing" id="swing"></a>
+					<div class="block function"><a name="easing" id="swing2"></a> <a name="linear"></a><a name="swing" id="swing"></a>
 						<div class="head">
 							<p class="title">FUNCTIONS : <a href="http://api.jquery.com/linear/">linear</a> &amp; swing</p>
 							<p class="desc">Internal function</p>
@@ -7968,8 +7965,7 @@ if ( jQuery.expr &amp;&amp; jQuery.expr.filters ) {
 				<div class="block function"> <a name="initialize"></a>
 					<div class="head">
 						<p class="title"><span class="type">Function : </span><a href="http://api.jquery.com/genFx/">genFx</a></p>
-						<span class="desc">Internal function</span>
-</div>
+						<span class="desc">Internal function</span></div>
 					<pre class="body prettyprint">
 
 function genFx( type, num ) {
@@ -8414,6 +8410,5 @@ window.jQuery = window.$ = jQuery;	</pre>
 		pageTracker._initData();
 		pageTracker._trackPageview(pageUrl);
 	</script>
-
 </body>
 </html>

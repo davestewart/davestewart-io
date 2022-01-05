@@ -1,0 +1,67 @@
+
+/* HEAD LINKS */
+
+	.block > .head > p,
+	.block > .head > p > a{
+		font-family:Arial, Helvetica, sans-serif;
+		font-weight:normal;
+		}
+
+	.block > .head > p > a{
+		border-bottom:1px dotted #FFF;
+	}
+
+	.block > .head > p > a:hover{
+		color:#000;
+	}
+	
+/* SECTION COLORS */
+
+	.section {
+		border-left:10px solid #09F;
+	}
+	
+	.section > .head {
+		background-color:#09F;
+	}
+	
+	.object {
+		border-left:10px solid #666;
+	}
+	
+	.object > .head {
+		background-color:#666;
+	}
+	
+	.extend {
+		border-left:10px solid #000;
+	}
+	
+	.extend > .head {
+		background-color:#000;
+	}
+	
+	.function {
+		border-left:10px solid #C00;
+	}
+	
+	.function > .head {
+		background-color:#C00;
+	}
+	
+	.variables {
+		border-left:10px solid #FC0;
+	}
+	
+	.variables > .head {
+		background-color:#FC0;
+	}
+	
+	.code {
+		border-left:10px solid #6C0;
+	}
+	
+	.code > .head {
+		background-color:#6C0;
+	}
+	

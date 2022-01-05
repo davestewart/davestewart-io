@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Maxscript - MaxHtml</title>
+
+	<meta name="script"			content="Max HTML">
+	<meta name="category"		content="UI Design">
+	<meta name="description"	content="Provides methods to run max commands from an ActiveX HTML control within a rollout.">
+	<meta name="version"		content="1.0">
+	<meta name="date"			content="3/11/2005">
+	<meta name="software"		content="Max 7">
+	<meta name="download"		content="maxHtml.zip">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../../html/elements.css" rel="stylesheet" type="text/css" />
+
+	<script language="javascript" src="../../../../html/functions.js"></script>
+	<script language="JavaScript" type="text/JavaScript">
+		preloadImages('layouts,bg,config'.split(','))
+	</script>
+
+</head>
+<body>
+<a href="../../../../../code">Home</a> &gt; <a href="../../../../maxscript">MaxScripts</a>
+<h1>MaxHtml</h1>
+<div class="content">
+	<h2>Description</h2>
+	<p>Provides methods to run max commands from an ActiveX HTML page.</p>
+	<p>Also, provides simple methods to write back to the page.</p>
+	<p>&nbsp;</p>
+	<p>Example uses:</p>
+	<ul>
+		<li>Run MaxScript commands as part of a help system </li>
+		<li>Build a custom UI using HTML / JavaScript </li>
+	</ul>
+	<p><em>Note: documentation is temporary and will be updated soon!</em></p>
+	<h2>Demo UI </h2>
+	<p><img src="ui/ui.jpg" style="aspect-ratio: 577 / 670;"/></p>
+	<h2>Functions</h2>
+	<p>This is just a base set of functions. I hope to add more soon. </p>
+	<p>&nbsp;</p>
+	<table width="550"  border="0" cellspacing="5" cellpadding="0">
+    	<tr>
+    		<td>parseUrl</td>
+    		<td>Parse and run the max command from the web page</td>
+   		</tr>
+    	<tr>
+    		<td width="87"> addMaxLink<br /></td>
+    		<td width="433">Add a MaxScript link to the web page</td>
+   		</tr>
+    	<tr>
+    		<td>addHtmlLink</td>
+    		<td>Add a normal HTML link to the web page</td>
+   		</tr>
+    	<tr>
+    		<td>setBgColor<br /></td>
+    		<td>Set the background color of the page to the max UI color </td>
+   		</tr>
+   	</table>
+	<p>&nbsp;</p>
+	<h2>Download &amp; Installation</h2>
+	<p>Download <a href="maxHtml.zip">MaxHtml.zip</a></p>
+	<p>&nbsp;</p>
+	<p>MaxHtml is a struct (function library) in conjunction with a JavaScript library. It is designed for programmers to use within their scripts.</p>
+	<p>&nbsp;</p>
+	<p>Basic implementation goes like this: </p>
+	<p>&nbsp;</p>
+	<p>HTML</p>
+	<ul>
+		<li>Include maxHtml.js  in your HTML</li>
+		<li>Construct  your HTML links correctly, e.g. &lt;a href=<em>&quot;javascript:maxCmd('render()')&quot;&gt;render&lt;/a&gt;</em></li>
+	</ul>
+	<p>3dsMax</p>
+	<ul>
+		<li>Include <em>maxHtml.ms</em> in your MaxScript</li>
+		<li>Set up the ActiveX browser control to display your html page</li>
+		<li>Use the control's <em>BeforeNavigate2</em> event to intercept the links in the web page</li>
+		<li>Pass the url along to the maxHtml struct like so: <em>maxHtml.parseUrl url</em></li>
+	</ul>
+	<p>Explore the demo to see how things work. Be sure to change the path in the top of the demo.ms file to point to towards the html demo file!</p>
+	<h2>Bugs and Feedback</h2>
+	<p>Email me <a href="javascript:mail('MaxHtml')">here</a></p>
+</div>
+</body>
+</html>

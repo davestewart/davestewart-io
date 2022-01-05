@@ -1,0 +1,110 @@
+
+/* BLOCK ICONS */
+
+	#lib.icons div.block .head
+	{
+		background-image:url("../../img/icons/icon-closed-white.gif");
+	}
+	
+	#lib.icons div.block.open > .head
+	{
+		background-image:url("../../img/icons/icon-open-white.gif");
+	}
+	
+	#lib.icons div.block > .head > p > a{
+		background-image:url("../../img/icons/icon-link-white.gif");
+		}
+
+/* HEAD LINKS */
+
+	.block > .head > p > strong{
+		font-family:"Courier New", Courier, monospace;
+		}
+
+	.block > .head > p > a, 
+	.block > .head > p > a:link{
+		font-family:"Courier New", Courier, monospace;
+		color:#FFF;
+		}
+		
+	.block > .head > p > a:hover{
+		color:#FFF;
+		border-bottom:1px dotted #FFF;
+	}
+	
+/* FORMATTING */
+
+	body{ background-color:#000; }
+
+	.block{ background-color: #000 !important; }
+	
+	div.function,
+	div.variables,
+	div.code{
+		background-color: #222 !important;
+		}
+		
+	pre.body{
+		background-color:#222 !important;
+		}
+
+	pre.body,
+	.tooltip{ background-color:#222; color:#696; }
+	
+	pre a{
+		border-bottom:2px dotted #A4DA25 !important;
+		}
+
+	pre a:hover{
+		background:#666;
+		color:#FFF;
+		}
+
+	
+/* CODE COLORS */
+
+	span.pln { color:#CCC; }
+	span.kwd { color:#0CF; }
+	span.com { color:#366; }
+
+/* SECTION COLORS */
+	
+	.section { border-left:10px solid #161616; }
+	.section > .head{ background-color:#161616; }
+	
+	.extend { border-left:10px solid #534250; }
+	.extend > .head { background-color:#534250; }
+	
+	.object { border-left:10px solid #68676F; }
+	.object > .head { background-color:#68676F; }
+	
+	
+	.function { border-left:10px solid #948D7B; }
+	.function > .head { background-color:#948D7B; }
+	
+	.variables { border-left:10px solid #B0926C; }
+	.variables > .head { background-color:#B0926C; }
+	
+	.code { border-left:10px solid #B0A96C; }
+	.code > .head { background-color:#B0A96C; }
+	
+/* SECTION COLORS (HOVER) */
+
+	#lib.hover .section:hover { border-left:10px solid #3b3b3b; }
+	#lib.hover .section:hover > .head { background-color:#3b3b3b; }
+	
+	#lib.hover .extend:hover { border-left:10px solid #6f5e6b; }
+	#lib.hover .extend:hover > .head { background-color:#6f5e6b; }
+	
+	#lib.hover .object:hover { border-left:10px solid #7f7e87; }
+	#lib.hover .object:hover > .head { background-color:#7f7e87; }
+	
+	#lib.hover .function:hover { border-left:10px solid #a79f8d; }
+	#lib.hover .function:hover > .head { background-color:#a79f8d; }
+	
+	#lib.hover .variables:hover { border-left:10px solid #c2a37c; }
+	#lib.hover .variables:hover > .head { background-color:#c2a37c; }
+	
+	#lib.hover .code:hover { border-left:10px solid #c2ba7c; }
+	#lib.hover .code:hover > .head { background-color:#c2ba7c; }
+	

@@ -1,0 +1,133 @@
+
+/*
+------------------------------------------------------------------------------------------------
+  SECTIONS
+------------------------------------------------------------------------------------------------
+*/
+	body{
+		text-align:center;
+		width:90%;
+		}
+	
+	#center{
+		text-align:left;
+		width:800px;
+		margin:auto;
+		position:relative;
+		left:-5%;
+		}
+	
+	#header{
+		font-size:36px;
+		color:#CCCCCC;
+		padding:10px;
+		margin-left:190px;
+		}
+		
+	#footer{
+		border-top:1px solid #dddddd;
+		padding:10px;
+		padding-right:0px;
+		text-align:middle;
+		}
+	
+	#content{
+		display:block;
+		/*
+		float:center;
+		*/
+		width:600px;
+		z-index:10;
+		text-align:left;
+		}
+		
+	#body{
+		margin-left:0px;
+		}
+	
+	
+/*
+------------------------------------------------------------------------------------------------
+  NAVIGATION
+------------------------------------------------------------------------------------------------
+*/
+	
+	/* SECTIONS */
+	
+		#main-navigation, #section-navigation, #footer-navigation{
+			display:block;
+			clear:both;
+			float:none;
+			margin:0px;
+			padding:0px;
+			}
+			
+		#main-navigation, #section-navigation{
+			padding-left:200px;
+			height:20px;
+			clear:both;
+			}
+			
+		#footer-navigation{
+			float:right;
+			}
+			
+		
+	/* BULLETS */
+	
+		#main-navigation li,
+		#section-navigation li, 
+		#footer-navigation li { 
+			float: left;
+			margin:0px;
+			margin-right: 2px;
+			margin-bottom:4px;
+			background: #CCCCCC;
+			list-style-type:none;
+			}
+		
+	/* LINKS */
+	
+		#main-navigation a.dim, #footer-navigation a {
+			background: #e3e3e3;
+			color:#bbbbbb;
+			}
+			
+		#main-navigation .active,
+		#main-navigation a,
+		#section-navigation .active, 
+		#section-navigation a,
+		#footer-navigation .active, 
+		#footer-navigation a{
+			font-family: Verdana, Arial, Helvetica, sans-serif !important;
+			font-size:13px;
+			padding: 1px 6px;
+			text-decoration: none;
+			color: #000000;
+			display: block;
+			}
+			
+		#main-navigation a,
+		#footer-navigation a	 {
+			background: #dddddd;
+			color:#999999;
+			}
+		
+		#footer-navigation a,#section-navigation a	{
+			font-size:11px;
+			}
+		
+		#section-navigation .active, 
+		#section-navigation a:hover, 
+		#section-navigation a:active, 
+		#main-navigation .active, 
+		#main-navigation a:hover, 
+		#main-navigation a:active,
+		#footer-navigation .active, 
+		#footer-navigation a:hover, 
+		#footer-navigation a:active
+		{
+			color: #FFFFFF;
+			background: #0099CC;
+			}
+			

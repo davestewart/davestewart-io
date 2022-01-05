@@ -1,13 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Highlight Demo</title>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	
 	<script type="text/javascript" src="/lib/js/jquery/jquery-1.2.1.pack.js"></script>
 	<script type="text/javascript" src="/lib/js/jquery/jquery.highlight.js"></script>
 
-	<script type="text/javascript" src="/resources/javascript/jQuery/demos/js/tabs.js"></script>
+	<script type="text/javascript" src="js/tabs.js"></script>
 
 	<script type="text/javascript">
 	
@@ -35,16 +36,20 @@
 			);
 	</script>
 	
-	<style type="text/css" media="screen">@import "/resources/javascript/jQuery/demos/css/main.css";
-		@import "/resources/javascript/jQuery/demos/css/form.css";
-		@import "/resources/javascript/jQuery/demos/css/form-ie.css";
-		@import "/resources/javascript/jQuery/demos/css/tabs.css";</style>
+	<style type="text/css" media="screen">
+		@import "css/main.css";
+		@import "css/form.css";
+		@import "css/form-ie.css";
+		@import "css/tabs.css";
+	</style>
 	<!--[if lte IE 7]>
 	<style type="text/css" media="all">
 		@import "error-fields1-ie.css";
 	</style>
 	<![endif]-->
-	<style type="text/css" media="screen">/* code */
+	<style type="text/css" media="screen">
+	
+		/* code */
 		
 			thead td{
 				border-bottom: 1px solid #ccc !important;
@@ -90,7 +95,7 @@
 				}
 				
 			.highlight-selected{
-				background-image:url('/resources/javascript/jQuery/demos/img/highlight-selected.gif') !important;
+				background-image:url('img/highlight-selected.gif') !important;
 				}
 		/* specific row styling for the lists ... */
 		
@@ -121,8 +126,9 @@
 				}
 				
 			.highlight{
-				background-image:url(/resources/javascript/jQuery/demos/img/highlight.gif);
-				}</style>
+				background-image:url(img/highlight.gif);
+				}
+	</style>
 </head>
 <body>
 	<div id="page">
@@ -132,10 +138,10 @@
 			<h2>jQuery plugin to highlight a form field’s parent tag (or any other selector) as you tab into it</h2>
 		</div>
 		
-		<hr>
+		<hr />
 		
 		<ul id="tab-list-main" class="tab-list" section="#section-main">
-			<li class="active" section="#intro"><a href="javascript:;">Introduction</a></li>
+			<li class="active"   section="#intro"><a href="javascript:;">Introduction</a></li>
 			<li class="inactive" section="#form-demo"><a class="" href="javascript:;">Form Demo</a></li>
 			<li class="inactive" section="#table-demo"><a class="" href="javascript:;"> Table Demo</a></li>
 			<li class="inactive" section="#list-demo"><a class="" href="javascript:;"> List Demo</a></li>
@@ -225,19 +231,18 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 				<p>Tab into, or select the form fields to see the control's parent li element receive the highlighting class.</p>
 				<form action="html/results.php" method="post" id="create" name="parameters">
 					<fieldset style="border:none">
-				<ul class="controls">
-<li>
+				<ul class="controls"><li>
 							<label for="label">Text field</label>
-							<input name="single-line-" id="label" type="text" class="text" maxlength="" value="">
+							<input name="single-line-" id="label" type="text" class="text" maxlength="" value=""  />
 							</li>
 							<li>
 								<label for="multi-line">Text box</label>
-								<textarea name="controls[multi_line]" id="multi-line" class="textarea" rows="4" maxlength=""></textarea>
+								<textarea name="controls[multi_line]" id="multi-line" class="textarea" rows="4" maxlength=""  /></textarea>
 							</li>
 							<li>
 								<label for="dropdown">Dropdown List</label>
-								<select name="controls[dropdown]" id="dropdown" class="select">
-									<option value="" selected>Select...</option>
+								<select name="controls[dropdown]" id="dropdown" class="select"  >
+									<option value="" selected="selected">Select...</option>
 									<option value="">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </option>
 									<option value="option 1">Option 1</option>
 									<option value="option 2">Option 2</option>
@@ -247,25 +252,24 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 							<li>
 								<label for="radio">Radio Buttons</label>
 								<fieldset id="radio">
-									<label><input name="controls[radio][]" id="controls-radio-1" type="radio" class="radio" value="option 1"> Option 1</label>
-									<label><input name="controls[radio][]" id="controls-radio-2" type="radio" class="radio" value="option 2"> Option 2</label>
-									<label><input name="controls[radio][]" id="controls-radio-3" type="radio" class="radio" value="option 3"> Option 3</label>
+									<label><input name="controls[radio][]" id="controls-radio-1" type="radio" class="radio" value="option 1"  /> Option 1</label>
+									<label><input name="controls[radio][]" id="controls-radio-2" type="radio" class="radio" value="option 2"  /> Option 2</label>
+									<label><input name="controls[radio][]" id="controls-radio-3" type="radio" class="radio" value="option 3"  /> Option 3</label>
 								</fieldset>
 							</li>
 							<li>
 								<label for="checkboxes">Check-boxes</label>
 								<fieldset id="checkboxes">
-									<label><input name="controls[checkboxes][]" id="" type="checkbox" class="checkbox" value="check 1"> Check 1</label>
-									<label><input name="controls[checkboxes][]" id="" type="checkbox" class="checkbox" value="check 2"> Check 2</label>
-									<label><input name="controls[checkboxes][]" id="" type="checkbox" class="checkbox" value="check 3"> Check 3</label>
+									<label><input name="controls[checkboxes][]" id="" type="checkbox" class="checkbox" value="check 1" /> Check 1</label>
+									<label><input name="controls[checkboxes][]" id="" type="checkbox" class="checkbox" value="check 2" /> Check 2</label>
+									<label><input name="controls[checkboxes][]" id="" type="checkbox" class="checkbox" value="check 3" /> Check 3</label>
 								</fieldset>
 							</li>
 							<li>
-								<input name="Button" type="button" class="button centered" value="Submit">
+								<input name="Button" type="button" class="button centered" value="Submit" />
 							</li>
 					</ul>
-				</fieldset>
-</form>
+				</fieldset></form>
 					
 				</div>
 				
@@ -278,31 +282,11 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 					<pre>$('#table1').highlight()</pre>
 					<p>Move your mouse over the table to see the table rows receive the highlighting class.</p>
 					<table width="90%" border="0" cellspacing="0" cellpadding="2" id="table1">
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
 					</table>
 					
 					<h4>Table cells</h4>
@@ -310,31 +294,11 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 					<pre>$('#table2').highlight('td')</pre>
 					<p>Move your mouse over the table to see the table cells receive the highlighting class.</p>
 					<table width="90%" border="0" cellspacing="0" cellpadding="2" id="table2">
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
 					</table>
 					
 					<h4>Toggling table rows</h4>
@@ -344,31 +308,11 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 	.highlight('tr', 'highlight-selected', 'mousedown');</pre>
 					<p>Click the table rows to toggle the highlighting class.</p>
 					<table width="90%" border="0" cellspacing="0" cellpadding="2" id="table3">
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-						<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
 					</table>
 					</div>
 				<div id="list-demo" class="section">
@@ -376,7 +320,7 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 					
 					<h4>List items</h4>
 					<p>The following code is used to highlight a list's elements as the mouse passes over them.</p>
-					<pre>$('#list1').highlight(null, 'list-highlight')<br></pre>
+					<pre>$('#list1').highlight(null, 'list-highlight')<br /></pre>
 					<p>Move your mouse over the list to see the list items receive the highlighting class</p>
 					<ul id="list1">
 						<li>Item 1</li>
@@ -414,7 +358,7 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 			<div id="download" class="section">
 					<h3>Download Highlight here</h3>
 					<h4>Download</h4>
-					<p>Download <a href="/resources/javascript/jQuery/highlight/jquery.highlight.js">jquery.highlight.js</a>.</p>
+					<p>Download <a href="../highlight/jquery.highlight.js">jquery.highlight.js</a>.</p>
 					<h4>Feedback</h4>
 					<p>If you have any comments, or wish to report any bugs or unexpected behaviour, please do so using the commenting system on the <a href="http://www.keyframesandcode.com/code/development/javascript/jquery-highlight-plugin/">project's blog page</a>.</p>
 					<p>I can't promise to answer questions on usage (that's what this help is for!), but I'll do my best to fix bugs.</p>
@@ -424,7 +368,7 @@ $('form').highlight(null, <span class="red">'some-class'</span>)
 				<p>&nbsp;</p>
 			</div>
 			
-			<hr>
+			<hr />
 		</div>
 
 </div>

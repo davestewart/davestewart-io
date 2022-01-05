@@ -1,0 +1,15 @@
+<h3>Download and Installation</h3>
+Download and run <a href="http://www.keyframesandcode.com/resources/maxscript/Tools/Scripted Lookat/Scripted Lookat.ms">Scripted Lookat</a> from 3dsmax.
+
+It will create the macroscript in the correct directory for your max version, then you can add the script to a toolbar by going to:
+<ul>
+	<li>Customize &gt; Customize User Interface...</li>
+	<li>and looking under the <strong>Animation Tools</strong> category for <strong>Scripted Lookat</strong>.</li>
+</ul>
+
+
+<h3>Download</h3>
+Download <a href="http://www.keyframesandcode.com/resources/maxscript/Tools/Scripted Lookat/Scripted Lookat.ms">Scripted Lookat</a>.
+
+
+<img src="http://www.keyframesandcode.com/resources/maxscript/Tools/Scripted Lookat/Scripted Lookat.gif" class="no-border" />

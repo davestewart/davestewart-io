@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Maxscript - Viewport Layout Manager</title>
+
+	<meta name="script"			content="Viewport Layout Manager">
+	<meta name="category"		content="Workflow">
+	<meta name="description"	content="Adds a toolbar that allows you to swap between viewport layouts on the fly, remembering settings per viewport between layouts (and optionally, sessions)">
+	<meta name="software"		content="Max 6">
+	<meta name="version"		content="1.0">
+	<meta name="date"			content="3/11/2006">
+	<meta name="download"		content="Viewport Layout Manager 1.2.ms">
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../../html/elements.css" rel="stylesheet" type="text/css" />
+
+	<script language="javascript" src="../../../../html/functions.js"></script>
+	<script language="JavaScript" type="text/JavaScript">
+		preloadImages('layouts,bg,config'.split(','))
+	</script>
+
+</head>
+<body>
+<!-- breadcrumb start -->
+<a href="http://www.davestewart.co.uk">Home</a> &gt; <a href="../../../../index.html">Code</a> &gt; <a href="../../../../catalogue.php?lang=maxscript">MAXScript</a>
+<!-- breadcrumb end -->
+<h1 class="title1">Viewport Layout Manager</h1>
+<div style="margin-left:50px">
+	<h2>Description</h2>
+	<p>Adds a toolbar that allows you to swap between viewport layouts on the fly, remembering settings per viewport between layouts (and optionally, sessions).</p>
+	<p>&nbsp;</p>
+	<p><img src="ui/screens.gif" style="aspect-ratio: 500 / 336;"style="margin-bottom:15px;"/></p>
+	<p>Example uses:</p>
+	<ul>
+		<li>use one layout for setup or modelling, and another for animation</li>
+	<li>Store camera views in each layout</li>
+	<li>Wireframe / shaded layouts </li>
+	</ul>
+	<p>&nbsp;</p>
+	<h2>UI</h2>
+	<img src="ui/ui.gif" style="aspect-ratio: 479 / 284;"border="0" usemap="#Map" id="ui"/>
+	<map name="Map" id="Map">
+		<area shape="rect" coords="16,13,223,34" href="#" onMouseOver="showUI('layouts')" onMouseOut="resetUI()" />
+		<area shape="rect" coords="228,13,248,33" href="#"  onMouseOver="showUI('bg')" onMouseOut="resetUI()" />
+		<area shape="rect" coords="248,13,268,33" href="#"  onMouseOver="showUI('config')" onMouseOut="resetUI()" />
+	</map>
+	<p><em>Rollover  ui to see the options...</em></p>
+	<h2>Features</h2>
+	<ul>
+		<li> Change viewport layout on the fly</li>
+		<li>Remembers individual viewport settings across layouts </li>
+		<li>Save layout sets, eg per task (modelling, animation), per scene, or per project</li>
+	</ul>
+	<p>Stores and retrieves - per view</p>
+	<ul>
+		<li> View type / named camera</li>
+		<li>Perspective view's viewpoint</li>
+		<li>Shading mode</li>
+		<li>Safe frame</li>
+		<li>Grid state</li>
+		<li>Bg image</li>
+		<li>Bg display</li>
+		<li>Active viewport</li>
+	</ul>
+	<h2>Options</h2>
+	<ul>
+		<li> Quick background image on / off</li>
+		<li>Reset layout / all layouts</li>
+		<li>Save / load settings to file</li>
+		<li>Auto-dock to top or bottom</li>
+		<li>Auto-start with max</li>
+		<li>Clear settings on startup</li>
+	</ul>
+	<h2>Download &amp; Installation</h2>
+	<p>Download <a href="Viewport%20Layout%20Manager%201.2.ms">Viewport Layout Manager 1.2.ms</a></p>
+	<p>&nbsp;</p>
+	<p> Run the .ms file once and it will install Views-ViewportLayoutManager.mcr to the 3dsmax/UI/MacroScripts directory, and install the new toolbar automatically.</p>
+	<h2>Bugs and Feedback</h2>
+	<p>Email me <a href="javascript:mail('Viewport Layout Manager')">here</a></p>
+</div>
+</body>
+</html>

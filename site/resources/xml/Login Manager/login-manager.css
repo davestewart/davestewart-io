@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*** GLOBAL ***/
+
+	*{
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:11px;
+		margin:0px;
+		padding:0px;
+		}
+	
+	body{
+		margin:25px;
+		}
+	
+/*** HEADINGS ***/
+
+	h1{
+		font-size:24px;
+		font-weight:bold;
+		margin-bottom:20px;
+		text-transform:capitalize;
+		}
+		
+	h2{
+		font-size:13px;
+		font-weight:bold;
+		border-bottom:1px solid #000;
+		clear:both;
+		}
+	h3{
+		clear:both;
+		float:left;
+		padding-bottom:10px;
+		width:200px;
+		}
+		
+/*** FORM ***/
+
+	form{
+		display:inline;
+		}
+		
+	input{
+		width:150px;
+		text-transform:capitalize;
+		cursor:pointer;
+		}
+	
+/*** STRUCTURE ***/
+
+	.category{
+		margin:20px 0px 20px 20px;
+		}
+		
+	.site{
+		border-top:1px solid #ccc;
+		padding:10px;
+		clear:both;
+		}
+		
+	.application{
+		border-top:1px dotted #aaa;
+		margin-top:10px;
+		padding-top:10px;
+		margin-left:200px;
+		}
+	
+	.title{
+		width:75px;
+		padding-right:5px;
+		padding-top:2px;
+		float:left;
+		text-align:right;
+		font-weight:bold;
+		text-transform:capitalize;
+		font-variant:small-caps;
+		}
+		
+/*** LINKS ***/
+
+	a, a:link, a:visited{
+		height:100%;
+		color:#000;
+		text-decoration:none;
+		}
+		
+	a:hover{
+		text-decoration:underline;
+		}
+		
+	.over{
+		background-color:#ddf;
+		}

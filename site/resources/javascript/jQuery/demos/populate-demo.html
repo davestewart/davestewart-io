@@ -1,13 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Populate Demo</title>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	
 	<script type="text/javascript" src="/lib/js/jquery/jquery-1.2.1.pack.js"></script>
 	<script type="text/javascript" src="/lib/js/jquery/jquery.populate.js"></script>
 
-	<script type="text/javascript" src="/resources/javascript/jQuery/demos/js/tabs.js"></script>
+	<script type="text/javascript" src="js/tabs.js"></script>
 
 	<script type="text/javascript">
 	
@@ -46,20 +47,24 @@
 			}
 	</script>
 	
-	<style type="text/css" media="screen">@import "/resources/javascript/jQuery/demos/css/main.css";
-		@import "/resources/javascript/jQuery/demos/css/form.css";
-		@import "/resources/javascript/jQuery/demos/css/form-ie.css";
-		@import "/resources/javascript/jQuery/demos/css/tabs.css";
+	<style type="text/css" media="screen">
+		@import "css/main.css";
+		@import "css/form.css";
+		@import "css/form-ie.css";
+		@import "css/tabs.css";
 		
 		body{
 			overflow:visible;
-			}</style>
+			}
+	</style>
 	<!--[if lte IE 7]>
 	<style type="text/css" media="all">
 		@import "error-fields1-ie.css";
 	</style>
 	<![endif]-->
-	<style type="text/css" media="screen">/* code */
+	<style type="text/css" media="screen">
+	
+		/* code */
 		
 			thead td{
 				border-bottom: 1px solid #ccc !important;
@@ -97,7 +102,9 @@
 			.plain{
 				border:none !important;
 				list-style:none !important;
-				}</style>
+				}
+
+	</style>
 </head>
 <body>
 	<div id="page">
@@ -107,9 +114,9 @@
 			<h2>jQuery plugin to populate an HTML form with values, on the client, rather than server-side</h2>
 		</div>
 		
-		<hr>
+		<hr />
 		<ul id="tab-list-main" class="tab-list" section="#section-main">
-			<li class="active" section="#intro"><a class="" href="javascript:;">Introduction</a></li>
+			<li class="active"   section="#intro"><a class="" href="javascript:;">Introduction</a></li>
 			<li class="inactive" section="#simple-demo"><a class="" href="javascript:;">Simple</a></li>
 			<li class="inactive" section="#complex-demo"><a class="" href="javascript:;">Complex</a></li>
 			<li class="inactive" section="#hierarchical-demo"><a class="" href="javascript:;">Hierarchal</a></li>
@@ -181,9 +188,9 @@
 				<p>But for items like radiobuttons, you may be tempted to store an index. Don't! Populate is going to be searching that array for an actual value to match up with. </p>
 				<p>Say, for example, you have a radiobutton array of 3 colours:</p>
 				<ul class="plain" style="padding-bottom:20px">
-					<li><label><input name="options" type="radio" value="red">  Red</label></li>
-					<li><label><input name="options" type="radio" value="green"> Green</label></li>
-					<li><label><input name="options" type="radio" value="blue"> Blue</label></li>
+					<li><label><input name="options" type="radio" value="red"  />  Red</label></li>
+					<li><label><input name="options" type="radio" value="green"  /> Green</label></li>
+					<li><label><input name="options" type="radio" value="blue"  /> Blue</label></li>
 				</ul>
 				<p>The code for these radiobuttons might look like this:</p>
 				<pre>&lt;input name=&quot;color&quot; type=&quot;radio&quot; value=&quot;red&quot;  /&gt; Red
@@ -256,8 +263,7 @@
 
 
 
-				<h4>
-<a name="php-naming"></a>What's all this about hierarchical forms and PHP naming, then?</h4>
+				<h4><a name="php-naming"></a>What's all this about hierarchical forms and PHP naming, then?</h4>
 				<p> JSON is natively hierarchical, and PHP supports a very useful feature which is that any form fields named using square-bracket notation automatically transmit their values to the server hierarchically (not a lot of people know this, for some reason).</p>
 				<p>For example:</p>
 				<pre>
@@ -362,12 +368,12 @@
 						<ul class="controls">
 							<li>
 								<label for="name">Name</label>
-								<input name="name" id="name" type="text" class="text" maxlength="" value="">
+								<input name="name" id="name" type="text" class="text" maxlength="" value=""  />
 							</li>
 							<li>
 								<label for="country">Country</label>
-								<select name="country" id="country" class="select">
-									<option value="" selected>Select...</option>
+								<select name="country" id="country" class="select"  >
+									<option value="" selected="selected">Select...</option>
 									<option value="">- - - - - - - - - - - - - - - - - - - - - - </option>
 									<option value="england">England</option>
 									<option value="scotland">Scotland</option>
@@ -378,13 +384,13 @@
 							<li>
 								<label for="contact">Contact</label>
 								<fieldset id="contact">
-									<label><input name="contact" id="" type="radio" class="radio" value="email"> Email</label>
-									<label><input name="contact" id="" type="radio" class="radio" value="phone"> Phone</label>
-									<label><input name="contact" id="" type="radio" class="radio" value="post"> Post</label>
+									<label><input name="contact" id="" type="radio" class="radio" value="email"  /> Email</label>
+									<label><input name="contact" id="" type="radio" class="radio" value="phone"  /> Phone</label>
+									<label><input name="contact" id="" type="radio" class="radio" value="post"  /> Post</label>
 								</fieldset>
 							</li>
 							<li>
-								<input type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)">
+								<input type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)" />
 							</li>
 
 							<!--<li class="centered" style="border:none; padding-top:0px;">
@@ -398,15 +404,15 @@
 				<h4>JSON</h4>
 				<form name="json_simple" id="json-simple" action="">
 					<div style="padding:10px 20px 10px 10px;">
-						<textarea name="json" id="json" rows="6" wrap="virtual" class="textarea code" style="width:100% !important"></textarea>
+						<textarea name="json" id="json" rows="6" wrap="virtual" class="textarea code" style="width:100% !important" />
 {
 'name':'Dave Stewart',
 'country':'scotland',
 'contact':'phone'
 }
-
-						<input type="button" class="button" value="Populate" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="populateForm('simple')">
-						<input type="button" class="button" value="Reset all" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="resetForms('simple')">
+</textarea>
+						<input type="button" class="button" value="Populate" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="populateForm('simple')" />
+						<input type="button" class="button" value="Reset all" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="resetForms('simple')" />
 					</div>
 
 				</form>
@@ -433,12 +439,12 @@
 					<ul class="controls">
 						<li>
 								<label for="name">Name</label>
-								<input name="name" id="name" type="text" class="text" maxlength="" value="">
+								<input name="name" id="name" type="text" class="text" maxlength="" value=""  />
 						</li>
 							
 						<li>
 							<label for="direction">Country</label>
-							<select name="country[]" id="country" class="select-multiple" multiple>
+							<select name="country[]" id="country" class="select-multiple" multiple="multiple" >
 								<option value="england">England</option>
 								<option value="scotland">Scotland</option>
 								<option value="wales">Wales</option>
@@ -449,15 +455,15 @@
 						<li>
 							<label for="contact">Contact Method</label>
 							<fieldset id="contact">
-							<label><input name="contact[]" id="" type="checkbox" class="checkbox" value="email"> Email</label>
-							<label><input name="contact[]" id="" type="checkbox" class="checkbox" value="phone"> Phone</label>
-							<label><input name="contact[]" id="" type="checkbox" class="checkbox" value="post"> Post</label>
+							<label><input name="contact[]" id="" type="checkbox" class="checkbox" value="email" /> Email</label>
+							<label><input name="contact[]" id="" type="checkbox" class="checkbox" value="phone" /> Phone</label>
+							<label><input name="contact[]" id="" type="checkbox" class="checkbox" value="post" /> Post</label>
 							</fieldset>
 						</li>
 						
 							
 							<li>
-								<input type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)">
+								<input type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)" />
 						</li>
 
 
@@ -472,14 +478,14 @@
 				<h4>JSON</h4>
 				<form name="json_complex" id="json-complex">
 					<div style="padding:10px 20px 10px 10px;">
-						<textarea name="json" rows="6" wrap="virtual" class="textarea code" style="width:100% !important"></textarea>{
+						<textarea name="json" rows="6" wrap="virtual" class="textarea code" style="width:100% !important" />{
 'name':'Dave Stewart',
 'country':['scotland','ireland'],
 'contact':['email','phone']
-}
+}</textarea>
 						<div class="json-sample" id="json-simple-sample">&nbsp;</div>
-						<input type="button" class="button" value="Populate" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="populateForm('complex')">
-						<input type="button" class="button" value="Reset all" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="resetForms('complex')">
+						<input type="button" class="button" value="Populate" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="populateForm('complex')" />
+						<input type="button" class="button" value="Reset all" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="resetForms('complex')" />
 					</div>
 
 				</form>
@@ -513,18 +519,18 @@
 						<ul class="controls">
 							<li>
 								<label for="first-name">First Name</label>
-								<input name="personal[first_name]" id="personal-first-name" type="text" class="text" maxlength="" value="">
+								<input name="personal[first_name]" id="personal-first-name" type="text" class="text" maxlength="" value=""  />
 							</li>
 							
 							<li>
 								<label for="last-name">Last Name</label>
-								<input name="personal[last_name]" id="personal-last-name" type="text" class="text" maxlength="" value="">
+								<input name="personal[last_name]" id="personal-last-name" type="text" class="text" maxlength="" value=""  />
 							</li>
 							
 							<li>
 								<label for="personal[country]">Country</label>
-								<select name="personal[country]" id="personal-country" class="select-multiple">
-									<option value="" selected>Select...</option>
+								<select name="personal[country]" id="personal-country" class="select-multiple" >
+									<option value="" selected="selected">Select...</option>
 									<option value="">- - - - - - - - - - - - - - - - - - - - - - </option>
 									<option value="england">England</option>
 									<option value="scotland">Scotland</option>
@@ -542,19 +548,19 @@
 						
 							<li>
 								<label for="email">Email</label>
-								<input name="contact[email]" id="email" type="text" class="text" maxlength="" value="">
+								<input name="contact[email]" id="email" type="text" class="text" maxlength="" value=""  />
 							</li>
 
 							<li>
 								<label for="phone">Phone</label>
-								<input name="contact[phone]" id="phone" type="text" class="text" maxlength="" value="">
+								<input name="contact[phone]" id="phone" type="text" class="text" maxlength="" value=""  />
 							</li>
 
 							<li>
 								<label for="method">Prefered</label>
 								<fieldset id="method">
-									<label><input name="contact[method]" id="" type="radio" class="radio" value="email"> Email</label>
-									<label><input name="contact[method]" id="" type="radio" class="radio" value="phone"> Phone</label>
+									<label><input name="contact[method]" id="" type="radio" class="radio" value="email" /> Email</label>
+									<label><input name="contact[method]" id="" type="radio" class="radio" value="phone" /> Phone</label>
 								</fieldset>
 							</li>
 
@@ -565,7 +571,7 @@
 					<fieldset class="plain">
 						<ul class="controls">
 							<li>
-								<input type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)">
+								<input type="submit" class="button centered" value="View POST output..." onclick="viewVariables(this)" />
 							</li>
 
 							<!--<li class="centered" style="border:none; padding-top:0px;">
@@ -579,7 +585,7 @@
 				<h4>JSON</h4>
 				<form name="json_hierarchal" id="json-hierarchal">
 					<div style="padding:10px 20px 10px 10px;">
-						<textarea name="json" rows="10" wrap="virtual" class="textarea code" style="width:100% !important"></textarea>{
+						<textarea name="json" rows="10" wrap="virtual" class="textarea code" style="width:100% !important" />{
 personal:{
 	first_name:'Dave', 
 	last_name:'Stewart',
@@ -591,10 +597,10 @@ contact:{
 	method:'phone'
 	}
 }
-
+</textarea>
 						<div class="json-sample" id="json-simple-sample">&nbsp;</div>
-						<input type="button" class="button" value="Populate" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="populateForm('hierarchal')">
-						<input type="button" class="button" value="Reset all" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="resetForms('hierarchal')">
+						<input type="button" class="button" value="Populate" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="populateForm('hierarchal')" />
+						<input type="button" class="button" value="Reset all" style="width:100% !important; margin:10px 0px 0px 5px;" onclick="resetForms('hierarchal')" />
 					</div>
 
 				</form>
@@ -675,8 +681,7 @@ instructions:'Please include the dialing code.'
 					</ul>
 					<p>Demo files</p>
 			<ul>
-						<li><a href="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/populate-demos.zip">Standalone demos</a></li>
-</ul>
+						<li><a href="http://www.keyframesandcode.com/resources/javascript/jQuery/populate/populate-demos.zip">Standalone demos</a></li></ul>
 				<h4>Feedback</h4>
 				<p>If you have any comments, or wish to report any bugs or unexpected behaviour, please do so using the commenting system on the <a href="http://www.keyframesandcode.com/code/development/javascript/jquery-populate-plugin/">project's blog page</a>.</p>
 				<p>I can't promise to answer questions on usage (that's what this help is for!), but I'll do my best to fix bugs.</p>
@@ -685,7 +690,7 @@ instructions:'Please include the dialing code.'
 				<p>&nbsp;</p>
 			</div>
 			
-			<hr>
+			<hr />
 		</div>
 
 </div>

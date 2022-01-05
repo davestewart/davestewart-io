@@ -307,18 +307,18 @@
 
 	#lib.icons div.block .head
 	{
-		background-image:url(/resources/javascript/deconstructed/assets/img/icons/icon-closed-white.gif);
+		background-image:url(../img/icons/icon-closed-white.gif);
 		background-repeat:no-repeat;
 		background-position:right;
 	}
 	
 	#lib.icons div.block.open > .head
 	{
-		background-image:url(/resources/javascript/deconstructed/assets/img/icons/icon-open-white.gif);
+		background-image:url(../img/icons/icon-open-white.gif);
 	}
 	
 	#lib.icons div.block > .head > p > a{
-		background-image:url(/resources/javascript/deconstructed/assets/img/icons/icon-link-white.gif);
+		background-image:url(../img/icons/icon-link-white.gif);
 		background-repeat:no-repeat;
 		background-position:0px;
 		padding-left:16px

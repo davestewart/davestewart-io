@@ -1,0 +1,103 @@
+
+/* BLOCK ICONS */
+
+	body.icons div.block .head
+	{
+		background-image:url("../../img/icon-closed-grey.gif");
+	}
+	
+	body.icons div.block.open > .head
+	{
+		background-image:url("../../img/icon-open-grey.gif");
+	}
+	
+	body.icons div.section > .head > p > a,
+	body.icons div.extend > .head > p > a,
+	body.icons div.object > .head > p > a{
+		background-image:url("../../img/icon-link-light-blue.gif");
+		}
+		
+	body.icons div.function > .head > p > a,
+	body.icons div.variable > .head > p > a,
+	body.icons div.code > .head > p > a{
+		background-image:url("../../img/icon-link-blue.gif");
+		}
+
+/* HEAD LINKS */
+
+	.block > .head > p > strong{
+		font-family:"Courier New", Courier, monospace;
+		}
+
+	.block > .head > p > a, 
+	.block > .head > p > a:link{
+		font-family:"Courier New", Courier, monospace;
+		color:#03A;
+		}
+		
+	body.icons div.block > .head > p > a{
+		}
+		
+
+	.section > .head > p > a,
+	.extend > .head > p > a,
+	.object > .head > p > a
+	{
+		color:#42A0FF;
+	}
+
+	.block > .head > p > a:hover{
+		color:#FFF;
+		border-bottom:1px dotted #FFF;
+	}
+
+/* SECTION COLORS */
+
+	.section {
+		border-left:10px solid #000;
+	}
+	
+	.section > .head {
+		background-color:#000;
+	}
+	
+	.extend {
+		border-left:10px solid #333;
+	}
+	
+	.extend > .head {
+		background-color:#333;
+	}
+	
+	.object {
+		border-left:10px solid #666;
+	}
+	
+	.object > .head {
+		background-color:#666;
+	}
+	
+	.function {
+		border-left:10px solid #AAA;
+	}
+	
+	.function > .head {
+		background-color:#AAA;
+	}
+	
+	.variables {
+		border-left:10px solid #BBB;
+	}
+	
+	.variables > .head {
+		background-color:#BBB;
+	}
+	
+	.code {
+		border-left:10px solid #CCC;
+	}
+	
+	.code > .head {
+		background-color:#CCC;
+	}
+	

@@ -1,0 +1,92 @@
+
+/* BLOCK ICONS */
+
+	body.icons div.block .head
+	{
+		background-image:url("../../img/icon-closed-grey.gif");
+	}
+	
+	body.icons div.block.open > .head
+	{
+		background-image:url("../../img/icon-open-grey.gif");
+	}
+	
+	body.icons div.block > .head > p > a, 
+	body.icons div.block > .head > p > a:link{
+		background-image:url("../../img/icon-link-grey.gif");
+		}
+
+/* HEAD LINKS */
+
+	.head,
+	.head *{
+		color:#333;
+		font-weight:normal;
+		font-family:Arial, Helvetica, sans-serif
+		}
+
+	.block > .head > p > a:link,
+	.block > .head > p > a:visited{
+		color:#333;
+		border-bottom:1px dotted #666;
+		font-weight:bold;
+	}
+
+	.block > .head > p > a:hover{
+		color:#FFF;
+	}
+
+/* SECTION COLORS */
+
+	body{
+		background-color:#F6F6F6;
+		}
+
+	.section {
+		border-left:10px solid #d8efff;
+	}
+	
+	.section > .head {
+		background-color:#d8efff;
+	}
+	
+	.extend {
+		border-left:10px solid #d8d8d8;
+	}
+	
+	.extend > .head {
+		background-color:#d8d8d8;
+	}
+	
+	.object {
+		border-left:10px solid #e6e6e6;
+	}
+	
+	.object > .head {
+		background-color:#e6e6e6;
+	}
+	
+	.function {
+		border-left:10px solid #f8d7d7;
+	}
+	
+	.function > .head {
+		background-color:#f8d7d7;
+	}
+	
+	.variables {
+		border-left:10px solid #fff7d8;
+	}
+	
+	.variables > .head {
+		background-color:#fff7d8;
+	}
+	
+	.code {
+		border-left:10px solid #e6f8d7;
+	}
+	
+	.code > .head {
+		background-color:#e6f8d7;
+	}
+	

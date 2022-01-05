@@ -118,7 +118,7 @@
     				<!-- FILE davestewart/content.php -->
 <div class="post-thumb">
 
-	<a href="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/feature.png"><img width="300" height="155" src="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/feature-580x300.png" class="attachment-medium size-medium" alt="" srcset="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/feature.png 580w, /wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/feature-260x134.png 260w" sizes="(max-width: 300px) 100vw, 300px"></a>
+	<a href="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/feature.png"><img style="aspect-ratio: 300 / 155;"src="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/feature-580x300.png" class="attachment-medium size-medium" alt="" ></a>
 </div>
 
     <h1 class="entry-title">Fix Windows broken SSH console output</h1>
@@ -139,10 +139,10 @@
 </ol>
 <h3>Problem</h3>
 <p>In the vanilla Windows console, pretty much as soon as you start typing within the SSH session, you&#039;re seeing chains of random characters eating your input and making it impossible to do anything meaningful:</p>
-<p><a href="/wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/escape-characters.png" rel="lightbox[1042]"><img class="alignnone wp-image-1045 size-full" src="/wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/escape-characters.png" alt="" width="900" height="300" srcset="/wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/escape-characters.png 900w, /wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/escape-characters-260x87.png 260w, /wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/escape-characters-580x193.png 580w, /wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/escape-characters-768x256.png 768w" sizes="(max-width: 900px) 100vw, 900px"></a></p>
+<p><a href="/wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/escape-characters.png" rel="lightbox[1042]"><img class="alignnone wp-image-1045 size-full" src="/wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/escape-characters.png" alt="" style="aspect-ratio: 900 / 300;"></a></p>
 <p>These are &#034;control codes&#034;, sent by the UNIX VM to display colors, or inserted as you hit keys like delete or cursor left, right, etc.</p>
 <p>Even worse, when editing text files using something like Nano, typing or navigation overwrites content. Page up and page down can completely destroy what&#039;s on screen:</p>
-<p><img class="alignnone size-full wp-image-1044" src="/wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/overwriting.png" alt="overwriting" width="900" height="300" srcset="/wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/overwriting.png 900w, /wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/overwriting-260x87.png 260w, /wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/overwriting-580x193.png 580w, /wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/overwriting-768x256.png 768w" sizes="(max-width: 900px) 100vw, 900px"></p>
+<p><img class="alignnone size-full wp-image-1044" src="/wordpress/wp-content/uploads/blog/fix-terribly-broken-console-ssh-experience-on-windows/overwriting.png" alt="overwriting" style="aspect-ratio: 900 / 300;"></p>
 <p>This comes down (apparently) to the fact that cmd.exe is a console, not a terminal (and doesn&#039;t emulate one either).</p>
 <p>Either way, it makes getting anything done impossible at best, and downright dangerous at worst &#8211; but fortunately it is solvable.</p>
 <p>The solution comes in 2 parts:</p>
@@ -153,7 +153,7 @@
 <h3>Fix control codes: Install a terminal emulator</h3>
 <p>There are lots of these around, but the two I&#039;ve got best results from seem to be <a href="https://conemu.github.io/">ConEmu</a> and <a href="http://cmder.net/">Cmdr</a> (which uses ConEmu behind the scenes).</p>
 <p>Get one of these installed (I&#039;ve been using ComEmu the most) and then set Windows to use ConEmu by default, by opening Settings &gt; Integration &gt; Default terminal and clicking the &#034;Force ConEmu as default terminal for console applications&#034;:</p>
-<p><a href="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings.png" rel="lightbox[1042]"><img class="alignnone size-full wp-image-1046" src="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings.png" alt="conemu settings" width="640" height="474" srcset="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings.png 640w, /wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings-260x193.png 260w, /wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings-580x430.png 580w" sizes="(max-width: 640px) 100vw, 640px"></a></p>
+<p><a href="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings.png" rel="lightbox[1042]"><img class="alignnone size-full wp-image-1046" src="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings.png" alt="conemu settings" style="aspect-ratio: 640 / 474;"></a></p>
 <p>As a bonus, both emulators support multiple tabs, attractive colour schemes, shortcut keys, and have multiple other usability features.</p>
 <p>Not sure how to make PHPStorm use ConEmu yet, but it would be really useful.</p>
 <h3>Fix overwriting: Use a different SSH client</h3>
@@ -189,9 +189,9 @@ ssh vagrant@127.0.0.1 -p 2222</pre>
 <li>Paste the above code in the &#034;Commands&#034; box</li>
 <li>Save your settings</li>
 </ol>
-<p><a href="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings-run.png" rel="lightbox[1042]"><img class="alignnone size-full wp-image-1048" src="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings-run.png" alt="conemu-settings-run" width="640" height="474" srcset="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings-run.png 640w, /wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings-run-260x193.png 260w, /wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings-run-580x430.png 580w" sizes="(max-width: 640px) 100vw, 640px"></a></p>
+<p><a href="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings-run.png" rel="lightbox[1042]"><img class="alignnone size-full wp-image-1048" src="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-settings-run.png" alt="conemu-settings-run" style="aspect-ratio: 640 / 474;"></a></p>
 <p>You can then pop open an SSH session from ConEmu by going to the &#034;Create new console&#034; dropdown and selecting your task there:</p>
-<p><a href="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-run.png" rel="lightbox[1042]"><img class="alignnone size-full wp-image-1049" src="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-run.png" alt="conemu-run" width="801" height="485" srcset="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-run.png 801w, /wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-run-260x157.png 260w, /wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-run-580x351.png 580w, /wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-run-768x465.png 768w" sizes="(max-width: 801px) 100vw, 801px"></a></p>
+<p><a href="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-run.png" rel="lightbox[1042]"><img class="alignnone size-full wp-image-1049" src="/wordpress/wp-content/uploads/blog/fix-windows-broken-ssh/conemu-run.png" alt="conemu-run" style="aspect-ratio: 801 / 485;"></a></p>
 <h3> Summing up</h3>
 <p>I&#039;ve been using Windows console to SSH into VMs for about a year now, and it&#039;s been awful. This is especially galling as the experience on the Mac is just so much better.</p>
 <p>However, if I need to quickly jump into a project and I&#039;m not using OSX, this is the way to do it.</p>

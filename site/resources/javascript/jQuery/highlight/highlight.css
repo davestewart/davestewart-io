@@ -1,0 +1,24 @@
+	.highlight{
+		background-color:#6CF;
+		}
+		
+	#list{
+		list-style:none;
+		clear:both; 
+		float:none
+		}
+		
+	#list label, 
+	#list input{
+		float:left;
+		display:block;
+		width:200px;
+		}
+		
+	#list li{
+		clear:both;
+		float:none;
+		display:block;
+		width:420px;
+		}
+		
